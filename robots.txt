@@ -1,0 +1,4 @@
+﻿User-agent: *
+Allow: /
+
+Sitemap: https://NahaAdmin.vercel.app/sitemap.xml

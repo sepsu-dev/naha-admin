@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Meta SEO -->
+    <meta name="description" content="NahaAdmin - Free Bootstrap 5 Admin Dashboard" />
+    <meta name="keywords" content="NahaAdmin, admin dashboard, bootstrap 5, ui kit, webapp" />
+    <meta name="author" content="NahaAdmin" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="NahaAdmin - Free Bootstrap 5 Admin Dashboard" />
+    <meta property="og:description" content="NahaAdmin - Free Bootstrap 5 Admin Dashboard" />
+    <meta property="og:type" content="website" />
+    <title>NahaAdmin - Free Bootstrap 5 Admin Dashboard</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+
+    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/plugins/phosphor/bold/style.css" />
+    <link rel="stylesheet" href="assets/plugins/phosphor/fill/style.css" />
+    <link href="assets/styles/landing.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <header>
+        <nav class="kd-topnav navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center" href="/">
+                    <img src="assets/images/logo.png" alt="logo" class="logo-navbar" />
+                    <span class="ms-2 fw-semibold">NahaAdmin</span>
+                </a>
+                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#landingNavbar" aria-controls="landingNavbar" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="ph-bold ph-list"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="landingNavbar">
+                    <div
+                        class="ms-auto d-flex flex-column flex-lg-row align-items-start align-items-lg-center gap-2 py-3 py-lg-0">
+                        <a href="docs/"
+                            class="btn btn-light w-100 w-lg-auto justify-content-start justify-content-lg-center"><i
+                                class="ph-bold ph-book me-2"></i>
+                            Docs</a>
+                        <a href="https://github.com/sepsu-dev/NahaAdmin"
+                            class="btn btn-outline-dark w-100 w-lg-auto justify-content-start justify-content-lg-center"
+                            target="_blank"><i class="ph-bold ph-github-logo me-2"></i> GitHub</a>
+                        <button class="btn btn-primary w-100 w-lg-auto justify-content-start justify-content-lg-center"
+                            data-bs-toggle="modal" data-bs-target="#downloadModal"><i
+                                class="ph-bold ph-download-simple me-2"></i>
+                            Download</button>
+                        <a href="demo/"
+                            class="btn btn-dark w-100 w-lg-auto justify-content-start justify-content-lg-center"><i
+                                class="ph-bold ph-monitor-play me-2"></i>
+                            Demo</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero-section">
+        <div class="hero-badge">
+            ✦ Free &amp; Open Source
+        </div>
+
+        <h1 class="hero-title">
+            Modern Admin Dashboard<br>built with <span>Bootstrap 5</span>
+        </h1>
+
+        <p class="hero-subtitle">
+            A clean, responsive, and fully-featured admin template. Ready to use for any web project — personal or
+            commercial.
+        </p>
+
+
+        <div class="hero-bg-icon">
+            <i class="ph-fill ph-rocket-launch"></i>
+        </div>
+
+        <!-- Banner Image -->
+        <div class="hero-banner-wrap">
+            <img src="assets/images/banner.png" alt="NahaAdmin Dashboard Preview" class="landing-banner">
+        </div>
+    </section>
+
+
+    <!-- Download Modal -->
+    <div class="modal fade" id="downloadModal" tabindex="-1" aria-labelledby="downloadModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg rounded-4 text-center">
+                <div class="modal-body p-5" style="position:relative;">
+                    <!-- Spinner Overlay -->
+                    <div id="dlSpinner"
+                        style="display:none; position:absolute; inset:0; background:rgba(255,255,255,0.96); border-radius:16px; z-index:10; flex-direction:column; align-items:center; justify-content:center; gap:0.75rem;">
+                        <div class="spinner-border text-primary" style="width:2.5rem; height:2.5rem;" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <p class="mb-0 text-muted" style="font-size:0.85rem; font-family:'Inter',sans-serif;">Preparing
+                            download...</p>
+                    </div>
+                    <div class="mb-4">
+                        <i class="ph-fill ph-hand-heart text-danger" style="font-size: 4rem;"></i>
+                    </div>
+                    <h3 class="fw-bold mb-3">Support NahaAdmin! ✦</h3>
+                    <p class="text-muted mb-4 text-center">
+                        Thank you for choosing NahaAdmin! If you find this template useful, please consider
+                        supporting the project to keep it free and updated.
+                    </p>
+                    <div class="d-grid gap-2 mb-3">
+                        <a href="https://github.com/sponsors/sepsu-dev/" target="_blank" class="btn btn-dark">
+                            <i class="ph-bold ph-github-logo"></i> GitHub Sponsors
+                        </a>
+                        <a href="https://trakteer.id/sepsu-dev" target="_blank" class="btn btn-primary">
+                            <img src="assets/images/trakteer.png" height="18" alt="Trakteer"> Trakteer
+                        </a>
+                    </div>
+                    <a href="https://github.com/sepsu-dev/NahaAdmin/archive/refs/heads/main.zip" id="dlDirectBtn"
+                        class="btn btn-link py-2 small">
+                        No thanks, just download directly
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('dlDirectBtn').addEventListener('click', function (e) {
+            e.preventDefault();
+            var spinner = document.getElementById('dlSpinner');
+            spinner.style.display = 'flex';
+            var a = document.createElement('a');
+            a.href = this.href;
+            a.download = 'NahaAdmin.zip';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            setTimeout(function () {
+                spinner.style.display = 'none';
+                bootstrap.Modal.getInstance(document.getElementById('downloadModal')).hide();
+            }, 800);
+        });
+    </script>
+</body>
+
+</html>

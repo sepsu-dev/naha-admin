@@ -1,0 +1,549 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic SEO -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Meta SEO -->
+    <meta name="description" content="Bootstrap navs component for creating flexible navigation elements." />
+    <meta name="keywords" content="navs, bootstrap navs, navigation, ui kit" />
+    <meta name="author" content="sepsu-dev" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://NahaAdmin.vercel.app/" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Navs and tabs - NahaAdmin" />
+    <meta property="og:description" content="Bootstrap navs component for creating flexible navigation elements." />
+    <meta property="og:image" content="assets/images/logo.png" />
+    <meta property="og:url" content="https://NahaAdmin.vercel.app/" />
+    <meta property="og:type" content="website" />
+
+    <title>NahaAdmin - Navs and tabs</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Styles -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/plugins/nprogress/nprogress.min.css" />
+    <link href="../assets/styles/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css" />
+    <link rel="stylesheet" href="../assets/plugins/animate/animate.min.css" />
+    <link rel="stylesheet" href="../assets/plugins/sweetalert2/sweetalert2.min.css" />
+    <link rel="stylesheet" href="../assets/plugins/tempus-dominus/css/tempus-dominus.min.css" />
+    <link rel="stylesheet" href="../assets/plugins/select2/css/select2.min.css" />
+    <link rel="stylesheet" href="../assets/plugins/select2/css/select2-bootstrap-5-theme.min.css" />
+    <link rel="stylesheet" href="../assets/plugins/simplebar/simplebar.min.css" />
+    <link rel="stylesheet" href="../assets/plugins/phosphor/bold/style.css" />
+    <link rel="stylesheet" href="../assets/plugins/phosphor/regular/style.css" />
+    <link rel="stylesheet" href="../assets/plugins/phosphor/fill/style.css" />
+
+</head>
+
+<body class='kd-nav-fixed'>
+    <header>
+        <nav class="kd-topnav navbar navbar-expand navbar-light">
+            <a class="navbar-brand ps-3 d-flex align-items-center" href="index.html">
+                <img src="../assets/images/logo.png" alt="logo" class="logo-navbar" />
+                <span class="ms-2 fw-semibold">NahaAdmin</span>
+            </a>
+            <button class="btn btn-light" id="sidebarToggle" aria-label="Toggle sidebar">
+                <i class="ph-bold ph-sidebar-simple"></i>
+            </button>
+
+            <ul class="navbar-nav ms-auto align-items-center">
+                <!-- Language -->
+                <li class="nav-item dropdown me-2">
+                    <a class="nav-link nav-icon bg-light rounded-3 border" href="#" id="langDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="fi fi-id"></span></a>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0" aria-labelledby="langDropdown"
+                        style="min-width: 150px;">
+                        <li><a class="dropdown-item d-flex align-items-center py-2" href="#"><span
+                                    class="fi fi-id me-2"></span> Indonesian</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center py-2" href="#"><span
+                                    class="fi fi-gb me-2"></span> English</a></li>
+                    </ul>
+                </li>
+                <!-- Messages -->
+                <li class="nav-item dropdown me-2">
+                    <a class="nav-link nav-icon bg-light rounded-3 border position-relative" href="#" id="msgDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="ph-bold ph-envelope"></i>
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary border border-light"
+                            style="font-size: 0.65rem; padding: 0.35em 0.5em; margin-top: 10px; margin-left: -8px;">
+                            2
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 messages-dropdown"
+                        aria-labelledby="msgDropdown">
+                        <li class="p-3 border-bottom d-flex justify-content-between align-items-center">
+                            <h6 class="mb-0 fw-bold">Recent Messages</h6>
+                            <span class="badge bg-primary-subtle text-primary extra-small">2 New</span>
+                        </li>
+                        <div data-simplebar style="max-height: 300px;">
+                            <a href="apps-inbox.html" class="notification-item">
+                                <div class="notification-icon bg-info-subtle text-info">
+                                    <img src="../assets/images/user-avatar.png" class="rounded-circle" width="32"
+                                        alt="">
+                                </div>
+                                <div>
+                                    <p class="mb-1 small fw-bold">Sarah Johnson</p>
+                                    <p class="mb-0 extra-small text-muted">Are we still meeting this afternoon?</p>
+                                </div>
+                            </a>
+                            <a href="apps-inbox.html" class="notification-item">
+                                <div class="notification-icon bg-warning-subtle text-warning">
+                                    <img src="../assets/images/user-avatar.png" class="rounded-circle" width="32"
+                                        alt="">
+                                </div>
+                                <div>
+                                    <p class="mb-1 small fw-bold">Alex Racing</p>
+                                    <p class="mb-0 extra-small text-muted">Let's play some games at 9 PM!</p>
+                                </div>
+                            </a>
+                        </div>
+                        <li class="p-2 text-center border-top">
+                            <a href="apps-inbox.html" class="text-primary extra-small fw-bold text-decoration-none">View
+                                all messages</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Notifications -->
+                <li class="nav-item dropdown me-2">
+                    <a class="nav-link nav-icon bg-light rounded-3 border position-relative" href="#" id="notifDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="ph-bold ph-bell"></i>
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger border border-light"
+                            style="font-size: 0.65rem; padding: 0.35em 0.5em; margin-top: 10px; margin-left: -8px;">
+                            3
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 notifications-dropdown"
+                        aria-labelledby="notifDropdown">
+                        <li class="p-3 border-bottom d-flex justify-content-between align-items-center">
+                            <h6 class="mb-0 fw-bold">Notifications</h6>
+                            <span class="badge bg-primary-subtle text-primary extra-small">3 New</span>
+                        </li>
+                        <div data-simplebar style="max-height: 300px;">
+                            <a href="#" class="notification-item">
+                                <div class="notification-icon bg-primary-subtle text-primary">
+                                    <i class="ph-bold ph-user-plus"></i>
+                                </div>
+                                <div>
+                                    <p class="mb-1 small fw-bold">New user registered</p>
+                                    <p class="mb-0 extra-small text-muted">A few seconds ago</p>
+                                </div>
+                            </a>
+                            <a href="#" class="notification-item">
+                                <div class="notification-icon bg-success-subtle text-success">
+                                    <i class="ph-bold ph-shopping-cart"></i>
+                                </div>
+                                <div>
+                                    <p class="mb-1 small fw-bold">New order received</p>
+                                    <p class="mb-0 extra-small text-muted">2 minutes ago</p>
+                                </div>
+                            </a>
+                            <a href="#" class="notification-item">
+                                <div class="notification-icon bg-warning-subtle text-warning">
+                                    <i class="ph-bold ph-warning"></i>
+                                </div>
+                                <div>
+                                    <p class="mb-1 small fw-bold">Server threshold alert</p>
+                                    <p class="mb-0 extra-small text-muted">1 hour ago</p>
+                                </div>
+                            </a>
+                        </div>
+                        <li class="p-2 text-center border-top">
+                            <a href="#" class="text-primary extra-small fw-bold text-decoration-none">View all
+                                notifications</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- User Profile -->
+                <li class="nav-item dropdown ms-1">
+                    <a class="nav-link d-flex align-items-center bg-light rounded-3 px-1 border" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" style="height: 40px;"
+                        aria-expanded="false">
+                        <img src="../assets/images/user-avatar.png" alt="user" class="rounded-circle border"
+                            style="width: 30px; height: 30px; object-fit: cover;" />
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 overflow-hidden"
+                        aria-labelledby="navbarDropdown" style="min-width: 240px;">
+                        <li class="p-3 bg-light">
+                            <div class="d-flex align-items-center">
+                                <img src="../assets/images/user-avatar.png" alt="user" class="rounded-circle border"
+                                    style="width: 48px; height: 48px; object-fit: cover;" />
+                                <div class="ms-3">
+                                    <h6 class="mb-0 fw-bold">Ujang Kasep</h6>
+                                    <p class="mb-0 text-muted extra-small">ujang@NahaAdmin.com</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider m-0 opacity-10">
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="profile.html">
+                                <i class="ph-bold ph-gear me-3 text-muted"></i> Account
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center text-danger" href="login.html">
+                                <i class="ph-bold ph-sign-out me-3"></i> Logout
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="layoutSidenav">
+        <aside id="layoutSidenav_nav">
+            <nav class="kd-sidenav accordion kd-sidenav-light" id="sidenavAccordion">
+                <div class="kd-sidenav-menu" data-simplebar>
+                    <div class="nav">
+                        <h2 class="kd-sidenav-menu-heading">Dashboard</h2>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#dashboardCollapse" aria-expanded="false">
+                            <div class="kd-nav-link-icon"><i class="ph-bold ph-house"></i></div>
+                            <span>Dashboards</span>
+                            <div class="kd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down"></i></div>
+                        </a>
+                        <div class="collapse" id="dashboardCollapse" data-bs-parent="#sidenavAccordion">
+                            <nav class="kd-sidenav-menu-nested nav">
+                                <a class="nav-link" href="index.html">Default</a>
+                                <a class="nav-link" href="dashboard-analytics.html">Analytics</a>
+                                <a class="nav-link" href="dashboard-crm.html">CRM</a>
+                                <a class="nav-link" href="dashboard-ecommerce.html">Ecommerce</a>
+                                <a class="nav-link" href="dashboard-finance.html">Finance</a>
+                            </nav>
+                        </div>
+                        <h2 class="kd-sidenav-menu-heading">Applications</h2>
+                        <a class="nav-link" href="apps-inbox.html">
+                            <div class="kd-nav-link-icon"><i class="ph-bold ph-envelope"></i></div>
+                            <span>Inbox</span>
+                        </a>
+                        <a class="nav-link" href="apps-chat.html">
+                            <div class="kd-nav-link-icon"><i class="ph-bold ph-chats-teardrop"></i></div>
+                            <span>Chat</span>
+                        </a>
+                        <a class="nav-link" href="apps-kanban.html">
+                            <div class="kd-nav-link-icon"><i class="ph-bold ph-projector-screen"></i></div>
+                            <span>Kanban</span>
+                        </a>
+                        <h2 class="kd-sidenav-menu-heading">Components</h2>
+                        <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#componentsCollapse"
+                            aria-expanded="true">
+                            <div class="kd-nav-link-icon"><i class="ph-bold ph-squares-four"></i></div>
+                            <span>UI Elements</span>
+                            <div class="kd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down"></i></div>
+                        </a>
+                        <div class="collapse show" id="componentsCollapse" data-bs-parent="#sidenavAccordion">
+                            <nav class="kd-sidenav-menu-nested nav">
+                                <a class="nav-link" href="accordion.html">Accordion</a>
+                                <a class="nav-link" href="alerts.html">Alert</a>
+                                <a class="nav-link" href="badges.html">Badge</a>
+                                <a class="nav-link" href="breadcrumb.html">Breadcrumb</a>
+                                <a class="nav-link" href="buttons.html">Button</a>
+                                <a class="nav-link" href="cards.html">Card</a>
+                                <a class="nav-link" href="carousel.html">Carousel</a>
+                                <a class="nav-link" href="collapse.html">Collapse</a>
+                                <a class="nav-link" href="dropdowns.html">Dropdown</a>
+                                <a class="nav-link" href="list-group.html">List Group</a>
+                                <a class="nav-link" href="modals.html">Modal</a>
+                                <a class="nav-link active" href="navs.html">Navs and tabs</a>
+
+                                <a class="nav-link" href="pagination.html">Pagination</a>
+                                <a class="nav-link" href="placeholders.html">Placeholder</a>
+                                <a class="nav-link" href="progress.html">Progress</a>
+                                <a class="nav-link" href="spinners.html">Spinner</a>
+                                <a class="nav-link" href="toasts.html">Toasts</a>
+                                <a class="nav-link" href="tooltips.html">Tooltip</a>
+                            </nav>
+                        </div>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#formsCollapse"
+                            aria-expanded="false">
+                            <div class="kd-nav-link-icon"><i class="ph-bold ph-textbox"></i></div>
+                            <span>Forms</span>
+                            <div class="kd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down"></i></div>
+                        </a>
+                        <div class="collapse" id="formsCollapse" data-bs-parent="#sidenavAccordion">
+                            <nav class="kd-sidenav-menu-nested nav">
+                                <a class="nav-link" href="forms-basic.html">Basic Inputs</a>
+                                <a class="nav-link" href="forms-select.html">Select</a>
+                                <a class="nav-link" href="forms-checks.html">Checkboxes & Radios</a>
+                                <a class="nav-link" href="forms-layout.html">Form Layout</a>
+                                <a class="nav-link" href="forms-validation.html">Validation</a>
+                                <a class="nav-link" href="forms-editors.html">Editors</a>
+                            </nav>
+                        </div>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#tablesCollapse" aria-expanded="false">
+                            <div class="kd-nav-link-icon"><i class="ph-bold ph-table"></i></div>
+                            <span>Tables</span>
+                            <div class="kd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down"></i></div>
+                        </a>
+                        <div class="collapse" id="tablesCollapse" data-bs-parent="#sidenavAccordion">
+                            <nav class="kd-sidenav-menu-nested nav">
+                                <a class="nav-link" href="tables-basic.html">Basic Table</a>
+                                <a class="nav-link" href="tables-datatables.html">DataTables</a>
+                                <a class="nav-link" href="tables-gridjs.html">Grid.js</a>
+                            </nav>
+                        </div>
+                        <h2 class="kd-sidenav-menu-heading">Style</h2>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#iconsCollapse"
+                            aria-expanded="false">
+                            <div class="kd-nav-link-icon"><i class="ph-bold ph-paint-brush"></i></div>
+                            <span>Icons & Styles</span>
+                            <div class="kd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down"></i></div>
+                        </a>
+                        <div class="collapse" id="iconsCollapse" data-bs-parent="#sidenavAccordion">
+                            <nav class="kd-sidenav-menu-nested nav">
+                                <a class="nav-link" href="icons.html">Phosphor Icons</a>
+                                <a class="nav-link" href="typography.html">Typography</a>
+                                <a class="nav-link" href="colors.html">Colors</a>
+                            </nav>
+                        </div>
+                        <h2 class="kd-sidenav-menu-heading">Extras</h2>
+                        <a class="nav-link" href="maps.html">
+                            <div class="kd-nav-link-icon"><i class="ph-bold ph-map-trifold"></i></div>
+                            <span>Maps</span>
+                        </a>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapse"
+                            aria-expanded="false">
+                            <div class="kd-nav-link-icon"><i class="ph-bold ph-lock"></i></div>
+                            <span>Authentication</span>
+                            <div class="kd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down"></i></div>
+                        </a>
+                        <div class="collapse" id="pagesCollapse" data-bs-parent="#sidenavAccordion">
+                            <nav class="kd-sidenav-menu-nested nav">
+                                <a class="nav-link" href="login.html">Login</a>
+                                <a class="nav-link" href="register.html">Register</a>
+                                <a class="nav-link" href="forgot-password.html">Forgot Password</a>
+                                <a class="nav-link" href="change-password.html">Change Password</a>
+                            </nav>
+                        </div>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#errorCollapse"
+                            aria-expanded="false">
+                            <div class="kd-nav-link-icon"><i class="ph-bold ph-warning-octagon"></i></div>
+                            <span>Error Pages</span>
+                            <div class="kd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down"></i></div>
+                        </a>
+                        <div class="collapse" id="errorCollapse" data-bs-parent="#sidenavAccordion">
+                            <nav class="kd-sidenav-menu-nested nav">
+                                <a class="nav-link" href="400.html">400 Error</a>
+                                <a class="nav-link" href="401.html">401 Error</a>
+                                <a class="nav-link" href="403.html">403 Error</a>
+                                <a class="nav-link" href="404.html">404 Error</a>
+                                <a class="nav-link" href="500.html">500 Error</a>
+                                <a class="nav-link" href="503.html">503 Error</a>
+                            </nav>
+                        </div>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#multiLevelCollapse" aria-expanded="false">
+                            <div class="kd-nav-link-icon"><i class="ph-bold ph-tree-structure"></i></div>
+                            <span>Multi Level</span>
+                            <div class="kd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down"></i></div>
+                        </a>
+                        <div class="collapse" id="multiLevelCollapse" data-bs-parent="#sidenavAccordion">
+                            <nav class="kd-sidenav-menu-nested nav">
+                                <a class="nav-link" href="#">Level 2 Item</a>
+                                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                                    data-bs-target="#level3Collapse" aria-expanded="false">
+                                    <span>Level 3 Menu</span>
+                                    <div class="kd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down"></i></div>
+                                </a>
+                                <div class="collapse" id="level3Collapse">
+                                    <nav class="kd-sidenav-menu-nested nav">
+                                        <a class="nav-link" href="#">Level 3 Item 1</a>
+                                        <a class="nav-link" href="#">Level 3 Item 2</a>
+                                    </nav>
+                                </div>
+                            </nav>
+                        </div>
+
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#customCollapse" aria-expanded="false">
+                            <div class="kd-nav-link-icon"><i class="ph-bold ph-browsers"></i></div>
+                            <span>Custom Pages</span>
+                            <div class="kd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down"></i></div>
+                        </a>
+                        <div class="collapse" id="customCollapse" data-bs-parent="#sidenavAccordion">
+                            <nav class="kd-sidenav-menu-nested nav">
+                                <a class="nav-link" href="profile.html">Profile</a>
+                                <a class="nav-link" href="starter.html">Starter Page</a>
+                                <a class="nav-link" href="blank.html">Blank Page</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <footer class="kd-sidenav-footer">
+                    <small>Logged in as:</small>
+                    <div>Ujang Kasep</div>
+                </footer>
+            </nav>
+        </aside>
+
+        <main id="layoutSidenav_content" class="animate__animated animate__fadeIn">
+            <section class="container-fluid px-4 pb-5">
+                <header class="my-4">
+                    <h1 class="h4 mb-0 fw-bold">Navs and tabs</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                            <li class="breadcrumb-item">Components</li>
+                            <li class="breadcrumb-item active">Navs and tabs</li>
+                        </ol>
+                    </nav>
+                </header>
+
+                <div class="row">
+                    <!-- Standard Tabs -->
+                    <div class="col-lg-6">
+                        <div class="card animate__animated animate__fadeIn mb-4">
+                            <div class="card-header fw-semibold">Basic Tabs</div>
+                            <div class="card-body">
+                                <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                                            data-bs-target="#home" type="button" role="tab" aria-controls="home"
+                                            aria-selected="true">Home</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
+                                            data-bs-target="#profile" type="button" role="tab" aria-controls="profile"
+                                            aria-selected="false">Profile</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                                            data-bs-target="#contact" type="button" role="tab" aria-controls="contact"
+                                            aria-selected="false">Contact</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="home" role="tabpanel"
+                                        aria-labelledby="home-tab">
+                                        <p class="mt-3">This is some placeholder content for the Home tab. It's very
+                                            engaging, right?</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="profile" role="tabpanel"
+                                        aria-labelledby="profile-tab">
+                                        <p class="mt-3">This is some placeholder content for the Profile tab. We're
+                                            getting somewhere now.</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="contact" role="tabpanel"
+                                        aria-labelledby="contact-tab">
+                                        <p class="mt-3">This is some placeholder content for the Contact tab. Feel free
+                                            to reach out!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pills -->
+                    <div class="col-lg-6">
+                        <div class="card animate__animated animate__fadeIn mb-4">
+                            <div class="card-header fw-semibold">Pills Navigation</div>
+                            <div class="card-body">
+                                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="tab"
+                                            data-bs-target="#pills-home" type="button" role="tab"
+                                            aria-controls="pills-home" aria-selected="true">Home</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="tab"
+                                            data-bs-target="#pills-profile" type="button" role="tab"
+                                            aria-controls="pills-profile" aria-selected="false">Profile</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="tab"
+                                            data-bs-target="#pills-contact" type="button" role="tab"
+                                            aria-controls="pills-contact" aria-selected="false">Contact</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="pills-tabContent">
+                                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                        aria-labelledby="pills-home-tab">
+                                        <p class="mt-3">Pills are a great way to handle navigation within a page.
+                                        </p>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                                        aria-labelledby="pills-profile-tab">
+                                        <p class="mt-3">Profile content for the pills navigation.</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-contact" role="tabpanel"
+                                        aria-labelledby="pills-contact-tab">
+                                        <p class="mt-3">Contact content for the pills navigation.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vertical Pills -->
+                    <div class="col-lg-12">
+                        <div class="card animate__animated animate__fadeIn mb-4">
+                            <div class="card-header fw-semibold">Vertical Pills</div>
+                            <div class="card-body">
+                                <div class="d-flex align-items-start">
+                                    <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist"
+                                        aria-orientation="vertical">
+                                        <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
+                                            data-bs-target="#v-pills-home" type="button" role="tab"
+                                            aria-controls="v-pills-home" aria-selected="true">Home</button>
+                                        <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
+                                            data-bs-target="#v-pills-profile" type="button" role="tab"
+                                            aria-controls="v-pills-profile" aria-selected="false">Profile</button>
+                                        <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                                            data-bs-target="#v-pills-messages" type="button" role="tab"
+                                            aria-controls="v-pills-messages" aria-selected="false">Messages</button>
+                                        <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill"
+                                            data-bs-target="#v-pills-settings" type="button" role="tab"
+                                            aria-controls="v-pills-settings" aria-selected="false">Settings</button>
+                                    </div>
+                                    <div class="tab-content" id="v-pills-tabContent">
+                                        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                                            aria-labelledby="v-pills-home-tab">
+                                            <p>This is the content for the vertical home tab.</p>
+                                        </div>
+                                        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                                            aria-labelledby="v-pills-profile-tab">
+                                            <p>This is the content for the vertical profile tab.</p>
+                                        </div>
+                                        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                                            aria-labelledby="v-pills-messages-tab">
+                                            <p>This is the content for the vertical messages tab.</p>
+                                        </div>
+                                        <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
+                                            aria-labelledby="v-pills-settings-tab">
+                                            <p>This is the content for the vertical settings tab.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+    </div>
+    <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/plugins/jquery/jquery.min.js"></script>
+    <script src="../assets/plugins/simplebar/simplebar.min.js"></script>
+    <script src="../assets/plugins/nprogress/nprogress.min.js"></script>
+    <script src="../assets/scripts/scripts.js"></script>
+</body>
+
+</html>
+
+

@@ -142,9 +142,14 @@ cd naha-admin</code></pre>
                         <div class="p-3 border rounded bg-light mb-3">
                             <h6 class="fw-bold small text-dark mb-2">Stable Production Release Package</h6>
                             <p class="text-muted small mb-3">Includes minified compiled styles/scripts, documentation, and the full static dashboard pages ready for direct deployment or static integration.</p>
-                            <a href="https://github.com/sepsu-dev/naha-admin/archive/refs/heads/main.zip" class="btn btn-primary btn-sm rounded-3 fw-semibold">
-                                <i class="ph-bold ph-download-simple me-1"></i> Download latest release (.zip)
-                            </a>
+                            <button id="downloadBtn"
+                                data-url="https://github.com/sepsu-dev/naha-admin/archive/refs/tags/v1.0.0.zip"
+                                class="btn btn-primary btn-sm rounded-3 fw-semibold d-inline-flex align-items-center"
+                                style="min-width: 140px; justify-content: center;">
+                                <span class="spinner-border spinner-border-sm me-2 d-none" role="status" aria-hidden="true"></span>
+                                <i class="ph-bold ph-download-simple me-2 btn-icon"></i>
+                                <span class="btn-text">Download latest release (.zip)</span>
+                            </button>
                         </div>
                         
                         <h6 class="fw-bold small text-dark mb-2">Source Code Repository</h6>
@@ -563,6 +568,38 @@ cd naha-admin</code></pre>
     <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/plugins/jquery/jquery.min.js"></script>
     <script src="../assets/scripts/naha-admin.min.js"></script>
+    <script>
+        $(function () {
+            $('#downloadBtn').on('click', function () {
+                const $btn = $(this);
+                const $spinner = $btn.find('.spinner-border');
+                const $icon = $btn.find('.btn-icon');
+                const $text = $btn.find('.btn-text');
+                const url = $btn.data('url');
+
+                $btn.prop('disabled', true);
+                $spinner.removeClass('d-none');
+                $icon.addClass('d-none');
+                $text.text('Downloading...');
+
+                setTimeout(() => {
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = '';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+
+                    setTimeout(() => {
+                        $btn.prop('disabled', false);
+                        $spinner.addClass('d-none');
+                        $icon.removeClass('d-none');
+                        $text.text('Download latest release (.zip)');
+                    }, 500);
+                }, 2000);
+            });
+        });
+    </script>
 </body>
 
 </html>

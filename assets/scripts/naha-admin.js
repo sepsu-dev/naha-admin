@@ -39,6 +39,12 @@ $(function () {
             $body.toggleClass('nd-sidenav-toggled');
             localStorage.setItem('nd|sidebar-toggle', $body.hasClass('nd-sidenav-toggled'));
             updateToggleIcon();
+            
+            // Dispatch resize event to recalculate charts size
+            window.dispatchEvent(new Event('resize'));
+            setTimeout(() => {
+                window.dispatchEvent(new Event('resize'));
+            }, 250);
         });
     }
 

@@ -1,11 +1,11 @@
-﻿:root {
-    --kd-primary: #006fee;
-    --kd-secondary: #71717a;
-    --kd-text: #11181c;
-    --kd-muted: #64748b;
-    --kd-accent: #3e94ff;
-    --kd-bg: #f8fafc;
-    --kd-border: #e2e8f0;
+:root {
+    --nd-primary: #006fee;
+    --nd-secondary: #71717a;
+    --nd-text: #11181c;
+    --nd-muted: #64748b;
+    --nd-accent: #3e94ff;
+    --nd-bg: #f8fafc;
+    --nd-border: #e2e8f0;
 }
 
 * {
@@ -14,8 +14,8 @@
 
 body {
     font-family: 'Outfit', sans-serif;
-    color: var(--kd-text);
-    background-color: var(--kd-bg);
+    color: var(--nd-text);
+    background-color: var(--nd-bg);
     margin: 0;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
@@ -24,7 +24,7 @@ body {
 /* ================================================
    NAVBAR
 ================================================ */
-.kd-topnav {
+.nd-topnav {
     position: fixed;
     top: 0;
     left: 0;
@@ -33,35 +33,35 @@ body {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--kd-border);
+    border-bottom: 1px solid var(--nd-border);
     z-index: 1000;
     display: flex;
     align-items: center;
     padding: 0.5rem 0.75rem;
 }
 
-.kd-topnav .navbar-brand {
+.nd-topnav .navbar-brand {
     text-decoration: none;
     display: flex;
     align-items: center;
 }
 
-.kd-topnav .navbar-brand span {
+.nd-topnav .navbar-brand span {
     font-family: 'Inter', sans-serif;
     font-size: 0.95rem;
     font-weight: 600;
-    background: linear-gradient(135deg, var(--kd-primary) 0%, var(--kd-accent) 100%);
+    background: linear-gradient(135deg, var(--nd-primary) 0%, var(--nd-accent) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
-.kd-topnav .navbar-brand .logo-navbar {
+.nd-topnav .navbar-brand .logo-navbar {
     width: 32px;
     height: auto;
 }
 
-.kd-topnav .btn {
+.nd-topnav .btn {
     padding: 0.5rem 1rem;
     font-size: 0.85rem;
     font-weight: 600;
@@ -74,40 +74,40 @@ body {
     gap: 0.5rem;
 }
 
-.kd-topnav .btn-light {
+.nd-topnav .btn-light {
     background-color: #f8fafc;
     border: 1px solid #e2e8f0;
     color: #475569;
 }
 
-.kd-topnav .btn-light:hover {
+.nd-topnav .btn-light:hover {
     background-color: #f1f5f9;
     border-color: #cbd5e1;
     color: #334155;
     transform: translateY(-1px);
 }
 
-.kd-topnav .btn-outline-dark {
+.nd-topnav .btn-outline-dark {
     background-color: transparent;
     border: 1px solid #d1d5db;
     color: #374151;
 }
 
-.kd-topnav .btn-outline-dark:hover {
+.nd-topnav .btn-outline-dark:hover {
     background-color: #f9fafb;
     border-color: #9ca3af;
     color: #111827;
     transform: translateY(-1px);
 }
 
-.kd-topnav .btn-primary {
-    background-color: var(--kd-primary);
-    border: 1px solid var(--kd-primary);
+.nd-topnav .btn-primary {
+    background-color: var(--nd-primary);
+    border: 1px solid var(--nd-primary);
     color: #ffffff;
     box-shadow: 0 4px 12px rgba(0, 111, 238, 0.25);
 }
 
-.kd-topnav .btn-primary:hover {
+.nd-topnav .btn-primary:hover {
     background-color: #005bc4;
     border-color: #005bc4;
     color: #ffffff;
@@ -115,13 +115,13 @@ body {
     box-shadow: 0 6px 16px rgba(0, 111, 238, 0.35);
 }
 
-.kd-topnav .btn-dark {
+.nd-topnav .btn-dark {
     background-color: #1e293b;
     border: 1px solid #1e293b;
     color: #ffffff;
 }
 
-.kd-topnav .btn-dark:hover {
+.nd-topnav .btn-dark:hover {
     background-color: #0f172a;
     border-color: #0f172a;
     color: #ffffff;
@@ -131,7 +131,7 @@ body {
 .navbar-toggler {
     padding: 0.5rem;
     font-size: 1.25rem;
-    color: var(--kd-text);
+    color: var(--nd-text);
 }
 
 @media (max-width: 991.98px) {
@@ -139,7 +139,7 @@ body {
         background: white;
         margin: 0 -0.75rem;
         padding: 1rem;
-        border-bottom: 1px solid var(--kd-border);
+        border-bottom: 1px solid var(--nd-border);
         box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     }
 }
@@ -192,25 +192,25 @@ body {
 }
 
 .modal-content .btn-primary {
-    background-color: var(--kd-primary);
+    background-color: var(--nd-primary);
     color: #fff;
     box-shadow: 0 4px 12px rgba(0, 111, 238, 0.2);
 }
 
 .modal-content .btn-primary:hover {
-    background-color: var(--kd-accent);
+    background-color: var(--nd-accent);
     transform: translateY(-1px);
     box-shadow: 0 6px 16px rgba(0, 111, 238, 0.3);
 }
 
 .modal-content .btn-link {
-    color: var(--kd-secondary);
+    color: var(--nd-secondary);
     text-decoration: none;
     font-size: 0.85rem;
 }
 
 .modal-content .btn-link:hover {
-    color: var(--kd-text);
+    color: var(--nd-text);
 }
 
 /* ================================================
@@ -222,7 +222,7 @@ body {
     align-items: center;
     padding: 8rem 1rem 2rem;
     text-align: center;
-    background-color: var(--kd-bg);
+    background-color: var(--nd-bg);
 }
 
 .hero-badge {
@@ -233,7 +233,7 @@ body {
     font-weight: 600;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: var(--kd-primary);
+    color: var(--nd-primary);
     background: #eff6ff;
     border: 1px solid #bfdbfe;
     padding: 0.3rem 0.85rem;
@@ -246,13 +246,13 @@ body {
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: -0.5px;
-    color: var(--kd-text);
+    color: var(--nd-text);
     margin-bottom: 0.85rem;
     max-width: 600px;
 }
 
 .hero-title span {
-    background: linear-gradient(135deg, var(--kd-primary) 0%, #38bdf8 100%);
+    background: linear-gradient(135deg, var(--nd-primary) 0%, #38bdf8 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -260,7 +260,7 @@ body {
 
 .hero-subtitle {
     font-size: 1rem;
-    color: var(--kd-muted);
+    color: var(--nd-muted);
     max-width: 480px;
     line-height: 1.65;
     margin-bottom: 1.75rem;
@@ -311,7 +311,7 @@ body {
     opacity: 0.03;
     z-index: -1;
     pointer-events: none;
-    color: var(--kd-primary);
+    color: var(--nd-primary);
 }
 
 .landing-banner {
@@ -347,9 +347,9 @@ body {
 .landing-footer {
     text-align: center;
     padding: 2rem 1rem;
-    color: var(--kd-muted);
+    color: var(--nd-muted);
     font-size: 0.8rem;
-    border-top: 1px solid var(--kd-border);
+    border-top: 1px solid var(--nd-border);
     margin-top: 4rem;
 }
 

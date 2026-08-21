@@ -1,4 +1,4 @@
-﻿// Configure NProgress immediately
+// Configure NProgress immediately
 if (typeof NProgress !== 'undefined') {
     NProgress.configure({ showSpinner: false });
     NProgress.start();
@@ -23,43 +23,21 @@ $(function () {
     const $sidebarToggle = $('#sidebarToggle');
 
     function updateToggleIcon() {
-        const $icon = $sidebarToggle.find('i');
-        if (!$icon.length) return;
-
-        const isMobile = window.innerWidth < 992;
-        const isToggled = $body.hasClass('kd-sidenav-toggled');
-
-        // Reset classes
-        $icon.removeClass('ph-list ph-sidebar-simple ph-x');
-
-        if (isMobile) {
-            // Mobile: Toggled means SHOWN
-            if (isToggled) {
-                $icon.addClass('ph-x');
-            } else {
-                $icon.addClass('ph-list');
-            }
-        } else {
-            // Desktop: Toggled means COLLAPSED
-            if (isToggled) {
-                $icon.addClass('ph-list');
-            } else {
-                $icon.addClass('ph-sidebar-simple');
-            }
-        }
+        // Icon remains constant as per template HTML markup
     }
 
     // Restore sidebar state from localStorage on page load
-    if (localStorage.getItem('kd|sidebar-toggle') === 'true') {
-        $body.addClass('kd-sidenav-toggled');
+    if (localStorage.getItem('nd|sidebar-toggle') === 'true') {
+        $body.addClass('nd-sidenav-toggled');
     }
+    
     updateToggleIcon();
 
     if ($sidebarToggle.length) {
         $sidebarToggle.on('click', function (event) {
             event.preventDefault();
-            $body.toggleClass('kd-sidenav-toggled');
-            localStorage.setItem('kd|sidebar-toggle', $body.hasClass('kd-sidenav-toggled'));
+            $body.toggleClass('nd-sidenav-toggled');
+            localStorage.setItem('nd|sidebar-toggle', $body.hasClass('nd-sidenav-toggled'));
             updateToggleIcon();
         });
     }
@@ -88,7 +66,7 @@ $(function () {
         const $link = $(this);
         const href = $link.attr('href');
 
-        if (!href || href === '#' || href.startsWith('javascript') || $link.attr('data-bs-toggle') === 'collapse') return;
+        if (!href || href === '#' || href.startsWith('javascript') || href.includes('..') || $link.attr('data-bs-toggle') === 'collapse') return;
 
         const linkPage = href.split('/').pop().split('?')[0].split('#')[0];
 

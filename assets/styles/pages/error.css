@@ -1,10 +1,10 @@
-﻿body {
+body {
     background-color: #f8fafc;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--kd-text);
+    color: var(--nd-text);
     font-family: 'Inter', sans-serif;
 }
 
@@ -30,28 +30,31 @@
     line-height: 1;
     margin-bottom: 1rem;
     letter-spacing: -4px;
+}
+
+.error-404 {
+    background: linear-gradient(135deg, var(--nd-primary), #3b82f6);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.error-404 {
-    background: linear-gradient(135deg, var(--kd-primary), #3b82f6);
-}
-
 .error-500 {
     background: linear-gradient(135deg, #ef4444, #f97316);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .error-title {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: var(--kd-text);
+    color: var(--nd-text);
 }
 
 .error-text {
-    color: var(--kd-text-muted);
+    color: var(--nd-text-muted);
     margin: 0 auto 3rem;
     font-size: 1.15rem;
     line-height: 1.6;
@@ -60,5 +63,5 @@
 .btn-lg {
     padding: 0.8rem 2.5rem;
     font-weight: 600;
-    border-radius: var(--kd-radius);
+    border-radius: var(--nd-radius);
 }

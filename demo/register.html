@@ -17,20 +17,14 @@
     <meta property="og:description" content="NahaAdmin - Free Bootstrap 5 Admin Dashboard" />
     <meta property="og:type" content="website" />
     <title>NahaAdmin - Register</title>
-    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../assets/plugins/nprogress/nprogress.min.css" />
-    <link href="../assets/styles/styles.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css" />
-    <link rel="stylesheet" href="../assets/plugins/animate/animate.min.css" />
-    <link rel="stylesheet" href="../assets/plugins/sweetalert2/sweetalert2.min.css" />
-    <link rel="stylesheet" href="../assets/plugins/tempus-dominus/css/tempus-dominus.min.css" />
-    <link rel="stylesheet" href="../assets/plugins/select2/css/select2.min.css" />
-    <link rel="stylesheet" href="../assets/plugins/select2/css/select2-bootstrap-5-theme.min.css" />
-    <link rel="stylesheet" href="../assets/plugins/simplebar/simplebar.min.css" />
-    <link rel="stylesheet" href="../assets/plugins/phosphor/bold/style.css" />
-    <link rel="stylesheet" href="../assets/styles/pages/register.css" />
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"/>
+    <link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../assets/styles/naha-admin.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css"/>
+    <link rel="stylesheet" href="../assets/plugins/animate/animate.min.css"/>
+    <link rel="stylesheet" href="../assets/plugins/phosphor/bold/style.css"/>
+    <link rel="stylesheet" href="../assets/styles/pages/register.css"/>
 </head>
 
 <body>
@@ -82,17 +76,40 @@
             </div>
         </div>
     </div>
-    <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/plugins/sweetalert2/sweetalert2.all.min.js"></script>
-    <script src="../assets/plugins/popper/popper.min.js"></script>
-    <script src="../assets/plugins/tempus-dominus/js/tempus-dominus.min.js"></script>
-    <script src="../assets/plugins/jquery/jquery.min.js"></script>
-    <script src="../assets/plugins/select2/js/select2.min.js"></script>
-    <script src="../assets/plugins/simplebar/simplebar.min.js"></script>
+    <!-- Donate QRIS Modal -->
+  <div class="modal fade" id="donateModal" tabindex="-1" aria-labelledby="donateModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 400px;">
+      <div class="modal-content border-0 shadow-lg" style="border-radius: 16px; overflow: hidden;">
+        <div class="modal-header bg-light border-0 py-3">
+          <h5 class="modal-title fw-bold text-dark d-flex align-items-center" id="donateModalLabel">
+            <i class="ph-bold ph-heart text-danger me-2"></i> Support NahaAdmin
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center p-4">
+          <p class="text-muted extra-small mb-3">Scan the QRIS code below to donate. Your support means a lot for the development of this template!</p>
+          <div class="bg-light p-3 rounded-3 border d-inline-block mb-2">
+            <img src="../assets/images/qris.jpeg" alt="QRIS Donation" class="img-fluid rounded-3" style="max-width: 280px; height: auto; display: block; margin: 0 auto;" />
+          </div>
+          <div class="mt-2 text-muted fw-semibold" style="font-size: 0.8rem;">
+            <span>QRIS GPN - Merchant</span>
+          </div>
+        </div>
+        <div class="modal-footer border-0 bg-light py-2">
+          <button type="button" class="btn btn-sm btn-outline-secondary w-100 fw-bold" data-bs-dismiss="modal" style="border-radius: 10px;">Close</button>
+        </div>
+      </div>
+    </div>
+
+  <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/scripts/pages/register.js"></script>
 </body>
 
 </html>
+
+
+
+
 
 
 

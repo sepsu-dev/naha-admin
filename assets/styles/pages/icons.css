@@ -4,8 +4,8 @@
     align-items: center;
     justify-content: center;
     padding: 1.25rem 0.5rem;
-    border: 1px solid var(--kd-border);
-    border-radius: var(--kd-radius);
+    border: 1px solid var(--nd-border);
+    border-radius: var(--nd-radius);
     background: #fff;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     height: 100%;
@@ -14,13 +14,13 @@
 .icon-box i {
     font-size: 1.75rem;
     margin-bottom: 0.75rem;
-    color: var(--kd-text);
+    color: var(--nd-text);
     transition: color 0.2s;
 }
 
 .icon-box span {
     font-size: 0.75rem;
-    color: var(--kd-text-muted);
+    color: var(--nd-text-muted);
     text-align: center;
     word-break: break-all;
     font-family: monospace;

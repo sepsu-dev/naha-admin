@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -19,25 +19,24 @@
     <title>NahaAdmin - Free Bootstrap 5 Admin Dashboard</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@400;600;700&display=swap"
-        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@400;600;700&display=swap" />
 
-    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/plugins/phosphor/bold/style.css" />
     <link rel="stylesheet" href="assets/plugins/phosphor/fill/style.css" />
-    <link href="assets/styles/landing.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/styles/landing.css" />
 </head>
 
 <body>
 
     <header>
-        <nav class="kd-topnav navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
+        <nav class="nd-topnav navbar navbar-expand-lg navbar-light">
+            <div class="container">
                 <a class="navbar-brand d-flex align-items-center" href="/">
                     <img src="assets/images/logo.png" alt="logo" class="logo-navbar" />
                     <span class="ms-2 fw-semibold">NahaAdmin</span>
@@ -50,21 +49,8 @@
                 <div class="collapse navbar-collapse" id="landingNavbar">
                     <div
                         class="ms-auto d-flex flex-column flex-lg-row align-items-start align-items-lg-center gap-2 py-3 py-lg-0">
-                        <a href="docs/"
-                            class="btn btn-light w-100 w-lg-auto justify-content-start justify-content-lg-center"><i
-                                class="ph-bold ph-book me-2"></i>
-                            Docs</a>
-                        <a href="https://github.com/sepsu-dev/NahaAdmin"
-                            class="btn btn-outline-dark w-100 w-lg-auto justify-content-start justify-content-lg-center"
-                            target="_blank"><i class="ph-bold ph-github-logo me-2"></i> GitHub</a>
-                        <button class="btn btn-primary w-100 w-lg-auto justify-content-start justify-content-lg-center"
-                            data-bs-toggle="modal" data-bs-target="#downloadModal"><i
-                                class="ph-bold ph-download-simple me-2"></i>
-                            Download</button>
-                        <a href="demo/"
-                            class="btn btn-dark w-100 w-lg-auto justify-content-start justify-content-lg-center"><i
-                                class="ph-bold ph-monitor-play me-2"></i>
-                            Demo</a>
+                        <a href="docs/" class="nav-link px-3 text-dark fw-semibold"><i class="ph-bold ph-book me-1"></i> Docs</a>
+                        <a href="demo/" class="btn btn-primary ms-lg-2 px-3 py-1.5"><i class="ph-bold ph-monitor-play me-1"></i> Live Demo</a>
                     </div>
                 </div>
             </div>
@@ -73,86 +59,176 @@
 
     <!-- Hero -->
     <section class="hero-section">
-        <div class="hero-badge">
-            ✦ Free &amp; Open Source
-        </div>
-
-        <h1 class="hero-title">
+        <h1 class="hero-title animate__animated animate__fadeInUp">
             Modern Admin Dashboard<br>built with <span>Bootstrap 5</span>
         </h1>
 
-        <p class="hero-subtitle">
-            A clean, responsive, and fully-featured admin template. Ready to use for any web project — personal or
-            commercial.
+        <p class="hero-subtitle animate__animated animate__fadeInUp" style="animation-delay: 0.1s;">
+            A clean, responsive, and fully-featured admin template. Crafted with rich aesthetics, smooth page
+            transitions, and modern sidebar states.
         </p>
-
 
         <div class="hero-bg-icon">
             <i class="ph-fill ph-rocket-launch"></i>
         </div>
 
         <!-- Banner Image -->
-        <div class="hero-banner-wrap">
+        <div class="hero-banner-wrap animate__animated animate__zoomIn shadow-lg" style="animation-delay: 0.3s;">
             <img src="assets/images/banner.png" alt="NahaAdmin Dashboard Preview" class="landing-banner">
         </div>
     </section>
 
-
-    <!-- Download Modal -->
-    <div class="modal fade" id="downloadModal" tabindex="-1" aria-labelledby="downloadModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content border-0 shadow-lg rounded-4 text-center">
-                <div class="modal-body p-5" style="position:relative;">
-                    <!-- Spinner Overlay -->
-                    <div id="dlSpinner"
-                        style="display:none; position:absolute; inset:0; background:rgba(255,255,255,0.96); border-radius:16px; z-index:10; flex-direction:column; align-items:center; justify-content:center; gap:0.75rem;">
-                        <div class="spinner-border text-primary" style="width:2.5rem; height:2.5rem;" role="status">
-                            <span class="visually-hidden">Loading...</span>
+    <!-- Key Features Section -->
+    <section class="container py-5 my-4">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold mb-2">Why Choose NahaAdmin?</h2>
+            <p class="text-muted" style="max-width: 500px; margin: 0 auto;">Designed to offer premium aesthetics,
+                standard layouts, and fluid responsiveness out of the box.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm h-100 p-3" style="border-radius: 16px;">
+                    <div class="card-body">
+                        <div class="bg-primary-subtle text-primary rounded-3 d-inline-flex p-3 mb-3">
+                            <i class="ph-bold ph-palette fs-4"></i>
                         </div>
-                        <p class="mb-0 text-muted" style="font-size:0.85rem; font-family:'Inter',sans-serif;">Preparing
-                            download...</p>
+                        <h5 class="fw-bold mb-2">Modern Aesthetics</h5>
+                        <p class="text-muted small mb-0">Carefully curated HSL color palette, clean cards, and premium
+                            typography for an upscale dashboard look.</p>
                     </div>
-                    <div class="mb-4">
-                        <i class="ph-fill ph-hand-heart text-danger" style="font-size: 4rem;"></i>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm h-100 p-3" style="border-radius: 16px;">
+                    <div class="card-body">
+                        <div class="bg-success-subtle text-success rounded-3 d-inline-flex p-3 mb-3">
+                            <i class="ph-bold ph-sidebar-simple fs-4"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Responsive Sidebar</h5>
+                        <p class="text-muted small mb-0">Collapsible & persistent sidebar states featuring an elegant
+                            auto-expanding mini view on desktop hover.</p>
                     </div>
-                    <h3 class="fw-bold mb-3">Support NahaAdmin! ✦</h3>
-                    <p class="text-muted mb-4 text-center">
-                        Thank you for choosing NahaAdmin! If you find this template useful, please consider
-                        supporting the project to keep it free and updated.
-                    </p>
-                    <div class="d-grid gap-2 mb-3">
-                        <a href="https://github.com/sponsors/sepsu-dev/" target="_blank" class="btn btn-dark">
-                            <i class="ph-bold ph-github-logo"></i> GitHub Sponsors
-                        </a>
-                        <a href="https://trakteer.id/sepsu-dev" target="_blank" class="btn btn-primary">
-                            <img src="assets/images/trakteer.png" height="18" alt="Trakteer"> Trakteer
-                        </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm h-100 p-3" style="border-radius: 16px;">
+                    <div class="card-body">
+                        <div class="bg-info-subtle text-info rounded-3 d-inline-flex p-3 mb-3">
+                            <i class="ph-bold ph-lightning fs-4"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Page Transition JS</h5>
+                        <p class="text-muted small mb-0">Lightweight routing and loading animations utilizing NProgress
+                            for smooth single-page application feel.</p>
                     </div>
-                    <a href="https://github.com/sepsu-dev/NahaAdmin/archive/refs/heads/main.zip" id="dlDirectBtn"
-                        class="btn btn-link py-2 small">
-                        No thanks, just download directly
-                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section (Download & Support) -->
+    <section class="container py-5 my-4">
+        <div class="card border-0 bg-dark text-light p-4 p-md-5 text-center shadow-lg position-relative overflow-hidden"
+            style="border-radius: 24px;">
+            <!-- Background Radial Glow -->
+            <div
+                style="position: absolute; inset: 0; background: radial-gradient(circle at center, rgba(0, 111, 238, 0.15) 0%, transparent 70%); pointer-events: none;">
+            </div>
+
+            <div class="position-relative z-1">
+                <h3 class="fw-bold mb-3 h2">Ready to kickstart your project?</h3>
+                <p class="text-light-50 mx-auto mb-4" style="max-width: 500px; opacity: 0.8;">Download NahaAdmin now for
+                    free and start building your custom dashboard in minutes, or support our open-source journey!</p>
+                <div class="d-flex flex-wrap gap-3 justify-content-center">
+                    <button id="downloadBtn"
+                        data-url="https://github.com/sepsu-dev/naha-admin/archive/refs/heads/main.zip"
+                        class="btn btn-primary px-4 py-2.5 fw-semibold d-inline-flex align-items-center"
+                        style="border-radius: 12px; min-width: 140px; justify-content: center;">
+                        <span class="spinner-border spinner-border-sm me-2 d-none" role="status"
+                            aria-hidden="true"></span>
+                        <i class="ph-bold ph-download-simple me-2 btn-icon"></i>
+                        <span class="btn-text">Download</span>
+                    </button>
+                    <button class="btn btn-outline-light px-4 py-2.5 fw-semibold" style="border-radius: 12px;"
+                        data-bs-toggle="modal" data-bs-target="#donateModal">
+                        <i class="ph-bold ph-heart text-danger me-2"></i> Donate & Support
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donate QRIS Modal -->
+    <div class="modal fade" id="donateModal" tabindex="-1" aria-labelledby="donateModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 400px;">
+            <div class="modal-content border-0 shadow-lg" style="border-radius: 16px; overflow: hidden;">
+                <div class="modal-header bg-light border-0 py-3">
+                    <h5 class="modal-title fw-bold text-dark d-flex align-items-center" id="donateModalLabel">
+                        <i class="ph-bold ph-heart text-danger me-2"></i> Support NahaAdmin
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center p-4">
+                    <p class="text-muted extra-small mb-3">Scan the QRIS code below to donate. Your support means a lot
+                        for the development of this template!</p>
+                    <div class="bg-light p-3 rounded-3 border d-inline-block mb-2">
+                        <img src="assets/images/qris.jpeg" alt="QRIS Donation" class="img-fluid rounded-3"
+                            style="max-width: 280px; height: auto; display: block; margin: 0 auto;" />
+                    </div>
+                    <div class="mt-2 text-muted fw-semibold" style="font-size: 0.8rem;">
+                        <span>QRIS GPN - Merchant</span>
+                    </div>
+                </div>
+                <div class="modal-footer border-0 bg-light py-2">
+                    <button type="button" class="btn btn-sm btn-outline-secondary w-100 fw-bold" data-bs-dismiss="modal"
+                        style="border-radius: 10px;">Close</button>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Footer -->
+    <footer class="landing-footer py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0 text-muted small">&copy; 2026 NahaAdmin. Distributed under MIT License.</p>
+        </div>
+    </footer>
+
     <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
     <script>
-        document.getElementById('dlDirectBtn').addEventListener('click', function (e) {
-            e.preventDefault();
-            var spinner = document.getElementById('dlSpinner');
-            spinner.style.display = 'flex';
-            var a = document.createElement('a');
-            a.href = this.href;
-            a.download = 'NahaAdmin.zip';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            setTimeout(function () {
-                spinner.style.display = 'none';
-                bootstrap.Modal.getInstance(document.getElementById('downloadModal')).hide();
-            }, 800);
+        $(function () {
+            $('#downloadBtn').on('click', function () {
+                const $btn = $(this);
+                const $spinner = $btn.find('.spinner-border');
+                const $icon = $btn.find('.btn-icon');
+                const $text = $btn.find('.btn-text');
+                const url = $btn.data('url');
+
+                // Disable button and show spinner
+                $btn.prop('disabled', true);
+                $spinner.removeClass('d-none');
+                $icon.addClass('d-none');
+                $text.text('Downloading...');
+
+                // Simulate loading progress
+                setTimeout(() => {
+                    // Trigger download
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = '';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+
+                    // Reset button state
+                    setTimeout(() => {
+                        $btn.prop('disabled', false);
+                        $spinner.addClass('d-none');
+                        $icon.removeClass('d-none');
+                        $text.text('Download');
+                    }, 500);
+                }, 2000); // 2 seconds delay for visual progress feedback
+            });
         });
     </script>
 </body>

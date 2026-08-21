@@ -1,5 +1,7 @@
 # NahaAdmin - Free Bootstrap 5 Admin Dashboard
 
+![NahaAdmin Banner](assets/images/banner.png)
+
 NahaAdmin adalah template admin gratis yang bersih, modern, dan sepenuhnya responsif yang dibangun menggunakan **Bootstrap 5**, vanilla JavaScript, dan CSS. Proyek ini menyediakan fondasi kokoh serta komponen antarmuka pengguna untuk membangun aplikasi web, backend SaaS, atau panel dasbor.
 
 ## 🚀 Live Demo & Dokumentasi
@@ -36,34 +38,22 @@ naha-admin/
 ├── docs/             # Situs web dokumentasi statis
 ├── index.html        # Halaman Landing utama
 ├── robots.txt        # Konfigurasi perayap mesin pencari
-├── sitemap.xml       # Daftar indeks mesin pencari
-└── vercel.json       # Konfigurasi Clean Urls untuk Vercel
+└── sitemap.xml       # Daftar indeks mesin pencari
 ```
 
 ---
 
 ## 🛠️ Panduan Memulai & Pengembangan Lokal
 
-Untuk menjalankan template dasbor ini di komputer Anda secara lokal:
+Karena NahaAdmin adalah template statis yang dibangun dengan HTML, CSS, dan JS, Anda tidak memerlukan proses instalasi yang rumit. Anda bisa menjalankannya secara lokal menggunakan cara berikut:
 
-### Prasyarat
-Pastikan Anda sudah menginstal [Node.js](https://nodejs.org/).
+### Opsi 1: Buka Langsung di Browser (Paling Mudah)
+Cukup klik dua kali berkas `index.html` di direktori utama untuk membukanya langsung di browser web Anda.
 
-### Cara Instalasi
-1. Clone repositori ini:
-   ```bash
-   git clone https://github.com/sepsu-dev/naha-admin.git
-   cd naha-admin
-   ```
-2. Pasang dependensi pengembangan (untuk server lokal):
-   ```bash
-   npm install
-   ```
-3. Jalankan server lokal:
-   ```bash
-   npm start
-   ```
-   Perintah ini akan membuka proyek di browser Anda (biasanya pada alamat `http://localhost:3000`) dan otomatis memuat ulang halaman setiap kali Anda melakukan perubahan berkas.
+### Opsi 2: Menggunakan VS Code Live Server
+1. Buka proyek ini di **VS Code**.
+2. Instal ekstensi **Live Server**.
+3. Klik tombol **Go Live** di pojok kanan bawah VS Code.
 
 ---
 

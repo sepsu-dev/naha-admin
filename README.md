@@ -1,5 +1,7 @@
 # NahaAdmin - Free Bootstrap 5 Admin Dashboard
 
+![NahaAdmin Banner](assets/images/banner.png)
+
 NahaAdmin is a clean, modern, and fully responsive free admin template built with **Bootstrap 5**, vanilla JavaScript, and CSS. It provides a solid foundation and user interface components for building web applications, SaaS backends, or dashboard panels.
 
 ## 🚀 Live Demo & Docs
@@ -36,34 +38,22 @@ naha-admin/
 ├── docs/             # Documentation static website
 ├── index.html        # Main landing page
 ├── robots.txt        # SEO configurations
-├── sitemap.xml       # Search engine index list
-└── vercel.json       # Clean Urls rewrite configuration
+└── sitemap.xml       # Search engine index list
 ```
 
 ---
 
 ## 🛠️ Quick Start & Local Development
 
-To run this dashboard template locally:
+Because NahaAdmin is a fully static template built with HTML, CSS, and JS, you don't need any complex installation. You can run it locally using these simple methods:
 
-### Prerequisites
-Make sure you have [Node.js](https://nodejs.org/) installed.
+### Option 1: Open Directly in Browser (Easiest)
+Simply double-click the `index.html` file in the root directory to open it directly in your web browser.
 
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/sepsu-dev/naha-admin.git
-   cd NahaAdmin
-   ```
-2. Install the dev dependencies (for the local development server):
-   ```bash
-   npm install
-   ```
-3. Start the local server:
-   ```bash
-   npm start
-   ```
-   This will open the project in your browser (usually at `http://localhost:3000`) and automatically reload the page whenever you make changes to the files.
+### Option 2: Using VS Code Live Server
+1. Open this project in **VS Code**.
+2. Install the **Live Server** extension.
+3. Click the **Go Live** button at the bottom right corner of VS Code.
 
 ---
 

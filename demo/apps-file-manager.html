@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic SEO -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Meta SEO -->
+    <meta name="description" content="NahaAdmin - Free Bootstrap 5 Admin Dashboard" />
+    <meta name="keywords" content="NahaAdmin, admin dashboard, bootstrap 5, ui kit, webapp" />
+    <meta name="author" content="NahaAdmin" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="NahaAdmin - File Manager" />
+    <meta property="og:description" content="NahaAdmin - Free Bootstrap 5 Admin Dashboard" />
+    <meta property="og:type" content="website" />
+    <title>NahaAdmin - File Manager</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon"/>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"/>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../assets/plugins/nprogress/nprogress.min.css"/>
+    <link rel="stylesheet" href="../assets/styles/naha-admin.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css"/>
+    <link rel="stylesheet" href="../assets/plugins/animate/animate.min.css"/>
+    <link rel="stylesheet" href="../assets/plugins/simplebar/simplebar.min.css"/>
+    <link rel="stylesheet" href="../assets/plugins/phosphor/bold/style.css"/>
+
+    <style>
+        .file-manager-sidebar {
+            height: calc(100vh - 180px);
+            min-height: 500px;
+        }
+
+        .file-manager-content {
+            height: calc(100vh - 180px);
+            min-height: 500px;
+        }
+
+        .folder-card {
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+        }
+
+        .folder-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.08) !important;
+        }
+
+        .file-item-card {
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+        }
+
+        .file-item-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.08) !important;
+        }
+
+        .storage-progress {
+            height: 6px;
+        }
+
+        .file-icon-wrapper {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .file-action-btn {
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+
+        .file-item-card:hover .file-action-btn {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class='nd-nav-fixed'>
+    <header>
+        <nav class="nd-topnav navbar navbar-expand navbar-light">
+            <a class="navbar-brand ps-3 d-flex align-items-center" href="index.html">
+                <img src="../assets/images/logo.png" alt="logo" class="logo-navbar" />
+                <span class="ms-2 fw-semibold">NahaAdmin</span>
+            </a>
+            <button class="btn btn-light" id="sidebarToggle" aria-label="Toggle sidebar">
+                <i class="ph-bold ph-sidebar-simple"></i>
+            </button>
+
+            <ul class="navbar-nav ms-auto align-items-center">
+                <!-- Notifications -->
+                <li class="nav-item dropdown me-2">
+                    <a class="nav-link nav-icon bg-light rounded-3 border position-relative" href="#" id="notifDropdown"
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="ph-bold ph-bell"></i>
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger border border-light"
+                            style="font-size: 0.65rem; padding: 0.35em 0.5em; margin-top: 10px; margin-left: -8px;">
+                            3
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 notifications-dropdown"
+                        aria-labelledby="notifDropdown">
+                        <li class="p-3 border-bottom d-flex justify-content-between align-items-center">
+                            <h6 class="mb-0 fw-bold">Notifications</h6>
+                            <span class="badge bg-primary-subtle text-primary extra-small">3 New</span>
+                        </li>
+                        <div data-simplebar style="max-height: 300px;">
+                            <a href="#" class="notification-item">
+                                <div class="notification-icon bg-primary-subtle text-primary">
+                                    <i class="ph-bold ph-user-plus"></i>
+                                </div>
+                                <div>
+                                    <p class="mb-1 small fw-bold">New user registered</p>
+                                    <p class="mb-0 extra-small text-muted">A few seconds ago</p>
+                                </div>
+                            </a>
+                            <a href="#" class="notification-item">
+                                <div class="notification-icon bg-success-subtle text-success">
+                                    <i class="ph-bold ph-shopping-cart"></i>
+                                </div>
+                                <div>
+                                    <p class="mb-1 small fw-bold">New order received</p>
+                                    <p class="mb-0 extra-small text-muted">2 minutes ago</p>
+                                </div>
+                            </a>
+                            <a href="#" class="notification-item">
+                                <div class="notification-icon bg-warning-subtle text-warning">
+                                    <i class="ph-bold ph-warning"></i>
+                                </div>
+                                <div>
+                                    <p class="mb-1 small fw-bold">Server threshold alert</p>
+                                    <p class="mb-0 extra-small text-muted">1 hour ago</p>
+                                </div>
+                            </a>
+                        </div>
+                        <li class="p-2 text-center border-top">
+                            <a href="#" class="text-primary extra-small fw-bold text-decoration-none">View all
+                                notifications</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- User Profile -->
+                <li class="nav-item dropdown ms-1">
+                    <a class="nav-link d-flex align-items-center bg-light rounded-3 px-1 border" id="navbarDropdown" href="#"
+                        role="button" data-bs-toggle="dropdown" style="height: 40px;" aria-expanded="false">
+                        <img src="../assets/images/user-avatar.png" alt="user" class="rounded-circle border"
+                            style="width: 30px; height: 30px; object-fit: cover;" />
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 overflow-hidden"
+                        aria-labelledby="navbarDropdown" style="min-width: 240px;">
+                        <li class="p-3 bg-light">
+                            <div class="d-flex align-items-center">
+                                <img src="../assets/images/user-avatar.png" alt="user" class="rounded-circle border"
+                                    style="width: 48px; height: 48px; object-fit: cover;" />
+                                <div class="ms-3">
+                                    <h6 class="mb-0 fw-bold">Ujang Kasep</h6>
+                                    <p class="mb-0 text-muted extra-small">ujang@email.com</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider m-0 opacity-10">
+                        </li>
+                        <li><a class="dropdown-item d-flex align-items-center" href="profile.html"><i
+                                    class="ph-bold ph-user me-3 text-muted"></i> Profile</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center text-danger" href="login.html"><i
+                                    class="ph-bold ph-sign-out me-3"></i> Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="layoutSidenav">
+        <aside id="layoutSidenav_nav">
+            <nav class="nd-sidenav accordion nd-sidenav-light" id="sidenavAccordion">
+                <div class="nd-sidenav-menu" data-simplebar>
+                    <div class="nav">
+                        <h2 class="nd-sidenav-menu-heading">Dashboard</h2>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#dashboardCollapse"
+                            aria-expanded="false">
+                            <div class="nd-nav-link-icon"><i class="ph-bold ph-house"></i></div>
+                            <span>Dashboards</span>
+                            <div class="nd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down"></i></div>
+                        </a>
+                        <div class="collapse" id="dashboardCollapse" data-bs-parent="#sidenavAccordion">
+                            <nav class="nd-sidenav-menu-nested nav">
+                                <a class="nav-link" href="index.html">Default</a>
+                                <a class="nav-link" href="dashboard-analytics.html">Analytics</a>
+                                <a class="nav-link" href="dashboard-crm.html">CRM</a>
+                                <a class="nav-link" href="dashboard-ecommerce.html">Ecommerce</a>
+                                <a class="nav-link" href="dashboard-finance.html">Finance</a>
+                            </nav>
+                        </div>
+                        <h2 class="nd-sidenav-menu-heading">Applications</h2>
+                        <a class="nav-link" href="apps-inbox.html">
+                            <div class="nd-nav-link-icon"><i class="ph-bold ph-envelope"></i></div>
+                            <span>Inbox</span>
+                        </a>
+                        <a class="nav-link" href="apps-chat.html">
+                            <div class="nd-nav-link-icon"><i class="ph-bold ph-chats-teardrop"></i></div>
+                            <span>Chat</span>
+                        </a>
+                        <a class="nav-link" href="apps-kanban.html">
+                            <div class="nd-nav-link-icon"><i class="ph-bold ph-projector-screen"></i></div>
+                            <span>Kanban</span>
+                        </a>
+                        <a class="nav-link active" href="apps-file-manager.html">
+                            <div class="nd-nav-link-icon"><i class="ph-bold ph-folder-open"></i></div>
+                            <span>File Manager</span>
+                        </a>
+                        <h2 class="nd-sidenav-menu-heading">Components</h2>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#componentsCollapse"
+                            aria-expanded="false">
+                            <div class="nd-nav-link-icon"><i class="ph-bold ph-squares-four"></i></div>
+                            <span>UI Elements</span>
+                            <div class="nd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down"></i></div>
+                        </a>
+                        <div class="collapse" id="componentsCollapse" data-bs-parent="#sidenavAccordion">
+                            <nav class="nd-sidenav-menu-nested nav">
+                                <a class="nav-link" href="accordion.html">Accordion</a>
+                                <a class="nav-link" href="alerts.html">Alert</a>
+                                <a class="nav-link" href="badges.html">Badge</a>
+                                <a class="nav-link" href="breadcrumb.html">Breadcrumb</a>
+                                <a class="nav-link" href="buttons.html">Button</a>
+                                <a class="nav-link" href="cards.html">Card</a>
+                                <a class="nav-link" href="carousel.html">Carousel</a>
+                                <a class="nav-link" href="collapse.html">Collapse</a>
+                                <a class="nav-link" href="dropdowns.html">Dropdown</a>
+                                <a class="nav-link" href="list-group.html">List Group</a>
+                                <a class="nav-link" href="modals.html">Modal</a>
+                                <a class="nav-link" href="navs.html">Navs and tabs</a>
+                                <a class="nav-link" href="pagination.html">Pagination</a>
+                                <a class="nav-link" href="placeholders.html">Placeholder</a>
+                                <a class="nav-link" href="progress.html">Progress</a>
+                                <a class="nav-link" href="spinners.html">Spinner</a>
+                                <a class="nav-link" href="toasts.html">Toasts</a>
+                                <a class="nav-link" href="tooltips.html">Tooltip</a>
+                            </nav>
+                        </div>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#formsCollapse"
+                            aria-expanded="false">
+                            <div class="nd-nav-link-icon"><i class="ph-bold ph-textbox"></i></div>
+                            <span>Forms</span>
+                            <div class="nd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down"></i></div>
+                        </a>
+                        <div class="collapse" id="formsCollapse" data-bs-parent="#sidenavAccordion">
+                            <nav class="nd-sidenav-menu-nested nav">
+                                <a class="nav-link" href="forms-basic.html">Basic Inputs</a>
+                                <a class="nav-link" href="forms-select.html">Select</a>
+                                <a class="nav-link" href="forms-checks.html">Checkboxes & Radios</a>
+                                <a class="nav-link" href="forms-layout.html">Form Layout</a>
+                                <a class="nav-link" href="forms-validation.html">Validation</a>
+                                <a class="nav-link" href="forms-editors.html">Editors</a>
+                            </nav>
+                        </div>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#tablesCollapse"
+                            aria-expanded="false">
+                            <div class="nd-nav-link-icon"><i class="ph-bold ph-table"></i></div>
+                            <span>Tables</span>
+                            <div class="nd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down"></i></div>
+                        </a>
+                        <div class="collapse" id="tablesCollapse" data-bs-parent="#sidenavAccordion">
+                            <nav class="nd-sidenav-menu-nested nav">
+                                <a class="nav-link" href="tables-basic.html">Basic Table</a>
+                                <a class="nav-link" href="tables-datatables.html">DataTables</a>
+                                <a class="nav-link" href="tables-gridjs.html">Grid.js</a>
+                            </nav>
+                        </div>
+                        <h2 class="nd-sidenav-menu-heading">Style</h2>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#iconsCollapse"
+                            aria-expanded="false">
+                            <div class="nd-nav-link-icon"><i class="ph-bold ph-paint-brush"></i></div>
+                            <span>Icons & Styles</span>
+                            <div class="nd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down"></i></div>
+                        </a>
+                        <div class="collapse" id="iconsCollapse" data-bs-parent="#sidenavAccordion">
+                            <nav class="nd-sidenav-menu-nested nav">
+                                <a class="nav-link" href="icons.html">Phosphor Icons</a>
+                                <a class="nav-link" href="typography.html">Typography</a>
+                                <a class="nav-link" href="colors.html">Colors</a>
+                            </nav>
+                        </div>
+                        <h2 class="nd-sidenav-menu-heading">Extras</h2>
+                        <a class="nav-link" href="maps.html">
+                            <div class="nd-nav-link-icon"><i class="ph-bold ph-map-trifold"></i></div>
+                            <span>Maps</span>
+                        </a>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapse"
+                            aria-expanded="false">
+                            <div class="nd-nav-link-icon"><i class="ph-bold ph-lock"></i></div>
+                            <span>Authentication</span>
+                            <div class="nd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down"></i></div>
+                        </a>
+                        <div class="collapse" id="pagesCollapse" data-bs-parent="#sidenavAccordion">
+                            <nav class="nd-sidenav-menu-nested nav">
+                                <a class="nav-link" href="login.html">Login</a>
+                                <a class="nav-link" href="register.html">Register</a>
+                                <a class="nav-link" href="forgot-password.html">Forgot Password</a>
+                                <a class="nav-link" href="change-password.html">Change Password</a>
+                            </nav>
+                        </div>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#errorCollapse"
+                            aria-expanded="false">
+                            <div class="nd-nav-link-icon"><i class="ph-bold ph-warning-octagon"></i></div>
+                            <span>Error Pages</span>
+                            <div class="nd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down"></i></div>
+                        </a>
+                        <div class="collapse" id="errorCollapse" data-bs-parent="#sidenavAccordion">
+                            <nav class="nd-sidenav-menu-nested nav">
+                                <a class="nav-link" href="400.html">400 Error</a>
+                                <a class="nav-link" href="401.html">401 Error</a>
+                                <a class="nav-link" href="403.html">403 Error</a>
+                                <a class="nav-link" href="404.html">404 Error</a>
+                                <a class="nav-link" href="500.html">500 Error</a>
+                                <a class="nav-link" href="503.html">503 Error</a>
+                            </nav>
+                        </div>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#multiLevelCollapse"
+                            aria-expanded="false">
+                            <div class="nd-nav-link-icon"><i class="ph-bold ph-tree-structure"></i></div>
+                            <span>Multi Level</span>
+                            <div class="nd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down"></i></div>
+                        </a>
+                        <div class="collapse" id="multiLevelCollapse" data-bs-parent="#sidenavAccordion">
+                            <nav class="nd-sidenav-menu-nested nav">
+                                <a class="nav-link" href="#">Level 2 Item</a>
+                                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#level3Collapse"
+                                    aria-expanded="false">
+                                    <span>Level 3 Menu</span>
+                                    <div class="nd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down"></i></div>
+                                </a>
+                                <div class="collapse" id="level3Collapse">
+                                    <nav class="nd-sidenav-menu-nested nav">
+                                        <a class="nav-link" href="#">Level 3 Item 1</a>
+                                        <a class="nav-link" href="#">Level 3 Item 2</a>
+                                    </nav>
+                                </div>
+                            </nav>
+                        </div>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#customCollapse"
+                            aria-expanded="false">
+                            <div class="nd-nav-link-icon"><i class="ph-bold ph-browsers"></i></div>
+                            <span>Custom Pages</span>
+                            <div class="nd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down"></i></div>
+                        </a>
+                        <div class="collapse" id="customCollapse" data-bs-parent="#sidenavAccordion">
+                            <nav class="nd-sidenav-menu-nested nav">
+                                <a class="nav-link" href="profile.html">Profile</a>
+                                <a class="nav-link" href="starter.html">Starter Page</a>
+                                <a class="nav-link" href="blank.html">Blank Page</a>
+                            </nav>
+                        </div>
+                        <h2 class="nd-sidenav-menu-heading">Support</h2>
+                        <a class="nav-link" href="../docs/index.html" target="_blank">
+                            <div class="nd-nav-link-icon"><i class="ph-bold ph-book-open"></i></div>
+                            <span>Documentation</span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <main id="layoutSidenav_content" class="bg-light">
+            <section class="container-fluid px-4 py-4">
+                <!-- Page Title -->
+                <header class="d-flex align-items-center justify-content-between mb-4">
+                    <div>
+                        <h4 class="mb-1 fw-bold text-dark">File Manager</h4>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb mb-0">
+                                <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Dashboard</a></li>
+                                <li class="breadcrumb-item active">File Manager</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <button class="btn btn-primary d-flex align-items-center fw-semibold">
+                        <i class="ph-bold ph-plus me-2"></i> Upload File
+                    </button>
+                </header>
+
+                <div class="row g-4">
+                    <!-- Storage & Menu Sidebar -->
+                    <div class="col-xl-3 col-lg-4">
+                        <div class="card border-0 shadow-sm rounded-4 file-manager-sidebar p-3 d-flex flex-column justify-content-between bg-white">
+                            <div>
+                                <!-- Navigations -->
+                                <ul class="nav flex-column mb-4">
+                                    <li class="nav-item mb-1">
+                                        <a href="#" class="nav-link active bg-light text-primary rounded-3 fw-bold d-flex align-items-center px-3 py-2">
+                                            <i class="ph-bold ph-hard-drive me-3"></i> All Files
+                                        </a>
+                                    </li>
+                                    <li class="nav-item mb-1">
+                                        <a href="#" class="nav-link text-muted rounded-3 d-flex align-items-center px-3 py-2">
+                                            <i class="ph-bold ph-clock me-3"></i> Recent Files
+                                        </a>
+                                    </li>
+                                    <li class="nav-item mb-1">
+                                        <a href="#" class="nav-link text-muted rounded-3 d-flex align-items-center px-3 py-2">
+                                            <i class="ph-bold ph-users-three me-3"></i> Shared with me
+                                        </a>
+                                    </li>
+                                    <li class="nav-item mb-1">
+                                        <a href="#" class="nav-link text-muted rounded-3 d-flex align-items-center px-3 py-2">
+                                            <i class="ph-bold ph-star me-3"></i> Starred
+                                        </a>
+                                    </li>
+                                    <li class="nav-item mb-1">
+                                        <a href="#" class="nav-link text-muted rounded-3 d-flex align-items-center px-3 py-2">
+                                            <i class="ph-bold ph-trash me-3"></i> Trash
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Storage Status Card -->
+                            <div class="bg-light rounded-4 p-3 border">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="bg-primary-subtle text-primary rounded-3 p-2 me-3">
+                                        <i class="ph-bold ph-cloud" style="font-size: 1.5rem;"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-0 fw-bold">Cloud Storage</h6>
+                                        <small class="text-muted extra-small">48.5 GB of 100 GB used</small>
+                                    </div>
+                                </div>
+                                <div class="progress storage-progress mb-3 bg-white border">
+                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 48.5%;" aria-valuenow="48.5" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center small text-muted">
+                                    <span>48.5% Used</span>
+                                    <a href="#" class="text-primary fw-bold text-decoration-none">Upgrade</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- File Explorer Main Grid -->
+                    <div class="col-xl-9 col-lg-8">
+                        <div class="card border-0 shadow-sm rounded-4 file-manager-content p-4 bg-white" data-simplebar>
+                            <!-- Search & Filter Header -->
+                            <div class="row g-3 justify-content-between align-items-center mb-4">
+                                <div class="col-md-6 col-lg-5">
+                                    <div class="input-group bg-light rounded-3">
+                                        <span class="input-group-text bg-transparent border-0"><i class="ph-bold ph-magnifying-glass text-muted"></i></span>
+                                        <input type="text" class="form-control bg-transparent border-0" placeholder="Search your files...">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-lg-3 d-flex gap-2 justify-content-md-end">
+                                    <select class="form-select border-light-subtle bg-light small rounded-3">
+                                        <option>All Types</option>
+                                        <option>Documents</option>
+                                        <option>Images</option>
+                                        <option>Videos</option>
+                                        <option>Zip Files</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Folders Section -->
+                            <h6 class="fw-bold mb-3 text-dark">Folders</h6>
+                            <div class="row g-3 mb-4">
+                                <div class="col-sm-6 col-md-4 col-xl-3">
+                                    <div class="card border folder-card shadow-sm rounded-3">
+                                        <div class="card-body p-3">
+                                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                                <i class="ph-bold ph-folder text-warning" style="font-size: 2.2rem;"></i>
+                                                <button class="btn btn-link text-muted p-0 border-0"><i class="ph-bold ph-dots-three-vertical"></i></button>
+                                            </div>
+                                            <h6 class="mb-1 fw-bold text-dark text-truncate">My Projects</h6>
+                                            <small class="text-muted extra-small">24 Files &bull; 12.4 GB</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-xl-3">
+                                    <div class="card border folder-card shadow-sm rounded-3">
+                                        <div class="card-body p-3">
+                                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                                <i class="ph-bold ph-folder text-primary" style="font-size: 2.2rem;"></i>
+                                                <button class="btn btn-link text-muted p-0 border-0"><i class="ph-bold ph-dots-three-vertical"></i></button>
+                                            </div>
+                                            <h6 class="mb-1 fw-bold text-dark text-truncate">Design System</h6>
+                                            <small class="text-muted extra-small">18 Files &bull; 2.5 GB</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-xl-3">
+                                    <div class="card border folder-card shadow-sm rounded-3">
+                                        <div class="card-body p-3">
+                                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                                <i class="ph-bold ph-folder text-success" style="font-size: 2.2rem;"></i>
+                                                <button class="btn btn-link text-muted p-0 border-0"><i class="ph-bold ph-dots-three-vertical"></i></button>
+                                            </div>
+                                            <h6 class="mb-1 fw-bold text-dark text-truncate">Finance & Tax</h6>
+                                            <small class="text-muted extra-small">8 Files &bull; 450 MB</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-xl-3">
+                                    <div class="card border folder-card shadow-sm rounded-3">
+                                        <div class="card-body p-3">
+                                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                                <i class="ph-bold ph-folder text-info" style="font-size: 2.2rem;"></i>
+                                                <button class="btn btn-link text-muted p-0 border-0"><i class="ph-bold ph-dots-three-vertical"></i></button>
+                                            </div>
+                                            <h6 class="mb-1 fw-bold text-dark text-truncate">Documentation</h6>
+                                            <small class="text-muted extra-small">42 Files &bull; 85 MB</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Files Section -->
+                            <h6 class="fw-bold mb-3 text-dark">Recent Files</h6>
+                            <div class="row g-3">
+                                <!-- File 1 -->
+                                <div class="col-md-6 col-xl-4">
+                                    <div class="card border file-item-card shadow-sm rounded-3">
+                                        <div class="card-body p-3 d-flex align-items-center justify-content-between">
+                                            <div class="d-flex align-items-center overflow-hidden">
+                                                <div class="file-icon-wrapper bg-danger-subtle text-danger me-3">
+                                                    <i class="ph-bold ph-file-pdf" style="font-size: 1.5rem;"></i>
+                                                </div>
+                                                <div class="overflow-hidden">
+                                                    <h6 class="mb-1 small fw-bold text-dark text-truncate">Q3_Report.pdf</h6>
+                                                    <small class="text-muted extra-small">4.8 MB &bull; Jan 12, 2026</small>
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-link text-muted p-1 file-action-btn"><i class="ph-bold ph-dots-three-vertical"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- File 2 -->
+                                <div class="col-md-6 col-xl-4">
+                                    <div class="card border file-item-card shadow-sm rounded-3">
+                                        <div class="card-body p-3 d-flex align-items-center justify-content-between">
+                                            <div class="d-flex align-items-center overflow-hidden">
+                                                <div class="file-icon-wrapper bg-info-subtle text-info me-3">
+                                                    <i class="ph-bold ph-image" style="font-size: 1.5rem;"></i>
+                                                </div>
+                                                <div class="overflow-hidden">
+                                                    <h6 class="mb-1 small fw-bold text-dark text-truncate">DashboardMockup.png</h6>
+                                                    <small class="text-muted extra-small">12.4 MB &bull; Jan 10, 2026</small>
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-link text-muted p-1 file-action-btn"><i class="ph-bold ph-dots-three-vertical"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- File 3 -->
+                                <div class="col-md-6 col-xl-4">
+                                    <div class="card border file-item-card shadow-sm rounded-3">
+                                        <div class="card-body p-3 d-flex align-items-center justify-content-between">
+                                            <div class="d-flex align-items-center overflow-hidden">
+                                                <div class="file-icon-wrapper bg-warning-subtle text-warning me-3">
+                                                    <i class="ph-bold ph-file-zip" style="font-size: 1.5rem;"></i>
+                                                </div>
+                                                <div class="overflow-hidden">
+                                                    <h6 class="mb-1 small fw-bold text-dark text-truncate">ProjectAssets.zip</h6>
+                                                    <small class="text-muted extra-small">145.2 MB &bull; Jan 08, 2026</small>
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-link text-muted p-1 file-action-btn"><i class="ph-bold ph-dots-three-vertical"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- File 4 -->
+                                <div class="col-md-6 col-xl-4">
+                                    <div class="card border file-item-card shadow-sm rounded-3">
+                                        <div class="card-body p-3 d-flex align-items-center justify-content-between">
+                                            <div class="d-flex align-items-center overflow-hidden">
+                                                <div class="file-icon-wrapper bg-primary-subtle text-primary me-3">
+                                                    <i class="ph-bold ph-file-doc" style="font-size: 1.5rem;"></i>
+                                                </div>
+                                                <div class="overflow-hidden">
+                                                    <h6 class="mb-1 small fw-bold text-dark text-truncate">Meeting_Notes.docx</h6>
+                                                    <small class="text-muted extra-small">250 KB &bull; Jan 05, 2026</small>
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-link text-muted p-1 file-action-btn"><i class="ph-bold ph-dots-three-vertical"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- File 5 -->
+                                <div class="col-md-6 col-xl-4">
+                                    <div class="card border file-item-card shadow-sm rounded-3">
+                                        <div class="card-body p-3 d-flex align-items-center justify-content-between">
+                                            <div class="d-flex align-items-center overflow-hidden">
+                                                <div class="file-icon-wrapper bg-success-subtle text-success me-3">
+                                                    <i class="ph-bold ph-file-xls" style="font-size: 1.5rem;"></i>
+                                                </div>
+                                                <div class="overflow-hidden">
+                                                    <h6 class="mb-1 small fw-bold text-dark text-truncate">Financials_Q4.xlsx</h6>
+                                                    <small class="text-muted extra-small">1.2 MB &bull; Jan 02, 2026</small>
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-link text-muted p-1 file-action-btn"><i class="ph-bold ph-dots-three-vertical"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/plugins/jquery/jquery.min.js"></script>
+    <script src="../assets/plugins/simplebar/simplebar.min.js"></script>
+    <script src="../assets/plugins/nprogress/nprogress.min.js"></script>
+    <script src="../assets/scripts/naha-admin.min.js"></script>
+</body>
+
+</html>

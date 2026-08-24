@@ -239,7 +239,7 @@ small {
   .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav:hover .nd-sidenav-collapse-arrow {
     display: flex !important;
   }
-  
+
   .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav:hover .nd-sidenav-menu-heading {
     display: block !important;
   }
@@ -419,13 +419,17 @@ small {
 }
 
 .nd-sidenav .nd-sidenav-menu .simplebar-content-wrapper {
-  scrollbar-width: none !important; /* Firefox */
-  -ms-overflow-style: none !important; /* IE 10+ */
-  overscroll-behavior-y: contain !important; /* Mencegah scroll chaining ke halaman utama */
+  scrollbar-width: none !important;
+  /* Firefox */
+  -ms-overflow-style: none !important;
+  /* IE 10+ */
+  overscroll-behavior-y: contain !important;
+  /* Mencegah scroll chaining ke halaman utama */
 }
 
 .nd-sidenav .nd-sidenav-menu .simplebar-content-wrapper::-webkit-scrollbar {
-  display: none !important; /* Chrome, Safari, Opera */
+  display: none !important;
+  /* Chrome, Safari, Opera */
 }
 
 /* Sembunyikan scrollbar vertical SimpleBar secara default pada sidebar */
@@ -1527,7 +1531,20 @@ i[class*=" ph-"] {
   .nd-topnav .navbar-brand {
     display: none !important;
   }
+
   .nd-topnav.navbar-light #sidebarToggle {
     margin-left: 1rem;
+  }
+
+  #layoutSidenav #layoutSidenav_content {
+    margin-left: 0 !important;
+  }
+
+  .nd-nav-fixed #layoutSidenav #layoutSidenav_content {
+    padding-left: 0 !important;
+  }
+
+  .nd-nav-fixed.nd-sidenav-toggled #layoutSidenav #layoutSidenav_content {
+    padding-left: 0 !important;
   }
 }

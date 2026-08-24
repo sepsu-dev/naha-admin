@@ -223,7 +223,7 @@ small {
     .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav:hover .nd-sidenav-collapse-arrow {
         display: flex !important;
     }
-  
+
     .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav:hover .nd-sidenav-menu-heading {
         display: block !important;
     }
@@ -578,29 +578,37 @@ small {
     .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav .nd-sidenav-footer {
         padding: 0.75rem 0.5rem !important
     }
+
     .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav .nd-sidenav-user-card {
         justify-content: center !important
     }
+
     .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav .user-info-footer,
     .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav .btn-icon-logout {
         display: none !important
     }
+
     .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav .img-avatar-footer {
         margin-right: 0 !important
     }
+
     .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav:hover .nd-sidenav-footer {
         padding: 0.75rem 1rem !important
     }
+
     .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav:hover .nd-sidenav-user-card {
         justify-content: flex-start !important
     }
+
     .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav:hover .user-info-footer {
         display: block !important;
         text-align: left !important
     }
+
     .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav:hover .btn-icon-logout {
         display: flex !important
     }
+
     .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav:hover .img-avatar-footer {
         margin-right: 0.5rem !important
     }
@@ -1418,4 +1426,26 @@ i[class*=" ph-"] {
 
 .border-dashed {
     border: var(--nd-border-dashed) !important
+}
+
+@media(max-width:991.98px) {
+    .nd-topnav .navbar-brand {
+        display: none !important
+    }
+
+    .nd-topnav.navbar-light #sidebarToggle {
+        margin-left: 1rem
+    }
+
+    #layoutSidenav #layoutSidenav_content {
+        margin-left: 0 !important
+    }
+
+    .nd-nav-fixed #layoutSidenav #layoutSidenav_content {
+        padding-left: 0 !important
+    }
+
+    .nd-nav-fixed.nd-sidenav-toggled #layoutSidenav #layoutSidenav_content {
+        padding-left: 0 !important
+    }
 }

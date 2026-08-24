@@ -5,7 +5,7 @@
 NahaAdmin adalah template admin gratis yang bersih, modern, dan sepenuhnya responsif yang dibangun menggunakan **Bootstrap 5**, vanilla JavaScript, dan CSS. Proyek ini menyediakan fondasi kokoh serta komponen antarmuka pengguna untuk membangun aplikasi web, backend SaaS, atau panel dasbor.
 
 ## 🚀 Live Demo & Dokumentasi
-* **Live Demo:** [naha-admin.vercel.app/demo/](https://naha-admin.vercel.app/demo/) *(atau URL hosting Anda)*
+* **Live Demo:** [naha-admin.vercel.app/demo/](https://naha-admin.vercel.app/demo/)
 * **Dokumentasi:** [naha-admin.vercel.app/docs/](https://naha-admin.vercel.app/docs/)
 
 ---

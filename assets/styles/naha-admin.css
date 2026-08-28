@@ -197,67 +197,78 @@ small {
     transition: margin 0.2s ease-in-out, padding-left 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  /* Status Mini (Ketika class toggled aktif di body) */
-  .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav {
+  /* Status Mini (Ketika class toggled aktif di body dan body memiliki nd-sidebar-mini) */
+  .nd-sidebar-mini.nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav {
     transform: translateX(0);
     width: 70px !important;
   }
 
-  .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav .nd-sidenav-menu-heading,
-  .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav .nd-sidenav-footer,
-  .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav .nav-link span,
-  .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav .nd-sidenav-collapse-arrow {
+  .nd-sidebar-mini.nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav .nd-sidenav-menu-heading,
+  .nd-sidebar-mini.nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav .nd-sidenav-footer,
+  .nd-sidebar-mini.nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav .nav-link span,
+  .nd-sidebar-mini.nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav .nd-sidenav-collapse-arrow {
     display: none !important;
   }
 
-  .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav .collapse.show {
+  .nd-sidebar-mini.nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav .collapse.show {
     display: none !important;
   }
 
-  .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav .nav-link {
+  .nd-sidebar-mini.nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav .nav-link {
     justify-content: center;
   }
 
-  .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav .nav-link .nd-nav-link-icon {
+  .nd-sidebar-mini.nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav .nav-link .nd-nav-link-icon {
     margin-right: 0 !important;
   }
 
-  .nd-sidenav-toggled #layoutSidenav #layoutSidenav_content {
+  .nd-sidebar-mini.nd-sidenav-toggled #layoutSidenav #layoutSidenav_content {
     margin-left: 0;
     padding-left: 70px !important;
   }
 
   /* Status Hover di Sidebar Mini (Auto-Expand) */
-  .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav:hover {
+  .nd-sidebar-mini.nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav:hover {
     width: 265px !important;
     box-shadow: var(--nd-shadow-xl);
   }
 
-  .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav:hover .nd-sidenav-menu-heading,
-  .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav:hover .nd-sidenav-footer,
-  .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav:hover .nav-link span,
-  .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav:hover .nd-sidenav-collapse-arrow {
+  .nd-sidebar-mini.nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav:hover .nd-sidenav-menu-heading,
+  .nd-sidebar-mini.nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav:hover .nd-sidenav-footer,
+  .nd-sidebar-mini.nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav:hover .nav-link span,
+  .nd-sidebar-mini.nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav:hover .nd-sidenav-collapse-arrow {
     display: flex !important;
   }
 
-  .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav:hover .nd-sidenav-menu-heading {
+  .nd-sidebar-mini.nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav:hover .nd-sidenav-menu-heading {
     display: block !important;
   }
 
-  .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav:hover .collapse.show {
+  .nd-sidebar-mini.nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav:hover .collapse.show {
     display: block !important;
   }
 
-  .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav:hover .nav-link {
+  .nd-sidebar-mini.nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav:hover .nav-link {
     justify-content: start;
   }
 
-  .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav:hover .nav-link .nd-nav-link-icon {
+  .nd-sidebar-mini.nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav:hover .nav-link .nd-nav-link-icon {
     margin-right: 0.75rem !important;
   }
 
   .nd-sidenav-toggled #layoutSidenav #layoutSidenav_content:before {
-    display: none;
+    display: none !important;
+  }
+
+  /* Status Hide (Ketika class toggled aktif di body dan body memiliki nd-sidebar-hide ATAU secara default) */
+  .nd-sidebar-hide.nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav,
+  body:not(.nd-sidebar-mini).nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav {
+    transform: translateX(-265px) !important;
+  }
+
+  .nd-sidebar-hide.nd-sidenav-toggled #layoutSidenav #layoutSidenav_content,
+  body:not(.nd-sidebar-mini).nd-sidenav-toggled #layoutSidenav #layoutSidenav_content {
+    margin-left: -265px !important;
   }
 }
 
@@ -286,8 +297,14 @@ small {
   transition: padding-left 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nd-nav-fixed.nd-sidenav-toggled #layoutSidenav #layoutSidenav_content {
+.nd-nav-fixed.nd-sidebar-mini.nd-sidenav-toggled #layoutSidenav #layoutSidenav_content {
   padding-left: 70px;
+}
+
+.nd-nav-fixed.nd-sidebar-hide.nd-sidenav-toggled #layoutSidenav #layoutSidenav_content,
+body.nd-nav-fixed:not(.nd-sidebar-mini).nd-sidenav-toggled #layoutSidenav #layoutSidenav_content {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
 }
 
 .nav .nav-link .nd-nav-link-icon,
@@ -611,41 +628,41 @@ small {
 
 /* Responsivitas User Card di Sidebar-Mini */
 @media (min-width: 992px) {
-  .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav .nd-sidenav-footer {
+  .nd-sidebar-mini.nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav .nd-sidenav-footer {
     padding: 0.75rem 0.5rem !important;
   }
 
-  .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav .nd-sidenav-user-card {
+  .nd-sidebar-mini.nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav .nd-sidenav-user-card {
     justify-content: center !important;
   }
 
-  .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav .user-info-footer,
-  .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav .btn-icon-logout {
+  .nd-sidebar-mini.nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav .user-info-footer,
+  .nd-sidebar-mini.nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav .btn-icon-logout {
     display: none !important;
   }
 
-  .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav .img-avatar-footer {
+  .nd-sidebar-mini.nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav .img-avatar-footer {
     margin-right: 0 !important;
   }
 
-  .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav:hover .nd-sidenav-footer {
+  .nd-sidebar-mini.nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav:hover .nd-sidenav-footer {
     padding: 0.75rem 1rem !important;
   }
 
-  .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav:hover .nd-sidenav-user-card {
+  .nd-sidebar-mini.nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav:hover .nd-sidenav-user-card {
     justify-content: flex-start !important;
   }
 
-  .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav:hover .user-info-footer {
+  .nd-sidebar-mini.nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav:hover .user-info-footer {
     display: block !important;
     text-align: left !important;
   }
 
-  .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav:hover .btn-icon-logout {
+  .nd-sidebar-mini.nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav:hover .btn-icon-logout {
     display: flex !important;
   }
 
-  .nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav:hover .img-avatar-footer {
+  .nd-sidebar-mini.nd-sidenav-toggled #layoutSidenav #layoutSidenav_nav:hover .img-avatar-footer {
     margin-right: 0.5rem !important;
   }
 }

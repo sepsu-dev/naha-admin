@@ -1,61 +1,49 @@
 # NahaAdmin - Free Bootstrap 5 Admin Dashboard
 
+[![GitHub downloads](https://img.shields.io/github/downloads/sepsu-dev/naha-admin/total.svg?style=for-the-badge&color=22c55e)](https://github.com/sepsu-dev/naha-admin/releases/tag/v1.0.0)
+[![GitHub release](https://img.shields.io/github/v/release/sepsu-dev/naha-admin?style=for-the-badge&color=3b82f6)](https://github.com/sepsu-dev/naha-admin/releases/tag/v1.0.0)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+
 ![NahaAdmin Banner](assets/images/banner.png)
 
-NahaAdmin is a clean, modern, and fully responsive free admin template built with **Bootstrap 5**, vanilla JavaScript, and CSS. It provides a solid foundation and user interface components for building web applications, SaaS backends, or dashboard panels.
+NahaAdmin is a clean, modern, and fully responsive free admin template built with **Bootstrap 5**, vanilla JavaScript, and modern CSS. It provides a solid foundation and complete UI ecosystem for building web applications, SaaS backends, enterprise portals, or custom dashboard panels.
 
-## 🚀 Live Demo & Docs
-* **Live Demo:** [naha-admin.vercel.app](https://naha-admin.vercel.app/demo/)
+---
+
+## 🚀 Live Demo & Documentation
+* **Live Demo:** [naha-admin.vercel.app/demo/](https://naha-admin.vercel.app/demo/)
 * **Documentation:** [naha-admin.vercel.app/docs/](https://naha-admin.vercel.app/docs/)
 
 ---
 
 ## ✨ Features
-* **Built on Bootstrap 5:** Clean, customizable, and modern design.
-* **Multiple Dashboards:**
-  * CRM Dashboard
-  * Analytics Dashboard
-  * E-Commerce Dashboard
-  * Finance Dashboard
-* **Beautiful Typography & Icons:** Powered by Google Fonts (Outfit & Inter) and **Phosphor Icons**.
-* **Transition & Loading Animations:** Smooth loading state with **NProgress** and entry animations via **Animate.css**.
-* **Rich UI Components:** Complete set of buttons, cards, modals, dropdowns, alerts, progress bars, and forms (including editor, select, validation, and check layouts).
-* **Data Presentation:** Pre-configured styled tables using Grid.js and DataTables.
-* **SEO Optimized:** Meta SEO and Open Graph tags ready-to-use.
-* **Developer Friendly:** Clean folder structure and pre-configured Vercel hosting rules.
+* **Bootstrap 5 Core:** Modern, clean design with customizable SCSS/CSS variables.
+* **4 Pre-built Dashboards:**
+  * **CRM Dashboard:** Manage customer interactions, pipelines, and team targets.
+  * **Analytics Dashboard:** Track site traffic, user behavior, and engagement stats.
+  * **E-Commerce Dashboard:** Monitor orders, revenue, inventory, and sales performance.
+  * **Finance Dashboard:** Manage cash flow, expenses, income statements, and transactions.
+* **53+ Ready-to-Use Pages:** Authentication, user profiles, invoices, pricing tables, error pages (404/500), and layout variations.
+* **Typography & Icons:** Powered by Google Fonts (*Outfit* & *Inter*) and **Phosphor Icons**.
+* **Smooth UI/UX:** Page loading progress indicators via **NProgress** and smooth entrance animations with **Animate.css**.
+* **Rich UI Components:** Complete kit including buttons, cards, modals, dropdowns, alerts, tooltips, progress bars, and advanced forms (WYSIWYG editor, custom select, validation layouts).
+* **Data Presentation:** High-performance, interactive tables using **Grid.js** and **DataTables**.
+* **SEO Optimized:** Ready-to-use Meta SEO configurations and Open Graph tags.
+* **Developer Friendly:** Clean directory architecture and pre-configured Vercel routing rules.
 
 ---
 
 ## 📁 Folder Structure
+
 ```text
 naha-admin/
 ├── assets/
-│   ├── images/       # Shared image assets (logos, banners, icons)
-│   ├── plugins/      # Third-party libraries (Bootstrap, Phosphor, NProgress, etc.)
+│   ├── images/       # Logos, banners, user avatars, and UI graphics
+│   ├── plugins/      # Third-party libraries (Bootstrap, Phosphor, NProgress, DataTables, etc.)
 │   ├── scripts/      # Custom scripts (naha-admin.min.js & page-specific scripts)
-│   └── styles/       # Custom stylesheets (naha-admin.min.css & page-specific styles)
-├── demo/             # 53+ complete ready-to-use HTML pages
-├── docs/             # Documentation static website
+│   └── styles/       # Stylesheets (naha-admin.min.css & page-specific styles)
+├── demo/             # 53+ static HTML pages ready for production
+├── docs/             # Static documentation site
 ├── index.html        # Main landing page
-├── robots.txt        # SEO configurations
-└── sitemap.xml       # Search engine index list
-```
-
----
-
-## 🛠️ Quick Start & Local Development
-
-Because NahaAdmin is a fully static template built with HTML, CSS, and JS, you don't need any complex installation. You can run it locally using these simple methods:
-
-### Option 1: Open Directly in Browser (Easiest)
-Simply double-click the `index.html` file in the root directory to open it directly in your web browser.
-
-### Option 2: Using VS Code Live Server
-1. Open this project in **VS Code**.
-2. Install the **Live Server** extension.
-3. Click the **Go Live** button at the bottom right corner of VS Code.
-
----
-
-## 📄 License
-This project is open-source and licensed under the **MIT License**. Feel free to use it for personal or commercial projects.
+├── robots.txt        # Web crawler configuration
+└── sitemap.xml       # Search engine indexing map

@@ -47,8 +47,14 @@
                 <div class="collapse navbar-collapse" id="landingNavbar">
                     <div
                         class="ms-auto d-flex flex-column flex-lg-row align-items-start align-items-lg-center gap-2 py-3 py-lg-0">
-                        <a href="index.html" class="nav-link px-3 text-dark fw-semibold"><i class="ph-bold ph-book me-1"></i> Docs</a>
-                        <a href="../demo/index.html" class="btn btn-primary ms-lg-2 px-3 py-1.5"><i class="ph-bold ph-monitor-play me-1"></i> Live Demo</a>
+                        <a href="index.html" class="btn btn-outline-dark ms-lg-2 px-3 py-1.5 text-success"><i class="ph-bold ph-book me-1"></i> Docs</a>
+                        <a href="https://github.com/sepsu-dev/naha-admin" target="_blank" class="btn btn-outline-dark ms-lg-2 px-3 py-1.5 text-dark"><i class="ph-bold ph-github-logo me-1"></i> GitHub</a>
+                        <button id="downloadBtnNav" data-url="https://github.com/sepsu-dev/naha-admin/archive/refs/tags/v1.0.0.zip" class="btn btn-outline-dark ms-lg-2 px-3 py-1.5 text-primary d-inline-flex align-items-center">
+                            <span class="spinner-border spinner-border-sm me-2 d-none" role="status" aria-hidden="true"></span>
+                            <i class="ph-bold ph-download-simple me-1 btn-icon"></i>
+                            <span class="btn-text">Download</span>
+                        </button>
+                        <a href="../demo/index.html" class="btn btn-outline-dark ms-lg-2 px-3 py-1.5 text-danger"><i class="ph-bold ph-monitor-play me-1"></i> Live Demo</a>
                     </div>
                 </div>
             </div>
@@ -62,18 +68,9 @@
                 <div class="card border-0 shadow-sm p-3 position-sticky" style="top: 80px; border-radius: 16px;">
                     <div class="nav flex-column nav-pills gap-1" id="docs-sidebar-nav">
                         <a class="nav-link active text-dark fw-semibold" href="#introduction"><i class="ph-bold ph-info me-2"></i> Introduction</a>
-                        <a class="nav-link text-dark fw-semibold" href="#installation"><i class="ph-bold ph-gear me-2"></i> Installation</a>
-                        <a class="nav-link text-dark fw-semibold" href="#download"><i class="ph-bold ph-download-simple me-2"></i> Download Template</a>
-                        <a class="nav-link text-dark fw-semibold" href="#structure"><i class="ph-bold ph-folder-open me-2"></i> Folder Structure</a>
-                        <a class="nav-link text-dark fw-semibold" href="#customization"><i class="ph-bold ph-palette me-2"></i> Customizing Styles</a>
-                        <a class="nav-link text-dark fw-semibold" href="#layout-customization"><i class="ph-bold ph-layout me-2"></i> Layout Customization</a>
-                        <a class="nav-link text-dark fw-semibold" href="#css-utilities"><i class="ph-bold ph-paint-brush-broad me-2"></i> CSS Utilities</a>
-                        <a class="nav-link text-dark fw-semibold" href="#sidebar-state"><i class="ph-bold ph-sidebar-simple me-2"></i> Sidebar & JS</a>
-                        <a class="nav-link text-dark fw-semibold" href="#custom-components"><i class="ph-bold ph-puzzle-piece me-2"></i> Custom Components</a>
-                        <a class="nav-link text-dark fw-semibold" href="#new-page"><i class="ph-bold ph-file-plus me-2"></i> Adding a Page</a>
-                        <a class="nav-link text-dark fw-semibold" href="#icons-usage"><i class="ph-bold ph-flag-banner me-2"></i> Icons Usage</a>
-                        <a class="nav-link text-dark fw-semibold" href="#active-routing"><i class="ph-bold ph-link-simple me-2"></i> Active Routing</a>
-                        <a class="nav-link text-dark fw-semibold" href="#plugins"><i class="ph-bold ph-plugs-connected me-2"></i> Plugins</a>
+                        <a class="nav-link text-dark fw-semibold" href="#getting-started"><i class="ph-bold ph-gear me-2"></i> Getting Started</a>
+                        <a class="nav-link text-dark fw-semibold" href="#theme-layout"><i class="ph-bold ph-palette me-2"></i> Theme & Layout</a>
+                        <a class="nav-link text-dark fw-semibold" href="#custom-features"><i class="ph-bold ph-lightning me-2"></i> Custom Features</a>
                         <a class="nav-link text-dark fw-semibold" href="#support"><i class="ph-bold ph-globe me-2"></i> Support</a>
                     </div>
                 </div>
@@ -86,441 +83,131 @@
                 <div id="introduction" class="card shadow-sm border-0 mb-4 animate__animated animate__fadeIn">
                     <div class="card-body p-4">
                         <div class="d-flex align-items-center mb-3">
-                            <div class="bg-primary-light text-primary rounded-3 p-2 me-3 d-inline-flex">
+                            <div class="bg-primary-subtle text-primary rounded-3 p-3 me-3 d-inline-flex">
                                 <i class="ph-bold ph-info fs-4"></i>
                             </div>
                             <h3 class="h5 fw-bold mb-0">Introduction</h3>
                         </div>
-                        <p class="text-muted small mb-3">Welcome to <strong>NahaAdmin</strong>! NahaAdmin is a clean, modern, premium, and fully responsive free admin template built with **Bootstrap 5**, vanilla JavaScript, and customized CSS layout engines. It is designed to provide a highly flexible workspace canvas for building admin portals, SaaS dashboard management consoles, and data visualization platforms.</p>
-                        <h6 class="fw-bold small text-dark mb-2">Core Project Features:</h6>
+                        <p class="text-muted small mb-3">Welcome to <strong>NahaAdmin</strong>! NahaAdmin is a clean, modern, and fully responsive free admin template built with Bootstrap 5.3, vanilla JavaScript, and customized CSS custom properties. It offers a premium, lightweight, and customizable base for building admin dashboards and SaaS management portals without heavy framework overhead.</p>
+                        <h6 class="fw-bold small text-dark mb-2">Core Features:</h6>
                         <ul class="ps-3 mb-0 text-muted small">
-                            <li class="mb-2"><strong>Modern Tech Stack:</strong> Fully integrated with Bootstrap 5, jQuery, ECharts, SweetAlert2, and Tempus Dominus without relying on heavy frontend framework overhead.</li>
-                            <li class="mb-2"><strong>SPA-Like Experience:</strong> Integrated page transition mechanisms using NProgress loading overlays and smooth element fade animations.</li>
-                            <li class="mb-2"><strong>Sleek Design System:</strong> Clean HSL primary brand accents, Outfit & Inter typography pairings, modern card layouts, and responsive mini sidebar hover setups.</li>
-                            <li><strong>MIT License:</strong> Open-source, developer-friendly, and free to use for personal or commercial projects.</li>
+                            <li class="mb-2"><strong>Modern Tech Stack:</strong> Bootstrap 5.3, vanilla JS, custom CSS variables, and Phosphor Icons.</li>
+                            <li class="mb-2"><strong>SPA-Like Transitions:</strong> Integrated page transition mechanisms using NProgress loading overlays.</li>
+                            <li class="mb-2"><strong>Responsive Mini Sidebar:</strong> Collapsible sidebar with auto-expanding hover mode.</li>
+                            <li><strong>MIT License:</strong> Free for personal and commercial projects.</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- Installation -->
-                <div id="installation" class="card shadow-sm border-0 mb-4 animate__animated animate__fadeIn">
+                <!-- Getting Started -->
+                <div id="getting-started" class="card shadow-sm border-0 mb-4 animate__animated animate__fadeIn">
                     <div class="card-body p-4">
                         <div class="d-flex align-items-center mb-3">
-                            <div class="bg-primary-light text-primary rounded-3 p-2 me-3 d-inline-flex">
+                            <div class="bg-success-subtle text-success rounded-3 p-3 me-3 d-inline-flex">
                                 <i class="ph-bold ph-gear fs-4"></i>
                             </div>
-                            <h3 class="h5 fw-bold mb-0">Installation & Setup</h3>
+                            <h3 class="h5 fw-bold mb-0">Getting Started</h3>
                         </div>
-                        <p class="text-muted small mb-3">Getting started with NahaAdmin is simple. You can download the pre-packaged files or clone the repository directly from GitHub to begin your project development.</p>
-                        
-                        <h6 class="fw-bold small text-dark mb-2">Option 1: Clone from GitHub</h6>
+                        <p class="text-muted small mb-3">Set up NahaAdmin locally on your computer in minutes.</p>
+
+                        <h6 class="fw-bold small text-dark mb-2">1. Cloning the Repository</h6>
                         <pre class="bg-dark text-light p-3 rounded small mb-3" style="font-family: monospace; font-size: 0.825rem;"><code>git clone https://github.com/sepsu-dev/naha-admin.git
 cd naha-admin</code></pre>
 
-                        <h6 class="fw-bold small text-dark mb-2">Option 2: Direct ZIP Download</h6>
-                        <p class="text-muted small mb-3">Download the latest release ZIP file from the <a href="https://github.com/sepsu-dev/naha-admin" target="_blank" class="text-decoration-none">GitHub repository</a>, extract it to your preferred workspace directory, and you are ready to go.</p>
+                        <h6 class="fw-bold small text-dark mb-2">2. Local Run (Avoid CORS Issues)</h6>
+                        <p class="text-muted small mb-3">Since the template utilizes modular JavaScript and dynamic AJAX elements, we recommend running it via a local development server (such as Live Server in VS Code) rather than opening the HTML files directly.</p>
 
-                        <h6 class="fw-bold small text-dark mb-2">Running the Pages</h6>
-                        <ul class="ps-3 mb-0 text-muted small">
-                            <li class="mb-2"><strong>Static Opening:</strong> You can double-click any HTML page inside the <code>demo/</code> directory to view it directly in your web browser.</li>
-                            <li class="mb-2"><strong>Recommended:</strong> Run the template via a local development server (such as Live Server in VS Code, or our built-in BrowserSync server) to avoid CORS issues when loading page assets or AJAX requests.</li>
-                        </ul>
+                        <h6 class="fw-bold small text-dark mb-2">3. Creating a New Page</h6>
+                        <p class="text-muted small mb-3">Always duplicate <code>demo/blank.html</code> or <code>demo/starter.html</code> as your blueprint. Place your custom views inside the <code>&lt;main&gt;</code> element. Sidenav links will be highlighted automatically by NahaAdmin's active routing script.</p>
+
+                        <h6 class="fw-bold small text-dark mb-0">4. Folder Structure</h6>
+                        <pre class="bg-dark text-light p-3 rounded small mb-0" style="font-family: monospace; font-size: 0.825rem; line-height: 1.5;"><code>naha-admin/
+├── assets/         # App assets (images, custom CSS variables, custom JS)
+│   ├── plugins/    # Vendor plugins (Bootstrap, Simplebar, ECharts, Select2)
+│   ├── scripts/    # Custom JS (naha-admin.js)
+│   └── styles/     # Global CSS (naha-admin.css)
+├── demo/           # Suite of 53+ pre-designed HTML pages
+└── index.html      # Landing page</code></pre>
                     </div>
                 </div>
 
-                <!-- Download Template -->
-                <div id="download" class="card shadow-sm border-0 mb-4 animate__animated animate__fadeIn">
+                <!-- Theme & Layout -->
+                <div id="theme-layout" class="card shadow-sm border-0 mb-4 animate__animated animate__fadeIn">
                     <div class="card-body p-4">
                         <div class="d-flex align-items-center mb-3">
-                            <div class="bg-primary-light text-primary rounded-3 p-2 me-3 d-inline-flex">
-                                <i class="ph-bold ph-download-simple fs-4"></i>
-                            </div>
-                            <h3 class="h5 fw-bold mb-0">Download Template</h3>
-                        </div>
-                        <p class="text-muted small mb-3">Access and download NahaAdmin templates directly. You can obtain the ready-to-run package containing all dashboards, icons, styles, and vendor libraries.</p>
-                        
-                        <div class="p-3 border rounded bg-light mb-3">
-                            <h6 class="fw-bold small text-dark mb-2">Stable Production Release Package</h6>
-                            <p class="text-muted small mb-3">Includes minified compiled styles/scripts, documentation, and the full static dashboard pages ready for direct deployment or static integration.</p>
-                            <button id="downloadBtn"
-                                data-url="https://github.com/sepsu-dev/naha-admin/archive/refs/tags/v1.0.0.zip"
-                                class="btn btn-primary btn-sm rounded-3 fw-semibold d-inline-flex align-items-center"
-                                style="min-width: 140px; justify-content: center;">
-                                <span class="spinner-border spinner-border-sm me-2 d-none" role="status" aria-hidden="true"></span>
-                                <i class="ph-bold ph-download-simple me-2 btn-icon"></i>
-                                <span class="btn-text">Download latest release (.zip)</span>
-                            </button>
-                        </div>
-                        
-                        <h6 class="fw-bold small text-dark mb-2">Source Code Repository</h6>
-                        <p class="text-muted small mb-0">Check out the official GitHub repository to access developer configuration scripts, submit issues, or fork the repository to build custom themes: <a href="https://github.com/sepsu-dev/naha-admin" target="_blank" class="text-decoration-none fw-semibold"><i class="ph-bold ph-github-logo"></i> GitHub Repository</a>.</p>
-                    </div>
-                </div>
-
-
-                <!-- Folder Structure -->
-                <div id="structure" class="card shadow-sm border-0 mb-4 animate__animated animate__fadeIn">
-                    <div class="card-body p-4">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="bg-primary-light text-primary rounded-3 p-2 me-3 d-inline-flex">
-                                <i class="ph-bold ph-folder-open fs-4"></i>
-                            </div>
-                            <h3 class="h5 fw-bold mb-0">Folder Structure</h3>
-                        </div>
-                        <p class="text-muted small mb-3">NahaAdmin is organized to separate template assets, third-party libraries, live demo files, and developer documentation:</p>
-                        
-                        <div class="bg-dark text-light p-3 rounded mb-3" style="font-family: monospace; font-size: 0.8rem; line-height: 1.6;">
-                            naha-admin/<br>
-                            ├── assets/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Static assets shared across the application<br>
-                            │   ├── images/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Site logo, avatars, banners, and default icons<br>
-                            │   ├── plugins/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Vendor assets (Bootstrap, Phosphor, Simplebar, ECharts, Select2)<br>
-                            │   ├── scripts/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Custom scripts (naha-admin.js, page-specific modules)<br>
-                            │   └── styles/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Global styles (naha-admin.css, page-specific views)<br>
-                            ├── demo/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Complete suite of 53+ pre-designed HTML pages<br>
-                            ├── docs/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Documentation static website files<br>
-                            ├── index.html &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Main landing page for marketing / entrance<br>
-                            ├── robots.txt &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Search engine optimization directive rules<br>
-                            ├── sitemap.xml &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Sitemap index for indexing pages<br>
-                            └── vercel.json &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Routing and clean-URL rules for Vercel deployment
-                        </div>
-                        <p class="text-muted small mb-0">Use the files in the <code>demo/</code> directory as reference blueprints. Duplicate <code>demo/blank.html</code> or <code>demo/starter.html</code> whenever starting a fresh web application workspace page.</p>
-                    </div>
-                </div>
-
-                <!-- Customizing Styles -->
-                <div id="customization" class="card shadow-sm border-0 mb-4 animate__animated animate__fadeIn">
-                    <div class="card-body p-4">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="bg-primary-light text-primary rounded-3 p-2 me-3 d-inline-flex">
+                            <div class="bg-warning-subtle text-warning rounded-3 p-3 me-3 d-inline-flex">
                                 <i class="ph-bold ph-palette fs-4"></i>
                             </div>
-                            <h3 class="h5 fw-bold mb-0">Customizing Theme Styles</h3>
+                            <h3 class="h5 fw-bold mb-0">Theme & Layout</h3>
                         </div>
-                        <p class="text-muted small mb-3">NahaAdmin is built using CSS Custom Properties (Variables), making theme customization extremely fast and simple. You can override colors, typography, borders, and margins globally inside your CSS stylesheets.</p>
+                        <p class="text-muted small mb-3">NahaAdmin is built using CSS Custom Properties (Variables) inside <code>assets/styles/naha-admin.css</code> for fast, global theme changes:</p>
                         
-                        <h6 class="fw-bold small text-dark mb-2">Defining Variables (Inside <code>:root</code>)</h6>
-                        <p class="text-muted small mb-3">The variables are declared in <code>assets/styles/naha-admin.css</code>. You can customize them directly or redefine them in a separate overrides stylesheet:</p>
-                        
-                        <div class="bg-dark text-light p-3 rounded mb-3" style="font-family: monospace; font-size: 0.8rem; line-height: 1.5;">
-                            :root {<br>
-                            &nbsp;&nbsp;/* Brand Theme Colors */<br>
-                            &nbsp;&nbsp;--nd-primary: #006fee; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/* Main color for brand identity & active links */<br>
-                            &nbsp;&nbsp;--nd-primary-light: #3e94ff; &nbsp;&nbsp;&nbsp;/* Hover accents and soft highlights */<br>
-                            &nbsp;&nbsp;--nd-primary-dark: #005bc4; &nbsp;&nbsp;&nbsp;&nbsp;/* Darker states for hover/active focus */<br>
-                            &nbsp;&nbsp;--nd-success: #10b981; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/* Confirmation and success tags */<br>
-                            &nbsp;&nbsp;--nd-danger: #ef4444; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/* Errors, alerts, and deletion prompts */<br>
-                            &nbsp;&nbsp;--nd-text: #11181c; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/* Global base body text color */<br>
-                            &nbsp;&nbsp;--nd-text-muted: #71717a; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/* Secondary descriptions and labels */<br>
-                            &nbsp;&nbsp;--nd-border: #e4e4e7; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/* Border color for tables, cards, lines */<br>
-                            <br>
-                            &nbsp;&nbsp;/* Component Layout Values */<br>
-                            &nbsp;&nbsp;--nd-radius: 10px; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/* Standard radius for buttons/inputs */<br>
-                            &nbsp;&nbsp;--nd-radius-lg: 16px; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/* Larger radius for primary cards/modals */<br>
-                            &nbsp;&nbsp;--nd-transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);<br>
-                            }
-                        </div>
+                        <pre class="bg-dark text-light p-3 rounded small mb-3" style="font-family: monospace; font-size: 0.8rem; line-height: 1.5;"><code>:root {
+  --nd-primary: #006fee;       /* Brand theme color */
+  --nd-text: #11181c;          /* Base body text color */
+  --nd-border: #e4e4e7;        /* Border color for lines/tables */
+  --nd-radius: 10px;           /* Buttons & inputs radius */
+  --nd-radius-lg: 16px;        /* Cards & modals radius */
+}</code></pre>
 
-                        <p class="text-muted small mb-0"><strong>Tip:</strong> Always use relative paths when adding a separate customized stylesheet to avoid breaking assets on different folder depth levels.</p>
-                    </div>
-                </div>
+                        <h6 class="fw-bold small text-dark mb-2">Layout Class Toggles (Apply to <code>&lt;body&gt;</code>)</h6>
+                        <ul class="ps-3 mb-3 text-muted small">
+                            <li class="mb-2"><code>nd-nav-fixed</code>: Fixed navbar at the top of viewport on scroll.</li>
+                            <li class="mb-2"><code>nd-sidenav-toggled</code>: Collapses sidebar to mini-mode (which auto-expands on hover).</li>
+                        </ul>
 
-
-                <!-- Layout Customization -->
-                <div id="layout-customization" class="card shadow-sm border-0 mb-4 animate__animated animate__fadeIn">
-                    <div class="card-body p-4">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="bg-primary-light text-primary rounded-3 p-2 me-3 d-inline-flex">
-                                <i class="ph-bold ph-layout fs-4"></i>
-                            </div>
-                            <h3 class="h5 fw-bold mb-0">Dashboard Layout Customization</h3>
-                        </div>
-                        <p class="text-muted small mb-3">Modify the layout and navigation structures quickly by managing CSS class toggles on the primary <code>&lt;body&gt;</code> element of your documents:</p>
-                        
-                        <div class="table-responsive mb-3">
-                            <table class="table table-bordered table-sm small text-muted mb-0">
-                                <thead>
-                                    <tr class="table-light">
-                                        <th style="width: 25%;">Class Toggle</th>
-                                        <th style="width: 20%;">Applied On</th>
-                                        <th>Description & Function</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><code>nd-nav-fixed</code></td>
-                                        <td><code>&lt;body&gt;</code></td>
-                                        <td>Forces the top navigation brand header to stay fixed at the top of the browser viewport during page scroll.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>nd-sidenav-toggled</code></td>
-                                        <td><code>&lt;body&gt;</code></td>
-                                        <td>Collapses the sidebar on screens &gt; 992px, or brings it into viewport view on screens &lt; 992px (responsive).</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <h6 class="fw-bold small text-dark mb-2">Sidebar Mini Mode (Auto-Expand on Hover)</h6>
-                        <p class="text-muted small mb-0">Applying the class <code>nd-sidenav-toggled</code> on screens wider than 992px collapses the sidebar accordion list items down to an icon-only representation. When a user hovers their mouse pointer over this mini sidebar area, the menu container smoothly expands to full width via modern CSS transitions, allowing convenient navigation access without taking up permanent canvas workspace.</p>
-                    </div>
-                </div>
-
-                <!-- CSS Utility Classes -->
-                <div id="css-utilities" class="card shadow-sm border-0 mb-4 animate__animated animate__fadeIn">
-                    <div class="card-body p-4">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="bg-primary-light text-primary rounded-3 p-2 me-3 d-inline-flex">
-                                <i class="ph-bold ph-paint-brush-broad fs-4"></i>
-                            </div>
-                            <h3 class="h5 fw-bold mb-0">Custom CSS Utilities</h3>
-                        </div>
-                        <p class="text-muted small mb-3">NahaAdmin extends standard Bootstrap helper classes with premium web-design assets tailored for backend applications:</p>
-                        
-                        <h6 class="fw-bold small text-dark mb-2">1. Dashed Border (<code>.border-dashed</code>)</h6>
-                        <p class="text-muted small mb-2">Great for drag-and-drop zones, file upload placeholders, or empty states:</p>
-                        <pre class="bg-dark text-light p-2 rounded small mb-3"><code>&lt;div class="border-dashed p-4 text-center text-muted"&gt;
-    Drag & drop files here to upload
-&lt;/div&gt;</code></pre>
-
-                        <h6 class="fw-bold small text-dark mb-2">2. Extra Small Font Sizing (<code>.extra-small</code>)</h6>
-                        <p class="text-muted small mb-2">Renders text at <code>0.75rem</code>. Ideal for badge markers, secondary captions, and relative timestamps:</p>
-                        <pre class="bg-dark text-light p-2 rounded small mb-3"><code>&lt;span class="text-muted extra-small"&gt;Updated 5 mins ago&lt;/span&gt;</code></pre>
-
-                        <h6 class="fw-bold small text-dark mb-2">3. Vertical Timeline Component (<code>.timeline-simple</code>)</h6>
-                        <p class="text-muted small mb-2">Create modern vertical newsfeeds or activity logs with simple HTML markup:</p>
-                        <pre class="bg-dark text-light p-2 rounded small mb-0"><code>&lt;ul class="timeline-simple"&gt;
-    &lt;li class="timeline-item"&gt;
-        &lt;span class="timeline-icon bg-primary text-white"&gt;
-            &lt;i class="ph-bold ph-user-plus"&gt;&lt;/i&gt;
-        &lt;/span&gt;
-        &lt;div class="timeline-content"&gt;
-            &lt;p class="mb-0 fw-semibold"&gt;New user registered&lt;/p&gt;
-            &lt;span class="extra-small text-muted"&gt;10:15 AM&lt;/span&gt;
-        &lt;/div&gt;
-    &lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-                    </div>
-                </div>
-
-                <!-- Sidebar & JS -->
-                <div id="sidebar-state" class="card shadow-sm border-0 mb-4 animate__animated animate__fadeIn">
-                    <div class="card-body p-4">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="bg-primary-light text-primary rounded-3 p-2 me-3 d-inline-flex">
-                                <i class="ph-bold ph-sidebar-simple fs-4"></i>
-                            </div>
-                            <h3 class="h5 fw-bold mb-0">Sidebar & JavaScript Architecture</h3>
-                        </div>
-                        <p class="text-muted small mb-3">The user interface handles state persistence and page transitions dynamically to deliver a fast application-like experience.</p>
-                        
                         <h6 class="fw-bold small text-dark mb-2">Sidebar State Persistence</h6>
-                        <p class="text-muted small mb-3">When a user toggles the sidebar using the collapse button, the selection is saved inside the browser's <code>localStorage</code> under the database key: <code>nd|sidebar-toggle</code>. On subsequent page loads, NahaAdmin reads this key immediately and applies the configuration classes, preventing content layout shifts.</p>
-
-                        <h6 class="fw-bold small text-dark mb-2">Smooth Page Transitions (Multi-Page App)</h6>
-                        <p class="text-muted small mb-3">NahaAdmin features page fade-out and fade-in animations on navigation. When an internal anchor link is clicked, the script intercepts the event, triggers the NProgress loading bar, fades out the content viewport using the <code>animate__fadeOut</code> transition, and redirects the browser window after 350ms once the animation concludes.</p>
-
-                        <h6 class="fw-bold small text-dark mb-2">Excluding Links from Fade Transitions</h6>
-                        <p class="text-muted small mb-0">To bypass this behavior (e.g. for files, external pages, modal openers, or dropdown components), make sure the anchor tag contains any of the following features: <code>target="_blank"</code>, <code>data-bs-toggle="..."</code>, or has an href starting with <code>#</code>, <code>http</code>, or <code>javascript:</code>.</p>
+                        <p class="text-muted small mb-0">The collapsed state of the sidebar is automatically saved inside the browser's <code>localStorage</code> under the key <code>nd|sidebar-toggle</code> to prevent layout shifts on page reload.</p>
                     </div>
                 </div>
 
-                <!-- Custom Components -->
-                <div id="custom-components" class="card shadow-sm border-0 mb-4 animate__animated animate__fadeIn">
+                <!-- Custom Features -->
+                <div id="custom-features" class="card shadow-sm border-0 mb-4 animate__animated animate__fadeIn">
                     <div class="card-body p-4">
                         <div class="d-flex align-items-center mb-3">
-                            <div class="bg-primary-light text-primary rounded-3 p-2 me-3 d-inline-flex">
-                                <i class="ph-bold ph-puzzle-piece fs-4"></i>
+                            <div class="bg-info-subtle text-info rounded-3 p-3 me-3 d-inline-flex">
+                                <i class="ph-bold ph-lightning fs-4"></i>
                             </div>
-                            <h3 class="h5 fw-bold mb-0">Custom & Interactive Components</h3>
+                            <h3 class="h5 fw-bold mb-0">Custom Features & Utility</h3>
                         </div>
-                        <p class="text-muted small mb-3">NahaAdmin integrates popular vendor scripts, beautifully re-designed to match our clean UI. Here are some setup code examples:</p>
                         
-                        <h6 class="fw-bold small text-dark mb-2">1. Password Visibility Toggle</h6>
-                        <pre class="bg-dark text-light p-2 rounded small mb-3"><code>&lt;div class="input-group"&gt;
+                        <h6 class="fw-bold small text-dark mb-2">1. Excluding Links from SPA Transitions</h6>
+                        <p class="text-muted small mb-3">NahaAdmin intercepts internal links for page-fade transitions. To bypass transitions (e.g. files, downloads, modals, or external links), add <code>target="_blank"</code>, <code>data-bs-toggle="..."</code>, or set the href to <code>#</code> or <code>javascript:</code>.</p>
+
+                        <h6 class="fw-bold small text-dark mb-2">2. Custom CSS Utilities</h6>
+                        <ul class="ps-3 mb-3 text-muted small">
+                            <li class="mb-2"><code>.border-dashed</code>: Dashed border styles, ideal for file uploads.</li>
+                            <li class="mb-2"><code>.extra-small</code>: Renders font sizes at <code>0.75rem</code> for timestamps/badges.</li>
+                            <li class="mb-2"><code>.timeline-simple</code>: CSS vertical newsfeed timeline component.</li>
+                        </ul>
+
+                        <h6 class="fw-bold small text-dark mb-2">3. Password Visibility Toggle</h6>
+                        <pre class="bg-dark text-light p-2 rounded small mb-0"><code>&lt;div class="input-group"&gt;
     &lt;input type="password" class="form-control password-toggle" placeholder="Password"&gt;
     &lt;button class="btn btn-light toggle-password" type="button"&gt;
         &lt;i class="ph-bold ph-eye"&gt;&lt;/i&gt;
     &lt;/button&gt;
 &lt;/div&gt;</code></pre>
-
-                        <h6 class="fw-bold small text-dark mb-2">2. Dynamic Select Options (Select2)</h6>
-                        <p class="text-muted small mb-2">Create tags or autocomplete select fields. Wrap your standard markup and initialize Select2 using JavaScript:</p>
-                        <pre class="bg-dark text-light p-2 rounded small mb-3"><code>&lt;select class="form-select select2-init" style="width: 100%;"&gt;
-    &lt;option value="ID"&gt;Indonesia&lt;/option&gt;
-    &lt;option value="SG"&gt;Singapore&lt;/option&gt;
-&lt;/select&gt;</code></pre>
-
-                        <h6 class="fw-bold small text-dark mb-2">3. SweetAlert2 Alerts</h6>
-                        <p class="text-muted small mb-2">Trigger beautiful modal popups instead of standard browser alert windows:</p>
-                        <pre class="bg-dark text-light p-2 rounded small mb-3"><code>Swal.fire({
-    title: 'Success!',
-    text: 'Your changes have been saved successfully.',
-    icon: 'success',
-    confirmButtonColor: '#006fee',
-    confirmButtonText: 'Great'
-});</code></pre>
-
-                        <h6 class="fw-bold small text-dark mb-2">4. Date Time Picker (Tempus Dominus)</h6>
-                        <p class="text-muted small mb-0">Utilize the modern tempus dominus wrapper library to create elegant calendars and date input selectors. See <code>demo/forms-basic.html</code> for full markup examples.</p>
-                    </div>
-                </div>
-
-                <!-- Adding a Page -->
-                <div id="new-page" class="card shadow-sm border-0 mb-4 animate__animated animate__fadeIn">
-                    <div class="card-body p-4">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="bg-primary-light text-primary rounded-3 p-2 me-3 d-inline-flex">
-                                <i class="ph-bold ph-file-plus fs-4"></i>
-                            </div>
-                            <h3 class="h5 fw-bold mb-0">Adding a New Workspace Page</h3>
-                        </div>
-                        <p class="text-muted small mb-3">Creating a new view within the NahaAdmin workspace follows a straightforward workflow:</p>
-                        
-                        <ol class="ps-3 mb-0 text-muted small">
-                            <li class="mb-2"><strong>Clone Template:</strong> Copy <code>demo/blank.html</code> or <code>demo/starter.html</code> and save it with your desired file name (e.g. <code>demo/new-dashboard.html</code>).</li>
-                            <li class="mb-2"><strong>Add Page Content:</strong> Open the file and locate the main structural viewport wrapper:
-                                <pre class="bg-dark text-light p-2 rounded mt-2"><code>&lt;main&gt;
-    &lt;div class="container-fluid px-4"&gt;
-        &lt;!-- Insert your charts, tables, or custom forms here --&gt;
-    &lt;/div&gt;
-&lt;/main&gt;</code></pre>
-                            </li>
-                            <li class="mb-2"><strong>Update Sidenav Link:</strong> Find the sidebar markup container inside the HTML file and append a link tag pointing to your new file:
-                                <pre class="bg-dark text-light p-2 rounded mt-2"><code>&lt;a class="nav-link" href="new-dashboard.html"&gt;
-    &lt;div class="nd-nav-link-icon"&gt;
-        &lt;i class="ph-bold ph-chart-bar"&gt;&lt;/i&gt;
-    &lt;/div&gt;
-    &lt;span&gt;New Statistics&lt;/span&gt;
-&lt;/a&gt;</code></pre>
-                            </li>
-                            <li><strong>Highlight State:</strong> The active highlight status on your newly created menu links will automatically be handled on page initialization by our dynamic active routing script.</li>
-                        </ol>
-                    </div>
-                </div>
-
-                <!-- Icons Usage -->
-                <div id="icons-usage" class="card shadow-sm border-0 mb-4 animate__animated animate__fadeIn">
-                    <div class="card-body p-4">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="bg-primary-light text-primary rounded-3 p-2 me-3 d-inline-flex">
-                                <i class="ph-bold ph-flag-banner fs-4"></i>
-                            </div>
-                            <h3 class="h5 fw-bold mb-0">Phosphor Icons Usage Guide</h3>
-                        </div>
-                        <p class="text-muted small mb-3">NahaAdmin relies on the modern Phosphor Icons pack, providing a fresh style for UI layouts.</p>
-                        
-                        <h6 class="fw-bold small text-dark mb-2">Style Variations</h6>
-                        <ul class="ps-3 mb-3 text-muted small">
-                            <li class="mb-1"><strong>Bold Icons:</strong> Add the class prefix <code>ph-bold</code> (recommended for clean navigation links).</li>
-                            <li class="mb-1"><strong>Solid/Filled Icons:</strong> Add the class prefix <code>ph-fill</code> (recommended for warnings, user states, or active buttons).</li>
-                        </ul>
-
-                        <h6 class="fw-bold small text-dark mb-2">HTML Code Examples</h6>
-                        <pre class="bg-dark text-light p-2 rounded small mb-3"><code>&lt;!-- Bold Icon --&gt;
-&lt;i class="ph-bold ph-house-line"&gt;&lt;/i&gt;
-
-&lt;!-- Filled Icon --&gt;
-&lt;i class="ph-fill ph-house-line"&gt;&lt;/i&gt;</code></pre>
-
-                        <p class="text-muted small mb-0">Browse and search the entire directory of 9000+ icons online directly on the official <a href="https://phosphoricons.com/" target="_blank" class="text-decoration-none">Phosphor Icons Website</a>.</p>
-                    </div>
-                </div>
-
-                <!-- Active Link Router -->
-                <div id="active-routing" class="card shadow-sm border-0 mb-4 animate__animated animate__fadeIn">
-                    <div class="card-body p-4">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="bg-primary-light text-primary rounded-3 p-2 me-3 d-inline-flex">
-                                <i class="ph-bold ph-link-simple fs-4"></i>
-                            </div>
-                            <h3 class="h5 fw-bold mb-0">Dynamic Active Route Highlighting</h3>
-                        </div>
-                        <p class="text-muted small mb-3">You do not need to manually write `.active` classes on each separate HTML file template when users navigate between pages.</p>
-                        <p class="text-muted small mb-3">The system automatically processes active routes using JavaScript on startup. The routing engine performs the following actions:</p>
-                        <ul class="ps-3 mb-0 text-muted small">
-                            <li class="mb-2">Reads the browser URL pathname through <code>window.location.pathname</code>.</li>
-                            <li class="mb-2">Identifies and selects matches against the <code>href</code> attributes of the links within the navbar or sidebar accordions.</li>
-                            <li class="mb-2">Applies the <code>active</code> class modifier to the matching link to highlight it.</li>
-                            <li>Walks up the DOM hierarchy tree to automatically open any nested parent menu panels (applying the <code>show</code> class) to reveal the location path.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Plugins -->
-                <div id="plugins" class="card shadow-sm border-0 mb-4 animate__animated animate__fadeIn">
-                    <div class="card-body p-4">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="bg-primary-light text-primary rounded-3 p-2 me-3 d-inline-flex">
-                                <i class="ph-bold ph-plugs-connected fs-4"></i>
-                            </div>
-                            <h3 class="h5 fw-bold mb-0">Bundled Third-Party Plugins</h3>
-                        </div>
-                        <p class="text-muted small mb-3">All libraries and plugins included in NahaAdmin are localized inside the <code>assets/plugins/</code> directory, ensuring offline capabilities without external CDN dependencies:</p>
-                        
-                        <div class="row g-3 text-muted small">
-                            <div class="col-md-6">
-                                <div class="p-2 border rounded bg-light">
-                                    <strong class="text-dark">Bootstrap 5</strong>
-                                    <div class="extra-small">Responsive UI core, layout grid, modals, and tooltips.</div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="p-2 border rounded bg-light">
-                                    <strong class="text-dark">ECharts (Apache)</strong>
-                                    <div class="extra-small">Modern vector charts for dashboards and data visualization.</div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="p-2 border rounded bg-light">
-                                    <strong class="text-dark">NProgress</strong>
-                                    <div class="extra-small">Ajax loading progress tracker line at the top of pages.</div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="p-2 border rounded bg-light">
-                                    <strong class="text-dark">SweetAlert2</strong>
-                                    <div class="extra-small">Highly interactive, stylized confirmation dialog popups.</div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="p-2 border rounded bg-light">
-                                    <strong class="text-dark">Simplebar</strong>
-                                    <div class="extra-small">Custom scrollbar replacement overlay for design consistency.</div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="p-2 border rounded bg-light">
-                                    <strong class="text-dark">Tempus Dominus</strong>
-                                    <div class="extra-small">Date & time Picker library integrated with Bootstrap.</div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
                 <!-- Support -->
-                <!-- Support -->
-                <div id="support" class="card shadow-sm border-0 mb-4 animate__animated animate__fadeIn">
+                <div id="support" class="card shadow-sm border-0 mb-4 animate__animated animate__fadeIn" style="margin-bottom: 25rem !important;">
                     <div class="card-body p-4">
                         <div class="d-flex align-items-center mb-3">
-                            <div class="bg-primary-light text-primary rounded-3 p-2 me-3 d-inline-flex">
+                            <div class="bg-danger-subtle text-danger rounded-3 p-3 me-3 d-inline-flex">
                                 <i class="ph-bold ph-globe fs-4"></i>
                             </div>
-                            <h3 class="h5 fw-bold mb-0">Support & Developer Info</h3>
+                            <h3 class="h5 fw-bold mb-0">Support & Feedback</h3>
                         </div>
-                        <p class="text-muted small mb-3">NahaAdmin is built and maintained as a free, open-source template project under the MIT License. You can collaborate or contact the developer.</p>
-                        
-                        <div class="row g-4 align-items-start mb-3">
-                            <div class="col-md-12 text-muted small">
-                                <h6 class="fw-bold small text-dark mb-2">Contact Developer</h6>
-                                <p class="mb-3">Have a custom dashboard project or need direct professional developer support? Reach out directly via <a href="https://sepsu.dev/" target="_blank" class="text-decoration-none fw-semibold">sepsu.dev</a> or visit our <a href="https://github.com/sepsu-dev/naha-admin" target="_blank" class="text-decoration-none fw-semibold">GitHub repo</a> to ask questions.</p>
-                                
-                                <div class="d-flex flex-wrap gap-2">
-                                    <a href="https://github.com/sepsu-dev/naha-admin/issues" target="_blank" class="btn btn-outline-dark btn-sm rounded-3 fw-semibold">
-                                        <i class="ph-bold ph-bug me-1"></i> Submit Issue
-                                    </a>
-                                </div>
-                            </div>
+                        <p class="text-muted small mb-3">NahaAdmin is free and open-source under the MIT license. You can submit issues, ask questions, or contact the developer directly.</p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <a href="https://sepsu.dev/" target="_blank" class="btn btn-outline-dark btn-sm rounded-3 fw-semibold">
+                                <i class="ph-bold ph-globe me-1"></i> Developer Site
+                            </a>
+                            <a href="https://github.com/sepsu-dev/naha-admin/issues" target="_blank" class="btn btn-outline-dark btn-sm rounded-3 fw-semibold">
+                                <i class="ph-bold ph-bug me-1"></i> Submit Issue
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -535,12 +222,13 @@ cd naha-admin</code></pre>
     <script src="../assets/scripts/naha-admin.min.js"></script>
     <script>
         $(function () {
-            $('#downloadBtn').on('click', function () {
+            $('#downloadBtn, #downloadBtnNav').on('click', function () {
                 const $btn = $(this);
                 const $spinner = $btn.find('.spinner-border');
                 const $icon = $btn.find('.btn-icon');
                 const $text = $btn.find('.btn-text');
                 const url = $btn.data('url');
+                const originalText = $text.text();
 
                 $btn.prop('disabled', true);
                 $spinner.removeClass('d-none');
@@ -559,7 +247,7 @@ cd naha-admin</code></pre>
                         $btn.prop('disabled', false);
                         $spinner.addClass('d-none');
                         $icon.removeClass('d-none');
-                        $text.text('Download latest release (.zip)');
+                        $text.text(originalText);
                     }, 500);
                 }, 2000);
             });

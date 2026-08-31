@@ -8,6 +8,10 @@
     --nd-border: #e2e8f0;
 }
 
+.container {
+    max-width: 1200px !important;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -53,10 +57,7 @@ body {
     font-family: 'Inter', sans-serif;
     font-size: 0.95rem;
     font-weight: 600;
-    background: linear-gradient(135deg, var(--nd-primary) 0%, var(--nd-accent) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--nd-primary);
 }
 
 .nd-topnav .navbar-brand .logo-navbar {
@@ -275,10 +276,7 @@ body {
 }
 
 .hero-title span {
-    background: linear-gradient(135deg, var(--nd-primary) 0%, #38bdf8 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--nd-primary);
 }
 
 .hero-subtitle {
@@ -315,14 +313,7 @@ body {
 }
 
 .hero-banner-wrap::before {
-    content: '';
-    position: absolute;
-    inset: -24px;
-    inset: -20px;
-    background: radial-gradient(circle at 50% 50%, rgba(0, 111, 238, 0.15), transparent 70%);
-    filter: blur(40px);
-    z-index: 0;
-    border-radius: 40px;
+    display: none;
 }
 
 .hero-bg-icon {

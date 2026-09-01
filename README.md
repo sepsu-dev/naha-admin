@@ -18,8 +18,8 @@ Drop it into any project — no build tools, no npm required.
 ## ✨ Features
 
 - **Bootstrap 5 Core** — Modern, clean design with customizable CSS variables.
-- **4 Pre-built Dashboards** — Default, Analytics, CRM, E-Commerce, and Finance.
-- **53+ Ready-to-Use Pages** — Auth pages, user profiles, error pages (400/401/403/404/500/503), and layout variations.
+- **5 Pre-built Dashboards** — Default, Analytics, CRM, E-Commerce, and Finance.
+- **56 Ready-to-Use Pages** — Auth pages, user profiles, error pages (400/401/403/404/500/503), and layout variations.
 - **Phosphor Icons** — 900+ icons across bold, regular, and fill styles.
 - **Smooth UI/UX** — Page progress bar via NProgress and entrance animations via Animate.css.
 - **Rich Components** — Buttons, cards, modals, dropdowns, alerts, tooltips, progress bars, and advanced forms.
@@ -54,7 +54,7 @@ naha-admin/
 │   ├── plugins/      # Third-party libraries (Bootstrap, Phosphor, NProgress, etc.)
 │   ├── scripts/      # Custom scripts (naha-admin.min.js & page-specific scripts)
 │   └── styles/       # Stylesheets (naha-admin.min.css & page-specific styles)
-├── demo/             # 53+ static HTML pages ready for use
+├── demo/             # 56 static HTML pages ready for use
 ├── docs/             # Static documentation site
 ├── index.html        # Landing page
 ├── robots.txt        # Web crawler configuration

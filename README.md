@@ -11,8 +11,8 @@ NahaAdmin is a clean, modern, and fully responsive free admin template built wit
 ---
 
 ## 🚀 Live Demo & Documentation
-* **Live Demo:** [naha-admin.vercel.app/demo/](https://naha-admin.vercel.app/demo/)
-* **Documentation:** [naha-admin.vercel.app/docs/](https://naha-admin.vercel.app/docs/)
+* **Live Demo:** [naha-admin.vercel.app/demo/](https://naha-admin.vercel.app/demo)
+* **Documentation:** [naha-admin.vercel.app/docs/](https://naha-admin.vercel.app/docs)
 
 ---
 

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic SEO -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Meta SEO -->
+    <meta name="description" content="NahaAdmin - Frequently Asked Questions" />
+    <meta name="keywords" content="NahaAdmin, faq, questions, admin dashboard, answers" />
+    <meta name="author" content="NahaAdmin" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="NahaAdmin - FAQ" />
+    <meta property="og:description" content="Frequently asked questions about NahaAdmin usage and setup" />
+    <meta property="og:type" content="website" />
+    <title>NahaAdmin - FAQ</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon"/>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"/>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../assets/plugins/nprogress/nprogress.min.css"/>
+    <link rel="stylesheet" href="../assets/styles/naha-admin.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css"/>
+    <link rel="stylesheet" href="../assets/plugins/animate/animate.min.css"/>
+    <link rel="stylesheet" href="../assets/plugins/simplebar/simplebar.min.css"/>
+    <link rel="stylesheet" href="../assets/plugins/phosphor/bold/style.css"/>
+    <link rel="stylesheet" href="../assets/plugins/phosphor/regular/style.css"/>
+    <link rel="stylesheet" href="../assets/plugins/phosphor/fill/style.css"/>
+</head>
+
+<body class="nd-nav-fixed">
+    <header>
+        <nav class="nd-topnav navbar navbar-expand navbar-light">
+            <a class="navbar-brand ps-3 d-flex align-items-center" href="index.html">
+                <img src="../assets/images/logo.png" alt="logo" class="logo-navbar" />
+                <span class="ms-2 fw-semibold">NahaAdmin</span>
+            </a>
+            <button class="btn btn-light" id="sidebarToggle" aria-label="Toggle sidebar">
+                <i class="ph-bold ph-sidebar-simple"></i>
+            </button>
+
+            <div class="d-none d-sm-flex align-items-center ms-3">
+                <span class="badge bg-primary-subtle text-primary fw-semibold px-2.5 py-1.5 rounded-pill">
+                    <i class="ph-bold ph-book me-1"></i> Documentation
+                </span>
+            </div>
+
+            <div class="ms-auto d-flex align-items-center pe-3">
+                <a href="../demo/index.html" class="btn btn-sm btn-outline-primary px-3">
+                    <i class="ph-bold ph-monitor-play me-1"></i> Live Preview
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <div id="layoutSidenav">
+        <aside id="layoutSidenav_nav">
+            <nav class="nd-sidenav accordion nd-sidenav-light" id="sidenavAccordion">
+                <div class="nd-sidenav-menu" data-simplebar>
+                    <div class="nav">
+                        <h2 class="nd-sidenav-menu-heading">Documentation</h2>
+                        <a class="nav-link" href="index.html">
+                            <div class="nd-nav-link-icon"><i class="ph-bold ph-info"></i></div>
+                            <span>Introduction</span>
+                        </a>
+                        <a class="nav-link" href="getting-started.html">
+                            <div class="nd-nav-link-icon"><i class="ph-bold ph-gear"></i></div>
+                            <span>Getting Started</span>
+                        </a>
+                        <a class="nav-link" href="theme-layout.html">
+                            <div class="nd-nav-link-icon"><i class="ph-bold ph-palette"></i></div>
+                            <span>Theme & Layout</span>
+                        </a>
+                        <a class="nav-link" href="browser-support.html">
+                            <div class="nd-nav-link-icon"><i class="ph-bold ph-browsers"></i></div>
+                            <span>Browser Support</span>
+                        </a>
+                        <a class="nav-link" href="custom-features.html">
+                            <div class="nd-nav-link-icon"><i class="ph-bold ph-lightning"></i></div>
+                            <span>Custom Features</span>
+                        </a>
+
+                        <h2 class="nd-sidenav-menu-heading">Resources</h2>
+                        <a class="nav-link" href="support.html">
+                            <div class="nd-nav-link-icon"><i class="ph-bold ph-globe"></i></div>
+                            <span>Support</span>
+                        </a>
+                        <a class="nav-link active" href="faq.html">
+                            <div class="nd-nav-link-icon"><i class="ph-bold ph-question"></i></div>
+                            <span>FAQ</span>
+                        </a>
+                        <a class="nav-link" href="license.html">
+                            <div class="nd-nav-link-icon"><i class="ph-bold ph-scales"></i></div>
+                            <span>License</span>
+                        </a>
+                        <a class="nav-link" href="https://github.com/sepsu-dev/naha-admin/releases" target="_blank">
+                            <div class="nd-nav-link-icon"><i class="ph-bold ph-download-simple"></i></div>
+                            <span>Download</span>
+                            <i class="ph-bold ph-arrow-up-right ms-auto extra-small opacity-50"></i>
+                        </a>
+                        <a class="nav-link" href="https://github.com/sepsu-dev/naha-admin" target="_blank">
+                            <div class="nd-nav-link-icon"><i class="ph-bold ph-github-logo"></i></div>
+                            <span>GitHub</span>
+                            <i class="ph-bold ph-arrow-up-right ms-auto extra-small opacity-50"></i>
+                        </a>
+                    </div>
+                </div>
+                <footer class="nd-sidenav-footer">
+                    <div class="user-info-footer overflow-hidden w-100">
+                        <small class="text-muted text-user-footer text-truncate d-block" style="font-size: 0.72rem; line-height: 1.4;">&copy; 2026 NahaAdmin &middot; MIT Licensed</small>
+                    </div>
+                </footer>
+            </nav>
+        </aside>
+
+        <main id="layoutSidenav_content" class="animate__animated animate__fadeIn">
+            <section class="container-fluid px-4 py-4 pb-5">
+                <div class="animate__animated animate__fadeIn">
+                    <!-- FAQ Card -->
+                    <div class="card shadow-sm border-0 mb-4">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="bg-primary-subtle text-primary rounded-3 p-3 me-3 d-inline-flex">
+                                    <i class="ph-bold ph-question fs-4"></i>
+                                </div>
+                                <div>
+                                    <h3 class="h5 fw-bold mb-0">FAQ</h3>
+                                    <p class="text-muted extra-small mb-0">Frequently asked questions and answers about NahaAdmin.</p>
+                                </div>
+                            </div>
+
+                            <!-- Category 1: Getting Started -->
+                            <h6 class="fw-bold text-dark mb-2.5 d-flex align-items-center">
+                                <i class="ph-bold ph-rocket-launch text-primary me-2"></i> Getting Started
+                            </h6>
+                            <div class="accordion mb-4" id="faqGettingStarted">
+                                <div class="accordion-item border rounded-3 mb-2 overflow-hidden">
+                                    <h2 class="accordion-header" id="faqGS1">
+                                        <button class="accordion-button fw-semibold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseGS1" aria-expanded="true" aria-controls="faqCollapseGS1">
+                                            What is NahaAdmin, exactly?
+                                        </button>
+                                    </h2>
+                                    <div id="faqCollapseGS1" class="accordion-collapse collapse show" aria-labelledby="faqGS1" data-bs-parent="#faqGettingStarted">
+                                        <div class="accordion-body text-muted small">
+                                            A free, open-source admin dashboard <em>template</em> licensed under MIT. It is a clean suite of HTML, CSS, and JavaScript files built on top of <strong>Bootstrap 5.3</strong> — not a bloated framework, not an npm component library. You drop it into your project, customize the markup to suit your application, and ship.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item border rounded-3 mb-2 overflow-hidden">
+                                    <h2 class="accordion-header" id="faqGS2">
+                                        <button class="accordion-button collapsed fw-semibold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseGS2" aria-expanded="false" aria-controls="faqCollapseGS2">
+                                            Do I need a build step, Node.js, or npm to run NahaAdmin?
+                                        </button>
+                                    </h2>
+                                    <div id="faqCollapseGS2" class="accordion-collapse collapse" aria-labelledby="faqGS2" data-bs-parent="#faqGettingStarted">
+                                        <div class="accordion-body text-muted small">
+                                            No build tools or bundlers are required! NahaAdmin is built with vanilla HTML, CSS Custom Properties, and modular JavaScript. You can serve it directly with any local static HTTP server (like VS Code Live Server, <code>npx serve .</code>, or <code>php -S localhost:8000</code>).
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item border rounded-3 mb-2 overflow-hidden">
+                                    <h2 class="accordion-header" id="faqGS3">
+                                        <button class="accordion-button collapsed fw-semibold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseGS3" aria-expanded="false" aria-controls="faqCollapseGS3">
+                                            Which Bootstrap version does NahaAdmin require?
+                                        </button>
+                                    </h2>
+                                    <div id="faqCollapseGS3" class="accordion-collapse collapse" aria-labelledby="faqGS3" data-bs-parent="#faqGettingStarted">
+                                        <div class="accordion-body text-muted small">
+                                            NahaAdmin is built natively on <strong>Bootstrap 5.3.x</strong>. It leverages Bootstrap 5.3's modern utility classes, CSS Custom Properties, and responsive flexbox components.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item border rounded-3 mb-0 overflow-hidden">
+                                    <h2 class="accordion-header" id="faqGS4">
+                                        <button class="accordion-button collapsed fw-semibold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseGS4" aria-expanded="false" aria-controls="faqCollapseGS4">
+                                            Can I use NahaAdmin with jQuery?
+                                        </button>
+                                    </h2>
+                                    <div id="faqCollapseGS4" class="accordion-collapse collapse" aria-labelledby="faqGS4" data-bs-parent="#faqGettingStarted">
+                                        <div class="accordion-body text-muted small">
+                                            NahaAdmin's core layout mechanics, sidebar toggling, and page transitions are written in <strong>pure vanilla JavaScript</strong>. However, jQuery is included in <code>assets/plugins/jquery/</code> so you can seamlessly use plugins like DataTables, Select2, or legacy scripts without conflicts.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Category 2: Framework Integrations -->
+                            <h6 class="fw-bold text-dark mb-2.5 d-flex align-items-center">
+                                <i class="ph-bold ph-puzzle-piece text-info me-2"></i> Framework Integrations
+                            </h6>
+                            <div class="accordion mb-4" id="faqIntegrations">
+                                <div class="accordion-item border rounded-3 mb-0 overflow-hidden">
+                                    <h2 class="accordion-header" id="faqInt1">
+                                        <button class="accordion-button collapsed fw-semibold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseInt1" aria-expanded="false" aria-controls="faqCollapseInt1">
+                                            How can I integrate NahaAdmin with Laravel, Django, Node.js, or PHP?
+                                        </button>
+                                    </h2>
+                                    <div id="faqCollapseInt1" class="accordion-collapse collapse" aria-labelledby="faqInt1" data-bs-parent="#faqIntegrations">
+                                        <div class="accordion-body text-muted small">
+                                            <ol class="ps-3 mb-0">
+                                                <li class="mb-1.5">Copy the <code>assets/</code> directory into your framework's public directory (e.g. <code>public/</code> for Laravel/PHP or <code>static/</code> for Django/Flask).</li>
+                                                <li class="mb-1.5">Extract the top navigation bar, sidebar navigation, and footer from <code>demo/starter.html</code> into your template layout or blade partials.</li>
+                                                <li>Render your dynamic server-side content directly inside the <code>&lt;main id="layoutSidenav_content"&gt;</code> container.</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Category 3: Customization & Theming -->
+                            <h6 class="fw-bold text-dark mb-2.5 d-flex align-items-center">
+                                <i class="ph-bold ph-palette text-warning me-2"></i> Customization & Theming
+                            </h6>
+                            <div class="accordion mb-4" id="faqCustomization">
+                                <div class="accordion-item border rounded-3 mb-2 overflow-hidden">
+                                    <h2 class="accordion-header" id="faqCust1">
+                                        <button class="accordion-button collapsed fw-semibold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseCust1" aria-expanded="false" aria-controls="faqCollapseCust1">
+                                            How do I customize the primary brand color?
+                                        </button>
+                                    </h2>
+                                    <div id="faqCollapseCust1" class="accordion-collapse collapse" aria-labelledby="faqCust1" data-bs-parent="#faqCustomization">
+                                        <div class="accordion-body text-muted small">
+                                            Simply modify the <code>--nd-primary</code> CSS variable inside <code>assets/styles/naha-admin.css</code> (or <code>assets/styles/docs.css</code>). All buttons, active sidebar links, focus rings, and badge accents will update instantly across all pages.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item border rounded-3 mb-2 overflow-hidden">
+                                    <h2 class="accordion-header" id="faqCust2">
+                                        <button class="accordion-button collapsed fw-semibold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseCust2" aria-expanded="false" aria-controls="faqCollapseCust2">
+                                            How do I enable the mini sidebar or fixed navbar?
+                                        </button>
+                                    </h2>
+                                    <div id="faqCollapseCust2" class="accordion-collapse collapse" aria-labelledby="faqCust2" data-bs-parent="#faqCustomization">
+                                        <div class="accordion-body text-muted small">
+                                            Apply the class <code>nd-nav-fixed</code> to the <code>&lt;body&gt;</code> tag for fixed top navbar behavior, and <code>nd-sidenav-toggled</code> to collapse the sidebar into the mini-mode rail (which auto-expands on hover).
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item border rounded-3 mb-0 overflow-hidden">
+                                    <h2 class="accordion-header" id="faqCust3">
+                                        <button class="accordion-button collapsed fw-semibold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseCust3" aria-expanded="false" aria-controls="faqCollapseCust3">
+                                            How do I disable page fade transitions?
+                                        </button>
+                                    </h2>
+                                    <div id="faqCollapseCust3" class="accordion-collapse collapse" aria-labelledby="faqCust3" data-bs-parent="#faqCustomization">
+                                        <div class="accordion-body text-muted small">
+                                            Add <code>target="_blank"</code> or specific data attributes to your anchor tags, or remove the click intercept handler in <code>assets/scripts/naha-admin.js</code>.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Category 4: Licensing -->
+                            <h6 class="fw-bold text-dark mb-2.5 d-flex align-items-center">
+                                <i class="ph-bold ph-scales text-success me-2"></i> Licensing
+                            </h6>
+                            <div class="accordion mb-0" id="faqLicensing">
+                                <div class="accordion-item border rounded-3 mb-2 overflow-hidden">
+                                    <h2 class="accordion-header" id="faqLic1">
+                                        <button class="accordion-button collapsed fw-semibold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseLic1" aria-expanded="false" aria-controls="faqCollapseLic1">
+                                            Can I use NahaAdmin in commercial and client projects?
+                                        </button>
+                                    </h2>
+                                    <div id="faqCollapseLic1" class="accordion-collapse collapse" aria-labelledby="faqLic1" data-bs-parent="#faqLicensing">
+                                        <div class="accordion-body text-muted small">
+                                            Yes! NahaAdmin is 100% free and open-source under the <a href="license.html" class="fw-semibold text-primary text-decoration-none">MIT License</a>. You can use it freely in unlimited personal, client, and commercial projects without any license fees.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item border rounded-3 mb-0 overflow-hidden">
+                                    <h2 class="accordion-header" id="faqLic2">
+                                        <button class="accordion-button collapsed fw-semibold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseLic2" aria-expanded="false" aria-controls="faqCollapseLic2">
+                                            Do I have to keep visible copyright attribution in my application UI?
+                                        </button>
+                                    </h2>
+                                    <div id="faqCollapseLic2" class="accordion-collapse collapse" aria-labelledby="faqLic2" data-bs-parent="#faqLicensing">
+                                        <div class="accordion-body text-muted small">
+                                            No, you do not need to display visible attribution or links in your website/application footer. The MIT License only requires preserving the copyright header notice inside the source code files.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Footer -->
+                    <div class="d-flex justify-content-between align-items-center mt-4">
+                        <a href="support.html" class="btn btn-outline-secondary px-3 py-2">
+                            <i class="ph-bold ph-arrow-left me-1"></i> Support
+                        </a>
+                        <a href="license.html" class="btn btn-outline-primary px-3 py-2">
+                            License <i class="ph-bold ph-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/plugins/jquery/jquery.min.js"></script>
+    <script src="../assets/plugins/simplebar/simplebar.min.js"></script>
+    <script src="../assets/plugins/nprogress/nprogress.min.js"></script>
+    <script src="../assets/scripts/naha-admin.min.js"></script>
+</body>
+
+</html>

@@ -8,16 +8,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <!-- Meta SEO -->
-    <meta name="description" content="NahaAdmin - Free Bootstrap 5 Admin Dashboard" />
-    <meta name="keywords" content="NahaAdmin, admin dashboard, bootstrap 5, ui kit, webapp" />
+    <meta name="description" content="NahaAdmin - Custom Features & Utilities" />
+    <meta name="keywords" content="NahaAdmin, admin dashboard, bootstrap 5, css utilities, spa transitions" />
     <meta name="author" content="NahaAdmin" />
     <meta name="robots" content="index, follow" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="NahaAdmin - Documentation" />
-    <meta property="og:description" content="NahaAdmin - Free Bootstrap 5 Admin Dashboard Documentation" />
+    <meta property="og:title" content="NahaAdmin - Custom Features" />
+    <meta property="og:description" content="Custom JS features, SPA transitions, password toggles, and utilities" />
     <meta property="og:type" content="website" />
-    <title>NahaAdmin - Introduction</title>
+    <title>NahaAdmin - Custom Features</title>
 
     <!-- Favicon -->
     <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon"/>
@@ -81,7 +81,7 @@
                 <div class="nd-sidenav-menu" data-simplebar>
                     <div class="nav">
                         <h2 class="nd-sidenav-menu-heading">Documentation</h2>
-                        <a class="nav-link active" href="index.html">
+                        <a class="nav-link" href="index.html">
                             <div class="nd-nav-link-icon"><i class="ph-bold ph-info"></i></div>
                             <span>Introduction</span>
                         </a>
@@ -97,7 +97,7 @@
                             <div class="nd-nav-link-icon"><i class="ph-bold ph-browsers"></i></div>
                             <span>Browser Support</span>
                         </a>
-                        <a class="nav-link" href="custom-features.html">
+                        <a class="nav-link active" href="custom-features.html">
                             <div class="nd-nav-link-icon"><i class="ph-bold ph-lightning"></i></div>
                             <span>Custom Features</span>
                         </a>
@@ -138,85 +138,63 @@
         <main id="layoutSidenav_content" class="animate__animated animate__fadeIn">
             <section class="container-fluid px-4 py-4 pb-5">
                 <div class="animate__animated animate__fadeIn">
-                    <!-- Introduction Card -->
+                    <!-- Custom Features Card -->
                     <div class="card shadow-sm border-0 mb-4">
                         <div class="card-body p-4">
                             <div class="d-flex align-items-center mb-3">
-                                <div class="bg-primary-subtle text-primary rounded-3 p-3 me-3 d-inline-flex">
-                                    <i class="ph-bold ph-info fs-4"></i>
+                                <div class="bg-info-subtle text-info rounded-3 p-3 me-3 d-inline-flex">
+                                    <i class="ph-bold ph-lightning fs-4"></i>
                                 </div>
                                 <div>
-                                    <h3 class="h5 fw-bold mb-0">Introduction</h3>
-                                    <p class="text-muted extra-small mb-0">Overview and core philosophy of NahaAdmin.</p>
+                                    <h3 class="h5 fw-bold mb-0">Custom Features</h3>
+                                    <p class="text-muted extra-small mb-0">Built-in JavaScript enhancements and utility helper classes.</p>
                                 </div>
                             </div>
-                            <p class="text-muted small mb-4"><strong>NahaAdmin</strong> is a modern, lightweight, and responsive free admin dashboard template built on top of <strong>Bootstrap 5.3</strong>, pure vanilla JavaScript, and modern CSS Custom Properties. Designed to give developers a clean, framework-agnostic starting point for web applications, SaaS dashboards, and control panels without the heavy overhead of complex build tools.</p>
+                            
+                            <h6 class="fw-bold small text-dark mb-2">1. Page Transitions & NProgress</h6>
+                            <p class="text-muted small mb-3">NahaAdmin automatically intercepts internal page navigations to display a top progress bar and smooth content fade. To exclude specific links (such as downloads, external URLs, modals, or tab toggles), apply any of these attributes:</p>
+                            <pre class="bg-dark text-light p-3 rounded small mb-4" style="font-family: monospace; font-size: 0.8rem; line-height: 1.5;"><code>&lt;!-- Excluded automatically from SPA transition: --&gt;
+&lt;a href="https://example.com" target="_blank"&gt;External Link&lt;/a&gt;
+&lt;a href="#modalId" data-bs-toggle="modal"&gt;Open Modal&lt;/a&gt;
+&lt;a href="javascript:;"&gt;JS Action&lt;/a&gt;</code></pre>
 
-                            <!-- Highlights Grid -->
-                            <div class="row g-3 mb-4">
-                                <div class="col-md-6 col-lg-3">
-                                    <div class="p-3 border rounded-3 bg-light h-100">
-                                        <div class="d-flex align-items-center mb-2">
-                                            <i class="ph-bold ph-squares-four text-primary fs-5 me-2"></i>
-                                            <h6 class="fw-bold mb-0 small text-dark">5 Dashboards</h6>
-                                        </div>
-                                        <p class="text-muted extra-small mb-0">Default, Analytics, CRM, Ecommerce, and Finance pre-built dashboards.</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-3">
-                                    <div class="p-3 border rounded-3 bg-light h-100">
-                                        <div class="d-flex align-items-center mb-2">
-                                            <i class="ph-bold ph-app-window text-success fs-5 me-2"></i>
-                                            <h6 class="fw-bold mb-0 small text-dark">4 Ready Apps</h6>
-                                        </div>
-                                        <p class="text-muted extra-small mb-0">Interactive Inbox, Chat, Kanban Board, and File Manager modules.</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-3">
-                                    <div class="p-3 border rounded-3 bg-light h-100">
-                                        <div class="d-flex align-items-center mb-2">
-                                            <i class="ph-bold ph-browsers text-info fs-5 me-2"></i>
-                                            <h6 class="fw-bold mb-0 small text-dark">53+ Demo Pages</h6>
-                                        </div>
-                                        <p class="text-muted extra-small mb-0">Complete suite of UI components, form controls, tables, and error pages.</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-3">
-                                    <div class="p-3 border rounded-3 bg-light h-100">
-                                        <div class="d-flex align-items-center mb-2">
-                                            <i class="ph-bold ph-sparkle text-warning fs-5 me-2"></i>
-                                            <h6 class="fw-bold mb-0 small text-dark">Zero Build Step</h6>
-                                        </div>
-                                        <p class="text-muted extra-small mb-0">Pure HTML5, CSS3, and JS. Ready to plug into any backend or serve statically.</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <h6 class="fw-bold small text-dark mb-2">2. Custom Scrollbars (SimpleBar)</h6>
+                            <p class="text-muted small mb-3">Attach custom cross-browser slim scrollbars to any scrollable element simply by adding the <code>data-simplebar</code> attribute:</p>
+                            <pre class="bg-dark text-light p-3 rounded small mb-4" style="font-family: monospace; font-size: 0.8rem;"><code>&lt;div class="nd-sidenav-menu" data-simplebar style="max-height: 100vh;"&gt;
+    &lt;!-- Scrollable content --&gt;
+&lt;/div&gt;</code></pre>
 
-                            <h6 class="fw-bold small text-dark mb-2">What's Included:</h6>
-                            <div class="row g-3 text-muted small">
-                                <div class="col-md-6">
-                                    <ul class="ps-3 mb-0">
-                                        <li class="mb-2"><strong>Layout Flexibility:</strong> Full sidebar and collapsible mini sidebar with hover auto-expansion and <code>localStorage</code> state persistence.</li>
-                                        <li class="mb-2"><strong>SPA-Like Feel:</strong> Built-in smooth page transitions integrated with NProgress loading bar.</li>
-                                        <li class="mb-2"><strong>Phosphor Icons:</strong> Over 1,000+ modern icons across Bold, Regular, and Fill styles.</li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-6">
-                                    <ul class="ps-3 mb-0">
-                                        <li class="mb-2"><strong>Advanced Data Tables:</strong> Basic responsive tables, DataTables, and Grid.js support.</li>
-                                        <li class="mb-2"><strong>Rich Forms:</strong> Select2 dropdowns, custom checkboxes/radios, Quill text editors, and client-side validation.</li>
-                                        <li class="mb-2"><strong>MIT Licensed:</strong> 100% free for both personal and commercial projects.</li>
-                                    </ul>
-                                </div>
-                            </div>
+                            <h6 class="fw-bold small text-dark mb-2">3. Phosphor Icons Integration</h6>
+                            <p class="text-muted small mb-3">NahaAdmin bundles over 1,000+ vector Phosphor icons. You can use <code>ph-bold</code>, <code>ph-regular</code>, or <code>ph-fill</code> variants:</p>
+                            <pre class="bg-dark text-light p-3 rounded small mb-4" style="font-family: monospace; font-size: 0.8rem;"><code>&lt;i class="ph-bold ph-house fs-5"&gt;&lt;/i&gt;
+&lt;i class="ph-regular ph-envelope"&gt;&lt;/i&gt;
+&lt;i class="ph-fill ph-heart text-danger"&gt;&lt;/i&gt;</code></pre>
+
+                            <h6 class="fw-bold small text-dark mb-2">4. Interactive Form Helpers</h6>
+                            <p class="text-muted small mb-2">Built-in password reveal toggle script:</p>
+                            <pre class="bg-dark text-light p-3 rounded small mb-4" style="font-family: monospace; font-size: 0.8rem;"><code>&lt;div class="input-group"&gt;
+    &lt;input type="password" class="form-control password-toggle" placeholder="Password"&gt;
+    &lt;button class="btn btn-light toggle-password border" type="button"&gt;
+        &lt;i class="ph-bold ph-eye"&gt;&lt;/i&gt;
+    &lt;/button&gt;
+&lt;/div&gt;</code></pre>
+
+                            <h6 class="fw-bold small text-dark mb-2">5. Custom CSS Helper Utilities</h6>
+                            <ul class="ps-3 mb-0 text-muted small">
+                                <li class="mb-2"><code>.border-dashed</code>: Dashed border outline, ideal for dropzones and upload boxes.</li>
+                                <li class="mb-2"><code>.extra-small</code>: Sets text size to <code>0.75rem</code> for sub-labels and badges.</li>
+                                <li><code>.timeline-simple</code>: Vertical activity timeline component for audit logs and notifications.</li>
+                            </ul>
                         </div>
                     </div>
 
-                    <!-- Next Step Navigation -->
+                    <!-- Navigation Footer -->
                     <div class="d-flex justify-content-between align-items-center mt-4">
-                        <div></div>
-                        <a href="getting-started.html" class="btn btn-outline-primary px-3 py-2">
-                            Getting Started <i class="ph-bold ph-arrow-right ms-1"></i>
+                        <a href="browser-support.html" class="btn btn-outline-secondary px-3 py-2">
+                            <i class="ph-bold ph-arrow-left me-1"></i> Browser Support
+                        </a>
+                        <a href="support.html" class="btn btn-outline-primary px-3 py-2">
+                            Support <i class="ph-bold ph-arrow-right ms-1"></i>
                         </a>
                     </div>
                 </div>

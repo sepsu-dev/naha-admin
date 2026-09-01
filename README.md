@@ -1,7 +1,7 @@
 # NahaAdmin - Free Bootstrap 5 Admin Dashboard
 
-[![GitHub downloads](https://img.shields.io/github/downloads/sepsu-dev/naha-admin/total.svg?style=for-the-badge&color=22c55e)](https://github.com/sepsu-dev/naha-admin/releases/tag/v1.0.0)
-[![GitHub release](https://img.shields.io/github/v/release/sepsu-dev/naha-admin?style=for-the-badge&color=3b82f6)](https://github.com/sepsu-dev/naha-admin/releases/tag/v1.0.0)
+[![GitHub downloads](https://img.shields.io/github/downloads/sepsu-dev/naha-admin/total.svg?style=for-the-badge&color=22c55e)](https://github.com/sepsu-dev/naha-admin/releases)
+[![GitHub release](https://img.shields.io/github/v/release/sepsu-dev/naha-admin?style=for-the-badge&color=3b82f6)](https://github.com/sepsu-dev/naha-admin/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
 ![NahaAdmin Banner](assets/images/banner.png)

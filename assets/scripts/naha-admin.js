@@ -64,8 +64,10 @@ $(function () {
     const path = window.location.pathname;
     const page = path.split('/').pop() || 'index.html';
 
-    // Remove any hardcoded active classes initially
+    // Remove any hardcoded active classes and reset collapses initially
     $('#sidenavAccordion .nav-link').removeClass('active');
+    $('#sidenavAccordion .collapse').removeClass('show');
+    $('#sidenavAccordion [data-bs-toggle="collapse"]').addClass('collapsed').attr('aria-expanded', 'false');
 
     // Find all nav links and match against current page
     $('#sidenavAccordion .nav-link').each(function () {
@@ -87,8 +89,6 @@ $(function () {
                 const collapseId = $parentCollapse.attr('id');
                 const $trigger = $('[data-bs-target="#' + collapseId + '"]');
                 $trigger.removeClass('collapsed').attr('aria-expanded', 'true');
-
-                // If the trigger has a parent collapse, we might need to show that too (handled by the parents() loop)
             });
         }
     });

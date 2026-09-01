@@ -88,19 +88,6 @@ body {
     transform: translateY(-1px);
 }
 
-.nd-topnav .btn-outline-dark {
-    background-color: transparent;
-    border: 1px solid #d1d5db;
-    color: #374151;
-}
-
-.nd-topnav .btn-outline-dark:hover {
-    background-color: #f9fafb;
-    border-color: #9ca3af;
-    color: #111827;
-    transform: translateY(-1px);
-}
-
 .nd-topnav .btn-primary {
     background-color: var(--nd-primary);
     border: 1px solid var(--nd-primary);
@@ -221,7 +208,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 8rem 1rem 2rem;
+    padding: 7rem 1.5rem 2.5rem;
     text-align: center;
     background-color: var(--nd-bg);
 }
@@ -229,27 +216,29 @@ body {
 .hero-badge {
     display: inline-flex;
     align-items: center;
-    gap: 0.35rem;
-    font-size: 0.75rem;
+    gap: 0.4rem;
+    font-size: 0.8rem;
     font-weight: 600;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
     color: var(--nd-primary);
     background: #eff6ff;
     border: 1px solid #bfdbfe;
-    padding: 0.3rem 0.85rem;
+    padding: 0.4rem 1.1rem;
     border-radius: 99px;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
 }
 
 .hero-title {
-    font-size: 2.1rem;
+    font-size: clamp(1.75rem, 2.75vw, 2.35rem);
     font-weight: 700;
-    line-height: 1.2;
-    letter-spacing: -0.5px;
+    line-height: 1.3;
+    letter-spacing: -0.4px;
     color: var(--nd-text);
-    margin-bottom: 0.85rem;
-    max-width: 600px;
+    margin: 0 auto 1rem;
+    max-width: 780px;
+    width: 100%;
+    text-align: center;
 }
 
 .hero-title span {
@@ -257,36 +246,24 @@ body {
 }
 
 .hero-subtitle {
-    font-size: 1rem;
+    font-size: 0.975rem;
     color: var(--nd-muted);
-    max-width: 480px;
+    max-width: 660px;
+    width: 100%;
     line-height: 1.65;
-    margin-bottom: 1.75rem;
-}
-
-.hero-actions {
-    display: flex;
-    gap: 0.65rem;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 2.5rem;
-}
-
-.hero-actions .btn {
-    font-size: 0.875rem;
-    font-weight: 600;
-    padding: 0.5rem 1.25rem;
-    border-radius: 99px;
+    margin: 0 auto 2.25rem;
+    text-align: center;
 }
 
 /* ================================================
    BANNER
 ================================================ */
 .hero-banner-wrap {
-    width: 100%;
-    max-width: 780px;
+    width: 80%;
+    max-width: 800px;
     margin: 0 auto;
     position: relative;
+    border-radius: 16px;
 }
 
 .hero-banner-wrap::before {
@@ -346,13 +323,23 @@ body {
 
 /* ================================================
    RESPONSIVE
-================================================ */
-@media (max-width: 640px) {
-    .hero-title {
-        font-size: 1.6rem;
+=============================================== */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 5.5rem 1rem 1.5rem;
     }
 
-    .hero-section {
-        padding: 6rem 1rem 2rem;
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 1.75rem;
+    }
+
+    .hero-banner-wrap {
+        width: 100%;
+        border-radius: 16px;
     }
 }

@@ -381,125 +381,124 @@
         </footer>
       </nav>
     </aside>
-        <main id="layoutSidenav_content" class="animate__animated animate__fadeIn">
-            <section class="container-fluid px-4">
-                <header class="my-4">
-                    <h1 class="mb-0 fw-semibold">Select</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                            <li class="breadcrumb-item">Forms</li>
-                            <li class="breadcrumb-item active">Select</li>
-                        </ol>
-                    </nav>
-                </header>
-                <p class="text-muted mb-4">A delivery form pairs a native shipping choice with searchable country controls and flag templates.
-                    Compare individual <a href="forms-select.html">Native Select</a> and <a href="forms-select.html#framework-select">Select</a> states.</p>
-                <form id="deliveryForm" onsubmit="event.preventDefault(); document.getElementById('deliveryStatus').textContent = 'Delivery choices checked locally. Nothing sent or saved.';">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="card animate__animated animate__fadeIn mb-4">
-                                <div class="card-header fw-semibold">Shipping service</div>
-                                <div class="card-body">
-                                    <label class="form-label" for="shippingService">Service</label>
-                                    <select class="form-select mb-3" id="shippingService" name="service" required>
-                                        <option value="" selected>Choose a service</option>
-                                        <option value="standard">Standard (3-5 days)</option>
-                                        <option value="express">Express (1-2 days)</option>
-                                    </select>
-                                </div>
+    <main id="layoutSidenav_content" class="animate__animated animate__fadeIn">
+        <section class="container-fluid px-4">
+            <header class="my-4">
+                <h1 class="mb-0 fw-semibold">Select</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="index.html">Dashboard</a>
+                        </li>
+                        <li class="breadcrumb-item">Forms</li>
+                        <li class="breadcrumb-item active">Select</li>
+                    </ol>
+                </nav>
+            </header>
+            <p class="text-muted mb-4">A delivery form pairs a native shipping choice with searchable country controls and flag templates.
+            Compare individual <a href="forms-select.html">Native Select</a> and <a href="forms-select.html#framework-select">Select</a> states.</p>
+            <form id="deliveryForm" onsubmit="event.preventDefault(); document.getElementById('deliveryStatus').textContent = 'Delivery choices checked locally. Nothing sent or saved.';">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card animate__animated animate__fadeIn mb-4">
+                            <div class="card-header fw-semibold">Shipping service</div>
+                            <div class="card-body">
+                                <label class="form-label" for="shippingService">Service</label>
+                                <select class="form-select mb-3" id="shippingService" name="service" required>
+                                    <option value="" selected>Choose a service</option>
+                                    <option value="standard">Standard (3-5 days)</option>
+                                    <option value="express">Express (1-2 days)</option>
+                                </select>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="card animate__animated animate__fadeIn mb-4">
-                                <div class="card-header fw-semibold">Billing country</div>
-                                <div class="card-body">
-                                    <label class="form-label" for="select2-single">Search billing countries</label>
-                                    <select class="form-select" id="select2-single" name="billingCountry" data-placeholder="Choose...">
-                                        <option></option>
-                                        <option value="usa">United States</option>
-                                        <option value="idn">Indonesia</option>
-                                    </select>
-                                </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card animate__animated animate__fadeIn mb-4">
+                            <div class="card-header fw-semibold">Billing country</div>
+                            <div class="card-body">
+                                <label class="form-label" for="select2-single">Search billing countries</label>
+                                <select class="form-select" id="select2-single" name="billingCountry" data-placeholder="Choose...">
+                                    <option></option>
+                                    <option value="usa">United States</option>
+                                    <option value="idn">Indonesia</option>
+                                </select>
                             </div>
                         </div>
-                        <div class="col-lg-12">
-                            <div class="card animate__animated animate__fadeIn mb-4">
-                                <div class="card-header fw-semibold">Delivery country with flags</div>
-                                <div class="card-body">
-                                    <p class="text-muted small mb-3">Custom Select2 template to display flag icons alongside
-                                        country names.</p>
-                                    <div class="row">
-                                        <div class="col-md-6 mb-3">
-                                            <label class="form-label" for="select-country">Delivery country</label>
-                                            <select class="form-select" id="select-country" name="deliveryCountry"
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="card animate__animated animate__fadeIn mb-4">
+                            <div class="card-header fw-semibold">Delivery country with flags</div>
+                            <div class="card-body">
+                                <p class="text-muted small mb-3">Custom Select2 template to display flag icons alongside
+                                country names.</p>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label" for="select-country">Delivery country</label>
+                                        <select class="form-select" id="select-country" name="deliveryCountry"
                                                 data-placeholder="Choose a country...">
-                                                <option></option>
-                                                <option value="ID">Indonesia</option>
-                                                <option value="US">United States</option>
-                                                <option value="GB">United Kingdom</option>
-                                                <option value="JP">Japan</option>
-                                                <option value="KR">South Korea</option>
-                                                <option value="DE">Germany</option>
-                                                <option value="FR">France</option>
-                                            </select>
-                                        </div>
+                                            <option></option>
+                                            <option value="ID">Indonesia</option>
+                                            <option value="US">United States</option>
+                                            <option value="GB">United Kingdom</option>
+                                            <option value="JP">Japan</option>
+                                            <option value="KR">South Korea</option>
+                                            <option value="DE">Germany</option>
+                                            <option value="FR">France</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
                 <button class="btn btn-primary" type="submit">Check delivery choices</button>
                 <p class="text-muted mt-3" id="deliveryStatus" role="status">Demo only. Nothing is sent or saved.</p>
-                </form>
-
-                <section id="native-region" class="mb-4" aria-label="Native Select">
-                    <div class="component-demo">
-                        <article class="card">
-                            <div class="card-body">
-                                <div id="native-select">
-                                    <label for="region" class="form-label">Native Select · Region</label>
-                                    <select class="form-select" id="region">
-                                        <option>Bandung</option>
-                                        <option>Jakarta</option>
-                                        <option disabled>Surabaya · unavailable</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </section>
-
-                <section id="framework-select" class="mb-4" aria-label="Select">
-                    <div class="component-demo">
-                        <article class="card">
-                            <div class="card-body">
-                                <h2>Choose a framework</h2>
-                                <label class="form-label" for="selectFramework">Framework</label>
-                                <select class="form-select" id="selectFramework">
-                                    <option value="">Choose framework</option>
-                                    <option>Bootstrap</option>
-                                    <option>React</option>
-                                    <option>Vue</option>
-                                </select>
-                                <p class="small text-muted mt-3">
-                                    <a href="forms-select.html">Advanced searchable Select2 examples</a>
-                                </p>
-                                <label class="form-label" for="disabledSelect">Unavailable</label>
-                                <select class="form-select" id="disabledSelect" disabled>
-                                    <option>Unavailable</option>
+            </form>
+            <section id="native-region" class="mb-4" aria-label="Native Select">
+                <div class="component-demo">
+                    <article class="card">
+                        <div class="card-body">
+                            <div id="native-select">
+                                <label for="region" class="form-label">Native Select · Region</label>
+                                <select class="form-select" id="region">
+                                    <option>Bandung</option>
+                                    <option>Jakarta</option>
+                                    <option disabled>Surabaya · unavailable</option>
                                 </select>
                             </div>
-                        </article>
-                    </div>
-                </section>
+                        </div>
+                    </article>
+                </div>
             </section>
-        </main>
+            <section id="framework-select" class="mb-4" aria-label="Select">
+                <div class="component-demo">
+                    <article class="card">
+                        <div class="card-body">
+                            <h2>Choose a framework</h2>
+                            <label class="form-label" for="selectFramework">Framework</label>
+                            <select class="form-select" id="selectFramework">
+                                <option value="">Choose framework</option>
+                                <option>Bootstrap</option>
+                                <option>React</option>
+                                <option>Vue</option>
+                            </select>
+                            <p class="small text-muted mt-3">
+                            <a href="forms-select.html">Advanced searchable Select2 examples</a>
+                            </p>
+                            <label class="form-label" for="disabledSelect">Unavailable</label>
+                            <select class="form-select" id="disabledSelect" disabled>
+                                <option>Unavailable</option>
+                            </select>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </section>
+    </main>
     </div>
     <script src="../assets/plugins/jquery/jquery.min.js"></script>
 
-
-  <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/plugins/select2/js/select2.min.js"></script>
     <script src="../assets/plugins/simplebar/simplebar.min.js"></script>
     <script src="../assets/plugins/nprogress/nprogress.min.js"></script>
@@ -534,10 +533,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-

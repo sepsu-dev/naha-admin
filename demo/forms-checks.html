@@ -378,152 +378,149 @@
       </nav>
     </aside>
     <main id="layoutSidenav_content" class="animate__animated animate__fadeIn">
-      <section class="container-fluid px-4">
-        <header class="my-4">
-          <h1 class="mb-0 fw-semibold">Checks, Radios &amp; Switches</h1>
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-              <li class="breadcrumb-item">Forms</li>
-              <li class="breadcrumb-item active">Checkboxes & Radios</li>
-            </ol>
-          </nav>
-        </header>
-        <p class="text-muted mb-4">A notification preferences form combining checkboxes, radios, and a switch.
-          For isolated states, see <a href="forms-checks.html#checkbox-states">Checkbox</a>, <a href="forms-checks.html#radio-states">Radio Group</a>, and <a href="forms-checks.html#switch-states">Switch</a>.</p>
-        <form class="card mb-4" id="preferencesForm" onsubmit="event.preventDefault(); document.getElementById('preferencesStatus').textContent = 'Preferences checked locally. Nothing saved.';">
-          <div class="card-body">
-            <h2>Notification preferences</h2>
-            <fieldset class="mb-4">
-              <legend class="h5">Send me updates about</legend>
-              <div class="form-check"><input class="form-check-input" type="checkbox" name="updates" value="projects" id="projectUpdates" checked><label class="form-check-label" for="projectUpdates">Project activity</label></div>
-              <div class="form-check"><input class="form-check-input" type="checkbox" name="updates" value="mentions" id="mentionUpdates" checked><label class="form-check-label" for="mentionUpdates">Mentions and replies</label></div>
-              <div class="form-check"><input class="form-check-input" type="checkbox" name="updates" value="product" id="productUpdates"><label class="form-check-label" for="productUpdates">Product news</label></div>
-            </fieldset>
-            <fieldset class="mb-4">
-              <legend class="h5">Email frequency</legend>
-              <div class="form-check"><input class="form-check-input" type="radio" name="frequency" value="daily" id="dailyDigest" checked><label class="form-check-label" for="dailyDigest">Daily digest</label></div>
-              <div class="form-check"><input class="form-check-input" type="radio" name="frequency" value="weekly" id="weeklyDigest"><label class="form-check-label" for="weeklyDigest">Weekly summary</label></div>
-              <div class="form-check"><input class="form-check-input" type="radio" name="frequency" value="none" id="noDigest"><label class="form-check-label" for="noDigest">No email digest</label></div>
-            </fieldset>
-            <div class="form-check form-switch mb-4"><input class="form-check-input" type="checkbox" role="switch" name="quiet" id="quietHours" aria-describedby="quietHelp"><label class="form-check-label" for="quietHours">Quiet hours</label><p class="form-text mb-0" id="quietHelp">Pause notifications between 10 pm and 8 am.</p></div>
-            <button class="btn btn-primary" type="submit">Check preferences</button>
-            <p class="text-muted mt-3 mb-0" id="preferencesStatus" role="status">Demo only. Changes reset on reload.</p>
-          </div>
-        </form>
-
-                <section id="checkbox-states" class="mb-4" aria-label="Checkbox">
-                    <div class="component-demo">
-                        <div class="card animate__animated animate__fadeIn mb-4">
-                            <div class="card-header fw-semibold">Checkboxes</div>
-                            <div class="card-body">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check1">
-                                    <label
-                    class="form-check-label" for="check1">Default
-                    checkbox</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check2" checked>
-                                    <label
-                    class="form-check-label" for="check2">Checked checkbox</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check3" disabled>
-                                    <label
-                    class="form-check-label" for="check3">Disabled checkbox</label>
-                                </div>
+        <section class="container-fluid px-4">
+            <header class="my-4">
+                <h1 class="mb-0 fw-semibold">Checks, Radios &amp; Switches</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="index.html">Dashboard</a>
+                        </li>
+                        <li class="breadcrumb-item">Forms</li>
+                        <li class="breadcrumb-item active">Checkboxes & Radios</li>
+                    </ol>
+                </nav>
+            </header>
+            <p class="text-muted mb-4">A notification preferences form combining checkboxes, radios, and a switch.
+            For isolated states, see <a href="forms-checks.html#checkbox-states">Checkbox</a>, <a href="forms-checks.html#radio-states">Radio Group</a>, and <a href="forms-checks.html#switch-states">Switch</a>.</p>
+            <form class="card mb-4" id="preferencesForm" onsubmit="event.preventDefault(); document.getElementById('preferencesStatus').textContent = 'Preferences checked locally. Nothing saved.';">
+                <div class="card-body">
+                    <h2>Notification preferences</h2>
+                    <fieldset class="mb-4">
+                        <legend class="h5">Send me updates about</legend>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="updates" value="projects" id="projectUpdates" checked>
+                            <label class="form-check-label" for="projectUpdates">Project activity</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="updates" value="mentions" id="mentionUpdates" checked>
+                            <label class="form-check-label" for="mentionUpdates">Mentions and replies</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="updates" value="product" id="productUpdates">
+                            <label class="form-check-label" for="productUpdates">Product news</label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="mb-4">
+                        <legend class="h5">Email frequency</legend>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="frequency" value="daily" id="dailyDigest" checked>
+                            <label class="form-check-label" for="dailyDigest">Daily digest</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="frequency" value="weekly" id="weeklyDigest">
+                            <label class="form-check-label" for="weeklyDigest">Weekly summary</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="frequency" value="none" id="noDigest">
+                            <label class="form-check-label" for="noDigest">No email digest</label>
+                        </div>
+                    </fieldset>
+                    <div class="form-check form-switch mb-4">
+                        <input class="form-check-input" type="checkbox" role="switch" name="quiet" id="quietHours" aria-describedby="quietHelp">
+                        <label class="form-check-label" for="quietHours">Quiet hours</label>
+                        <p class="form-text mb-0" id="quietHelp">Pause notifications between 10 pm and 8 am.</p>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Check preferences</button>
+                    <p class="text-muted mt-3 mb-0" id="preferencesStatus" role="status">Demo only. Changes reset on reload.</p>
+                </div>
+            </form>
+            <section id="checkbox-states" class="mb-4" aria-label="Checkbox">
+                <div class="component-demo">
+                    <div class="card animate__animated animate__fadeIn mb-4">
+                        <div class="card-header fw-semibold">Checkboxes</div>
+                        <div class="card-body">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="check1">
+                                <label
+                                class="form-check-label" for="check1">Default
+                                checkbox</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="check2" checked>
+                                <label
+                                class="form-check-label" for="check2">Checked checkbox</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="check3" disabled>
+                                <label
+                                class="form-check-label" for="check3">Disabled checkbox</label>
                             </div>
                         </div>
                     </div>
-                </section>
-
-                <section id="radio-states" class="mb-4" aria-label="Radio Group">
-                    <div class="component-demo">
-                        <div class="card animate__animated animate__fadeIn mb-4">
-                            <div class="card-header fw-semibold">Radios</div>
-                            <div class="card-body">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="radios" id="radio1"
-                    checked>
-                                    <label class="form-check-label" for="radio1">Default
-                    radio</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="radios" id="radio2">
-                                    <label
-                    class="form-check-label" for="radio2">Second radio</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="radios" id="radio3"
-                    disabled>
-                                    <label class="form-check-label" for="radio3">Disabled
-                    radio</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="switch-states" class="mb-4" aria-label="Switch">
-                    <div class="component-demo">
-                        <div class="card animate__animated animate__fadeIn mb-4">
-                            <div class="card-header fw-semibold">Switches</div>
-                            <div class="card-body">
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch" id="switch1">
-                                    <label
-                    class="form-check-label" for="switch1">Default
-                    switch</label>
-                                </div>
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch" id="switch2"
-                    checked>
-                                    <label class="form-check-label" for="switch2">Checked
-                    switch</label>
-                                </div>
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch" id="switchDisabled" disabled>
-                                    <label class="form-check-label" for="switchDisabled">Unavailable</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                </div>
             </section>
+            <section id="radio-states" class="mb-4" aria-label="Radio Group">
+                <div class="component-demo">
+                    <div class="card animate__animated animate__fadeIn mb-4">
+                        <div class="card-header fw-semibold">Radios</div>
+                        <div class="card-body">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radios" id="radio1"
+                                checked>
+                                <label class="form-check-label" for="radio1">Default
+                                radio</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radios" id="radio2">
+                                <label
+                                class="form-check-label" for="radio2">Second radio</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radios" id="radio3"
+                                disabled>
+                                <label class="form-check-label" for="radio3">Disabled
+                                radio</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="switch-states" class="mb-4" aria-label="Switch">
+                <div class="component-demo">
+                    <div class="card animate__animated animate__fadeIn mb-4">
+                        <div class="card-header fw-semibold">Switches</div>
+                        <div class="card-body">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="switch1">
+                                <label
+                                class="form-check-label" for="switch1">Default
+                                switch</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="switch2"
+                                checked>
+                                <label class="form-check-label" for="switch2">Checked
+                                switch</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="switchDisabled" disabled>
+                                <label class="form-check-label" for="switchDisabled">Unavailable</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
     </main>
   </div>
 
-
-  <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/plugins/jquery/jquery.min.js"></script>
-  <script src="../assets/plugins/simplebar/simplebar.min.js"></script>
-  <script src="../assets/plugins/nprogress/nprogress.min.js"></script>
-  <script src="../assets/scripts/naha-admin.min.js"></script>
+    <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/plugins/jquery/jquery.min.js"></script>
+    <script src="../assets/plugins/simplebar/simplebar.min.js"></script>
+    <script src="../assets/plugins/nprogress/nprogress.min.js"></script>
+    <script src="../assets/scripts/naha-admin.min.js"></script>
     <script src="../assets/scripts/pages/components.js"></script>
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

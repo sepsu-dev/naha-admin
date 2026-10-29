@@ -498,228 +498,222 @@
       </nav>
     </aside>
 
-        <main id="layoutSidenav_content" class="animate__animated animate__fadeIn">
-            <section class="container-fluid px-4 pb-4">
-                <header class="my-4 d-flex justify-content-between align-items-center">
-                    <div>
-                        <h1 class="mb-0 fw-semibold">Chat</h1>
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb mb-0">
-                                <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                                <li class="breadcrumb-item active">Chat</li>
-                            </ol>
-                        </nav>
-                    </div>
-                    <button class="btn btn-primary btn-sm d-lg-none" id="toggleChatList" aria-controls="chatContacts" aria-expanded="true" aria-label="Toggle chat contacts">
-                        <i class="ph-bold ph-list"></i>
-                    </button>
-                </header>
-
-                <p class="text-muted">Full app layout and compact conversation variants. Messages and files stay local; reload resets this demo.</p>
-                <nav class="d-flex flex-wrap gap-2 mb-4" aria-label="Chat examples">
-                    <a class="btn btn-light btn-sm" href="#chatHistory">App layout</a>
-                    <a class="btn btn-light btn-sm" href="#conversation">Compact conversation</a>
-                    <a class="btn btn-light btn-sm" href="#attachments">Attachments</a>
-                </nav>
-                <div class="row g-4">
-                    <!-- Chat Sidebar (User List) -->
-                    <div class="col-lg-4 col-xl-3" id="chatContacts">
-                        <div class="card border-0 shadow-sm rounded-4 chat-sidebar overflow-hidden">
-                            <div class="p-3 border-bottom">
-                                <div class="input-group input-group-sm bg-light rounded-3">
-                                    <span class="input-group-text bg-transparent border-0"><i
-                                            class="ph-bold ph-magnifying-glass text-muted"></i></span>
-                                    <input type="text" class="form-control bg-transparent border-0"
-                                        id="chatSearch" aria-label="Search chats" placeholder="Search chats...">
-                                </div>
-                            </div>
-                            <div class="chat-list-wrapper" data-simplebar>
-                                <div class="chat-item active d-flex align-items-center" role="button" tabindex="0" aria-pressed="true">
-                                    <div class="avatar-wrapper me-3">
-                                        <img src="../assets/images/user-avatar.png" class="rounded-circle" width="45"
-                                            alt="">
-                                        <span class="status-dot status-online"></span>
-                                    </div>
-                                    <div class="flex-grow-1 overflow-hidden">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <h6 class="mb-0 fw-semibold text-truncate">Neng Lilis</h6>
-                                            <small class="text-muted extra-small">2m</small>
-                                        </div>
-                                        <p class="mb-0 text-muted extra-small text-truncate">Let's play this afternoon!
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="chat-item d-flex align-items-center" role="button" tabindex="0" aria-pressed="false">
-                                    <div class="avatar-wrapper me-3">
-                                        <img src="../assets/images/user-avatar.png" class="rounded-circle" width="45"
-                                            alt="">
-                                        <span class="status-dot status-away"></span>
-                                    </div>
-                                    <div class="flex-grow-1 overflow-hidden">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <h6 class="mb-0 fw-semibold text-truncate">Asep Racing</h6>
-                                            <small class="text-muted extra-small">1h</small>
-                                        </div>
-                                        <p class="mb-0 text-muted extra-small text-truncate">Hey bro, let's go!</p>
-                                    </div>
-                                </div>
-                                <div class="chat-item d-flex align-items-center" role="button" tabindex="0" aria-pressed="false">
-                                    <div class="avatar-wrapper me-3">
-                                        <img src="../assets/images/user-avatar.png" class="rounded-circle" width="45"
-                                            alt="">
-                                        <span class="status-dot status-offline"></span>
-                                    </div>
-                                    <div class="flex-grow-1 overflow-hidden">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <h6 class="mb-0 fw-semibold text-truncate">Mang Oleh</h6>
-                                            <small class="text-muted extra-small">3h</small>
-                                        </div>
-                                        <p class="mb-0 text-muted extra-small text-truncate">One Odading please, sir.
-                                        </p>
-                                    </div>
-                                </div>
+    <main id="layoutSidenav_content" class="animate__animated animate__fadeIn">
+        <section class="container-fluid px-4 pb-4">
+            <header class="my-4 d-flex justify-content-between align-items-center">
+                <div>
+                    <h1 class="mb-0 fw-semibold">Chat</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item">
+                                <a href="index.html">Dashboard</a>
+                            </li>
+                            <li class="breadcrumb-item active">Chat</li>
+                        </ol>
+                    </nav>
+                </div>
+                <button class="btn btn-primary btn-sm d-lg-none" id="toggleChatList" aria-controls="chatContacts" aria-expanded="true" aria-label="Toggle chat contacts">
+                <i class="ph-bold ph-list"></i>
+                </button>
+            </header>
+            <p class="text-muted">Full app layout and compact conversation variants. Messages and files stay local; reload resets this demo.</p>
+            <nav class="d-flex flex-wrap gap-2 mb-4" aria-label="Chat examples">
+                <a class="btn btn-light btn-sm" href="#chatHistory">App layout</a>
+                <a class="btn btn-light btn-sm" href="#conversation">Compact conversation</a>
+                <a class="btn btn-light btn-sm" href="#attachments">Attachments</a>
+            </nav>
+            <div class="row g-4">
+                <!-- Chat Sidebar (User List) -->
+                <div class="col-lg-4 col-xl-3" id="chatContacts">
+                    <div class="card border-0 shadow-sm rounded-4 chat-sidebar overflow-hidden">
+                        <div class="p-3 border-bottom">
+                            <div class="input-group input-group-sm bg-light rounded-3">
+                                <span class="input-group-text bg-transparent border-0"><i
+                                class="ph-bold ph-magnifying-glass text-muted"></i></span>
+                                <input type="text" class="form-control bg-transparent border-0"
+                                id="chatSearch" aria-label="Search chats" placeholder="Search chats...">
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Chat Window -->
-                    <div class="col-lg-8 col-xl-9">
-                        <div class="card border-0 shadow-sm rounded-4 chat-content overflow-hidden">
-                            <!-- Chat Header -->
-                            <div class="p-3 border-bottom d-flex align-items-center justify-content-between bg-white">
-                                <div class="d-flex align-items-center">
-                                    <img src="../assets/images/user-avatar.png" class="rounded-circle me-3" width="40"
-                                        alt="">
-                                    <div>
-                                        <h6 class="mb-0 fw-semibold">Neng Lilis</h6>
-                                        <small class="text-success extra-small">Online</small>
-                                    </div>
+                        <div class="chat-list-wrapper" data-simplebar>
+                            <div class="chat-item active d-flex align-items-center" role="button" tabindex="0" aria-pressed="true">
+                                <div class="avatar-wrapper me-3">
+                                    <img src="../assets/images/user-avatar.png" class="rounded-circle" width="45"
+                                    alt="">
+                                    <span class="status-dot status-online"></span>
                                 </div>
-                                <div class="d-flex gap-1">
-                                    <button class="btn btn-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 36px; height: 36px; padding: 0;" disabled aria-label="Voice call unavailable in local demo"><i class="ph-bold ph-phone" aria-hidden="true"></i></button>
-                                    <button class="btn btn-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 36px; height: 36px; padding: 0;" disabled aria-label="Video call unavailable in local demo"><i class="ph-bold ph-video-camera" aria-hidden="true"></i></button>
-                                    <button class="btn btn-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 36px; height: 36px; padding: 0;" disabled aria-label="More chat actions unavailable in local demo"><i class="ph-bold ph-dots-three-vertical" aria-hidden="true"></i></button>
+                                <div class="flex-grow-1 overflow-hidden">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h6 class="mb-0 fw-semibold text-truncate">Neng Lilis</h6>
+                                        <small class="text-muted extra-small">2m</small>
+                                    </div>
+                                    <p class="mb-0 text-muted extra-small text-truncate">Let's play this afternoon!
+                                    </p>
                                 </div>
                             </div>
-
-                            <!-- Messages History -->
-                            <div class="chat-history" data-simplebar id="chatHistory" role="log" aria-live="polite" aria-label="App conversation" tabindex="0">
-                                <div class="message message-inbound">
-                                    <div class="message-bubble">
-                                        Hello handsome, how are you?
-                                    </div>
-                                    <small class="text-muted extra-small mt-1">10:30 AM</small>
+                            <div class="chat-item d-flex align-items-center" role="button" tabindex="0" aria-pressed="false">
+                                <div class="avatar-wrapper me-3">
+                                    <img src="../assets/images/user-avatar.png" class="rounded-circle" width="45"
+                                    alt="">
+                                    <span class="status-dot status-away"></span>
                                 </div>
-                                <div class="message message-outbound">
-                                    <div class="message-bubble">
-                                        I'm good, thanks. What are you up to, Sis?
+                                <div class="flex-grow-1 overflow-hidden">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h6 class="mb-0 fw-semibold text-truncate">Asep Racing</h6>
+                                        <small class="text-muted extra-small">1h</small>
                                     </div>
-                                    <small class="text-muted extra-small mt-1">10:32 AM</small>
-                                </div>
-                                <div class="message message-inbound">
-                                    <div class="message-bubble">
-                                        Just relaxing. Let's play ML this afternoon, pushing rank with Asep.
-                                    </div>
-                                    <small class="text-muted extra-small mt-1">10:35 AM</small>
-                                </div>
-                                <div class="message message-outbound">
-                                    <div class="message-bubble">
-                                        Ready, let's go! What time?
-                                    </div>
-                                    <small class="text-muted extra-small mt-1">10:36 AM</small>
+                                    <p class="mb-0 text-muted extra-small text-truncate">Hey bro, let's go!</p>
                                 </div>
                             </div>
-
-                            <!-- Chat Input -->
-                            <div class="chat-input-area">
-                                <form id="chatForm">
-                                    <div class="input-group">
-                                        <a class="btn btn-light" href="#attachments" aria-label="Choose a local attachment"><i
-                                                class="ph-bold ph-paperclip"></i></a>
-                                        <input type="text" class="form-control border-0 bg-light" id="chatInput" required maxlength="500" aria-label="Chat message"
-                                            placeholder="Type your message here..." autocomplete="off">
-                                        <button class="btn btn-primary px-4 fw-medium" type="submit" aria-label="Send chat message">
-                                            <i class="ph-bold ph-paper-plane-tilt"></i>
-                                        </button>
+                            <div class="chat-item d-flex align-items-center" role="button" tabindex="0" aria-pressed="false">
+                                <div class="avatar-wrapper me-3">
+                                    <img src="../assets/images/user-avatar.png" class="rounded-circle" width="45"
+                                    alt="">
+                                    <span class="status-dot status-offline"></span>
+                                </div>
+                                <div class="flex-grow-1 overflow-hidden">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h6 class="mb-0 fw-semibold text-truncate">Mang Oleh</h6>
+                                        <small class="text-muted extra-small">3h</small>
                                     </div>
-                                </form>
+                                    <p class="mb-0 text-muted extra-small text-truncate">One Odading please, sir.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <section id="conversation" class="mb-4" aria-label="Message">
-                    <div class="component-demo">
-                        <article class="card conversation-card" id="message">
-                            <div class="card-body">
-                                <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-3">
-                                    <h2 class="h6 mb-0">Compact conversation</h2>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <label class="form-label mb-0 text-nowrap" for="conversationStyle">Message style</label>
-                                        <select id="conversationStyle" class="form-select form-select-sm">
-                                            <option value="bubbles">Bubbles</option>
-                                            <option value="plain">Plain transcript</option>
-                                        </select>
-                                    </div>
+                <!-- Chat Window -->
+                <div class="col-lg-8 col-xl-9">
+                    <div class="card border-0 shadow-sm rounded-4 chat-content overflow-hidden">
+                        <!-- Chat Header -->
+                        <div class="p-3 border-bottom d-flex align-items-center justify-content-between bg-white">
+                            <div class="d-flex align-items-center">
+                                <img src="../assets/images/user-avatar.png" class="rounded-circle me-3" width="40"
+                                alt="">
+                                <div>
+                                    <h6 class="mb-0 fw-semibold">Neng Lilis</h6>
+                                    <small class="text-success extra-small">Online</small>
                                 </div>
-                                <div id="message-scroller" role="region" aria-label="Demo conversation" tabindex="0" class="message-viewport border rounded p-3">
-                                    <div id="messageLog" role="log" aria-live="polite" aria-relevant="additions">
-                                        <div id="marker" class="nd-marker">Today · local demo</div>
-                                        <article class="message-row">
-                                            <span class="nd-avatar" aria-hidden="true">UK</span>
-                                            <div>
-                                                <strong>Ujang</strong>
-                                                <p class="small text-muted">10:30</p>
-                                                <div class="nd-bubble" id="bubble">Can we keep Bootstrap and refresh the components?</div>
-                                            </div>
-                                        </article>
-                                        <article class="message-row">
-                                            <span class="nd-avatar" aria-hidden="true">NA</span>
-                                            <div>
-                                                <strong>NahaAdmin</strong>
-                                                <p class="small text-muted">10:31</p>
-                                                <div class="nd-bubble">Yes. Shared tokens preserve the existing stack.</div>
-                                                <button class="btn btn-light btn-sm mt-2" id="reaction" aria-pressed="false">Helpful · 0</button>
-                                            </div>
-                                        </article>
-                                    </div>
-                                </div>
-                                <div class="d-flex flex-wrap gap-2 my-2">
-                                    <button class="btn btn-light btn-sm" id="loadHistory">Load earlier</button>
-                                    <button class="btn btn-light btn-sm" id="jumpLatest" hidden>Jump to latest</button>
-                                </div>
-                                <form id="messageForm" class="d-flex gap-2">
-                                    <label class="visually-hidden" for="messageInput">Message</label>
-                                    <input id="messageInput" class="form-control" required maxlength="500" placeholder="Write a local message…">
-                                    <button class="btn btn-primary" type="submit">Send</button>
-                                </form>
-                                <p id="messageStatus" role="status" class="small text-muted mt-2 mb-0">Sample replies only. Nothing leaves your browser.</p>
                             </div>
-                        </article>
-                    </div>
-                </section>
-
-                <section id="attachments" class="mb-4" aria-label="Attachment">
-                    <div class="component-demo">
-                        <article class="card" id="attachment">
-                            <div class="card-body">
-                                <h2 class="h6">Attachment</h2>
-                                <label class="form-label" for="attachmentInput">Choose a file · maximum 5 MB</label>
-                                <input class="form-control" id="attachmentInput" type="file" accept="image/png,image/jpeg,application/pdf,.txt">
-                                <p class="small text-muted mt-2">PNG, JPEG, PDF, or text. Local preview only; no upload.</p>
-                                <div id="attachmentList"></div>
-                                <p id="attachmentStatus" role="status" class="small mb-0"></p>
+                            <div class="d-flex gap-1">
+                                <button class="btn btn-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 36px; height: 36px; padding: 0;" disabled aria-label="Voice call unavailable in local demo"><i class="ph-bold ph-phone" aria-hidden="true"></i></button>
+                                <button class="btn btn-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 36px; height: 36px; padding: 0;" disabled aria-label="Video call unavailable in local demo"><i class="ph-bold ph-video-camera" aria-hidden="true"></i></button>
+                                <button class="btn btn-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 36px; height: 36px; padding: 0;" disabled aria-label="More chat actions unavailable in local demo"><i class="ph-bold ph-dots-three-vertical" aria-hidden="true"></i></button>
                             </div>
-                        </article>
+                        </div>
+                        <!-- Messages History -->
+                        <div class="chat-history" data-simplebar id="chatHistory" role="log" aria-live="polite" aria-label="App conversation" tabindex="0">
+                            <div class="message message-inbound">
+                                <div class="message-bubble">
+                                Hello handsome, how are you?
+                                </div>
+                                <small class="text-muted extra-small mt-1">10:30 AM</small>
+                            </div>
+                            <div class="message message-outbound">
+                                <div class="message-bubble">
+                                I'm good, thanks. What are you up to, Sis?
+                                </div>
+                                <small class="text-muted extra-small mt-1">10:32 AM</small>
+                            </div>
+                            <div class="message message-inbound">
+                                <div class="message-bubble">
+                                Just relaxing. Let's play ML this afternoon, pushing rank with Asep.
+                                </div>
+                                <small class="text-muted extra-small mt-1">10:35 AM</small>
+                            </div>
+                            <div class="message message-outbound">
+                                <div class="message-bubble">
+                                Ready, let's go! What time?
+                                </div>
+                                <small class="text-muted extra-small mt-1">10:36 AM</small>
+                            </div>
+                        </div>
+                        <!-- Chat Input -->
+                        <div class="chat-input-area">
+                            <form id="chatForm">
+                                <div class="input-group">
+                                    <a class="btn btn-light" href="#attachments" aria-label="Choose a local attachment"><i
+                                    class="ph-bold ph-paperclip"></i></a>
+                                    <input type="text" class="form-control border-0 bg-light" id="chatInput" required maxlength="500" aria-label="Chat message"
+                                    placeholder="Type your message here..." autocomplete="off">
+                                    <button class="btn btn-primary px-4 fw-medium" type="submit" aria-label="Send chat message">
+                                    <i class="ph-bold ph-paper-plane-tilt"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                </section>
+                </div>
+            </div>
+            <section id="conversation" class="mb-4" aria-label="Message">
+                <div class="component-demo">
+                    <article class="card conversation-card" id="message">
+                        <div class="card-body">
+                            <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-3">
+                                <h2 class="h6 mb-0">Compact conversation</h2>
+                                <div class="d-flex align-items-center gap-2">
+                                    <label class="form-label mb-0 text-nowrap" for="conversationStyle">Message style</label>
+                                    <select id="conversationStyle" class="form-select form-select-sm">
+                                        <option value="bubbles">Bubbles</option>
+                                        <option value="plain">Plain transcript</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div id="message-scroller" role="region" aria-label="Demo conversation" tabindex="0" class="message-viewport border rounded p-3">
+                                <div id="messageLog" role="log" aria-live="polite" aria-relevant="additions">
+                                    <div id="marker" class="nd-marker">Today · local demo</div>
+                                    <article class="message-row">
+                                        <span class="nd-avatar" aria-hidden="true">UK</span>
+                                        <div>
+                                            <strong>Ujang</strong>
+                                            <p class="small text-muted">10:30</p>
+                                            <div class="nd-bubble" id="bubble">Can we keep Bootstrap and refresh the components?</div>
+                                        </div>
+                                    </article>
+                                    <article class="message-row">
+                                        <span class="nd-avatar" aria-hidden="true">NA</span>
+                                        <div>
+                                            <strong>NahaAdmin</strong>
+                                            <p class="small text-muted">10:31</p>
+                                            <div class="nd-bubble">Yes. Shared tokens preserve the existing stack.</div>
+                                            <button class="btn btn-light btn-sm mt-2" id="reaction" aria-pressed="false">Helpful · 0</button>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-wrap gap-2 my-2">
+                                <button class="btn btn-light btn-sm" id="loadHistory">Load earlier</button>
+                                <button class="btn btn-light btn-sm" id="jumpLatest" hidden>Jump to latest</button>
+                            </div>
+                            <form id="messageForm" class="d-flex gap-2">
+                                <label class="visually-hidden" for="messageInput">Message</label>
+                                <input id="messageInput" class="form-control" required maxlength="500" placeholder="Write a local message…">
+                                <button class="btn btn-primary" type="submit">Send</button>
+                            </form>
+                            <p id="messageStatus" role="status" class="small text-muted mt-2 mb-0">Sample replies only. Nothing leaves your browser.</p>
+                        </div>
+                    </article>
+                </div>
             </section>
-        </main>
+            <section id="attachments" class="mb-4" aria-label="Attachment">
+                <div class="component-demo">
+                    <article class="card" id="attachment">
+                        <div class="card-body">
+                            <h2 class="h6">Attachment</h2>
+                            <label class="form-label" for="attachmentInput">Choose a file · maximum 5 MB</label>
+                            <input class="form-control" id="attachmentInput" type="file" accept="image/png,image/jpeg,application/pdf,.txt">
+                            <p class="small text-muted mt-2">PNG, JPEG, PDF, or text. Local preview only; no upload.</p>
+                            <div id="attachmentList"></div>
+                            <p id="attachmentStatus" role="status" class="small mb-0"></p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </section>
+    </main>
     </div>
 
-
-
-  <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/plugins/jquery/jquery.min.js"></script>
     <script src="../assets/plugins/simplebar/simplebar.min.js"></script>
     <script src="../assets/plugins/nprogress/nprogress.min.js"></script>
@@ -772,17 +766,16 @@
                 contacts.hidden = !contacts.hidden;
                 this.setAttribute('aria-expanded', String(!contacts.hidden));
             });
+
+            const desktop = matchMedia('(min-width: 992px)');
+            desktop.addEventListener('change', event => {
+                if (!event.matches) return;
+                document.getElementById('chatContacts').hidden = false;
+                document.getElementById('toggleChatList').setAttribute('aria-expanded', 'true');
+            });
         });
     </script>
     <script src="../assets/scripts/pages/components.js"></script>
 </body>
 
 </html>
-
-
-
-
-
-
-
-

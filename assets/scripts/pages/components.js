@@ -67,7 +67,6 @@
             pickOption(option);
         }));
         combo.addEventListener('blur', closeCombo);
-
     }
 
     if ($('otp')) {
@@ -148,7 +147,6 @@
             drawCalendar(true);
         });
         drawCalendar();
-
     }
 
     if ($('commandDialog')) {
@@ -209,7 +207,6 @@
         hover.addEventListener('keydown', event => { if (event.key === 'Escape') hover.classList.add('dismissed'); });
         hover.addEventListener('mouseleave', () => hover.classList.remove('dismissed'));
         hover.addEventListener('focusin', () => hover.classList.remove('dismissed'));
-
     }
 
     if ($('contextPopup')) {
@@ -272,7 +269,6 @@
             menus[next].focus();
         });
         document.querySelectorAll('[data-menu-action]').forEach(button => button.addEventListener('click', () => status('menuStatus', `${button.dataset.menuAction} (local demo).`)));
-
     }
 
     $('directionSelect')?.addEventListener('change', () => { $('directionSample').dir = $('directionSelect').value; });
@@ -321,7 +317,8 @@
             const selection = getSelection();
             const range = document.createRange();
             range.selectNodeContents($('codeSample'));
-            selection.removeAllRanges(); selection.addRange(range);
+            selection.removeAllRanges();
+            selection.addRange(range);
             status('copyStatus', 'Clipboard unavailable. Code selected; press Ctrl/Cmd+C to copy.');
         }
     });
@@ -336,28 +333,42 @@
         $('attachmentInput').addEventListener('change', () => {
             clearAttachment();
             const file = $('attachmentInput').files[0];
-            if (!file) return;
+            if (!file) {
+                status('attachmentStatus', 'No attachment selected.');
+                return;
+            }
             if (file.size > 5 * 1024 * 1024 || !/\.(png|jpe?g|pdf|txt)$/i.test(file.name) || (file.type && !['image/png', 'image/jpeg', 'application/pdf', 'text/plain'].includes(file.type))) {
                 status('attachmentStatus', 'Unsupported file. Choose PNG, JPEG, PDF, or text up to 5 MB.');
                 $('attachmentInput').value = '';
                 return;
             }
-            const row = document.createElement('div'); row.className = 'nd-item mb-2';
-            const info = document.createElement('div'); info.className = 'flex-grow-1';
-            const name = document.createElement('strong'); name.textContent = file.name;
-            const description = document.createElement('p'); description.className = 'small text-muted mb-0';
+            const row = document.createElement('div');
+            row.className = 'nd-item mb-2';
+            const info = document.createElement('div');
+            info.className = 'flex-grow-1';
+            const name = document.createElement('strong');
+            name.textContent = file.name;
+            const description = document.createElement('p');
+            description.className = 'small text-muted mb-0';
             description.textContent = `${Math.ceil(file.size / 1024)} KB · Local preview ready`;
             info.append(name, description);
-            const remove = document.createElement('button'); remove.className = 'btn btn-light btn-sm'; remove.textContent = 'Remove';
+            const remove = document.createElement('button');
+            remove.className = 'btn btn-light btn-sm';
+            remove.textContent = 'Remove';
             remove.setAttribute('aria-label', `Remove ${file.name}`);
             remove.addEventListener('click', () => {
-                clearAttachment(); $('attachmentInput').value = '';
-                status('attachmentStatus', 'Attachment removed.'); $('attachmentInput').focus();
+                clearAttachment();
+                $('attachmentInput').value = '';
+                status('attachmentStatus', 'Attachment removed.');
+                $('attachmentInput').focus();
             });
-            row.append(info, remove); $('attachmentList').append(row);
+            row.append(info, remove);
+            $('attachmentList').append(row);
             if (['image/png', 'image/jpeg'].includes(file.type)) {
                 attachmentUrl = URL.createObjectURL(file);
-                const image = document.createElement('img'); image.src = attachmentUrl; image.alt = `Preview of ${file.name}`;
+                const image = document.createElement('img');
+                image.src = attachmentUrl;
+                image.alt = `Preview of ${file.name}`;
                 image.addEventListener('error', () => status('attachmentStatus', 'Image could not be decoded. Remove it and choose another file.'));
                 $('attachmentList').append(image);
             }
@@ -389,18 +400,26 @@
         const appendMessage = (name, text, outgoing = false, prepend = false) => {
             const article = document.createElement('article');
             article.className = `message-row${outgoing ? ' message-outgoing' : ''}`;
-            const avatar = document.createElement('span'); avatar.className = 'nd-avatar'; avatar.setAttribute('aria-hidden', 'true'); avatar.textContent = outgoing ? 'UK' : 'NA';
+            const avatar = document.createElement('span');
+            avatar.className = 'nd-avatar';
+            avatar.setAttribute('aria-hidden', 'true');
+            avatar.textContent = outgoing ? 'UK' : 'NA';
             const content = document.createElement('div');
-            const author = document.createElement('strong'); author.textContent = name;
-            const bubble = document.createElement('div'); bubble.className = 'nd-bubble'; bubble.textContent = text;
-            content.append(author, bubble); article.append(avatar, content);
+            const author = document.createElement('strong');
+            author.textContent = name;
+            const bubble = document.createElement('div');
+            bubble.className = 'nd-bubble';
+            bubble.textContent = text;
+            content.append(author, bubble);
+            article.append(avatar, content);
             if (prepend) $('messageLog').prepend(article); else $('messageLog').append(article);
             return article;
         };
         viewport.addEventListener('scroll', jumpState);
         $('jumpLatest').addEventListener('click', () => { viewport.scrollTop = viewport.scrollHeight; jumpState(); });
         $('loadHistory').addEventListener('click', () => {
-            const top = viewport.scrollTop; const height = viewport.scrollHeight;
+            const top = viewport.scrollTop;
+            const height = viewport.scrollHeight;
             appendMessage('NahaAdmin · Earlier', 'Welcome to the local component preview. Earlier messages preserve your reading position.', false, true);
             viewport.scrollTop = top + viewport.scrollHeight - height;
             $('loadHistory').disabled = true;
@@ -410,7 +429,11 @@
         $('messageForm').addEventListener('submit', event => {
             event.preventDefault();
             const text = $('messageInput').value.trim();
-            if (!text) { $('messageInput').setCustomValidity('Enter a message.'); $('messageInput').reportValidity(); return; }
+            if (!text) {
+                $('messageInput').setCustomValidity('Enter a message.');
+                $('messageInput').reportValidity();
+                return;
+            }
             appendMessage('Ujang', text, true);
             $('messageInput').value = '';
             // Sending is an explicit request to reveal the new turn; incoming replies never steal a reader's place.
@@ -430,7 +453,6 @@
             $('reaction').textContent = `Helpful · ${pressed ? 1 : 0}`;
         });
         jumpState();
-
     }
 
     if ($('questionForm')) {
@@ -450,7 +472,11 @@
         };
         $('questionForm').addEventListener('submit', event => {
             event.preventDefault();
-            if (step < questions.length - 1) { step++; showQuestion(); return; }
+            if (step < questions.length - 1) {
+                step++;
+                showQuestion();
+                return;
+            }
             questions.forEach(question => { question.disabled = false; });
             const data = new FormData($('questionForm'));
             questions.forEach((question, index) => { question.disabled = index !== step; });
@@ -459,7 +485,8 @@
         $('questionPrevious').addEventListener('click', () => { step--; showQuestion(); });
         $('questionSkip').addEventListener('click', () => {
             questions[step].querySelectorAll('input').forEach(input => { input.checked = false; });
-            step++; showQuestion();
+            step++;
+            showQuestion();
         });
         $('questionForm').addEventListener('reset', () => { step = 0; showQuestion(); });
         questions.forEach(question => question.addEventListener('invalid', event => {
@@ -467,7 +494,6 @@
             status('questionStatus', event.target.validationMessage);
         }, true));
         $('questionForm').addEventListener('input', event => event.target.removeAttribute('aria-invalid'));
-        showQuestion(false);    }
-
-
+        showQuestion(false);
+    }
 })();

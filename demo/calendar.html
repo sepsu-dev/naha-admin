@@ -360,30 +360,63 @@
         </footer>
       </nav>
     </aside>
-    <main id="layoutSidenav_content"><section class="container-fluid px-4 pb-5">
-      <header id="pageContent" class="my-4"><nav aria-label="Breadcrumb"><ol class="breadcrumb mb-2"><li class="breadcrumb-item"><a href="index.html">Components</a></li><li class="breadcrumb-item active" aria-current="page">Calendar &amp; Date Picker</li></ol></nav><h1 class="catalog-title">Calendar &amp; Date Picker</h1><p class="text-muted">Keyboard-accessible calendar and native date input variants.</p></header>
-<div class="component-demo"><article class="card" id="calendar"><div class="card-body"><h2 class="h6">Calendar</h2><div class="d-flex align-items-center justify-content-between gap-2 mb-2"><button class="btn btn-light btn-sm" id="monthPrevious" aria-label="Previous month">‹</button><strong id="calendarMonth" aria-live="polite"></strong><button class="btn btn-light btn-sm" id="monthNext" aria-label="Next month">›</button></div><div class="calendar-grid" aria-hidden="true"><span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span></div><div class="calendar-grid" id="calendarDays" role="group" aria-labelledby="calendarMonth"></div><p class="small text-muted mt-2 mb-0" id="calendarStatus" role="status">Choose a date. Use arrows, Home/End, or Page Up/Down.</p></div></article></div>
-
-                <section id="native-date" class="mb-4" aria-label="Date Picker">
-                    <div class="component-demo">
-                        <article class="card">
-                            <div class="card-body">
-                                <h2>Choose dates</h2>
-                                <label class="form-label" for="eventDate">Event date</label>
-                                <input class="form-control mb-3" type="date" id="eventDate">
-                                <label class="form-label" for="unavailableDate">Unavailable</label>
-                                <input class="form-control" type="date" id="unavailableDate" disabled>
-                                <p class="small text-muted mt-3 mb-0">Native calendar, locale formatting, and keyboard input.</p>
-                            </div>
-                        </article>
+    <main id="layoutSidenav_content">
+        <section class="container-fluid px-4 pb-5">
+            <header id="pageContent" class="my-4">
+                <nav aria-label="Breadcrumb">
+                    <ol class="breadcrumb mb-2">
+                        <li class="breadcrumb-item">
+                            <a href="index.html">Components</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">Calendar &amp; Date Picker</li>
+                    </ol>
+                </nav>
+                <h1 class="catalog-title">Calendar &amp; Date Picker</h1>
+                <p class="text-muted">Keyboard-accessible calendar and native date input variants.</p>
+            </header>
+            <div class="component-demo">
+                <article class="card" id="calendar">
+                    <div class="card-body">
+                        <h2 class="h6">Calendar</h2>
+                        <div class="d-flex align-items-center justify-content-between gap-2 mb-2">
+                            <button class="btn btn-light btn-sm" id="monthPrevious" aria-label="Previous month">‹</button>
+                            <strong id="calendarMonth" aria-live="polite"></strong>
+                            <button class="btn btn-light btn-sm" id="monthNext" aria-label="Next month">›</button>
+                        </div>
+                        <div class="calendar-grid" aria-hidden="true">
+                            <span>Su</span>
+                            <span>Mo</span>
+                            <span>Tu</span>
+                            <span>We</span>
+                            <span>Th</span>
+                            <span>Fr</span>
+                            <span>Sa</span>
+                        </div>
+                        <div class="calendar-grid" id="calendarDays" role="group" aria-labelledby="calendarMonth"></div>
+                        <p class="small text-muted mt-2 mb-0" id="calendarStatus" role="status">Choose a date. Use arrows, Home/End, or Page Up/Down.</p>
                     </div>
-                </section>
+                </article>
+            </div>
+            <section id="native-date" class="mb-4" aria-label="Date Picker">
+                <div class="component-demo">
+                    <article class="card">
+                        <div class="card-body">
+                            <h2>Choose dates</h2>
+                            <label class="form-label" for="eventDate">Event date</label>
+                            <input class="form-control mb-3" type="date" id="eventDate">
+                            <label class="form-label" for="unavailableDate">Unavailable</label>
+                            <input class="form-control" type="date" id="unavailableDate" disabled>
+                            <p class="small text-muted mt-3 mb-0">Native calendar, locale formatting, and keyboard input.</p>
+                        </div>
+                    </article>
+                </div>
             </section>
+        </section>
     </main>
   </div>
-  <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/plugins/jquery/jquery.min.js"></script>
-  <script src="../assets/scripts/naha-admin.min.js"></script>
-  <script src="../assets/scripts/pages/components.js"></script>
+    <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/plugins/jquery/jquery.min.js"></script>
+    <script src="../assets/scripts/naha-admin.min.js"></script>
+    <script src="../assets/scripts/pages/components.js"></script>
 </body>
 </html>

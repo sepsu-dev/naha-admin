@@ -408,112 +408,114 @@
       </nav>
     </aside>
 
-        <main id="layoutSidenav_content" class="animate__animated animate__fadeIn">
-            <section class="container-fluid px-4">
-                <header class="my-4">
-                    <h1 class="mb-0 fw-semibold">Toasts</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                            <li class="breadcrumb-item">Components</li>
-                            <li class="breadcrumb-item active">Toasts</li>
-                        </ol>
-                    </nav>
-                </header>
-
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="card animate__animated animate__fadeIn mb-4">
-                            <div class="card-header fw-semibold">Basic Toast</div>
-                            <div class="card-body">
-                                <button type="button" class="btn btn-primary" id="liveToastBtn">Show Toast</button>
-                            </div>
+    <main id="layoutSidenav_content" class="animate__animated animate__fadeIn">
+        <section class="container-fluid px-4">
+            <header class="my-4">
+                <h1 class="mb-0 fw-semibold">Toasts</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="index.html">Dashboard</a>
+                        </li>
+                        <li class="breadcrumb-item">Components</li>
+                        <li class="breadcrumb-item active">Toasts</li>
+                    </ol>
+                </nav>
+            </header>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card animate__animated animate__fadeIn mb-4">
+                        <div class="card-header fw-semibold">Basic Toast</div>
+                        <div class="card-body">
+                            <button type="button" class="btn btn-primary" id="liveToastBtn">Show Toast</button>
                         </div>
                     </div>
-
-                    <div class="col-lg-6">
-                        <div class="card animate__animated animate__fadeIn mb-4">
-                            <div class="card-header fw-semibold">Colored Toasts</div>
-                            <div class="card-body">
-                                <button type="button" class="btn btn-success me-2" id="successToastBtn">Success</button>
-                                <button type="button" class="btn btn-danger" id="dangerToastBtn">Error</button>
-                            </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card animate__animated animate__fadeIn mb-4">
+                        <div class="card-header fw-semibold">Colored Toasts</div>
+                        <div class="card-body">
+                            <button type="button" class="btn btn-success me-2" id="successToastBtn">Success</button>
+                            <button type="button" class="btn btn-danger" id="dangerToastBtn">Error</button>
                         </div>
                     </div>
-                    <!-- Global Toast Container (diletakkan di luar card agar fixed position bekerja dengan benar) -->
-                    <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1100;">
-                        <div id="liveToast" class="toast rounded-3" role="alert">
-                            <div class="toast-header rounded-top-3">
-                                <strong class="me-auto">Notification</strong>
-                                <small>Just now</small>
-                                <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
-                            </div>
-                            <div class="toast-body">Hello, world! This is a toast message.</div>
+                </div>
+                <!-- Global Toast Container (diletakkan di luar card agar fixed position bekerja dengan benar) -->
+                <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1100;">
+                    <div id="liveToast" class="toast rounded-3" role="alert">
+                        <div class="toast-header rounded-top-3">
+                            <strong class="me-auto">Notification</strong>
+                            <small>Just now</small>
+                            <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
                         </div>
-                        <div id="successToast" class="toast text-bg-success border-0 rounded-3">
-                            <div class="d-flex">
-                                <div class="toast-body">Success!</div><button
-                                    class="btn-close btn-close-white me-2 m-auto"
-                                    data-bs-dismiss="toast"></button>
-                            </div>
+                        <div class="toast-body">Hello, world! This is a toast message.</div>
+                    </div>
+                    <div id="successToast" class="toast text-bg-success border-0 rounded-3">
+                        <div class="d-flex">
+                            <div class="toast-body">Success!</div>
+                            <button
+                            class="btn-close btn-close-white me-2 m-auto"
+                            data-bs-dismiss="toast"></button>
                         </div>
-                        <div id="dangerToast" class="toast text-bg-danger border-0 rounded-3">
-                            <div class="d-flex">
-                                <div class="toast-body">Error!</div><button
-                                    class="btn-close btn-close-white me-2 m-auto"
-                                    data-bs-dismiss="toast"></button>
+                    </div>
+                    <div id="dangerToast" class="toast text-bg-danger border-0 rounded-3">
+                        <div class="d-flex">
+                            <div class="toast-body">Error!</div>
+                            <button
+                            class="btn-close btn-close-white me-2 m-auto"
+                            data-bs-dismiss="toast"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-lg-12">
+                        <div class="card animate__animated animate__fadeIn mb-4">
+                            <div class="card-header fw-semibold">SweetAlert2 Examples</div>
+                            <div class="card-body">
+                                <div class="d-flex flex-wrap gap-2 mb-4">
+                                    <button type="button" class="btn btn-outline-primary" id="swalBasic">Basic
+                                    Alert</button>
+                                    <button type="button" class="btn btn-success" id="swalSuccess">Success
+                                    Message</button>
+                                    <button type="button" class="btn btn-danger" id="swalError">Error
+                                    Message</button>
+                                    <button type="button" class="btn btn-warning text-white"
+                                    id="swalConfirm">Confirm Dialog</button>
+                                    <button type="button" class="btn btn-info text-white" id="swalCustom">Custom
+                                    Styled</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="row mt-2">
                         <div class="col-lg-12">
                             <div class="card animate__animated animate__fadeIn mb-4">
-                                <div class="card-header fw-semibold">SweetAlert2 Examples</div>
+                                <div class="card-header fw-semibold">Solid-Style Notifications (Notyf)</div>
                                 <div class="card-body">
-                                    <div class="d-flex flex-wrap gap-2 mb-4">
-                                        <button type="button" class="btn btn-outline-primary" id="swalBasic">Basic
-                                            Alert</button>
-                                        <button type="button" class="btn btn-success" id="swalSuccess">Success
-                                            Message</button>
-                                        <button type="button" class="btn btn-danger" id="swalError">Error
-                                            Message</button>
+                                    <p class="text-muted small mb-4">Notyf is a minimalistic, dependency-free
+                                    vanilla JS library for toast notifications, perfect for the "Solid"
+                                    aesthetic.</p>
+                                    <div class="d-flex flex-wrap gap-2 mb-2">
+                                        <button type="button" class="btn btn-primary" id="notyfSuccess">Success
+                                        Toast</button>
+                                        <button type="button" class="btn btn-danger" id="notyfError">Error
+                                        Toast</button>
                                         <button type="button" class="btn btn-warning text-white"
-                                            id="swalConfirm">Confirm Dialog</button>
-                                        <button type="button" class="btn btn-info text-white" id="swalCustom">Custom
-                                            Styled</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mt-2">
-                            <div class="col-lg-12">
-                                <div class="card animate__animated animate__fadeIn mb-4">
-                                    <div class="card-header fw-semibold">Solid-Style Notifications (Notyf)</div>
-                                    <div class="card-body">
-                                        <p class="text-muted small mb-4">Notyf is a minimalistic, dependency-free
-                                            vanilla JS library for toast notifications, perfect for the "Solid"
-                                            aesthetic.</p>
-                                        <div class="d-flex flex-wrap gap-2 mb-2">
-                                            <button type="button" class="btn btn-primary" id="notyfSuccess">Success
-                                                Toast</button>
-                                            <button type="button" class="btn btn-danger" id="notyfError">Error
-                                                Toast</button>
-                                            <button type="button" class="btn btn-warning text-white"
-                                                id="notyfWarning">Warning Toast</button>
-                                            <button type="button" class="btn btn-info text-white" id="notyfInfo">Info
-                                                Toast</button>
-                                        </div>
+                                        id="notyfWarning">Warning Toast</button>
+                                        <button type="button" class="btn btn-info text-white" id="notyfInfo">Info
+                                        Toast</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-            </section>
-        </main>
+                </div>
+            </div>
+        </section>
+    </main>
     </div>
 
-
-  <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/plugins/sweetalert2/sweetalert2.all.min.js"></script>
     <script src="../assets/plugins/jquery/jquery.min.js"></script>
     <script src="../assets/plugins/simplebar/simplebar.min.js"></script>
@@ -642,9 +644,3 @@
 </body>
 
 </html>
-
-
-
-
-
-

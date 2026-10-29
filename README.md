@@ -141,7 +141,7 @@ full streaming/virtualized transcript infrastructure is not included.
 
 Found a layout issue or missing state? Include the page URL, browser, viewport width,
 and reproduction steps in your issue. Focused pull requests are welcome.
-See [CONTRIBUTING.md](CONTRIBUTING.md) for the editing workflow and [CHANGELOG.md](CHANGELOG.md) for recent changes.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the editing workflow and browser checks.
 
 ## Dependencies and network access
 

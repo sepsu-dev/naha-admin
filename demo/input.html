@@ -360,83 +360,106 @@
         </footer>
       </nav>
     </aside>
-    <main id="layoutSidenav_content"><section class="container-fluid px-4 pb-5">
-      <header id="pageContent" class="my-4"><nav aria-label="Breadcrumb"><ol class="breadcrumb mb-2"><li class="breadcrumb-item"><a href="index.html">Components</a></li><li class="breadcrumb-item active" aria-current="page">Inputs &amp; Fields</li></ol></nav><h1 class="catalog-title">Inputs &amp; Fields</h1><p class="text-muted">Input, textarea, labels, groups, and validated fields in one place.</p></header>
-<div class="component-demo"><article class="card"><div class="card-body"><h2>Input states</h2><label class="form-label" for="nameInput">Name</label><input class="form-control mb-3" id="nameInput" placeholder="Ujang Kasep"><label class="form-label" for="emailInput">Email</label><input class="form-control is-invalid" type="email" id="emailInput" value="invalid" aria-invalid="true" aria-describedby="inputError"><p class="invalid-feedback d-block" id="inputError">Enter a valid email address.</p><label class="form-label" for="disabledInput">Disabled</label><input class="form-control mb-3" id="disabledInput" value="Unavailable" disabled><label class="form-label" for="readonlyInput">Read only</label><input class="form-control" id="readonlyInput" value="naha.local" readonly></div></article></div>
-
-                <section id="textarea-states" class="mb-4" aria-label="Textarea">
-                    <div class="component-demo">
-                        <article class="card">
-                            <div class="card-body">
-                                <h2>Default, invalid, and disabled</h2>
-                                <label class="form-label" for="messageText">Message</label>
-                                <textarea class="form-control mb-3" id="messageText" rows="4" placeholder="Write a message…"></textarea>
-                                <label class="form-label" for="invalidText">Required message</label>
-                                <textarea class="form-control is-invalid" id="invalidText" rows="3" aria-invalid="true" aria-describedby="textareaError"></textarea>
-                                <p class="invalid-feedback d-block" id="textareaError">Enter a message.</p>
-                                <label class="form-label" for="disabledText">Unavailable</label>
-                                <textarea class="form-control" id="disabledText" disabled rows="3">Editing unavailable</textarea>
-                            </div>
-                        </article>
+    <main id="layoutSidenav_content">
+        <section class="container-fluid px-4 pb-5">
+            <header id="pageContent" class="my-4">
+                <nav aria-label="Breadcrumb">
+                    <ol class="breadcrumb mb-2">
+                        <li class="breadcrumb-item">
+                            <a href="index.html">Components</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">Inputs &amp; Fields</li>
+                    </ol>
+                </nav>
+                <h1 class="catalog-title">Inputs &amp; Fields</h1>
+                <p class="text-muted">Input, textarea, labels, groups, and validated fields in one place.</p>
+            </header>
+            <div class="component-demo">
+                <article class="card">
+                    <div class="card-body">
+                        <h2>Input states</h2>
+                        <label class="form-label" for="nameInput">Name</label>
+                        <input class="form-control mb-3" id="nameInput" placeholder="Ujang Kasep">
+                        <label class="form-label" for="emailInput">Email</label>
+                        <input class="form-control is-invalid" type="email" id="emailInput" value="invalid" aria-invalid="true" aria-describedby="inputError">
+                        <p class="invalid-feedback d-block" id="inputError">Enter a valid email address.</p>
+                        <label class="form-label" for="disabledInput">Disabled</label>
+                        <input class="form-control mb-3" id="disabledInput" value="Unavailable" disabled>
+                        <label class="form-label" for="readonlyInput">Read only</label>
+                        <input class="form-control" id="readonlyInput" value="naha.local" readonly>
                     </div>
-                </section>
-
-                <section id="workspace-input" class="mb-4" aria-label="Input Group">
-                    <div class="component-demo">
-                        <article class="card" id="input-group">
-                            <div class="card-body">
-                                <h2 class="h6">Input Group</h2>
-                                <label for="workspace" class="form-label">Workspace address</label>
-                                <div class="input-group mb-3">
-                                    <span class="input-group-text" id="workspacePrefix">naha.local/</span>
-                                    <input class="form-control" id="workspace" value="ujang" aria-describedby="workspacePrefix">
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </section>
-
-                <section id="validated-field" class="mb-4" aria-label="Field">
-                    <div class="component-demo">
-                        <article class="card" id="field">
-                            <div class="card-body">
-                                <h2 class="h6">Field</h2>
-                                <form id="fieldForm">
-                                    <label for="contactEmail" class="form-label">Contact email
-                                        <span class="text-muted">(required)</span>
-                                    </label>
-                                    <input type="email" required id="contactEmail" class="form-control" aria-describedby="emailHelp">
-                                    <p id="emailHelp" class="small text-muted mt-2">Used for demo validation only. Never sent to a server.</p>
-                                    <button class="btn btn-primary" type="submit">Save contact</button>
-                                </form>
-                                <p id="fieldStatus" role="status" class="small mt-2 mb-0"></p>
-                            </div>
-                        </article>
-                    </div>
-                </section>
-
-                <section id="label-states" class="mb-4" aria-label="Label">
-                    <div class="component-demo">
-                        <article class="card">
-                            <div class="card-body">
-                                <h2>Labels and descriptions</h2>
-                                <label class="form-label" for="labelName">Display name</label>
-                                <input class="form-control" id="labelName" aria-describedby="labelHelp">
-                                <p class="small text-muted mt-2" id="labelHelp">Visible to your workspace.</p>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="labelTerms">
-                                    <label class="form-check-label" for="labelTerms">Accept sample terms</label>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </section>
+                </article>
+            </div>
+            <section id="textarea-states" class="mb-4" aria-label="Textarea">
+                <div class="component-demo">
+                    <article class="card">
+                        <div class="card-body">
+                            <h2>Default, invalid, and disabled</h2>
+                            <label class="form-label" for="messageText">Message</label>
+                            <textarea class="form-control mb-3" id="messageText" rows="4" placeholder="Write a message…"></textarea>
+                            <label class="form-label" for="invalidText">Required message</label>
+                            <textarea class="form-control is-invalid" id="invalidText" rows="3" aria-invalid="true" aria-describedby="textareaError"></textarea>
+                            <p class="invalid-feedback d-block" id="textareaError">Enter a message.</p>
+                            <label class="form-label" for="disabledText">Unavailable</label>
+                            <textarea class="form-control" id="disabledText" disabled rows="3">Editing unavailable</textarea>
+                        </div>
+                    </article>
+                </div>
             </section>
+            <section id="workspace-input" class="mb-4" aria-label="Input Group">
+                <div class="component-demo">
+                    <article class="card" id="input-group">
+                        <div class="card-body">
+                            <h2 class="h6">Input Group</h2>
+                            <label for="workspace" class="form-label">Workspace address</label>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="workspacePrefix">naha.local/</span>
+                                <input class="form-control" id="workspace" value="ujang" aria-describedby="workspacePrefix">
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <section id="validated-field" class="mb-4" aria-label="Field">
+                <div class="component-demo">
+                    <article class="card" id="field">
+                        <div class="card-body">
+                            <h2 class="h6">Field</h2>
+                            <form id="fieldForm">
+                                <label for="contactEmail" class="form-label">Contact email
+                                <span class="text-muted">(required)</span>
+                                </label>
+                                <input type="email" required id="contactEmail" class="form-control" aria-describedby="emailHelp">
+                                <p id="emailHelp" class="small text-muted mt-2">Used for demo validation only. Never sent to a server.</p>
+                                <button class="btn btn-primary" type="submit">Save contact</button>
+                            </form>
+                            <p id="fieldStatus" role="status" class="small mt-2 mb-0"></p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <section id="label-states" class="mb-4" aria-label="Label">
+                <div class="component-demo">
+                    <article class="card">
+                        <div class="card-body">
+                            <h2>Labels and descriptions</h2>
+                            <label class="form-label" for="labelName">Display name</label>
+                            <input class="form-control" id="labelName" aria-describedby="labelHelp">
+                            <p class="small text-muted mt-2" id="labelHelp">Visible to your workspace.</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="labelTerms">
+                                <label class="form-check-label" for="labelTerms">Accept sample terms</label>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </section>
     </main>
   </div>
-  <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/plugins/jquery/jquery.min.js"></script>
-  <script src="../assets/scripts/naha-admin.min.js"></script>
-  <script src="../assets/scripts/pages/components.js"></script>
+    <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/plugins/jquery/jquery.min.js"></script>
+    <script src="../assets/scripts/naha-admin.min.js"></script>
+    <script src="../assets/scripts/pages/components.js"></script>
 </body>
 </html>

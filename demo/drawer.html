@@ -360,27 +360,69 @@
         </footer>
       </nav>
     </aside>
-    <main id="layoutSidenav_content"><section class="container-fluid px-4 pb-5">
-      <header id="pageContent" class="my-4"><nav aria-label="Breadcrumb"><ol class="breadcrumb mb-2"><li class="breadcrumb-item"><a href="index.html">Components</a></li><li class="breadcrumb-item active" aria-current="page">Drawer &amp; Sheet</li></ol></nav><h1 class="catalog-title">Drawer &amp; Sheet</h1><p class="text-muted">Bottom and side panels share Bootstrap offcanvas behavior.</p></header>
-<div class="component-demo"><article class="card" id="drawer"><div class="card-body"><h2 class="h6">Drawer</h2><p class="text-muted">Bottom panel for a short decision.</p><button class="btn btn-light" data-bs-toggle="offcanvas" data-bs-target="#demoDrawer">Set daily goal</button><p id="goalStatus" class="small mt-2 mb-0" role="status">Goal: 3 tasks.</p></div></article></div>
-
-                <section id="side-panel" class="mb-4" aria-label="Sheet">
-                    <div class="component-demo">
-                        <article class="card" id="sheet">
-                            <div class="card-body">
-                                <h2 class="h6">Sheet</h2>
-                                <p class="text-muted">Side panel with editable details.</p>
-                                <button class="btn btn-light" data-bs-toggle="offcanvas" data-bs-target="#demoSheet">Edit profile</button>
-                                <p id="profileStatus" class="small mt-2 mb-0" role="status">Profile: Ujang Kasep.</p>
-                            </div>
-                        </article>
+    <main id="layoutSidenav_content">
+        <section class="container-fluid px-4 pb-5">
+            <header id="pageContent" class="my-4">
+                <nav aria-label="Breadcrumb">
+                    <ol class="breadcrumb mb-2">
+                        <li class="breadcrumb-item">
+                            <a href="index.html">Components</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">Drawer &amp; Sheet</li>
+                    </ol>
+                </nav>
+                <h1 class="catalog-title">Drawer &amp; Sheet</h1>
+                <p class="text-muted">Bottom and side panels share Bootstrap offcanvas behavior.</p>
+            </header>
+            <div class="component-demo">
+                <article class="card" id="drawer">
+                    <div class="card-body">
+                        <h2 class="h6">Drawer</h2>
+                        <p class="text-muted">Bottom panel for a short decision.</p>
+                        <button class="btn btn-light" data-bs-toggle="offcanvas" data-bs-target="#demoDrawer">Set daily goal</button>
+                        <p id="goalStatus" class="small mt-2 mb-0" role="status">Goal: 3 tasks.</p>
                     </div>
-                </section>
+                </article>
+            </div>
+            <section id="side-panel" class="mb-4" aria-label="Sheet">
+                <div class="component-demo">
+                    <article class="card" id="sheet">
+                        <div class="card-body">
+                            <h2 class="h6">Sheet</h2>
+                            <p class="text-muted">Side panel with editable details.</p>
+                            <button class="btn btn-light" data-bs-toggle="offcanvas" data-bs-target="#demoSheet">Edit profile</button>
+                            <p id="profileStatus" class="small mt-2 mb-0" role="status">Profile: Ujang Kasep.</p>
+                        </div>
+                    </article>
+                </div>
             </section>
+        </section>
     </main>
   </div>
-<div class="offcanvas offcanvas-bottom" tabindex="-1" id="demoDrawer" aria-labelledby="drawerTitle"><div class="offcanvas-header"><h2 id="drawerTitle">Daily task goal</h2><button class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button></div><div class="offcanvas-body"><label class="form-label" for="dailyGoal">Tasks per day</label><input id="dailyGoal" type="number" min="1" max="20" value="3" class="form-control mb-3"><button class="btn btn-primary" id="saveGoal">Save goal</button></div></div>
-<div class="offcanvas offcanvas-end" tabindex="-1" id="demoSheet" aria-labelledby="sheetTitle"><div class="offcanvas-header"><h2 id="sheetTitle">Edit profile</h2><button class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button></div><div class="offcanvas-body"><form id="profileForm"><label for="profileName" class="form-label">Display name</label><input id="profileName" class="form-control mb-3" value="Ujang Kasep" required maxlength="80"><button class="btn btn-primary" type="submit">Save profile</button></form></div></div>
+    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="demoDrawer" aria-labelledby="drawerTitle">
+        <div class="offcanvas-header">
+            <h2 id="drawerTitle">Daily task goal</h2>
+            <button class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <label class="form-label" for="dailyGoal">Tasks per day</label>
+            <input id="dailyGoal" type="number" min="1" max="20" value="3" class="form-control mb-3">
+            <button class="btn btn-primary" id="saveGoal">Save goal</button>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="demoSheet" aria-labelledby="sheetTitle">
+        <div class="offcanvas-header">
+            <h2 id="sheetTitle">Edit profile</h2>
+            <button class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <form id="profileForm">
+                <label for="profileName" class="form-label">Display name</label>
+                <input id="profileName" class="form-control mb-3" value="Ujang Kasep" required maxlength="80">
+                <button class="btn btn-primary" type="submit">Save profile</button>
+            </form>
+        </div>
+    </div>
     <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/plugins/jquery/jquery.min.js"></script>
     <script src="../assets/scripts/naha-admin.min.js"></script>

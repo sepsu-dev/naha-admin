@@ -360,83 +360,103 @@
         </footer>
       </nav>
     </aside>
-    <main id="layoutSidenav_content"><section class="container-fluid px-4 pb-5">
-      <header id="pageContent" class="my-4"><nav aria-label="Breadcrumb"><ol class="breadcrumb mb-2"><li class="breadcrumb-item"><a href="index.html">Components</a></li><li class="breadcrumb-item active" aria-current="page">Tabs</li></ol></nav><h1 class="catalog-title">Tabs</h1><p class="text-muted">Switch account panels with arrow keys. Disabled tabs stay out of the keyboard sequence; values remain when switching panels.</p></header>
-<div class="component-demo">
-  <article class="card mb-4"><div class="card-body"><h2>Tabs</h2>
-    <div class="nav nav-tabs" role="tablist" aria-label="Account settings">
-      <button class="nav-link active" id="accountTab" data-bs-toggle="tab" data-bs-target="#accountPanel" type="button" role="tab" aria-controls="accountPanel" aria-selected="true">Account</button>
-      <button class="nav-link" id="passwordTab" data-bs-toggle="tab" data-bs-target="#passwordPanel" type="button" role="tab" aria-controls="passwordPanel" aria-selected="false" tabindex="-1">Password</button>
-      <button class="nav-link" type="button" role="tab" aria-selected="false" disabled>Unavailable</button>
-    </div>
-    <div class="tab-content pt-3">
-      <div class="tab-pane fade show active" id="accountPanel" role="tabpanel" aria-labelledby="accountTab" tabindex="0"><label class="form-label" for="accountName">Display name</label><input class="form-control" id="accountName" value="Ujang Kasep"></div>
-      <div class="tab-pane fade" id="passwordPanel" role="tabpanel" aria-labelledby="passwordTab" tabindex="0"><label class="form-label" for="accountPassword">New password</label><input class="form-control" id="accountPassword" type="password" autocomplete="new-password"></div>
-    </div>
-  </div></article>
-</div>
-
-                <section id="workspace" class="mb-4" aria-label="Tabs Accordions">
-                    <div class="component-demo">
-                        <article class="card mb-4">
-                            <div class="card-body">
-                                <h2>Website refresh</h2>
-                                <ul class="nav nav-tabs" role="tablist" aria-label="Project workspace">
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link active" id="overview-tab" data-bs-toggle="tab" data-bs-target="#overview" type="button" role="tab" aria-controls="overview" aria-selected="true">Overview</button>
-                                    </li>
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="details-tab" data-bs-toggle="tab" data-bs-target="#details" type="button" role="tab" aria-controls="details" aria-selected="false" tabindex="-1">Delivery details</button>
-                                    </li>
-                                </ul>
-                                <div class="tab-content pt-4">
-                                    <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview-tab" tabindex="0">
-                                        <h3>Ready for review</h3>
-                                        <p class="text-muted">The new dashboard layout is complete. Review the scope and handoff checklist before approving delivery.</p>
-                                        <dl class="row mb-0">
-                                            <dt class="col-sm-3">Owner</dt>
-                                            <dd class="col-sm-9">Ujang Kasep</dd>
-                                            <dt class="col-sm-3">Progress</dt>
-                                            <dd class="col-sm-9">8 of 10 tasks complete</dd>
-                                        </dl>
-                                    </div>
-                                    <div class="tab-pane fade" id="details" role="tabpanel" aria-labelledby="details-tab" tabindex="0">
-                                        <div class="accordion" id="deliveryAccordion">
-                                            <div class="accordion-item">
-                                                <h3 class="accordion-header">
-                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryScope" aria-expanded="true" aria-controls="deliveryScope">Included in this delivery</button>
-                                                </h3>
-                                                <div id="deliveryScope" class="accordion-collapse collapse show" data-bs-parent="#deliveryAccordion">
-                                                    <div class="accordion-body">Responsive dashboard, shared navigation, and account settings screens. Backend integration is a separate task.</div>
-                                                </div>
+    <main id="layoutSidenav_content">
+        <section class="container-fluid px-4 pb-5">
+            <header id="pageContent" class="my-4">
+                <nav aria-label="Breadcrumb">
+                    <ol class="breadcrumb mb-2">
+                        <li class="breadcrumb-item">
+                            <a href="index.html">Components</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">Tabs</li>
+                    </ol>
+                </nav>
+                <h1 class="catalog-title">Tabs</h1>
+                <p class="text-muted">Switch account panels with arrow keys. Disabled tabs stay out of the keyboard sequence; values remain when switching panels.</p>
+            </header>
+            <div class="component-demo">
+                <article class="card mb-4">
+                    <div class="card-body">
+                        <h2>Tabs</h2>
+                        <div class="nav nav-tabs" role="tablist" aria-label="Account settings">
+                            <button class="nav-link active" id="accountTab" data-bs-toggle="tab" data-bs-target="#accountPanel" type="button" role="tab" aria-controls="accountPanel" aria-selected="true">Account</button>
+                            <button class="nav-link" id="passwordTab" data-bs-toggle="tab" data-bs-target="#passwordPanel" type="button" role="tab" aria-controls="passwordPanel" aria-selected="false" tabindex="-1">Password</button>
+                            <button class="nav-link" type="button" role="tab" aria-selected="false" disabled>Unavailable</button>
+                        </div>
+                        <div class="tab-content pt-3">
+                            <div class="tab-pane fade show active" id="accountPanel" role="tabpanel" aria-labelledby="accountTab" tabindex="0">
+                                <label class="form-label" for="accountName">Display name</label>
+                                <input class="form-control" id="accountName" value="Ujang Kasep">
+                            </div>
+                            <div class="tab-pane fade" id="passwordPanel" role="tabpanel" aria-labelledby="passwordTab" tabindex="0">
+                                <label class="form-label" for="accountPassword">New password</label>
+                                <input class="form-control" id="accountPassword" type="password" autocomplete="new-password">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <section id="workspace" class="mb-4" aria-label="Tabs Accordions">
+                <div class="component-demo">
+                    <article class="card mb-4">
+                        <div class="card-body">
+                            <h2>Website refresh</h2>
+                            <ul class="nav nav-tabs" role="tablist" aria-label="Project workspace">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="overview-tab" data-bs-toggle="tab" data-bs-target="#overview" type="button" role="tab" aria-controls="overview" aria-selected="true">Overview</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="details-tab" data-bs-toggle="tab" data-bs-target="#details" type="button" role="tab" aria-controls="details" aria-selected="false" tabindex="-1">Delivery details</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content pt-4">
+                                <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview-tab" tabindex="0">
+                                    <h3>Ready for review</h3>
+                                    <p class="text-muted">The new dashboard layout is complete. Review the scope and handoff checklist before approving delivery.</p>
+                                    <dl class="row mb-0">
+                                        <dt class="col-sm-3">Owner</dt>
+                                        <dd class="col-sm-9">Ujang Kasep</dd>
+                                        <dt class="col-sm-3">Progress</dt>
+                                        <dd class="col-sm-9">8 of 10 tasks complete</dd>
+                                    </dl>
+                                </div>
+                                <div class="tab-pane fade" id="details" role="tabpanel" aria-labelledby="details-tab" tabindex="0">
+                                    <div class="accordion" id="deliveryAccordion">
+                                        <div class="accordion-item">
+                                            <h3 class="accordion-header">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryScope" aria-expanded="true" aria-controls="deliveryScope">Included in this delivery</button>
+                                            </h3>
+                                            <div id="deliveryScope" class="accordion-collapse collapse show" data-bs-parent="#deliveryAccordion">
+                                                <div class="accordion-body">Responsive dashboard, shared navigation, and account settings screens. Backend integration is a separate task.</div>
                                             </div>
-                                            <div class="accordion-item">
-                                                <h3 class="accordion-header">
-                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryChecklist" aria-expanded="false" aria-controls="deliveryChecklist">Handoff checklist</button>
-                                                </h3>
-                                                <div id="deliveryChecklist" class="accordion-collapse collapse" data-bs-parent="#deliveryAccordion">
-                                                    <div class="accordion-body">
-                                                        <ul class="mb-0">
-                                                            <li>Review desktop and mobile layouts.</li>
-                                                            <li>Check keyboard navigation.</li>
-                                                            <li>Confirm content and approve delivery.</li>
-                                                        </ul>
-                                                    </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h3 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryChecklist" aria-expanded="false" aria-controls="deliveryChecklist">Handoff checklist</button>
+                                            </h3>
+                                            <div id="deliveryChecklist" class="accordion-collapse collapse" data-bs-parent="#deliveryAccordion">
+                                                <div class="accordion-body">
+                                                    <ul class="mb-0">
+                                                        <li>Review desktop and mobile layouts.</li>
+                                                        <li>Check keyboard navigation.</li>
+                                                        <li>Confirm content and approve delivery.</li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </article>
-                    </div>
-                </section>
+                        </div>
+                    </article>
+                </div>
             </section>
+        </section>
     </main>
   </div>
-  <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/plugins/jquery/jquery.min.js"></script>
-  <script src="../assets/scripts/naha-admin.min.js"></script>
-  <script src="../assets/scripts/pages/components.js"></script>
+    <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/plugins/jquery/jquery.min.js"></script>
+    <script src="../assets/scripts/naha-admin.min.js"></script>
+    <script src="../assets/scripts/pages/components.js"></script>
 </body>
 </html>

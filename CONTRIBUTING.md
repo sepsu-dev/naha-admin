@@ -41,7 +41,15 @@ console.assert(document.querySelector('#chatForm input') !== document.querySelec
 document.getElementById('conversationStyle').value = 'plain';
 document.getElementById('conversationStyle').dispatchEvent(new Event('change'));
 console.assert(document.getElementById('message').classList.contains('conversation-plain'), 'Plain style must apply');
+const attachment = document.getElementById('attachmentInput');
+attachment.value = '';
+attachment.dispatchEvent(new Event('change'));
+console.assert(document.getElementById('attachmentList').childElementCount === 0, 'Empty selection must clear preview');
+console.assert(document.getElementById('attachmentStatus').textContent === 'No attachment selected.', 'Empty selection must reset status');
 ```
+
+At mobile width, hide chat contacts, then resize to at least 992 px. Contacts must
+reappear and the toggle's `aria-expanded` must be `true`.
 
 ## Design and content
 
@@ -54,4 +62,4 @@ requires a backend. Documentation must describe the code that ships, not planned
 
 For bug reports, include the page URL, browser, viewport width, reproduction steps,
 and a screenshot if the issue is visual. For code changes, list the checks run and
-record user-visible changes under `Unreleased` in `CHANGELOG.md`.
+describe user-visible changes in the pull request.

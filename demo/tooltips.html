@@ -404,130 +404,124 @@
       </nav>
     </aside>
 
-        <main id="layoutSidenav_content" class="animate__animated animate__fadeIn">
-            <section class="container-fluid px-4 pb-5">
-                <header class="my-4">
-                    <h1 class="mb-0 fw-semibold">Tooltips & Popovers</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                            <li class="breadcrumb-item">Components</li>
-                            <li class="breadcrumb-item active">Tooltips & Popovers</li>
-                        </ol>
-                    </nav>
-                </header>
-
-                <div class="row">
-                    <!-- Tooltips -->
-                    <div class="col-lg-6">
-                        <div class="card animate__animated animate__fadeIn mb-4">
-                            <div class="card-header fw-semibold">Tooltips</div>
-                            <div class="card-body">
-                                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip"
-                                    data-bs-placement="top" title="Tooltip on top">
-                                    Tooltip on top
-                                </button>
-                                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip"
-                                    data-bs-placement="right" title="Tooltip on right">
-                                    Tooltip on right
-                                </button>
-                                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip"
-                                    data-bs-placement="bottom" title="Tooltip on bottom">
-                                    Tooltip on bottom
-                                </button>
-                                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip"
-                                    data-bs-placement="left" title="Tooltip on left">
-                                    Tooltip on left
-                                </button>
-                            </div>
+    <main id="layoutSidenav_content" class="animate__animated animate__fadeIn">
+        <section class="container-fluid px-4 pb-5">
+            <header class="my-4">
+                <h1 class="mb-0 fw-semibold">Tooltips & Popovers</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="index.html">Dashboard</a>
+                        </li>
+                        <li class="breadcrumb-item">Components</li>
+                        <li class="breadcrumb-item active">Tooltips & Popovers</li>
+                    </ol>
+                </nav>
+            </header>
+            <div class="row">
+                <!-- Tooltips -->
+                <div class="col-lg-6">
+                    <div class="card animate__animated animate__fadeIn mb-4">
+                        <div class="card-header fw-semibold">Tooltips</div>
+                        <div class="card-body">
+                            <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip"
+                            data-bs-placement="top" title="Tooltip on top">
+                            Tooltip on top
+                            </button>
+                            <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip"
+                            data-bs-placement="right" title="Tooltip on right">
+                            Tooltip on right
+                            </button>
+                            <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip"
+                            data-bs-placement="bottom" title="Tooltip on bottom">
+                            Tooltip on bottom
+                            </button>
+                            <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip"
+                            data-bs-placement="left" title="Tooltip on left">
+                            Tooltip on left
+                            </button>
                         </div>
                     </div>
-
-                    <!-- Popovers -->
-                    <div class="col-lg-6">
-                        <div class="card animate__animated animate__fadeIn mb-4">
-                            <div class="card-header fw-semibold">Popovers</div>
-                            <div class="card-body">
-                                <button type="button" class="btn btn-secondary" data-bs-container="body"
-                                    data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
-                                    Popover on top
-                                </button>
-                                <button type="button" class="btn btn-secondary" data-bs-container="body"
-                                    data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover">
-                                    Popover on right
-                                </button>
-                                <button type="button" class="btn btn-secondary" data-bs-container="body"
-                                    data-bs-toggle="popover" data-bs-placement="bottom"
-                                    data-bs-content="Bottom popover">
-                                    Popover on bottom
-                                </button>
-                                <button type="button" class="btn btn-secondary" data-bs-container="body"
-                                    data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Left popover">
-                                    Popover on left
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Dismissible Popovers -->
-                    <div class="col-lg-6">
-                        <div class="card animate__animated animate__fadeIn mb-4">
-                            <div class="card-header fw-semibold">Dismissible Popover</div>
-                            <div class="card-body">
-                                <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover"
-                                    data-bs-trigger="focus" title="Dismissible popover"
-                                    data-bs-content="And here's some amazing content. It's very engaging. Right?">Dismissible
-                                    popover</a>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
-
-
-                <section id="native-popover" class="mb-4" aria-label="Popover">
-                    <div class="component-demo">
-                        <article class="card" id="popover">
-                            <div class="card-body">
-                                <h2 class="h6">Popover</h2>
-                                <button class="btn btn-light" id="popoverButton" popovertarget="demoPopover">Display settings</button>
-                                <div id="demoPopover" popover class="nd-popover">
-                                    <h4>Display settings</h4>
-                                    <label for="density" class="form-label">Density</label>
-                                    <select id="density" class="form-select">
-                                        <option>Comfortable</option>
-                                        <option>Compact</option>
-                                    </select>
-                                    <button class="btn btn-light mt-3" popovertarget="demoPopover" popovertargetaction="hide">Done</button>
-                                </div>
-                            </div>
-                        </article>
+                <!-- Popovers -->
+                <div class="col-lg-6">
+                    <div class="card animate__animated animate__fadeIn mb-4">
+                        <div class="card-header fw-semibold">Popovers</div>
+                        <div class="card-body">
+                            <button type="button" class="btn btn-secondary" data-bs-container="body"
+                            data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
+                            Popover on top
+                            </button>
+                            <button type="button" class="btn btn-secondary" data-bs-container="body"
+                            data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover">
+                            Popover on right
+                            </button>
+                            <button type="button" class="btn btn-secondary" data-bs-container="body"
+                            data-bs-toggle="popover" data-bs-placement="bottom"
+                            data-bs-content="Bottom popover">
+                            Popover on bottom
+                            </button>
+                            <button type="button" class="btn btn-secondary" data-bs-container="body"
+                            data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Left popover">
+                            Popover on left
+                            </button>
+                        </div>
                     </div>
-                </section>
-
-                <section id="profile-hover-card" class="mb-4" aria-label="Hover Card">
-                    <div class="component-demo">
-                        <article class="card" id="hover-card">
-                            <div class="card-body">
-                                <h2 class="h6">Hover Card</h2>
-                                <div class="hover-card">
-                                    <button class="btn btn-link px-0" aria-describedby="personCard">@ujang</button>
-                                    <div id="personCard" class="hover-card-content">
-                                        <strong>Ujang Kasep</strong>
-                                        <p class="small text-muted mb-0">Designer in Bandung. Joined October 2026.</p>
-                                    </div>
-                                </div>
-                                <p class="small text-muted mb-0">Hover or focus the name. Escape dismisses the card.</p>
-                            </div>
-                        </article>
+                </div>
+                <!-- Dismissible Popovers -->
+                <div class="col-lg-6">
+                    <div class="card animate__animated animate__fadeIn mb-4">
+                        <div class="card-header fw-semibold">Dismissible Popover</div>
+                        <div class="card-body">
+                            <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover"
+                            data-bs-trigger="focus" title="Dismissible popover"
+                            data-bs-content="And here's some amazing content. It's very engaging. Right?">Dismissible
+                            popover</a>
+                        </div>
                     </div>
-                </section>
+                </div>
+            </div>
+            <section id="native-popover" class="mb-4" aria-label="Popover">
+                <div class="component-demo">
+                    <article class="card" id="popover">
+                        <div class="card-body">
+                            <h2 class="h6">Popover</h2>
+                            <button class="btn btn-light" id="popoverButton" popovertarget="demoPopover">Display settings</button>
+                            <div id="demoPopover" popover class="nd-popover">
+                                <h4>Display settings</h4>
+                                <label for="density" class="form-label">Density</label>
+                                <select id="density" class="form-select">
+                                    <option>Comfortable</option>
+                                    <option>Compact</option>
+                                </select>
+                                <button class="btn btn-light mt-3" popovertarget="demoPopover" popovertargetaction="hide">Done</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </section>
-        </main>
+            <section id="profile-hover-card" class="mb-4" aria-label="Hover Card">
+                <div class="component-demo">
+                    <article class="card" id="hover-card">
+                        <div class="card-body">
+                            <h2 class="h6">Hover Card</h2>
+                            <div class="hover-card">
+                                <button class="btn btn-link px-0" aria-describedby="personCard">@ujang</button>
+                                <div id="personCard" class="hover-card-content">
+                                    <strong>Ujang Kasep</strong>
+                                    <p class="small text-muted mb-0">Designer in Bandung. Joined October 2026.</p>
+                                </div>
+                            </div>
+                            <p class="small text-muted mb-0">Hover or focus the name. Escape dismisses the card.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </section>
+    </main>
     </div>
 
-
-  <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/plugins/jquery/jquery.min.js"></script>
     <script src="../assets/plugins/simplebar/simplebar.min.js"></script>
     <script src="../assets/plugins/nprogress/nprogress.min.js"></script>
@@ -548,11 +542,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-

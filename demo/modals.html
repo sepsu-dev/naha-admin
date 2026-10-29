@@ -406,131 +406,124 @@
       </nav>
     </aside>
 
-        <main id="layoutSidenav_content" class="animate__animated animate__fadeIn">
-            <section class="container-fluid px-4">
-                <header class="my-4">
-                    <h1 class="mb-0 fw-semibold">Dialogs</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                            <li class="breadcrumb-item">Components</li>
-                            <li class="breadcrumb-item active">Modals</li>
-                        </ol>
-                    </nav>
-                </header>
-
-                                <div class="row">
-                    <!-- Standard Modals -->
-                    <div class="col-lg-6">
-                        <div class="card border-0 shadow-sm mb-4">
-                            <div class="card-header fw-semibold">Standard Modals</div>
-                            <div class="card-body">
-                                <p class="text-muted small mb-3">Toggle a working modal demo by clicking the buttons below. Includes default, static backdrop and scrollable behavior.</p>
-                                <div class="d-flex flex-wrap gap-2">
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#basicModal">Basic Modal</button>
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Static Backdrop</button>
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollableModal">Scrollable</button>
-                                </div>
+    <main id="layoutSidenav_content" class="animate__animated animate__fadeIn">
+        <section class="container-fluid px-4">
+            <header class="my-4">
+                <h1 class="mb-0 fw-semibold">Dialogs</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="index.html">Dashboard</a>
+                        </li>
+                        <li class="breadcrumb-item">Components</li>
+                        <li class="breadcrumb-item active">Modals</li>
+                    </ol>
+                </nav>
+            </header>
+            <div class="row">
+                <!-- Standard Modals -->
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-header fw-semibold">Standard Modals</div>
+                        <div class="card-body">
+                            <p class="text-muted small mb-3">Toggle a working modal demo by clicking the buttons below. Includes default, static backdrop and scrollable behavior.</p>
+                            <div class="d-flex flex-wrap gap-2">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#basicModal">Basic Modal</button>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Static Backdrop</button>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollableModal">Scrollable</button>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Positioning -->
-                    <div class="col-lg-6">
-                        <div class="card border-0 shadow-sm mb-4">
-                            <div class="card-header fw-semibold">Positioning</div>
-                            <div class="card-body">
-                                <p class="text-muted small mb-3">Align your modals to the center of the viewport or use centered scrollable layouts.</p>
-                                <div class="d-flex flex-wrap gap-2">
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#centeredModal">Vertically Centered</button>
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#centeredScrollableModal">Centered Scrollable</button>
-                                </div>
+                </div>
+                <!-- Positioning -->
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-header fw-semibold">Positioning</div>
+                        <div class="card-body">
+                            <p class="text-muted small mb-3">Align your modals to the center of the viewport or use centered scrollable layouts.</p>
+                            <div class="d-flex flex-wrap gap-2">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#centeredModal">Vertically Centered</button>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#centeredScrollableModal">Centered Scrollable</button>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Colored Modals (New) -->
-                    <div class="col-lg-12">
-                        <div class="card border-0 shadow-sm mb-4">
-                            <div class="card-header fw-semibold">Colored Variants</div>
-                            <div class="card-body">
-                                <p class="text-muted small mb-3">Use color utility classes on <code>.modal-header</code> to create themed modal dialogs for different states.</p>
-                                <div class="d-flex flex-wrap gap-2">
-                                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#successModal">Success Modal</button>
-                                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#dangerModal">Danger Modal</button>
-                                    <button type="button" class="btn btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#warningModal">Warning Modal</button>
-                                    <button type="button" class="btn btn-info text-white" data-bs-toggle="modal" data-bs-target="#infoModal">Info Modal</button>
-                                </div>
+                </div>
+                <!-- Colored Modals (New) -->
+                <div class="col-lg-12">
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-header fw-semibold">Colored Variants</div>
+                        <div class="card-body">
+                            <p class="text-muted small mb-3">Use color utility classes on <code>.modal-header</code> to create themed modal dialogs for different states.</p>
+                            <div class="d-flex flex-wrap gap-2">
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#successModal">Success Modal</button>
+                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#dangerModal">Danger Modal</button>
+                                <button type="button" class="btn btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#warningModal">Warning Modal</button>
+                                <button type="button" class="btn btn-info text-white" data-bs-toggle="modal" data-bs-target="#infoModal">Info Modal</button>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Animated Modals (New) -->
-                    <div class="col-lg-6">
-                        <div class="card border-0 shadow-sm mb-4">
-                            <div class="card-header fw-semibold">Animated Modals</div>
-                            <div class="card-body">
-                                <p class="text-muted small mb-3">Combine Bootstrap modals with <code>Animate.css</code> for modern entrance effects.</p>
-                                <div class="d-flex flex-wrap gap-2">
-                                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#animateZoomIn">Zoom In</button>
-                                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#animateSlideDown">Slide Down</button>
-                                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#animatePulse">Pulse Effect</button>
-                                </div>
+                </div>
+                <!-- Animated Modals (New) -->
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-header fw-semibold">Animated Modals</div>
+                        <div class="card-body">
+                            <p class="text-muted small mb-3">Combine Bootstrap modals with <code>Animate.css</code> for modern entrance effects.</p>
+                            <div class="d-flex flex-wrap gap-2">
+                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#animateZoomIn">Zoom In</button>
+                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#animateSlideDown">Slide Down</button>
+                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#animatePulse">Pulse Effect</button>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Sizes -->
-                    <div class="col-lg-6">
-                        <div class="card border-0 shadow-sm mb-4">
-                            <div class="card-header fw-semibold">Optional Sizes</div>
-                            <div class="card-body">
-                                <p class="text-muted small mb-3">Flexible sizing options from small to fullscreen layouts.</p>
-                                <div class="d-flex flex-wrap gap-2">
-                                    <button type="button" class="btn btn-light border" data-bs-toggle="modal" data-bs-target="#smallModal">Small</button>
-                                    <button type="button" class="btn btn-light border" data-bs-toggle="modal" data-bs-target="#largeModal">Large</button>
-                                    <button type="button" class="btn btn-light border" data-bs-toggle="modal" data-bs-target="#xlModal">Extra Large</button>
-                                    <button type="button" class="btn btn-light border" data-bs-toggle="modal" data-bs-target="#fullscreenModal">Fullscreen</button>
-                                </div>
+                </div>
+                <!-- Sizes -->
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-header fw-semibold">Optional Sizes</div>
+                        <div class="card-body">
+                            <p class="text-muted small mb-3">Flexible sizing options from small to fullscreen layouts.</p>
+                            <div class="d-flex flex-wrap gap-2">
+                                <button type="button" class="btn btn-light border" data-bs-toggle="modal" data-bs-target="#smallModal">Small</button>
+                                <button type="button" class="btn btn-light border" data-bs-toggle="modal" data-bs-target="#largeModal">Large</button>
+                                <button type="button" class="btn btn-light border" data-bs-toggle="modal" data-bs-target="#xlModal">Extra Large</button>
+                                <button type="button" class="btn btn-light border" data-bs-toggle="modal" data-bs-target="#fullscreenModal">Fullscreen</button>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Content Options -->
-                    <div class="col-lg-12">
-                        <div class="card border-0 shadow-sm mb-4">
-                            <div class="card-header fw-semibold">Content Options</div>
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <p class="text-muted small mb-2">Utilize the Bootstrap grid system within a modal.</p>
-                                        <button type="button" class="btn btn-secondary w-100 mb-3" data-bs-toggle="modal" data-bs-target="#gridModal">Launch Grid Modal</button>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p class="text-muted small mb-2">Tooltips and popovers can be placed within modals.</p>
-                                        <button type="button" class="btn btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#tooltipPopoverModal">Launch Tooltip Modal</button>
-                                    </div>
+                </div>
+                <!-- Content Options -->
+                <div class="col-lg-12">
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-header fw-semibold">Content Options</div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="text-muted small mb-2">Utilize the Bootstrap grid system within a modal.</p>
+                                    <button type="button" class="btn btn-secondary w-100 mb-3" data-bs-toggle="modal" data-bs-target="#gridModal">Launch Grid Modal</button>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="text-muted small mb-2">Tooltips and popovers can be placed within modals.</p>
+                                    <button type="button" class="btn btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#tooltipPopoverModal">Launch Tooltip Modal</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                    </div>
+            </div>
+            <section id="archive-project" class="mb-4" aria-label="Alert Dialog">
+                <div class="component-demo">
+                    <article class="card" id="alert-dialog">
+                        <div class="card-body">
+                            <h2 class="h6">Alert Dialog</h2>
+                            <p class="text-muted" id="archiveStatus" role="status">Sample project is active.</p>
+                            <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#archiveDialog">Archive sample project</button>
+                        </div>
+                    </article>
                 </div>
-
-                <section id="archive-project" class="mb-4" aria-label="Alert Dialog">
-                    <div class="component-demo">
-                        <article class="card" id="alert-dialog">
-                            <div class="card-body">
-                                <h2 class="h6">Alert Dialog</h2>
-                                <p class="text-muted" id="archiveStatus" role="status">Sample project is active.</p>
-                                <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#archiveDialog">Archive sample project</button>
-                            </div>
-                        </article>
-                    </div>
-                </section>
             </section>
-        </main>
+        </section>
+    </main>
     </div>
 
     <!-- Basic Modal -->
@@ -893,9 +886,21 @@
             </div>
         </div>
     </div>
-    
 
-  <div class="modal fade" id="archiveDialog" tabindex="-1" role="alertdialog" aria-labelledby="archiveTitle" aria-describedby="archiveDescription" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h2 class="modal-title fs-6" id="archiveTitle">Archive this sample project?</h2></div><div class="modal-body" id="archiveDescription">This only changes local demo state. No project data will be deleted.</div><div class="modal-footer"><button class="btn btn-light" id="archiveCancel" data-bs-dismiss="modal">Cancel</button><button class="btn btn-danger" id="archiveConfirm" data-bs-dismiss="modal">Archive project</button></div></div></div></div>
+    <div class="modal fade" id="archiveDialog" tabindex="-1" role="alertdialog" aria-labelledby="archiveTitle" aria-describedby="archiveDescription" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-6" id="archiveTitle">Archive this sample project?</h2>
+                </div>
+                <div class="modal-body" id="archiveDescription">This only changes local demo state. No project data will be deleted.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-light" id="archiveCancel" data-bs-dismiss="modal">Cancel</button>
+                    <button class="btn btn-danger" id="archiveConfirm" data-bs-dismiss="modal">Archive project</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/plugins/jquery/jquery.min.js"></script>
     <script src="../assets/plugins/simplebar/simplebar.min.js"></script>
@@ -905,19 +910,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

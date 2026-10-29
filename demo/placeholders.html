@@ -405,119 +405,112 @@
       </nav>
     </aside>
 
-        <main id="layoutSidenav_content" class="animate__animated animate__fadeIn">
-            <section class="container-fluid px-4 pb-5">
-                <header class="my-4">
-                    <h1 class="mb-0 fw-semibold">Placeholders &amp; Skeletons</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                            <li class="breadcrumb-item">Components</li>
-                            <li class="breadcrumb-item active">Placeholders</li>
-                        </ol>
-                    </nav>
-                </header>
-
-                <div class="row">
-                    <!-- Basic -->
-                    <div class="col-lg-6">
-                        <div class="card animate__animated animate__fadeIn mb-4">
-                            <div class="card-header fw-semibold">Basic Usage</div>
-                            <div class="card-body">
-                                <div class="card" aria-hidden="true">
-                                    <img src="../assets/images/user-avatar.png" class="card-img-top bg-secondary"
-                                        alt="..." style="height: 150px; object-fit: cover; opacity: 0.1">
-                                    <div class="card-body">
-                                        <h5 class="card-title placeholder-glow">
-                                            <span class="placeholder col-6"></span>
-                                        </h5>
-                                        <p class="card-text placeholder-glow">
-                                            <span class="placeholder col-7"></span>
-                                            <span class="placeholder col-4"></span>
-                                            <span class="placeholder col-4"></span>
-                                            <span class="placeholder col-6"></span>
-                                            <span class="placeholder col-8"></span>
-                                        </p>
-                                        <a href="#" tabindex="-1"
-                                            class="btn btn-primary disabled placeholder rounded-pill col-6"></a>
-                                    </div>
+    <main id="layoutSidenav_content" class="animate__animated animate__fadeIn">
+        <section class="container-fluid px-4 pb-5">
+            <header class="my-4">
+                <h1 class="mb-0 fw-semibold">Placeholders &amp; Skeletons</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="index.html">Dashboard</a>
+                        </li>
+                        <li class="breadcrumb-item">Components</li>
+                        <li class="breadcrumb-item active">Placeholders</li>
+                    </ol>
+                </nav>
+            </header>
+            <div class="row">
+                <!-- Basic -->
+                <div class="col-lg-6">
+                    <div class="card animate__animated animate__fadeIn mb-4">
+                        <div class="card-header fw-semibold">Basic Usage</div>
+                        <div class="card-body">
+                            <div class="card" aria-hidden="true">
+                                <img src="../assets/images/user-avatar.png" class="card-img-top bg-secondary"
+                                alt="..." style="height: 150px; object-fit: cover; opacity: 0.1">
+                                <div class="card-body">
+                                    <h5 class="card-title placeholder-glow">
+                                    <span class="placeholder col-6"></span>
+                                    </h5>
+                                    <p class="card-text placeholder-glow">
+                                    <span class="placeholder col-7"></span>
+                                    <span class="placeholder col-4"></span>
+                                    <span class="placeholder col-4"></span>
+                                    <span class="placeholder col-6"></span>
+                                    <span class="placeholder col-8"></span>
+                                    </p>
+                                    <a href="#" tabindex="-1"
+                                    class="btn btn-primary disabled placeholder rounded-pill col-6"></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Color -->
-                    <div class="col-lg-6">
-                        <div class="card animate__animated animate__fadeIn mb-4">
-                            <div class="card-header fw-semibold">Colors</div>
-                            <div class="card-body">
-                                <span class="placeholder col-12"></span>
-                                <span class="placeholder col-12 bg-primary"></span>
-                                <span class="placeholder col-12 bg-secondary"></span>
-                                <span class="placeholder col-12 bg-success"></span>
-                                <span class="placeholder col-12 bg-danger"></span>
-                                <span class="placeholder col-12 bg-warning"></span>
-                                <span class="placeholder col-12 bg-info"></span>
-                                <span class="placeholder col-12 bg-light"></span>
-                                <span class="placeholder col-12 bg-dark"></span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Animation -->
-                    <div class="col-lg-6">
-                        <div class="card animate__animated animate__fadeIn mb-4">
-                            <div class="card-header fw-semibold">Animation</div>
-                            <div class="card-body">
-                                <p class="placeholder-glow">
-                                    <span class="placeholder col-12"></span>
-                                </p>
-
-                                <p class="placeholder-wave">
-                                    <span class="placeholder col-12"></span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Sizing -->
-                    <div class="col-lg-6">
-                        <div class="card animate__animated animate__fadeIn mb-4">
-                            <div class="card-header fw-semibold">Sizing</div>
-                            <div class="card-body">
-                                <span class="placeholder col-12 placeholder-lg"></span>
-                                <span class="placeholder col-12"></span>
-                                <span class="placeholder col-12 placeholder-sm"></span>
-                                <span class="placeholder col-12 placeholder-xs"></span>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
-
-
-                <section id="profile-skeleton" class="mb-4" aria-label="Skeleton">
-                    <div class="component-demo">
-                        <article class="card" id="skeleton">
-                            <div class="card-body">
-                                <h2 class="h6">Skeleton</h2>
-                                <div id="loadingPreview" aria-busy="true" aria-label="Sample profile loading">
-                                    <div class="nd-skeleton skeleton-avatar"></div>
-                                    <div class="nd-skeleton w-75 mt-3"></div>
-                                    <div class="nd-skeleton w-50 mt-2"></div>
-                                </div>
-                                <button id="loadPreview" class="btn btn-light mt-3">Load sample profile</button>
-                                <p id="loadingStatus" role="status" class="small mt-2 mb-0">Waiting to load.</p>
-                            </div>
-                        </article>
+                <!-- Color -->
+                <div class="col-lg-6">
+                    <div class="card animate__animated animate__fadeIn mb-4">
+                        <div class="card-header fw-semibold">Colors</div>
+                        <div class="card-body">
+                            <span class="placeholder col-12"></span>
+                            <span class="placeholder col-12 bg-primary"></span>
+                            <span class="placeholder col-12 bg-secondary"></span>
+                            <span class="placeholder col-12 bg-success"></span>
+                            <span class="placeholder col-12 bg-danger"></span>
+                            <span class="placeholder col-12 bg-warning"></span>
+                            <span class="placeholder col-12 bg-info"></span>
+                            <span class="placeholder col-12 bg-light"></span>
+                            <span class="placeholder col-12 bg-dark"></span>
+                        </div>
                     </div>
-                </section>
+                </div>
+                <!-- Animation -->
+                <div class="col-lg-6">
+                    <div class="card animate__animated animate__fadeIn mb-4">
+                        <div class="card-header fw-semibold">Animation</div>
+                        <div class="card-body">
+                            <p class="placeholder-glow">
+                            <span class="placeholder col-12"></span>
+                            </p>
+                            <p class="placeholder-wave">
+                            <span class="placeholder col-12"></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sizing -->
+                <div class="col-lg-6">
+                    <div class="card animate__animated animate__fadeIn mb-4">
+                        <div class="card-header fw-semibold">Sizing</div>
+                        <div class="card-body">
+                            <span class="placeholder col-12 placeholder-lg"></span>
+                            <span class="placeholder col-12"></span>
+                            <span class="placeholder col-12 placeholder-sm"></span>
+                            <span class="placeholder col-12 placeholder-xs"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section id="profile-skeleton" class="mb-4" aria-label="Skeleton">
+                <div class="component-demo">
+                    <article class="card" id="skeleton">
+                        <div class="card-body">
+                            <h2 class="h6">Skeleton</h2>
+                            <div id="loadingPreview" aria-busy="true" aria-label="Sample profile loading">
+                                <div class="nd-skeleton skeleton-avatar"></div>
+                                <div class="nd-skeleton w-75 mt-3"></div>
+                                <div class="nd-skeleton w-50 mt-2"></div>
+                            </div>
+                            <button id="loadPreview" class="btn btn-light mt-3">Load sample profile</button>
+                            <p id="loadingStatus" role="status" class="small mt-2 mb-0">Waiting to load.</p>
+                        </div>
+                    </article>
+                </div>
             </section>
-        </main>
+        </section>
+    </main>
     </div>
 
-
-  <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/plugins/jquery/jquery.min.js"></script>
     <script src="../assets/plugins/simplebar/simplebar.min.js"></script>
     <script src="../assets/plugins/nprogress/nprogress.min.js"></script>
@@ -526,11 +519,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-

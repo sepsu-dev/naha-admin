@@ -25,7 +25,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" />
 
     <!-- Styles -->
     <link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css" />
@@ -36,14 +36,15 @@
     <link rel="stylesheet" href="../assets/plugins/phosphor/bold/style.css" />
     <link rel="stylesheet" href="../assets/plugins/phosphor/regular/style.css" />
     <link rel="stylesheet" href="../assets/plugins/phosphor/fill/style.css" />
+    <link rel="stylesheet" href="../assets/styles/docs.css" />
 </head>
 
 <body class="nd-nav-fixed">
     <header>
         <nav class="nd-topnav navbar navbar-expand navbar-light">
-            <a class="navbar-brand ps-3 d-flex align-items-center" href="index.html">
-                <img src="../assets/images/logo.png" alt="logo" class="logo-navbar" />
-                <span class="ms-2 fw-semibold">NahaAdmin</span>
+            <a class="navbar-brand ps-3 d-flex align-items-center" href="index.html" aria-label="Naha Admin">
+                <svg class="logo-navbar" viewBox="0 0 48 36" fill="currentColor" stroke="currentColor" stroke-width="3" stroke-dasharray="5 5" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><rect x="10" y="4" width="28" height="28" rx="3" fill-opacity="0.15"/></svg>
+                <span class="ms-2 fw-semibold">Naha Admin</span>
             </a>
             <button class="btn btn-light" id="sidebarToggle" aria-label="Toggle sidebar">
                 <i class="ph-bold ph-sidebar-simple"></i>
@@ -56,7 +57,7 @@
             </div>
 
             <div class="ms-auto d-flex align-items-center pe-3">
-                <a href="../demo/index.html" class="btn btn-light border ms-lg-2 px-3 py-2 text-dark fw-semibold">
+                <a href="../demo/index.html" class="btn btn-light border ms-lg-2 px-3 py-2 text-dark fw-medium">
                     <i class="ph-bold ph-monitor-play me-1 text-primary"></i> Live Preview
                 </a>
             </div>
@@ -87,13 +88,13 @@
                         </a>
 
                         <h2 class="nd-sidenav-menu-heading">Resources</h2>
-                        <a class="nav-link" href="support.html">
-                            <div class="nd-nav-link-icon"><i class="ph-bold ph-headset"></i></div>
-                            <span>Support</span>
-                        </a>
                         <a class="nav-link" href="faq.html">
                             <div class="nd-nav-link-icon"><i class="ph-bold ph-question"></i></div>
                             <span>FAQ</span>
+                        </a>
+                        <a class="nav-link" href="support.html">
+                            <div class="nd-nav-link-icon"><i class="ph-bold ph-headset"></i></div>
+                            <span>Support</span>
                         </a>
                         <a class="nav-link" href="license.html">
                             <div class="nd-nav-link-icon"><i class="ph-bold ph-seal-check"></i></div>
@@ -114,255 +115,73 @@
                 <footer class="nd-sidenav-footer">
                     <div class="user-info-footer overflow-hidden w-100">
                         <small class="text-muted text-user-footer text-truncate d-block"
-                            style="font-size: 0.72rem; line-height: 1.4;">&copy; 2026 NahaAdmin &middot; MIT
-                            License</small>
+                            style="font-size: 0.75rem; line-height: 1.4;">&copy; 2026 Naha Admin</small>
                     </div>
                 </footer>
             </nav>
         </aside>
 
-        <main id="layoutSidenav_content" class="animate__animated animate__fadeIn">
+        <main id="layoutSidenav_content">
             <section class="container-fluid px-4 py-4 pb-5">
-                <div class="animate__animated animate__fadeIn">
+                <div>
                     <!-- Browser Support Card -->
-                    <div class="card shadow-sm border-0 mb-4">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="bg-primary-subtle text-primary rounded-3 p-3 me-3 d-inline-flex">
-                                    <i class="ph-bold ph-globe fs-4"></i>
-                                </div>
-                                <div>
-                                    <h3 class="h5 fw-bold mb-0">Browser Support</h3>
-                                    <p class="text-muted extra-small mb-0">Supported modern web browsers and platform
-                                        matrix.</p>
-                                </div>
-                            </div>
-                            <p class="text-muted small mb-3">NahaAdmin comes with the same browser support as
-                                <strong>Bootstrap 5.3</strong>.
-                            </p>
-
-                            <div class="border-start border-4 border-primary bg-light p-3 rounded-end mb-4">
-                                <h6 class="fw-bold small text-dark mb-1">Excerpt from Bootstrap’s official
-                                    Documentation:</h6>
-                                <p class="text-muted small mb-2">Bootstrap supports the <strong>latest, stable
-                                        releases</strong> of all major browsers and platforms.</p>
+                    <div class="docs-article mb-4">
+                        <div class="docs-body">
+                            <header class="docs-page-heading">
+                                <h1>Browser Support</h1>
+                                <p class="text-muted mb-0">Modern browser requirements and validation scope.</p>
+                            </header>
+                            <p class="text-muted mb-3">Target current stable Chrome, Edge, Firefox, and Safari
+                                on desktop, plus current Chrome on Android and Safari on iOS/iPadOS. Bootstrap 5.3
+                                provides the base, but template-specific CSS and browser APIs can need newer browsers.</p>
+                            <p class="text-muted mb-4">See
                                 <a href="https://getbootstrap.com/docs/5.3/getting-started/browsers-devices/#supported-browsers"
-                                    target="_blank" class="extra-small fw-semibold text-primary text-decoration-none">
-                                    View Bootstrap Browser Support &rarr;
-                                </a>
-                            </div>
-
-                            <!-- Table of Supported Browsers -->
+                                    target="_blank" rel="noopener noreferrer">Bootstrap browser guidance</a>
+                                for the underlying framework. It is not a test report for this template.
+                                Internet Explorer and legacy Edge are not supported.</p>
                             <div class="table-responsive mb-4">
-                                <table class="table table-hover align-middle border mb-0"
-                                    style="border-radius: 12px; overflow: hidden;">
-                                    <thead class="table-light border-bottom">
-                                        <tr>
-                                            <th class="py-3 px-3 text-dark fw-bold small" style="width: 32%;">Browser
-                                            </th>
-                                            <th class="py-3 px-3 text-dark fw-bold small text-center"
-                                                style="width: 34%;">Desktop Support</th>
-                                            <th class="py-3 px-3 text-dark fw-bold small text-center"
-                                                style="width: 34%;">Mobile / Tablet Support</th>
-                                        </tr>
+                                <table class="table table-bordered align-middle small mb-0">
+                                    <thead class="table-light">
+                                        <tr><th scope="col">Area</th><th scope="col">Requirements and limits</th></tr>
                                     </thead>
-                                    <tbody>
-                                        <!-- Google Chrome -->
-                                        <tr>
-                                            <td class="py-3 px-3">
-                                                <div class="d-flex align-items-center">
-                                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/browser-logos/74.0.0/chrome/chrome_48x48.png"
-                                                        alt="Chrome" width="28" height="28"
-                                                        class="me-2.5 rounded-circle flex-shrink-0" />
-                                                    <div>
-                                                        <span class="fw-semibold text-dark d-block"
-                                                            style="font-size: 0.875rem;">Google Chrome</span>
-                                                        <small class="text-muted extra-small">Blink Engine</small>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="text-center py-3">
-                                                <span
-                                                    class="badge bg-success-subtle text-success border border-success-subtle px-2.5 py-1.5 rounded-pill">
-                                                    <i class="ph-bold ph-check me-1"></i> Supported (Latest)
-                                                </span>
-                                            </td>
-                                            <td class="text-center py-3">
-                                                <span
-                                                    class="badge bg-success-subtle text-success border border-success-subtle px-2.5 py-1.5 rounded-pill">
-                                                    <i class="ph-bold ph-check me-1"></i> Supported (Android & iOS)
-                                                </span>
-                                            </td>
-                                        </tr>
-
-                                        <!-- Mozilla Firefox -->
-                                        <tr>
-                                            <td class="py-3 px-3">
-                                                <div class="d-flex align-items-center">
-                                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/browser-logos/74.0.0/firefox/firefox_48x48.png"
-                                                        alt="Firefox" width="28" height="28"
-                                                        class="me-2.5 rounded-circle flex-shrink-0" />
-                                                    <div>
-                                                        <span class="fw-semibold text-dark d-block"
-                                                            style="font-size: 0.875rem;">Mozilla Firefox</span>
-                                                        <small class="text-muted extra-small">Gecko Engine</small>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="text-center py-3">
-                                                <span
-                                                    class="badge bg-success-subtle text-success border border-success-subtle px-2.5 py-1.5 rounded-pill">
-                                                    <i class="ph-bold ph-check me-1"></i> Supported (Latest + ESR)
-                                                </span>
-                                            </td>
-                                            <td class="text-center py-3">
-                                                <span
-                                                    class="badge bg-success-subtle text-success border border-success-subtle px-2.5 py-1.5 rounded-pill">
-                                                    <i class="ph-bold ph-check me-1"></i> Supported (Android & iOS)
-                                                </span>
-                                            </td>
-                                        </tr>
-
-                                        <!-- Apple Safari -->
-                                        <tr>
-                                            <td class="py-3 px-3">
-                                                <div class="d-flex align-items-center">
-                                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/browser-logos/74.0.0/safari/safari_48x48.png"
-                                                        alt="Safari" width="28" height="28"
-                                                        class="me-2.5 rounded-circle flex-shrink-0" />
-                                                    <div>
-                                                        <span class="fw-semibold text-dark d-block"
-                                                            style="font-size: 0.875rem;">Apple Safari</span>
-                                                        <small class="text-muted extra-small">WebKit Engine</small>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="text-center py-3">
-                                                <span
-                                                    class="badge bg-success-subtle text-success border border-success-subtle px-2.5 py-1.5 rounded-pill">
-                                                    <i class="ph-bold ph-check me-1"></i> Supported (macOS 12+)
-                                                </span>
-                                            </td>
-                                            <td class="text-center py-3">
-                                                <span
-                                                    class="badge bg-success-subtle text-success border border-success-subtle px-2.5 py-1.5 rounded-pill">
-                                                    <i class="ph-bold ph-check me-1"></i> Supported (iOS 15+)
-                                                </span>
-                                            </td>
-                                        </tr>
-
-                                        <!-- Microsoft Edge -->
-                                        <tr>
-                                            <td class="py-3 px-3">
-                                                <div class="d-flex align-items-center">
-                                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/browser-logos/74.0.0/edge/edge_48x48.png"
-                                                        alt="Edge" width="28" height="28"
-                                                        class="me-2.5 rounded-circle flex-shrink-0" />
-                                                    <div>
-                                                        <span class="fw-semibold text-dark d-block"
-                                                            style="font-size: 0.875rem;">Microsoft Edge</span>
-                                                        <small class="text-muted extra-small">Chromium Engine</small>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="text-center py-3">
-                                                <span
-                                                    class="badge bg-success-subtle text-success border border-success-subtle px-2.5 py-1.5 rounded-pill">
-                                                    <i class="ph-bold ph-check me-1"></i> Supported (Chromium)
-                                                </span>
-                                            </td>
-                                            <td class="text-center py-3">
-                                                <span
-                                                    class="badge bg-success-subtle text-success border border-success-subtle px-2.5 py-1.5 rounded-pill">
-                                                    <i class="ph-bold ph-check me-1"></i> Supported
-                                                </span>
-                                            </td>
-                                        </tr>
-
-                                        <!-- Opera -->
-                                        <tr>
-                                            <td class="py-3 px-3">
-                                                <div class="d-flex align-items-center">
-                                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/browser-logos/74.0.0/opera/opera_48x48.png"
-                                                        alt="Opera" width="28" height="28"
-                                                        class="me-2.5 rounded-circle flex-shrink-0" />
-                                                    <div>
-                                                        <span class="fw-semibold text-dark d-block"
-                                                            style="font-size: 0.875rem;">Opera</span>
-                                                        <small class="text-muted extra-small">Chromium Engine</small>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="text-center py-3">
-                                                <span
-                                                    class="badge bg-success-subtle text-success border border-success-subtle px-2.5 py-1.5 rounded-pill">
-                                                    <i class="ph-bold ph-check me-1"></i> Supported (Latest)
-                                                </span>
-                                            </td>
-                                            <td class="text-center py-3">
-                                                <span
-                                                    class="badge bg-success-subtle text-success border border-success-subtle px-2.5 py-1.5 rounded-pill">
-                                                    <i class="ph-bold ph-check me-1"></i> Supported
-                                                </span>
-                                            </td>
-                                        </tr>
-
-                                        <!-- Internet Explorer -->
-                                        <tr class="table-light">
-                                            <td class="py-3 px-3 opacity-75">
-                                                <div class="d-flex align-items-center">
-                                                    <img src="https://cdnjs.cloudflare.com/ajax/libs/browser-logos/74.0.0/archive/internet-explorer_9-11/internet-explorer_9-11_48x48.png"
-                                                        alt="Internet Explorer" width="28" height="28"
-                                                        class="me-2.5 rounded-circle flex-shrink-0 grayscale"
-                                                        style="filter: grayscale(100%); opacity: 0.65;" />
-                                                    <div>
-                                                        <span class="fw-semibold text-muted d-block"
-                                                            style="font-size: 0.875rem;">Internet Explorer</span>
-                                                        <small class="text-muted extra-small">Trident Engine
-                                                            (Legacy)</small>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="text-center py-3">
-                                                <span
-                                                    class="badge bg-danger-subtle text-danger border border-danger-subtle px-2.5 py-1.5 rounded-pill">
-                                                    <i class="ph-bold ph-x me-1"></i> Not Supported
-                                                </span>
-                                            </td>
-                                            <td class="text-center py-3">
-                                                <span
-                                                    class="badge bg-danger-subtle text-danger border border-danger-subtle px-2.5 py-1.5 rounded-pill">
-                                                    <i class="ph-bold ph-x me-1"></i> Not Supported
-                                                </span>
-                                            </td>
-                                        </tr>
+                                    <tbody class="text-muted">
+                                        <tr><th scope="row">Theme and layout</th><td>CSS custom properties, Grid,
+                                            Flexbox, <code>color-mix()</code>, and OKLCH colors. Older engines may
+                                            drop declarations; no legacy-browser polyfill bundle is included.</td></tr>
+                                        <tr><th scope="row">Popover and context menu</th><td>Native Popover API;
+                                            use a current browser. A Bootstrap modal is not a fallback for these demos.</td></tr>
+                                        <tr><th scope="row">Sidebar and focus</th><td>Modern <code>inert</code>
+                                            support keeps hidden navigation out of keyboard focus. localStorage saves
+                                            desktop preference; blocked storage disables persistence, not toggling.</td></tr>
+                                        <tr><th scope="row">Files and clipboard</th><td>File selection and attachment
+                                            previews stay local. Clipboard access can need HTTPS or localhost and
+                                            browser permission. No upload service is provided.</td></tr>
+                                        <tr><th scope="row">External assets</th><td>Google Fonts, CDN plugins,
+                                            map tiles, and remote images may require a connection and compatible
+                                            content security policy. Bundled libraries remain local.</td></tr>
                                     </tbody>
                                 </table>
                             </div>
-
-                            <h6 class="fw-bold small text-dark mb-2">Supported Range (<code>.browserslistrc</code>):
-                            </h6>
-                            <pre class="bg-dark text-light p-3 rounded small mb-0"
-                                style="font-family: monospace; font-size: 0.8rem; line-height: 1.5;"><code># Standard Browserlist target configuration
->= 0.5%
-last 2 major versions
-not dead
-Chrome >= 60
-Firefox >= 60
-Firefox ESR
-iOS >= 12
-Safari >= 12
-not Explorer <= 11</code></pre>
+                            <h2 class="docs-section-title fw-semibold small text-dark mb-2">Validation scope</h2>
+                            <p class="text-muted">The included browser checker runs headless Chrome at 1440,
+                                390, and 320 px. It checks layout overflow, local HTTP/runtime errors, shared navigation,
+                                accessibility targets, and selected keyboard interactions. Emulated widths are not
+                                physical-device tests. No Safari, Firefox, or Edge certification is claimed.</p>
+                            <p class="text-muted mb-0">There is no Browserslist configuration or transpilation step
+                                in this repository. Before release, test your selected pages in target browsers and
+                                real touch devices, including zoom, keyboard focus, reduced motion, and blocked
+                                network/storage. See <a href="getting-started.html">Getting Started</a> for checks
+                                and <a href="faq.html">FAQ</a> for troubleshooting.</p>
                         </div>
                     </div>
 
                     <!-- Navigation Footer -->
                     <div class="d-flex justify-content-between align-items-center mt-4">
                         <a href="theme-layout.html" class="btn btn-outline-secondary px-3 py-2">
-                            <i class="ph-bold ph-arrow-left me-1"></i> Theme & Layout
+                            <i class="ph-bold ph-arrow-left me-1"></i> Theme &amp; Layout
                         </a>
-                        <a href="support.html" class="btn btn-outline-primary px-3 py-2">
-                            Support <i class="ph-bold ph-arrow-right ms-1"></i>
+                        <a href="faq.html" class="btn btn-outline-primary px-3 py-2">
+                            FAQ <i class="ph-bold ph-arrow-right ms-1"></i>
                         </a>
                     </div>
                 </div>

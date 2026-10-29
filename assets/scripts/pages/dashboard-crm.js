@@ -2,10 +2,12 @@
  * CRM Dashboard Charts
  */
 if (typeof echarts !== 'undefined') {
+    const styles = getComputedStyle(document.documentElement);
+    const token = name => styles.getPropertyValue(`--${name}`).trim();
     // === CRM PIPELINE CHART ===
     const $pipelineDom = $('#pipelineChart');
     if ($pipelineDom.length) {
-        const pipelineChart = echarts.init($pipelineDom[0]);
+        const pipelineChart = echarts.init($pipelineDom[0], 'naha');
         const pipelineOption = {
             tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
             grid: { left: '3%', right: '4%', bottom: '3%', containLabel: true },
@@ -16,8 +18,8 @@ if (typeof echarts !== 'undefined') {
                 data: [420, 580, 890, 1200],
                 itemStyle: {
                     color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
-                        { offset: 0, color: '#006fee' },
-                        { offset: 1, color: '#00d4ff' }
+                        { offset: 0, color: token('nd-primary') },
+                        { offset: 1, color: token('nd-primary-light') }
                     ]),
                     borderRadius: [0, 4, 4, 0]
                 }
@@ -30,7 +32,7 @@ if (typeof echarts !== 'undefined') {
     // === CRM LEAD SOURCE CHART ===
     const $leadSourceDom = $('#leadSourceChart');
     if ($leadSourceDom.length) {
-        const leadSourceChart = echarts.init($leadSourceDom[0]);
+        const leadSourceChart = echarts.init($leadSourceDom[0], 'naha');
         const leadSourceOption = {
             tooltip: { trigger: 'item' },
             series: [{
@@ -38,7 +40,7 @@ if (typeof echarts !== 'undefined') {
                 type: 'pie',
                 radius: ['40%', '70%'],
                 avoidLabelOverlap: false,
-                itemStyle: { borderRadius: 10, borderColor: '#fff', borderWidth: 2 },
+                itemStyle: { borderRadius: 10, borderColor: token('nd-surface'), borderWidth: 2 },
                 label: { show: false, position: 'center' },
                 emphasis: { label: { show: true, fontSize: '18', fontWeight: 'bold' } },
                 data: [

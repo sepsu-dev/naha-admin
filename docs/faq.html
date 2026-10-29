@@ -25,7 +25,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" />
 
     <!-- Styles -->
     <link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css" />
@@ -36,14 +36,15 @@
     <link rel="stylesheet" href="../assets/plugins/phosphor/bold/style.css" />
     <link rel="stylesheet" href="../assets/plugins/phosphor/regular/style.css" />
     <link rel="stylesheet" href="../assets/plugins/phosphor/fill/style.css" />
+    <link rel="stylesheet" href="../assets/styles/docs.css" />
 </head>
 
 <body class="nd-nav-fixed">
     <header>
         <nav class="nd-topnav navbar navbar-expand navbar-light">
-            <a class="navbar-brand ps-3 d-flex align-items-center" href="index.html">
-                <img src="../assets/images/logo.png" alt="logo" class="logo-navbar" />
-                <span class="ms-2 fw-semibold">NahaAdmin</span>
+            <a class="navbar-brand ps-3 d-flex align-items-center" href="index.html" aria-label="Naha Admin">
+                <svg class="logo-navbar" viewBox="0 0 48 36" fill="currentColor" stroke="currentColor" stroke-width="3" stroke-dasharray="5 5" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><rect x="10" y="4" width="28" height="28" rx="3" fill-opacity="0.15"/></svg>
+                <span class="ms-2 fw-semibold">Naha Admin</span>
             </a>
             <button class="btn btn-light" id="sidebarToggle" aria-label="Toggle sidebar">
                 <i class="ph-bold ph-sidebar-simple"></i>
@@ -56,7 +57,7 @@
             </div>
 
             <div class="ms-auto d-flex align-items-center pe-3">
-                <a href="../demo/index.html" class="btn btn-light border ms-lg-2 px-3 py-2 text-dark fw-semibold">
+                <a href="../demo/index.html" class="btn btn-light border ms-lg-2 px-3 py-2 text-dark fw-medium">
                     <i class="ph-bold ph-monitor-play me-1 text-primary"></i> Live Preview
                 </a>
             </div>
@@ -87,13 +88,13 @@
                         </a>
 
                         <h2 class="nd-sidenav-menu-heading">Resources</h2>
-                        <a class="nav-link" href="support.html">
-                            <div class="nd-nav-link-icon"><i class="ph-bold ph-headset"></i></div>
-                            <span>Support</span>
-                        </a>
                         <a class="nav-link active" href="faq.html">
                             <div class="nd-nav-link-icon"><i class="ph-bold ph-question"></i></div>
                             <span>FAQ</span>
+                        </a>
+                        <a class="nav-link" href="support.html">
+                            <div class="nd-nav-link-icon"><i class="ph-bold ph-headset"></i></div>
+                            <span>Support</span>
                         </a>
                         <a class="nav-link" href="license.html">
                             <div class="nd-nav-link-icon"><i class="ph-bold ph-seal-check"></i></div>
@@ -114,34 +115,27 @@
                 <footer class="nd-sidenav-footer">
                     <div class="user-info-footer overflow-hidden w-100">
                         <small class="text-muted text-user-footer text-truncate d-block"
-                            style="font-size: 0.72rem; line-height: 1.4;">&copy; 2026 NahaAdmin &middot; MIT
-                            License</small>
+                            style="font-size: 0.75rem; line-height: 1.4;">&copy; 2026 Naha Admin</small>
                     </div>
                 </footer>
             </nav>
         </aside>
 
-        <main id="layoutSidenav_content" class="animate__animated animate__fadeIn">
+        <main id="layoutSidenav_content">
             <section class="container-fluid px-4 py-4 pb-5">
-                <div class="animate__animated animate__fadeIn">
+                <div>
                     <!-- FAQ Card -->
-                    <div class="card shadow-sm border-0 mb-4">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center mb-4">
-                                <div class="bg-primary-subtle text-primary rounded-3 p-3 me-3 d-inline-flex">
-                                    <i class="ph-bold ph-question fs-4"></i>
-                                </div>
-                                <div>
-                                    <h3 class="h5 fw-bold mb-0">FAQ</h3>
-                                    <p class="text-muted extra-small mb-0">Frequently asked questions and answers about
-                                        NahaAdmin.</p>
-                                </div>
-                            </div>
+                    <div class="docs-article mb-4">
+                        <div class="docs-body">
+                            <header class="docs-page-heading">
+                                <h1>FAQ</h1>
+                                <p class="text-muted mb-0">Frequently asked questions and answers about NahaAdmin.</p>
+                            </header>
 
                             <!-- Category 1: Getting Started -->
-                            <h6 class="fw-bold text-dark mb-2.5 d-flex align-items-center">
+                            <h2 class="docs-section-title fw-semibold text-dark mb-2.5 d-flex align-items-center">
                                 <i class="ph-bold ph-rocket-launch text-primary me-2"></i> Getting Started
-                            </h6>
+                            </h2>
                             <div class="accordion mb-4" id="faqGettingStarted">
                                 <div class="accordion-item border rounded-3 mb-2 overflow-hidden">
                                     <h2 class="accordion-header" id="faqGS1">
@@ -175,9 +169,10 @@
                                         aria-labelledby="faqGS2" data-bs-parent="#faqGettingStarted">
                                         <div class="accordion-body text-muted small">
                                             No build tools or bundlers are required! NahaAdmin is built with vanilla
-                                            HTML, CSS Custom Properties, and modular JavaScript. You can serve it
-                                            directly with any local static HTTP server (like VS Code Live Server,
-                                            <code>npx serve .</code>, or <code>php -S localhost:8000</code>).
+                                            HTML, CSS Custom Properties, and JavaScript with jQuery. Open
+                                            <code>index.html</code> directly in your browser, or double-click it in your file manager.
+                                            No local server is required. Keep the project folders together;
+                                            some examples need an internet connection for CDN assets.
                                         </div>
                                     </div>
                                 </div>
@@ -211,19 +206,18 @@
                                     <div id="faqCollapseGS4" class="accordion-collapse collapse"
                                         aria-labelledby="faqGS4" data-bs-parent="#faqGettingStarted">
                                         <div class="accordion-body text-muted small">
-                                            NahaAdmin's core layout mechanics, sidebar toggling, and page transitions
-                                            are written in <strong>pure vanilla JavaScript</strong>. However, jQuery is
-                                            included in <code>assets/plugins/jquery/</code> so you can seamlessly use
-                                            plugins like DataTables, Select2, or legacy scripts without conflicts.
+                                            Yes. The shared layout script requires the bundled <strong>jQuery</strong>.
+                                            Load it before <code>naha-admin.min.js</code> and jQuery plugins such as
+                                            Select2 and DataTables. Bootstrap 5 itself does not require jQuery.
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Category 2: Framework Integrations -->
-                            <h6 class="fw-bold text-dark mb-2.5 d-flex align-items-center">
+                            <h2 class="docs-section-title fw-semibold text-dark mb-2.5 d-flex align-items-center">
                                 <i class="ph-bold ph-puzzle-piece text-info me-2"></i> Framework Integrations
-                            </h6>
+                            </h2>
                             <div class="accordion mb-4" id="faqIntegrations">
                                 <div class="accordion-item border rounded-3 mb-0 overflow-hidden">
                                     <h2 class="accordion-header" id="faqInt1">
@@ -252,9 +246,9 @@
                             </div>
 
                             <!-- Category 3: Customization & Theming -->
-                            <h6 class="fw-bold text-dark mb-2.5 d-flex align-items-center">
+                            <h2 class="docs-section-title fw-semibold text-dark mb-2.5 d-flex align-items-center">
                                 <i class="ph-bold ph-palette text-warning me-2"></i> Customization & Theming
-                            </h6>
+                            </h2>
                             <div class="accordion mb-4" id="faqCustomization">
                                 <div class="accordion-item border rounded-3 mb-2 overflow-hidden">
                                     <h2 class="accordion-header" id="faqCust1">
@@ -267,10 +261,11 @@
                                     <div id="faqCollapseCust1" class="accordion-collapse collapse"
                                         aria-labelledby="faqCust1" data-bs-parent="#faqCustomization">
                                         <div class="accordion-body text-muted small">
-                                            Simply modify the <code>--nd-primary</code> CSS variable inside
-                                            <code>assets/styles/naha-admin.css</code> (or
-                                            <code>assets/styles/docs.css</code>). All buttons, active sidebar links,
-                                            focus rings, and badge accents will update instantly across all pages.
+                                            Edit <code>--primary</code>, <code>--nd-primary-rgb</code>,
+                                            <code>--nd-primary-dark</code>, and <code>--nd-primary-light</code> in
+                                            <code>assets/styles/naha-admin.css</code>, then copy its contents to
+                                            <code>assets/styles/naha-admin.min.css</code>. See
+                                            <a href="theme-layout.html">Theme &amp; Layout</a> for scope and examples.
                                         </div>
                                     </div>
                                 </div>
@@ -287,8 +282,9 @@
                                         aria-labelledby="faqCust2" data-bs-parent="#faqCustomization">
                                         <div class="accordion-body text-muted small">
                                             Apply the class <code>nd-nav-fixed</code> to the <code>&lt;body&gt;</code>
-                                            tag for fixed top navbar behavior, and <code>nd-sidenav-toggled</code> to
-                                            collapse the sidebar into the mini-mode rail (which auto-expands on hover).
+                                            tag for fixed top navbar behavior. Add <code>nd-sidebar-mini</code> to enable
+                                            the desktop icon rail, and <code>nd-sidenav-toggled</code> to start collapsed.
+                                            The rail expands on hover or keyboard focus. Without mini mode, toggling hides it.
                                         </div>
                                     </div>
                                 </div>
@@ -298,24 +294,25 @@
                                         <button class="accordion-button collapsed fw-semibold text-dark" type="button"
                                             data-bs-toggle="collapse" data-bs-target="#faqCollapseCust3"
                                             aria-expanded="false" aria-controls="faqCollapseCust3">
-                                            How do I disable page fade transitions?
+                                            Does navigation delay page changes for animations?
                                         </button>
                                     </h2>
                                     <div id="faqCollapseCust3" class="accordion-collapse collapse"
                                         aria-labelledby="faqCust3" data-bs-parent="#faqCustomization">
                                         <div class="accordion-body text-muted small">
-                                            Add <code>target="_blank"</code> or specific data attributes to your anchor
-                                            tags, or remove the click intercept handler in
-                                            <code>assets/scripts/naha-admin.js</code>.
+                                            No. Links use native browser navigation, including Ctrl/Cmd-click,
+                                            downloads, and back/forward. Some example pages include Animate.css entry
+                                            classes; remove those classes to disable entry effects. The shared theme
+                                            respects <code>prefers-reduced-motion</code>.
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Category 4: Licensing -->
-                            <h6 class="fw-bold text-dark mb-2.5 d-flex align-items-center">
+                            <h2 class="docs-section-title fw-semibold text-dark mb-2.5 d-flex align-items-center">
                                 <i class="ph-bold ph-seal-check text-success me-2"></i> Licensing
-                            </h6>
+                            </h2>
                             <div class="accordion mb-0" id="faqLicensing">
                                 <div class="accordion-item border rounded-3 mb-2 overflow-hidden">
                                     <h2 class="accordion-header" id="faqLic1">
@@ -349,21 +346,48 @@
                                         <div class="accordion-body text-muted small">
                                             No, you do not need to display visible attribution or links in your
                                             website/application footer. The MIT License only requires preserving the
-                                            copyright header notice inside the source code files.
+                                            copyright and license notice in copies or substantial portions of the software.
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <h2 class="docs-section-title fw-semibold text-dark mt-4 mb-3">Troubleshooting</h2>
+                            <dl class="text-muted small mb-0">
+                                <dt class="text-dark">Styles, icons, or scripts are missing</dt>
+                                <dd class="mb-3">Serve the repository root over HTTP. Inspect Network for 404s,
+                                    check relative paths and filename case, and keep vendor files under
+                                    <code>assets/plugins/</code>. Nested routes need adjusted asset paths.</dd>
+                                <dt class="text-dark">Tables, editors, maps, or fonts fail offline</dt>
+                                <dd class="mb-3">Some examples use CDNs, Google Fonts, remote images, or map tiles.
+                                    Check connection and content security policy. Self-host required assets with
+                                    their license notices for offline use; system fonts are the font fallback.</dd>
+                                <dt class="text-dark">Sidebar or Bootstrap controls do not respond</dt>
+                                <dd class="mb-3">Load jQuery before <code>naha-admin.min.js</code> and load
+                                    <code>bootstrap.bundle.min.js</code> once. Check console errors, unique IDs,
+                                    and matching <code>data-bs-target</code> values. Desktop sidebar preference
+                                    uses <code>nd|sidebar-toggle</code> in localStorage; remove that key to reset it.
+                                    Mobile starts closed; Escape closes the sidebar and restores toggle focus.</dd>
+                                <dt class="text-dark">Shared CSS/JS edits do not appear</dt>
+                                <dd class="mb-3">Edit the non-min source, then copy its contents to the matching
+                                    <code>.min.css</code> or <code>.min.js</code> file. Pages load historical
+                                    <code>.min</code> compatibility copies. Hard-refresh to bypass stale cache.</dd>
+                                <dt class="text-dark">A copied component does not work</dt>
+                                <dd class="mb-0">Copy its markup, page CSS, required vendors, and page initializer
+                                    together. Preserve accessibility attributes and handler IDs, avoiding duplicate IDs.
+                                    Check <a href="getting-started.html">Getting Started</a> for asset order and
+                                    <a href="browser-support.html">Browser Support</a> for required APIs.
+                                    Demo actions do not replace backend authentication, uploads, or persistence.</dd>
+                            </dl>
                         </div>
                     </div>
 
                     <!-- Navigation Footer -->
                     <div class="d-flex justify-content-between align-items-center mt-4">
-                        <a href="support.html" class="btn btn-outline-secondary px-3 py-2">
-                            <i class="ph-bold ph-arrow-left me-1"></i> Support
+                        <a href="browser-support.html" class="btn btn-outline-secondary px-3 py-2">
+                            <i class="ph-bold ph-arrow-left me-1"></i> Browser Support
                         </a>
-                        <a href="license.html" class="btn btn-outline-primary px-3 py-2">
-                            License <i class="ph-bold ph-arrow-right ms-1"></i>
+                        <a href="support.html" class="btn btn-outline-primary px-3 py-2">
+                            Support <i class="ph-bold ph-arrow-right ms-1"></i>
                         </a>
                     </div>
                 </div>

@@ -25,7 +25,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" />
 
     <!-- Styles -->
     <link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css" />
@@ -36,14 +36,15 @@
     <link rel="stylesheet" href="../assets/plugins/phosphor/bold/style.css" />
     <link rel="stylesheet" href="../assets/plugins/phosphor/regular/style.css" />
     <link rel="stylesheet" href="../assets/plugins/phosphor/fill/style.css" />
+    <link rel="stylesheet" href="../assets/styles/docs.css" />
 </head>
 
 <body class="nd-nav-fixed">
     <header>
         <nav class="nd-topnav navbar navbar-expand navbar-light">
-            <a class="navbar-brand ps-3 d-flex align-items-center" href="index.html">
-                <img src="../assets/images/logo.png" alt="logo" class="logo-navbar" />
-                <span class="ms-2 fw-semibold">NahaAdmin</span>
+            <a class="navbar-brand ps-3 d-flex align-items-center" href="index.html" aria-label="Naha Admin">
+                <svg class="logo-navbar" viewBox="0 0 48 36" fill="currentColor" stroke="currentColor" stroke-width="3" stroke-dasharray="5 5" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><rect x="10" y="4" width="28" height="28" rx="3" fill-opacity="0.15"/></svg>
+                <span class="ms-2 fw-semibold">Naha Admin</span>
             </a>
             <button class="btn btn-light" id="sidebarToggle" aria-label="Toggle sidebar">
                 <i class="ph-bold ph-sidebar-simple"></i>
@@ -56,7 +57,7 @@
             </div>
 
             <div class="ms-auto d-flex align-items-center pe-3">
-                <a href="../demo/index.html" class="btn btn-light border ms-lg-2 px-3 py-2 text-dark fw-semibold">
+                <a href="../demo/index.html" class="btn btn-light border ms-lg-2 px-3 py-2 text-dark fw-medium">
                     <i class="ph-bold ph-monitor-play me-1 text-primary"></i> Live Preview
                 </a>
             </div>
@@ -87,13 +88,13 @@
                         </a>
 
                         <h2 class="nd-sidenav-menu-heading">Resources</h2>
-                        <a class="nav-link active" href="support.html">
-                            <div class="nd-nav-link-icon"><i class="ph-bold ph-headset"></i></div>
-                            <span>Support</span>
-                        </a>
                         <a class="nav-link" href="faq.html">
                             <div class="nd-nav-link-icon"><i class="ph-bold ph-question"></i></div>
                             <span>FAQ</span>
+                        </a>
+                        <a class="nav-link active" href="support.html">
+                            <div class="nd-nav-link-icon"><i class="ph-bold ph-headset"></i></div>
+                            <span>Support</span>
                         </a>
                         <a class="nav-link" href="license.html">
                             <div class="nd-nav-link-icon"><i class="ph-bold ph-seal-check"></i></div>
@@ -114,39 +115,32 @@
                 <footer class="nd-sidenav-footer">
                     <div class="user-info-footer overflow-hidden w-100">
                         <small class="text-muted text-user-footer text-truncate d-block"
-                            style="font-size: 0.72rem; line-height: 1.4;">&copy; 2026 NahaAdmin &middot; MIT
-                            License</small>
+                            style="font-size: 0.75rem; line-height: 1.4;">&copy; 2026 Naha Admin</small>
                     </div>
                 </footer>
             </nav>
         </aside>
 
-        <main id="layoutSidenav_content" class="animate__animated animate__fadeIn">
+        <main id="layoutSidenav_content">
             <section class="container-fluid px-4 py-4 pb-5">
-                <div class="animate__animated animate__fadeIn">
+                <div>
                     <!-- Support Card -->
-                    <div class="card shadow-sm border-0 mb-4">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="bg-primary-subtle text-primary rounded-3 p-3 me-3 d-inline-flex">
-                                    <i class="ph-bold ph-headset fs-4"></i>
-                                </div>
-                                <div>
-                                    <h3 class="h5 fw-bold mb-0">Support</h3>
-                                    <p class="text-muted extra-small mb-0">Connect with the project maintainer and open
-                                        source community.</p>
-                                </div>
-                            </div>
-                            <p class="text-muted small mb-4">NahaAdmin is free and open-source under the MIT license.
+                    <div class="docs-article mb-4">
+                        <div class="docs-body">
+                            <header class="docs-page-heading">
+                                <h1>Support</h1>
+                                <p class="text-muted mb-0">Connect with the project maintainer and open source community.</p>
+                            </header>
+                            <p class="text-muted mb-4">NahaAdmin is free and open-source under the MIT license.
                                 You can submit issues, request new features, or contact the developer directly.</p>
 
                             <div class="row g-3">
                                 <!-- Issue Tracker -->
                                 <div class="col-md-6">
-                                    <div class="p-3.5 border rounded-3 bg-light h-100 d-flex flex-column p-3">
-                                        <h6 class="fw-bold small text-dark mb-1">
+                                    <div class="docs-note">
+                                        <h3 class="fw-semibold small text-dark mb-1">
                                             <i class="ph-bold ph-bug text-danger me-1"></i> Issue Tracker
-                                        </h6>
+                                        </h3>
                                         <p class="text-muted extra-small mb-3">Report bugs, submit UI suggestions, or
                                             track open issues on GitHub.</p>
                                         <div class="mt-auto">
@@ -160,10 +154,10 @@
 
                                 <!-- Developer & Contact -->
                                 <div class="col-md-6">
-                                    <div class="p-3.5 border rounded-3 bg-light h-100 d-flex flex-column p-3">
-                                        <h6 class="fw-bold small text-dark mb-1">
+                                    <div class="docs-note">
+                                        <h3 class="fw-semibold small text-dark mb-1">
                                             <i class="ph-bold ph-user-circle text-primary me-1"></i> Developer
-                                        </h6>
+                                        </h3>
                                         <p class="text-muted extra-small mb-3">Visit the official site for project
                                             updates, or send an email directly for inquiries.</p>
                                         <div class="mt-auto d-flex flex-wrap gap-2">
@@ -171,23 +165,29 @@
                                                 class="btn btn-sm btn-outline-dark">
                                                 <i class="ph-bold ph-globe me-1"></i> sepsu.dev
                                             </a>
-                                            <a href="mailto:contact@sepsu.dev" class="btn btn-sm btn-outline-primary">
-                                                <i class="ph-bold ph-envelope me-1"></i> Send Email
+                                            <a href="mailto:hello@sepsu.dev" class="btn btn-sm btn-outline-primary">
+                                                <i class="ph-bold ph-envelope me-1"></i> hello@sepsu.dev
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <h2 class="docs-section-title fw-semibold small text-dark mt-4 mb-2">Before reporting an issue</h2>
+                            <p class="text-muted mb-0">Check <a href="faq.html">FAQ</a>, then include the page URL,
+                                reproduction steps, expected and actual behavior, browser/version, OS, viewport size,
+                                and relevant console or Network errors. Include a screenshot when useful.
+                                Remove credentials and personal data. Support is community-maintained;
+                                response times are not guaranteed.</p>
                         </div>
                     </div>
 
                     <!-- Navigation Footer -->
                     <div class="d-flex justify-content-between align-items-center mt-4">
-                        <a href="browser-support.html" class="btn btn-outline-secondary px-3 py-2">
-                            <i class="ph-bold ph-arrow-left me-1"></i> Browser Support
+                        <a href="faq.html" class="btn btn-outline-secondary px-3 py-2">
+                            <i class="ph-bold ph-arrow-left me-1"></i> FAQ
                         </a>
-                        <a href="faq.html" class="btn btn-outline-primary px-3 py-2">
-                            FAQ <i class="ph-bold ph-arrow-right ms-1"></i>
+                        <a href="license.html" class="btn btn-outline-primary px-3 py-2">
+                            License <i class="ph-bold ph-arrow-right ms-1"></i>
                         </a>
                     </div>
                 </div>

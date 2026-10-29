@@ -3,15 +3,17 @@
  */
 $(function () {
     if (typeof echarts !== 'undefined') {
+        const styles = getComputedStyle(document.documentElement);
+        const token = name => styles.getPropertyValue(`--${name}`).trim();
 
         // === CASH FLOW CHART (Area) ===
         const $flowDom = $('#cashFlowChart');
         if ($flowDom.length) {
-            const flowChart = echarts.init($flowDom[0]);
+            const flowChart = echarts.init($flowDom[0], 'naha');
             const flowOption = {
                 tooltip: {
                     trigger: 'axis',
-                    axisPointer: { type: 'cross', label: { backgroundColor: '#6a7985' } }
+                    axisPointer: { type: 'cross', label: { backgroundColor: token('nd-secondary'), color: token('nd-text') } }
                 },
                 legend: {
                     data: ['Income', 'Expenses'],
@@ -30,16 +32,16 @@ $(function () {
                         type: 'category',
                         boundaryGap: false,
                         data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-                        axisLine: { lineStyle: { color: '#eee' } },
-                        axisLabel: { color: '#999' }
+                        axisLine: { lineStyle: { color: token('nd-border') } },
+                        axisLabel: { color: token('nd-text-muted') }
                     }
                 ],
                 yAxis: [
                     {
                         type: 'value',
                         axisLine: { show: false },
-                        axisLabel: { color: '#999' },
-                        splitLine: { lineStyle: { color: '#f5f5f5' } }
+                        axisLabel: { color: token('nd-text-muted') },
+                        splitLine: { lineStyle: { color: token('nd-border') } }
                     }
                 ],
                 series: [
@@ -47,13 +49,14 @@ $(function () {
                         name: 'Income',
                         type: 'line',
                         smooth: true,
-                        lineStyle: { width: 3, color: '#006fee' },
+                        itemStyle: { color: token('nd-primary') },
+                        lineStyle: { width: 3, color: token('nd-primary') },
                         showSymbol: false,
                         areaStyle: {
                             opacity: 0.1,
                             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-                                { offset: 0, color: '#006fee' },
-                                { offset: 1, color: '#fff' }
+                                { offset: 0, color: token('nd-primary') },
+                                { offset: 1, color: token('nd-surface') }
                             ])
                         },
                         emphasis: { focus: 'series' },
@@ -63,13 +66,14 @@ $(function () {
                         name: 'Expenses',
                         type: 'line',
                         smooth: true,
-                        lineStyle: { width: 3, color: '#f31260' },
+                        itemStyle: { color: token('nd-danger') },
+                        lineStyle: { width: 3, color: token('nd-danger') },
                         showSymbol: false,
                         areaStyle: {
                             opacity: 0.1,
                             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-                                { offset: 0, color: '#f31260' },
-                                { offset: 1, color: '#fff' }
+                                { offset: 0, color: token('nd-danger') },
+                                { offset: 1, color: token('nd-surface') }
                             ])
                         },
                         emphasis: { focus: 'series' },
@@ -84,7 +88,7 @@ $(function () {
         // === SPENDING CHART (Donut) ===
         const $spendingDom = $('#spendingChart');
         if ($spendingDom.length) {
-            const spendingChart = echarts.init($spendingDom[0]);
+            const spendingChart = echarts.init($spendingDom[0], 'naha');
             const spendingOption = {
                 tooltip: {
                     trigger: 'item',
@@ -107,7 +111,7 @@ $(function () {
                         avoidLabelOverlap: false,
                         itemStyle: {
                             borderRadius: 10,
-                            borderColor: '#fff',
+                            borderColor: token('nd-surface'),
                             borderWidth: 2
                         },
                         label: { show: false, position: 'center' },
@@ -120,11 +124,11 @@ $(function () {
                         },
                         labelLine: { show: false },
                         data: [
-                            { value: 1200, name: 'Rent', itemStyle: { color: '#006fee' } },
-                            { value: 800, name: 'Food', itemStyle: { color: '#17c964' } },
-                            { value: 600, name: 'Entertainment', itemStyle: { color: '#f5a524' } },
-                            { value: 400, name: 'Shopping', itemStyle: { color: '#f31260' } },
-                            { value: 300, name: 'Transport', itemStyle: { color: '#7828c8' } }
+                            { value: 1200, name: 'Rent' },
+                            { value: 800, name: 'Food' },
+                            { value: 600, name: 'Entertainment' },
+                            { value: 400, name: 'Shopping' },
+                            { value: 300, name: 'Transport' }
                         ]
                     }
                 ]

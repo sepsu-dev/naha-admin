@@ -17,33 +17,33 @@
   <title>NahaAdmin - Dashboard</title>
 
   <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" />
 
   <link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css" />
   <link rel="stylesheet" href="../assets/plugins/nprogress/nprogress.min.css" />
   <link rel="stylesheet" href="../assets/styles/naha-admin.min.css" />
-  <link rel="stylesheet" href="../assets/plugins/animate/animate.min.css" />
+  <link rel="stylesheet" href="../assets/styles/pages/dashboard.css" />
   <link rel="stylesheet" href="../assets/plugins/simplebar/simplebar.min.css" />
   <link rel="stylesheet" href="../assets/plugins/phosphor/bold/style.css" />
 </head>
 
 <body class='nd-nav-fixed'>
   <header>
-    <nav class="nd-topnav navbar navbar-expand navbar-light">
-      <a class="navbar-brand ps-3 d-flex align-items-center" href="index.html">
-        <img src="../assets/images/logo.png" alt="logo" class="logo-navbar" />
-        <span class="ms-2 fw-semibold">NahaAdmin</span>
+    <nav class="nd-topnav navbar navbar-expand navbar-light" aria-label="Main navigation">
+      <a class="navbar-brand ps-3 d-flex align-items-center" href="index.html" aria-label="Naha Admin">
+        <svg class="logo-navbar" viewBox="0 0 48 36" fill="currentColor" stroke="currentColor" stroke-width="3" stroke-dasharray="5 5" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><rect x="10" y="4" width="28" height="28" rx="3" fill-opacity="0.15"/></svg>
+        <span class="ms-2 fw-semibold">Naha Admin</span>
       </a>
       <button class="btn btn-light" id="sidebarToggle" aria-label="Toggle sidebar">
-        <i class="ph-bold ph-sidebar-simple"></i>
+        <i class="ph-bold ph-sidebar-simple" aria-hidden="true"></i>
       </button>
 
       <ul class="navbar-nav ms-auto align-items-center">
         <!-- Notifications -->
         <li class="nav-item dropdown me-2">
           <a class="nav-link nav-icon bg-light rounded-3 border position-relative" href="#" id="notifDropdown"
-            role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="ph-bold ph-bell"></i>
+            role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Notifications: 3 new">
+            <i class="ph-bold ph-bell" aria-hidden="true"></i>
             <span
               class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger border border-light"
               style="font-size: 0.65rem; padding: 0.35em 0.5em; margin-top: 10px; margin-left: -8px;">
@@ -53,48 +53,47 @@
           <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 notifications-dropdown"
             aria-labelledby="notifDropdown">
             <li class="p-3 border-bottom d-flex justify-content-between align-items-center">
-              <h6 class="mb-0 fw-bold">Notifications</h6>
+              <h6 class="mb-0 fw-semibold">Notifications</h6>
               <span class="badge bg-primary-subtle text-primary extra-small">3 New</span>
             </li>
-            <div data-simplebar style="max-height: 300px;">
-              <a href="#" class="notification-item">
+            <li class="list-unstyled" style="max-height: 300px; overflow-y: auto;">
+              <a href="profile.html" class="notification-item">
                 <div class="notification-icon bg-primary-subtle text-primary">
                   <i class="ph-bold ph-user-plus"></i>
                 </div>
                 <div>
-                  <p class="mb-1 small fw-bold">New user registered</p>
+                  <p class="mb-1 small fw-semibold">New user registered</p>
                   <p class="mb-0 extra-small text-muted">A few seconds ago</p>
                 </div>
               </a>
-              <a href="#" class="notification-item">
+              <a href="tables-basic.html" class="notification-item">
                 <div class="notification-icon bg-success-subtle text-success">
                   <i class="ph-bold ph-shopping-cart"></i>
                 </div>
                 <div>
-                  <p class="mb-1 small fw-bold">New order received</p>
+                  <p class="mb-1 small fw-semibold">New order received</p>
                   <p class="mb-0 extra-small text-muted">2 minutes ago</p>
                 </div>
               </a>
-              <a href="#" class="notification-item">
+              <a href="dashboard-finance.html" class="notification-item">
                 <div class="notification-icon bg-warning-subtle text-warning">
                   <i class="ph-bold ph-warning"></i>
                 </div>
                 <div>
-                  <p class="mb-1 small fw-bold">Server threshold alert</p>
+                  <p class="mb-1 small fw-semibold">Server threshold alert</p>
                   <p class="mb-0 extra-small text-muted">1 hour ago</p>
                 </div>
               </a>
-            </div>
+            </li>
             <li class="p-2 text-center border-top">
-              <a href="#" class="text-primary extra-small fw-bold text-decoration-none">View all
-                notifications</a>
+              <a href="apps-inbox.html" class="text-primary extra-small fw-semibold text-decoration-none">Open inbox</a>
             </li>
           </ul>
         </li>
         <!-- User Profile -->
         <li class="nav-item dropdown ms-1">
           <a class="nav-link d-flex align-items-center bg-light rounded-3 px-1 border" id="navbarDropdown" href="#"
-            role="button" data-bs-toggle="dropdown" style="height: 40px;" aria-expanded="false">
+            role="button" data-bs-toggle="dropdown" style="height: 40px;" aria-expanded="false" aria-label="Account menu">
             <img src="../assets/images/user-avatar.png" alt="user" class="rounded-circle border"
               style="width: 30px; height: 30px; object-fit: cover;" />
           </a>
@@ -105,7 +104,7 @@
                 <img src="../assets/images/user-avatar.png" alt="user" class="rounded-circle border"
                   style="width: 48px; height: 48px; object-fit: cover;" />
                 <div class="ms-3">
-                  <h6 class="mb-0 fw-bold">Ujang Kasep</h6>
+                  <h6 class="mb-0 fw-semibold">Ujang Kasep</h6>
                   <p class="mb-0 text-muted extra-small">ujang@email.com</p>
                 </div>
               </div>
@@ -126,24 +125,24 @@
   <div id="layoutSidenav">
     <aside id="layoutSidenav_nav">
       <nav class="nd-sidenav accordion nd-sidenav-light" id="sidenavAccordion">
-        <div class="nd-sidenav-menu" data-simplebar>
+        <div class="nd-sidenav-menu">
           <div class="nav">
             <h2 class="nd-sidenav-menu-heading">Dashboard</h2>
             <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#dashboardCollapse"
-              aria-expanded="true">
+              aria-expanded="false">
               <div class="nd-nav-link-icon"><i class="ph-bold ph-house"></i></div>
               <span>Dashboards</span>
               <div class="nd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down"></i></div>
             </a>
-            <div class="collapse show" id="dashboardCollapse" data-bs-parent="#sidenavAccordion">
+            <div class="collapse" id="dashboardCollapse" data-bs-parent="#sidenavAccordion">
               <nav class="nd-sidenav-menu-nested nav">
-                <a class="nav-link active" href="index.html">Default</a>
+                <a class="nav-link" href="index.html">Default</a>
                 <a class="nav-link" href="dashboard-analytics.html">Analytics</a>
                 <a class="nav-link" href="dashboard-crm.html">CRM</a>
                 <a class="nav-link" href="dashboard-ecommerce.html">Ecommerce</a>
                 <a class="nav-link" href="dashboard-finance.html">Finance</a>
               </nav>
-                        </div>
+            </div>
             <h2 class="nd-sidenav-menu-heading">Layouts</h2>
             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#layoutsCollapse"
               aria-expanded="false">
@@ -176,44 +175,79 @@
             </a>
             <h2 class="nd-sidenav-menu-heading">Components</h2>
             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#componentsCollapse"
-              aria-expanded="false">
-              <div class="nd-nav-link-icon"><i class="ph-bold ph-squares-four"></i></div>
+              aria-expanded="false" aria-controls="componentsCollapse">
+              <div class="nd-nav-link-icon"><i class="ph-bold ph-squares-four" aria-hidden="true"></i></div>
               <span>UI Elements</span>
-              <div class="nd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down"></i></div>
+              <div class="nd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down" aria-hidden="true"></i></div>
             </a>
             <div class="collapse" id="componentsCollapse" data-bs-parent="#sidenavAccordion">
               <nav class="nd-sidenav-menu-nested nav">
                 <a class="nav-link" href="accordion.html">Accordion</a>
                 <a class="nav-link" href="alerts.html">Alert</a>
+                <a class="nav-link" href="alert-dialog.html">Alert Dialog</a>
+                <a class="nav-link" href="aspect-ratio.html">Aspect Ratio</a>
+                <a class="nav-link" href="avatar.html">Avatar</a>
                 <a class="nav-link" href="badges.html">Badge</a>
                 <a class="nav-link" href="breadcrumb.html">Breadcrumb</a>
                 <a class="nav-link" href="buttons.html">Button</a>
+                <a class="nav-link" href="button-group.html">Button Group</a>
                 <a class="nav-link" href="cards.html">Card</a>
                 <a class="nav-link" href="carousel.html">Carousel</a>
-                <a class="nav-link" href="collapse.html">Collapse</a>
-                <a class="nav-link" href="dropdowns.html">Dropdown</a>
+                <a class="nav-link" href="collapse.html">Collapsible</a>
+                <a class="nav-link" href="context-menu.html">Context Menu</a>
+                <a class="nav-link" href="dropdowns.html">Dropdown Menu</a>
+                <a class="nav-link" href="empty.html">Empty</a>
+                <a class="nav-link" href="hover-card.html">Hover Card</a>
+                <a class="nav-link" href="item.html">Item</a>
+                <a class="nav-link" href="kbd.html">Kbd</a>
+                <a class="nav-link" href="label.html">Label</a>
                 <a class="nav-link" href="list-group.html">List Group</a>
-                <a class="nav-link" href="modals.html">Modal</a>
-                <a class="nav-link" href="navs.html">Navs and tabs</a>
-
+                <a class="nav-link" href="menubar.html">Menubar</a>
+                <a class="nav-link" href="modals.html">Dialog</a>
+                <a class="nav-link" href="navigation-menu.html">Navigation Menu</a>
+                <a class="nav-link" href="navs.html">Navs and Tabs</a>
                 <a class="nav-link" href="pagination.html">Pagination</a>
                 <a class="nav-link" href="placeholders.html">Placeholder</a>
+                <a class="nav-link" href="popover.html">Popover</a>
                 <a class="nav-link" href="progress.html">Progress</a>
+                <a class="nav-link" href="scroll-area.html">Scroll Area</a>
+                <a class="nav-link" href="separator.html">Separator</a>
+                <a class="nav-link" href="skeleton.html">Skeleton</a>
                 <a class="nav-link" href="spinners.html">Spinner</a>
-                <a class="nav-link" href="toasts.html">Toasts</a>
+                <a class="nav-link" href="tabs.html">Tabs</a>
+                <a class="nav-link" href="tabs-accordions.html">Tabs & Accordions</a>
+                <a class="nav-link" href="toasts.html">Toast</a>
+                <a class="nav-link" href="toggle.html">Toggle</a>
+                <a class="nav-link" href="toggle-group.html">Toggle Group</a>
                 <a class="nav-link" href="tooltips.html">Tooltip</a>
+                <a class="nav-link" href="typography.html">Typography</a>
               </nav>
             </div>
             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#formsCollapse"
-              aria-expanded="false">
-              <div class="nd-nav-link-icon"><i class="ph-bold ph-textbox"></i></div>
+              aria-expanded="false" aria-controls="formsCollapse">
+              <div class="nd-nav-link-icon"><i class="ph-bold ph-textbox" aria-hidden="true"></i></div>
               <span>Forms</span>
-              <div class="nd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down"></i></div>
+              <div class="nd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down" aria-hidden="true"></i></div>
             </a>
             <div class="collapse" id="formsCollapse" data-bs-parent="#sidenavAccordion">
               <nav class="nd-sidenav-menu-nested nav">
+                <a class="nav-link" href="calendar.html">Calendar</a>
+                <a class="nav-link" href="checkbox.html">Checkbox</a>
+                <a class="nav-link" href="combobox.html">Combobox</a>
+                <a class="nav-link" href="command.html">Command</a>
+                <a class="nav-link" href="date-picker.html">Date Picker</a>
+                <a class="nav-link" href="field.html">Field</a>
+                <a class="nav-link" href="input.html">Input</a>
+                <a class="nav-link" href="input-group.html">Input Group</a>
+                <a class="nav-link" href="input-otp.html">Input OTP</a>
+                <a class="nav-link" href="native-select.html">Native Select</a>
+                <a class="nav-link" href="radio-group.html">Radio Group</a>
+                <a class="nav-link" href="select.html">Select</a>
+                <a class="nav-link" href="slider.html">Slider</a>
+                <a class="nav-link" href="switch.html">Switch</a>
+                <a class="nav-link" href="textarea.html">Textarea</a>
                 <a class="nav-link" href="forms-basic.html">Basic Inputs</a>
-                <a class="nav-link" href="forms-select.html">Select</a>
+                <a class="nav-link" href="forms-select.html">Advanced Select</a>
                 <a class="nav-link" href="forms-checks.html">Checkboxes & Radios</a>
                 <a class="nav-link" href="forms-layout.html">Form Layout</a>
                 <a class="nav-link" href="forms-validation.html">Validation</a>
@@ -221,16 +255,50 @@
               </nav>
             </div>
             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#tablesCollapse"
-              aria-expanded="false">
-              <div class="nd-nav-link-icon"><i class="ph-bold ph-table"></i></div>
-              <span>Tables</span>
-              <div class="nd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down"></i></div>
+              aria-expanded="false" aria-controls="tablesCollapse">
+              <div class="nd-nav-link-icon"><i class="ph-bold ph-chart-bar" aria-hidden="true"></i></div>
+              <span>Tables & Charts</span>
+              <div class="nd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down" aria-hidden="true"></i></div>
             </a>
             <div class="collapse" id="tablesCollapse" data-bs-parent="#sidenavAccordion">
               <nav class="nd-sidenav-menu-nested nav">
-                <a class="nav-link" href="tables-basic.html">Basic Table</a>
-                <a class="nav-link" href="tables-datatables.html">DataTables</a>
+                <a class="nav-link" href="tables-basic.html">Table</a>
+                <a class="nav-link" href="tables-datatables.html">Data Table</a>
                 <a class="nav-link" href="tables-gridjs.html">Grid.js</a>
+                <a class="nav-link" href="chart.html">Chart</a>
+              </nav>
+            </div>
+            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#navigationCollapse"
+              aria-expanded="false" aria-controls="navigationCollapse">
+              <div class="nd-nav-link-icon"><i class="ph-bold ph-layout" aria-hidden="true"></i></div>
+              <span>Layout & Navigation</span>
+              <div class="nd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down" aria-hidden="true"></i></div>
+            </a>
+            <div class="collapse" id="navigationCollapse" data-bs-parent="#sidenavAccordion">
+              <nav class="nd-sidenav-menu-nested nav">
+                <a class="nav-link" href="direction.html">Direction</a>
+                <a class="nav-link" href="drawer.html">Drawer</a>
+                <a class="nav-link" href="resizable.html">Resizable</a>
+                <a class="nav-link" href="sheet.html">Sheet</a>
+                <a class="nav-link" href="sidebar.html">Sidebar</a>
+              </nav>
+            </div>
+            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#messagesCollapse"
+              aria-expanded="false" aria-controls="messagesCollapse">
+              <div class="nd-nav-link-icon"><i class="ph-bold ph-chats-teardrop" aria-hidden="true"></i></div>
+              <span>Messages & Activity</span>
+              <div class="nd-sidenav-collapse-arrow"><i class="ph-bold ph-caret-down" aria-hidden="true"></i></div>
+            </a>
+            <div class="collapse" id="messagesCollapse" data-bs-parent="#sidenavAccordion">
+              <nav class="nd-sidenav-menu-nested nav">
+                <a class="nav-link" href="attachment.html">Attachment</a>
+                <a class="nav-link" href="bubble.html">Bubble</a>
+                <a class="nav-link" href="code-block.html">Code Block</a>
+                <a class="nav-link" href="marker.html">Marker</a>
+                <a class="nav-link" href="message.html">Message</a>
+                <a class="nav-link" href="message-scroller.html">Message Scroller</a>
+                <a class="nav-link" href="questionnaire.html">Questionnaire</a>
+                <a class="nav-link" href="trace.html">Trace</a>
               </nav>
             </div>
             <h2 class="nd-sidenav-menu-heading">Style</h2>
@@ -243,7 +311,6 @@
             <div class="collapse" id="iconsCollapse" data-bs-parent="#sidenavAccordion">
               <nav class="nd-sidenav-menu-nested nav">
                 <a class="nav-link" href="icons.html">Phosphor Icons</a>
-                <a class="nav-link" href="typography.html">Typography</a>
                 <a class="nav-link" href="colors.html">Colors</a>
               </nav>
             </div>
@@ -318,7 +385,7 @@
                 <a class="nav-link" href="blank.html">Blank Page</a>
               </nav>
             </div>
-            
+
             <h2 class="nd-sidenav-menu-heading">Support</h2>
             <a class="nav-link" href="../docs/index.html" target="_blank">
               <div class="nd-nav-link-icon"><i class="ph-bold ph-book-open"></i></div>
@@ -330,36 +397,33 @@
           <div class="d-flex align-items-center w-100 nd-sidenav-user-card">
             <img src="../assets/images/user-avatar.png" alt="user" class="rounded-circle border me-2 img-avatar-footer" style="width: 32px; height: 32px; object-fit: cover;" />
             <div class="user-info-footer overflow-hidden">
-              <small class="text-muted text-user-footer text-truncate d-block" style="font-size: 0.7rem; line-height: 1.2;">Logged in as:</small>
-              <div class="fw-bold text-dark name-user-footer text-truncate" style="font-size: 0.85rem; max-width: 150px; line-height: 1.3;">Ujang Kasep</div>
+              <small class="text-muted text-user-footer text-truncate d-block" style="font-size: 0.75rem; line-height: 1.4;">Logged in as:</small>
+              <div class="fw-semibold text-dark name-user-footer text-truncate" style="font-size: 0.875rem; max-width: 150px; line-height: 1.3;">Ujang Kasep</div>
             </div>
           </div>
         </footer>
       </nav>
     </aside>
 
-    <main id="layoutSidenav_content" class="animate__animated animate__fadeIn">
-      <section class="container-fluid px-4 pb-5">
+    <main id="layoutSidenav_content">
+      <section class="container-fluid px-4 pb-5 nd-dashboard">
         <!-- Welcome Widget -->
         <div class="row mt-4">
           <div class="col-12">
-            <div class="card border-0 shadow-sm mb-4 bg-white rounded-3 overflow-hidden">
-              <div class="card-body p-4 p-lg-5">
-                <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-4 mb-4">
-                  <div class="text-center text-md-start">
-                    <div class="badge bg-primary-subtle text-primary fw-bold px-3 py-2 rounded-3 mb-3">
-                      Welcome Back
-                    </div>
-                    <h2 class="fw-bolder mb-2 text-dark" style="letter-spacing: -0.5px;">Good Morning, Ujang! 👋</h2>
+            <div class="card mb-4 dashboard-overview">
+              <div class="card-body p-4">
+                <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between gap-3 mb-4">
+                  <div>
+                    <h1 class="mb-2">Workspace overview</h1>
                     <p class="mb-0 text-muted" style="max-width: 480px;">
-                      Here's a quick overview of your workspace today. Let's keep the momentum going!
+                      Ujang's projects, tasks, and resource usage. Sample data for February 2026; not connected to a live service.
                     </p>
                   </div>
 
-                  <div class="d-flex flex-column align-items-center align-items-md-end gap-1">
-                    <div class="d-flex align-items-center gap-2 text-dark fw-bold h5 mb-0">
+                  <div class="d-flex flex-wrap flex-md-column align-items-center align-items-md-end gap-2 dashboard-date">
+                    <div class="d-flex align-items-center gap-2 text-dark fw-semibold h5 mb-0">
                       <i class="ph-bold ph-calendar-blank text-primary"></i>
-                      <span>Feb 26, 2026</span>
+                      <time datetime="2026-02-26">Feb 26, 2026</time>
                     </div>
                     <div class="d-flex align-items-center gap-2 text-muted small">
                       <i class="ph-bold ph-map-pin"></i>
@@ -368,37 +432,37 @@
                   </div>
                 </div>
 
-                <div class="row g-3">
+                <div class="row g-2 dashboard-summary">
                   <div class="col-md-4">
                     <div class="d-flex align-items-center p-3 bg-light rounded-3 border-dashed">
-                      <div class="bg-primary text-white p-2 rounded-3 me-3">
+                      <div class="bg-primary-subtle text-primary p-2 rounded-3 me-3">
                         <i class="ph-bold ph-projector-screen" style="font-size: 1.25rem;"></i>
                       </div>
                       <div>
-                        <p class="text-muted extra-small mb-0 fw-bold text-uppercase">Active Projects</p>
-                        <h5 class="mb-0 fw-bold">12 Projects</h5>
+                        <p class="text-muted small mb-0">Active projects</p>
+                        <h5 class="mb-0 fw-semibold">12 Projects</h5>
                       </div>
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="d-flex align-items-center p-3 bg-light rounded-3 border-dashed">
-                      <div class="bg-success text-white p-2 rounded-3 me-3">
+                      <div class="bg-primary-subtle text-primary p-2 rounded-3 me-3">
                         <i class="ph-bold ph-check-square" style="font-size: 1.25rem;"></i>
                       </div>
                       <div>
-                        <p class="text-muted extra-small mb-0 fw-bold text-uppercase">Tasks Today</p>
-                        <h5 class="mb-0 fw-bold">8 Pending</h5>
+                        <p class="text-muted small mb-0">Tasks today</p>
+                        <h5 class="mb-0 fw-semibold">8 Pending</h5>
                       </div>
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="d-flex align-items-center p-3 bg-light rounded-3 border-dashed">
-                      <div class="bg-info text-white p-2 rounded-3 me-3">
+                      <div class="bg-success-subtle text-success p-2 rounded-3 me-3">
                         <i class="ph-bold ph-activity" style="font-size: 1.25rem;"></i>
                       </div>
                       <div>
-                        <p class="text-muted extra-small mb-0 fw-bold text-uppercase">System Health</p>
-                        <h5 class="mb-0 fw-bold">100% Online</h5>
+                        <p class="text-muted small mb-0">Service status</p>
+                        <h5 class="mb-0 fw-semibold">Operational</h5>
                       </div>
                     </div>
                   </div>
@@ -409,9 +473,9 @@
         </div>
 
         <!-- Metric Cards -->
-        <div class="row">
-          <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-0 shadow-sm h-100 animate__animated animate__fadeIn" style="animation-delay: 0.1s;">
+        <div class="dashboard-metrics mb-4">
+          <div>
+            <div class="card h-100">
               <div class="card-body p-4">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                   <div class="bg-primary-subtle text-primary p-3 rounded-3">
@@ -420,49 +484,49 @@
                   <span class="badge bg-success-subtle text-success">+12.5%</span>
                 </div>
                 <h6 class="text-muted mb-1">Total Users</h6>
-                <h3 class="fw-bold mb-0">14,250</h3>
+                <h3 class="fw-semibold mb-0">14,250</h3>
               </div>
             </div>
           </div>
-          <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-0 shadow-sm h-100 animate__animated animate__fadeIn" style="animation-delay: 0.2s;">
+          <div>
+            <div class="card h-100">
               <div class="card-body p-4">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <div class="bg-success-subtle text-success p-3 rounded-3">
+                  <div class="bg-primary-subtle text-primary p-3 rounded-3">
                     <i class="ph-bold ph-folder" style="font-size: 1.5rem;"></i>
                   </div>
-                  <span class="badge bg-primary-subtle text-primary">Active</span>
+                  <span class="badge bg-primary-subtle text-primary">12 active</span>
                 </div>
                 <h6 class="text-muted mb-1">Total Projects</h6>
-                <h3 class="fw-bold mb-0">48</h3>
+                <h3 class="fw-semibold mb-0">48</h3>
               </div>
             </div>
           </div>
-          <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-0 shadow-sm h-100 animate__animated animate__fadeIn" style="animation-delay: 0.3s;">
+          <div>
+            <div class="card h-100">
               <div class="card-body p-4">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <div class="bg-warning-subtle text-warning p-3 rounded-3">
+                  <div class="bg-primary-subtle text-primary p-3 rounded-3">
                     <i class="ph-bold ph-check-circle" style="font-size: 1.5rem;"></i>
                   </div>
-                  <span class="text-warning small fw-bold">85% done</span>
+                  <span class="text-muted small">All time</span>
                 </div>
                 <h6 class="text-muted mb-1">Completed Tasks</h6>
-                <h3 class="fw-bold mb-0">1,204</h3>
+                <h3 class="fw-semibold mb-0">1,204</h3>
               </div>
             </div>
           </div>
-          <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-0 shadow-sm h-100 animate__animated animate__fadeIn" style="animation-delay: 0.4s;">
+          <div>
+            <div class="card h-100">
               <div class="card-body p-4">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <div class="bg-danger-subtle text-danger p-3 rounded-3">
+                  <div class="bg-primary-subtle text-primary p-3 rounded-3">
                     <i class="ph-bold ph-activity" style="font-size: 1.5rem;"></i>
                   </div>
-                  <span class="text-success small fw-bold">Healthy</span>
+                  <span class="text-success small fw-semibold">Healthy</span>
                 </div>
-                <h6 class="text-muted mb-1">System Health</h6>
-                <h3 class="fw-bold mb-0">99.9%</h3>
+                <h6 class="text-muted mb-1">Uptime this month</h6>
+                <h3 class="fw-semibold mb-0">99.9%</h3>
               </div>
             </div>
           </div>
@@ -471,21 +535,22 @@
         <div class="row">
           <!-- Active Projects -->
           <div class="col-lg-8 mb-4">
-            <div class="card border-0 shadow-sm h-100 animate__animated animate__fadeIn">
+            <div class="card dashboard-projects">
               <div
                 class="card-header bg-transparent border-0 pt-4 px-4 d-flex justify-content-between align-items-center">
-                <h6 class="fw-bold mb-0">Active Projects</h6>
-                <button class="btn btn-sm btn-light border">View All</button>
+                <h6 class="fw-semibold mb-0">Active Projects</h6>
+                <span class="small text-muted">3 of 12 active</span>
               </div>
               <div class="card-body p-0">
-                <div class="table-responsive">
+                <div class="table-responsive" tabindex="0" role="region" aria-label="Active projects, scroll horizontally for more columns">
                   <table class="table table-hover align-middle mb-0">
+                    <caption class="visually-hidden">Three sample active projects with team, status, and completion percentage.</caption>
                     <thead class="bg-light">
                       <tr>
-                        <th class="ps-4">Project Name</th>
-                        <th>Team</th>
-                        <th>Status</th>
-                        <th class="pe-4 text-end">Progress</th>
+                        <th scope="col" class="ps-4">Project Name</th>
+                        <th scope="col">Team</th>
+                        <th scope="col">Status</th>
+                        <th scope="col" class="pe-4 text-end">Progress</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -494,17 +559,18 @@
                         <td>
                           <div class="avatar-group d-flex">
                             <div
-                              class="avatar-sm bg-primary text-white rounded-circle d-flex align-items-center justify-content-center border border-white"
+                              class="avatar-sm bg-primary-subtle text-primary rounded-circle d-flex align-items-center justify-content-center border border-white"
                               style="width: 24px; height: 24px; font-size: 0.6rem;">SD</div>
                             <div
-                              class="avatar-sm bg-success text-white rounded-circle d-flex align-items-center justify-content-center border border-white ms-n1"
+                              class="avatar-sm bg-success-subtle text-success rounded-circle d-flex align-items-center justify-content-center border border-white ms-n1"
                               style="width: 24px; height: 24px; font-size: 0.6rem;">JD</div>
                           </div>
                         </td>
                         <td><span class="badge bg-primary-subtle text-primary">In Progress</span></td>
                         <td class="pe-4">
+                          <span class="d-block text-end small mb-1">65%</span>
                           <div class="progress" style="height: 6px;">
-                            <div class="progress-bar bg-primary" style="width: 65%;"></div>
+                            <div class="progress-bar bg-primary" style="width: 65%;" role="progressbar" aria-label="NahaAdmin Branding completion" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
                           </div>
                         </td>
                       </tr>
@@ -513,14 +579,15 @@
                         <td>
                           <div class="avatar-group d-flex">
                             <div
-                              class="avatar-sm bg-info text-white rounded-circle d-flex align-items-center justify-content-center border border-white"
+                              class="avatar-sm bg-info-subtle text-info rounded-circle d-flex align-items-center justify-content-center border border-white"
                               style="width: 24px; height: 24px; font-size: 0.6rem;">MA</div>
                           </div>
                         </td>
                         <td><span class="badge bg-warning-subtle text-warning">Testing</span></td>
                         <td class="pe-4">
+                          <span class="d-block text-end small mb-1">85%</span>
                           <div class="progress" style="height: 6px;">
-                            <div class="progress-bar bg-warning" style="width: 85%;"></div>
+                            <div class="progress-bar bg-warning" style="width: 85%;" role="progressbar" aria-label="Mobile App Dev completion" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                           </div>
                         </td>
                       </tr>
@@ -529,14 +596,15 @@
                         <td>
                           <div class="avatar-group d-flex">
                             <div
-                              class="avatar-sm bg-danger text-white rounded-circle d-flex align-items-center justify-content-center border border-white"
+                              class="avatar-sm bg-danger-subtle text-danger rounded-circle d-flex align-items-center justify-content-center border border-white"
                               style="width: 24px; height: 24px; font-size: 0.6rem;">KW</div>
                           </div>
                         </td>
-                        <td><span class="badge bg-secondary-subtle text-secondary">Delayed</span></td>
+                        <td><span class="badge bg-danger-subtle text-danger">Delayed</span></td>
                         <td class="pe-4">
+                          <span class="d-block text-end small mb-1">30%</span>
                           <div class="progress" style="height: 6px;">
-                            <div class="progress-bar bg-danger" style="width: 30%;"></div>
+                            <div class="progress-bar bg-danger" style="width: 30%;" role="progressbar" aria-label="API Integration completion" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
                           </div>
                         </td>
                       </tr>
@@ -549,42 +617,42 @@
 
           <!-- Activity Feed -->
           <div class="col-lg-4 mb-4">
-            <div class="card border-0 shadow-sm h-100 animate__animated animate__fadeIn">
+            <div class="card h-100">
               <div class="card-header bg-transparent border-0 pt-4 px-4">
-                <h6 class="fw-bold mb-0">Recent Activity</h6>
+                <h6 class="fw-semibold mb-0">Recent Activity</h6>
               </div>
               <div class="card-body px-4">
                 <div class="timeline-simple">
                   <div class="d-flex mb-4">
-                    <div class="timeline-icon bg-primary text-white me-3"
+                    <div class="timeline-icon bg-primary-subtle text-primary me-3"
                       style="width: 32px; height: 32px; flex-shrink: 0; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
                       <i class="ph-bold ph-check" style="font-size: 1rem;"></i>
                     </div>
                     <div>
-                      <p class="mb-1 small fw-bold">Task Completed</p>
+                      <p class="mb-1 small fw-semibold">Task Completed</p>
                       <p class="mb-0 extra-small text-muted">Sepsu updated the Branding project progress.</p>
                       <span class="extra-small text-muted">2 mins ago</span>
                     </div>
                   </div>
                   <div class="d-flex mb-4">
-                    <div class="timeline-icon bg-success text-white me-3"
+                    <div class="timeline-icon bg-success-subtle text-success me-3"
                       style="width: 32px; height: 32px; flex-shrink: 0; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
                       <i class="ph-bold ph-user" style="font-size: 1rem;"></i>
                     </div>
                     <div>
-                      <p class="mb-1 small fw-bold">New User Joined</p>
+                      <p class="mb-1 small fw-semibold">New User Joined</p>
                       <p class="mb-0 extra-small text-muted">Atep Rizal has registered as a new member.</p>
                       <span class="extra-small text-muted">1 hour ago</span>
                     </div>
                   </div>
                   <div class="d-flex">
-                    <div class="timeline-icon bg-warning text-white me-3"
+                    <div class="timeline-icon bg-warning-subtle text-warning me-3"
                       style="width: 32px; height: 32px; flex-shrink: 0; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
                       <i class="ph-bold ph-warning" style="font-size: 1rem;"></i>
                     </div>
                     <div>
-                      <p class="mb-1 small fw-bold">Server Alert</p>
-                      <p class="mb-0 extra-small text-muted">System storage reached 85% capacity.</p>
+                      <p class="mb-1 small fw-semibold">Server Alert</p>
+                      <p class="mb-0 extra-small text-muted">API requests reached 85% of the monthly quota.</p>
                       <span class="extra-small text-muted">3 hours ago</span>
                     </div>
                   </div>
@@ -597,9 +665,9 @@
         <div class="row">
           <!-- Resource Usage -->
           <div class="col-md-6 mb-4">
-            <div class="card border-0 shadow-sm animate__animated animate__fadeIn">
+            <div class="card">
               <div class="card-header bg-transparent border-0 pt-4 px-4">
-                <h6 class="fw-bold mb-0">Resource Usage</h6>
+                <h6 class="fw-semibold mb-0">Resource Usage</h6>
               </div>
               <div class="card-body px-4">
                 <div class="mb-3">
@@ -608,7 +676,7 @@
                     <span class="small text-muted">45%</span>
                   </div>
                   <div class="progress" style="height: 8px;">
-                    <div class="progress-bar bg-primary" style="width: 45%;"></div>
+                    <div class="progress-bar bg-primary" style="width: 45%;" role="progressbar" aria-label="Storage used" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                 </div>
                 <div class="mb-3">
@@ -617,7 +685,7 @@
                     <span class="small text-muted">60%</span>
                   </div>
                   <div class="progress" style="height: 8px;">
-                    <div class="progress-bar bg-success" style="width: 60%;"></div>
+                    <div class="progress-bar bg-success" style="width: 60%;" role="progressbar" aria-label="Bandwidth used" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                 </div>
                 <div>
@@ -626,7 +694,7 @@
                     <span class="small text-muted">85%</span>
                   </div>
                   <div class="progress" style="height: 8px;">
-                    <div class="progress-bar bg-warning" style="width: 85%;"></div>
+                    <div class="progress-bar bg-warning" style="width: 85%;" role="progressbar" aria-label="API quota used" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                 </div>
               </div>
@@ -635,30 +703,30 @@
 
           <!-- Calendar / Events Widget -->
           <div class="col-md-6 mb-4">
-            <div class="card border-0 shadow-sm h-100 animate__animated animate__fadeIn">
+            <div class="card h-100">
               <div
                 class="card-header bg-transparent border-0 pt-4 px-4 d-flex justify-content-between align-items-center">
-                <h6 class="fw-bold mb-0">Upcoming Events</h6>
-                <button class="btn btn-sm btn-outline-primary px-3">Add New</button>
+                <h6 class="fw-semibold mb-0">Upcoming Events</h6>
+                <span class="small text-muted">March 2026 · WIB</span>
               </div>
               <div class="card-body px-4">
                 <div class="event-item d-flex align-items-center mb-3 p-3 bg-light rounded-3">
-                  <div class="event-date bg-primary text-white p-2 rounded text-center me-3" style="min-width: 50px;">
-                    <span class="d-block fw-bold h5 mb-0">12</span>
-                    <span class="extra-small text-uppercase">Feb</span>
+                  <div class="event-date bg-primary-subtle text-primary p-2 rounded text-center me-3" style="min-width: 50px;">
+                    <span class="d-block fw-semibold h5 mb-0">12</span>
+                    <span class="extra-small text-uppercase">Mar</span>
                   </div>
                   <div>
-                    <h6 class="mb-1 fw-bold small">Product Launch Sync</h6>
+                    <h6 class="mb-1 fw-semibold small">Product Launch Sync</h6>
                     <p class="mb-0 extra-small text-muted"><i class="ph-bold ph-clock me-1"></i> 10:00 AM - 11:30 AM</p>
                   </div>
                 </div>
                 <div class="event-item d-flex align-items-center p-3 bg-light rounded-3">
-                  <div class="event-date bg-info text-white p-2 rounded text-center me-3" style="min-width: 50px;">
-                    <span class="d-block fw-bold h5 mb-0">15</span>
-                    <span class="extra-small text-uppercase">Feb</span>
+                  <div class="event-date bg-primary-subtle text-primary p-2 rounded text-center me-3" style="min-width: 50px;">
+                    <span class="d-block fw-semibold h5 mb-0">15</span>
+                    <span class="extra-small text-uppercase">Mar</span>
                   </div>
                   <div>
-                    <h6 class="mb-1 fw-bold small">Designer Weekly Meetup</h6>
+                    <h6 class="mb-1 fw-semibold small">Designer Weekly Meetup</h6>
                     <p class="mb-0 extra-small text-muted"><i class="ph-bold ph-clock me-1"></i> 02:00 PM - 03:00 PM</p>
                   </div>
                 </div>

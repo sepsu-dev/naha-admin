@@ -2,10 +2,12 @@
  * Ecommerce Dashboard Charts & Logic
  */
 if (typeof echarts !== 'undefined') {
+    const styles = getComputedStyle(document.documentElement);
+    const token = name => styles.getPropertyValue(`--${name}`).trim();
     // === ECOMMERCE ORDERS CHART ===
     const $ecommerceDom = $('#ecommerceOrdersChart');
     if ($ecommerceDom.length) {
-        const ecommerceChart = echarts.init($ecommerceDom[0]);
+        const ecommerceChart = echarts.init($ecommerceDom[0], 'naha');
         const ecommerceOption = {
             tooltip: { trigger: 'axis' },
             xAxis: { type: 'category', data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'] },
@@ -16,11 +18,12 @@ if (typeof echarts !== 'undefined') {
                 smooth: true,
                 areaStyle: {
                     color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-                        { offset: 0, color: 'rgba(0, 111, 238, 0.3)' },
-                        { offset: 1, color: 'rgba(0, 111, 238, 0)' }
+                        { offset: 0, color: `rgba(${token('nd-primary-rgb')}, 0.16)` },
+                        { offset: 1, color: `rgba(${token('nd-primary-rgb')}, 0)` }
                     ])
                 },
-                lineStyle: { width: 3, color: '#006fee' }
+                itemStyle: { color: token('nd-primary') },
+                lineStyle: { width: 3, color: token('nd-primary') }
             }]
         };
         ecommerceChart.setOption(ecommerceOption);
@@ -30,7 +33,7 @@ if (typeof echarts !== 'undefined') {
     // === ECOMMERCE CATEGORY CHART ===
     const $categoryDom = $('#categoryChart');
     if ($categoryDom.length) {
-        const categoryChart = echarts.init($categoryDom[0]);
+        const categoryChart = echarts.init($categoryDom[0], 'naha');
         const categoryOption = {
             tooltip: { trigger: 'item' },
             legend: { top: 'bottom' },

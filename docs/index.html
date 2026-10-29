@@ -25,7 +25,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" />
 
     <!-- Styles -->
     <link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css" />
@@ -36,26 +36,16 @@
     <link rel="stylesheet" href="../assets/plugins/phosphor/bold/style.css" />
     <link rel="stylesheet" href="../assets/plugins/phosphor/regular/style.css" />
     <link rel="stylesheet" href="../assets/plugins/phosphor/fill/style.css" />
+    <link rel="stylesheet" href="../assets/styles/docs.css" />
 
-    <style>
-        pre {
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            background-color: #0f172a !important;
-            border-radius: 8px;
-        }
-
-        pre code {
-            color: #cbd5e1 !important;
-        }
-    </style>
 </head>
 
 <body class="nd-nav-fixed">
     <header>
         <nav class="nd-topnav navbar navbar-expand navbar-light">
-            <a class="navbar-brand ps-3 d-flex align-items-center" href="index.html">
-                <img src="../assets/images/logo.png" alt="logo" class="logo-navbar" />
-                <span class="ms-2 fw-semibold">NahaAdmin</span>
+            <a class="navbar-brand ps-3 d-flex align-items-center" href="index.html" aria-label="Naha Admin">
+                <svg class="logo-navbar" viewBox="0 0 48 36" fill="currentColor" stroke="currentColor" stroke-width="3" stroke-dasharray="5 5" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><rect x="10" y="4" width="28" height="28" rx="3" fill-opacity="0.15"/></svg>
+                <span class="ms-2 fw-semibold">Naha Admin</span>
             </a>
             <button class="btn btn-light" id="sidebarToggle" aria-label="Toggle sidebar">
                 <i class="ph-bold ph-sidebar-simple"></i>
@@ -68,7 +58,7 @@
             </div>
 
             <div class="ms-auto d-flex align-items-center pe-3">
-                <a href="../demo/index.html" class="btn btn-light border ms-lg-2 px-3 py-2 text-dark fw-semibold">
+                <a href="../demo/index.html" class="btn btn-light border ms-lg-2 px-3 py-2 text-dark fw-medium">
                     <i class="ph-bold ph-monitor-play me-1 text-primary"></i> Live Preview
                 </a>
             </div>
@@ -99,13 +89,13 @@
                         </a>
 
                         <h2 class="nd-sidenav-menu-heading">Resources</h2>
-                        <a class="nav-link" href="support.html">
-                            <div class="nd-nav-link-icon"><i class="ph-bold ph-headset"></i></div>
-                            <span>Support</span>
-                        </a>
                         <a class="nav-link" href="faq.html">
                             <div class="nd-nav-link-icon"><i class="ph-bold ph-question"></i></div>
                             <span>FAQ</span>
+                        </a>
+                        <a class="nav-link" href="support.html">
+                            <div class="nd-nav-link-icon"><i class="ph-bold ph-headset"></i></div>
+                            <span>Support</span>
                         </a>
                         <a class="nav-link" href="license.html">
                             <div class="nd-nav-link-icon"><i class="ph-bold ph-seal-check"></i></div>
@@ -126,104 +116,42 @@
                 <footer class="nd-sidenav-footer">
                     <div class="user-info-footer overflow-hidden w-100">
                         <small class="text-muted text-user-footer text-truncate d-block"
-                            style="font-size: 0.72rem; line-height: 1.4;">&copy; 2026 NahaAdmin &middot; MIT
-                            License</small>
+                            style="font-size: 0.75rem; line-height: 1.4;">&copy; 2026 Naha Admin</small>
                     </div>
                 </footer>
             </nav>
         </aside>
 
-        <main id="layoutSidenav_content" class="animate__animated animate__fadeIn">
+        <main id="layoutSidenav_content">
             <section class="container-fluid px-4 py-4 pb-5">
-                <div class="animate__animated animate__fadeIn">
+                <div>
                     <!-- Introduction Card -->
-                    <div class="card shadow-sm border-0 mb-4">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="bg-primary-subtle text-primary rounded-3 p-3 me-3 d-inline-flex">
-                                    <i class="ph-bold ph-book-open fs-4"></i>
-                                </div>
-                                <div>
-                                    <h3 class="h5 fw-bold mb-0">Introduction</h3>
-                                    <p class="text-muted extra-small mb-0">Overview and core philosophy of NahaAdmin.
-                                    </p>
-                                </div>
+                    <div class="docs-article mb-4">
+                        <div class="docs-body">
+                            <header class="docs-page-heading">
+                                <h1>Introduction</h1>
+                                <p class="text-muted mb-0">Overview and core philosophy of NahaAdmin.</p>
+                            </header>
+                            <p class="text-muted mb-4">Naha Admin is a free Bootstrap 5 admin template built with HTML,
+                                CSS, and jQuery. Start from an example, reuse the components, and connect your own backend.</p>
+                            <div class="docs-quickstart">
+                                <h2>Run it locally</h2>
+                                <p class="text-muted">Double-click <code>index.html</code> in the project folder to open it in your browser.
+                                    No local server, package installation, or build step.</p>
+                                <p class="mb-0">Open the <a href="../demo/index.html">demo</a> or <a href="../index.html">landing page</a> directly.
+                                    Need the files? <a href="getting-started.html">Follow the setup guide</a>.</p>
                             </div>
-                            <p class="text-muted small mb-4"><strong>NahaAdmin</strong> is a modern, lightweight, and
-                                responsive free admin dashboard template built on top of <strong>Bootstrap 5.3</strong>,
-                                pure vanilla JavaScript, and modern CSS Custom Properties. Designed to give developers a
-                                clean, framework-agnostic starting point for web applications, SaaS dashboards, and
-                                control panels without the heavy overhead of complex build tools.</p>
-
-                            <!-- Highlights Grid -->
-                            <div class="row g-3 mb-4">
-                                <div class="col-md-6 col-lg-3">
-                                    <div class="p-3 border rounded-3 bg-light h-100">
-                                        <div class="d-flex align-items-center mb-2">
-                                            <i class="ph-bold ph-squares-four text-primary fs-5 me-2"></i>
-                                            <h6 class="fw-bold mb-0 small text-dark">5 Dashboards</h6>
-                                        </div>
-                                        <p class="text-muted extra-small mb-0">Default, Analytics, CRM, Ecommerce, and
-                                            Finance pre-built dashboards.</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-3">
-                                    <div class="p-3 border rounded-3 bg-light h-100">
-                                        <div class="d-flex align-items-center mb-2">
-                                            <i class="ph-bold ph-app-window text-success fs-5 me-2"></i>
-                                            <h6 class="fw-bold mb-0 small text-dark">4 Ready Apps</h6>
-                                        </div>
-                                        <p class="text-muted extra-small mb-0">Interactive Inbox, Chat, Kanban Board,
-                                            and File Manager modules.</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-3">
-                                    <div class="p-3 border rounded-3 bg-light h-100">
-                                        <div class="d-flex align-items-center mb-2">
-                                            <i class="ph-bold ph-browsers text-info fs-5 me-2"></i>
-                                            <h6 class="fw-bold mb-0 small text-dark">56 Demo Pages</h6>
-                                        </div>
-                                        <p class="text-muted extra-small mb-0">Complete suite of UI components, form
-                                            controls, tables, and error pages.</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-3">
-                                    <div class="p-3 border rounded-3 bg-light h-100">
-                                        <div class="d-flex align-items-center mb-2">
-                                            <i class="ph-bold ph-sparkle text-warning fs-5 me-2"></i>
-                                            <h6 class="fw-bold mb-0 small text-dark">Zero Build Step</h6>
-                                        </div>
-                                        <p class="text-muted extra-small mb-0">Pure HTML5, CSS3, and JS. Ready to plug
-                                            into any backend or serve statically.</p>
-                                    </div>
-                                </div>
+                            <h2 class="docs-section-title">Find your next step</h2>
+                            <div class="docs-guide-links">
+                                <a href="getting-started.html"><strong>Getting started</strong><span>Setup, folder structure, and reusing components.</span><i class="ph-bold ph-arrow-right" aria-hidden="true"></i></a>
+                                <a href="theme-layout.html"><strong>Theme &amp; layout</strong><span>Colors, typography, and sidebar options.</span><i class="ph-bold ph-arrow-right" aria-hidden="true"></i></a>
+                                <a href="browser-support.html"><strong>Browser support</strong><span>Browser requirements and checks.</span><i class="ph-bold ph-arrow-right" aria-hidden="true"></i></a>
                             </div>
-
-                            <h6 class="fw-bold small text-dark mb-2">What's Included:</h6>
-                            <div class="row g-3 text-muted small">
-                                <div class="col-md-6">
-                                    <ul class="ps-3 mb-0">
-                                        <li class="mb-2"><strong>Layout Flexibility:</strong> Full sidebar and
-                                            collapsible mini sidebar with hover auto-expansion and
-                                            <code>localStorage</code> state persistence.
-                                        </li>
-                                        <li class="mb-2"><strong>SPA-Like Feel:</strong> Built-in smooth page
-                                            transitions integrated with NProgress loading bar.</li>
-                                        <li class="mb-2"><strong>Phosphor Icons:</strong> Over 1,000+ modern icons
-                                            across Bold, Regular, and Fill styles.</li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-6">
-                                    <ul class="ps-3 mb-0">
-                                        <li class="mb-2"><strong>Advanced Data Tables:</strong> Basic responsive tables,
-                                            DataTables, and Grid.js support.</li>
-                                        <li class="mb-2"><strong>Rich Forms:</strong> Select2 dropdowns, custom
-                                            checkboxes/radios, Quill text editors, and client-side validation.</li>
-                                        <li class="mb-2"><strong>MIT Licensed:</strong> 100% free for both personal and
-                                            commercial projects.</li>
-                                    </ul>
-                                </div>
-                            </div>
+                            <h2 class="docs-section-title">What's included</h2>
+                            <p class="text-muted">5 dashboards, 4 app examples, and 66 component examples, plus combined form
+                                demos. Browse them from the <strong>Components</strong> menu in <a href="../demo/index.html">Live Preview</a>.</p>
+                            <p class="text-muted mb-0">Examples use sample data, not a live backend. Check the <a href="faq.html">FAQ</a>,
+                                get <a href="support.html">support</a>, or review the <a href="license.html">MIT license</a>.</p>
                         </div>
                     </div>
 

@@ -4,42 +4,75 @@ if (typeof NProgress !== 'undefined') {
     NProgress.start();
 }
 
-// Initialize on page load
-$(window).on('load', () => {
+// Finish on back/forward navigation too.
+$(window).on('load pageshow', () => {
     if (typeof NProgress !== 'undefined') {
-        setTimeout(() => {
-            NProgress.done();
-        }, 200);
+        NProgress.done();
     }
 });
+
+// ECharts loads before this file on dashboard pages. Keep vendor defaults on our palette.
+if (typeof echarts !== 'undefined') {
+    const styles = getComputedStyle(document.documentElement);
+    const token = name => styles.getPropertyValue(`--${name}`).trim();
+    echarts.registerTheme('naha', {
+        color: [1, 2, 3, 4, 5, 6].map(index => token(`nd-chart-${index}`)),
+        textStyle: { color: token('nd-text'), fontFamily: token('nd-font-sans'), fontSize: 12 },
+        legend: { textStyle: { color: token('nd-text-muted') } },
+        categoryAxis: { axisLabel: { color: token('nd-text-muted') }, axisLine: { lineStyle: { color: token('nd-border') } } },
+        valueAxis: { axisLabel: { color: token('nd-text-muted') }, splitLine: { lineStyle: { color: token('nd-border') } } },
+        pie: { label: { color: token('nd-text') } },
+        tooltip: { backgroundColor: token('nd-surface'), borderColor: token('nd-border'), textStyle: { color: token('nd-text') } }
+    });
+}
 
 $(function () {
     const $body = $('body');
     const $content = $('#layoutSidenav_content');
 
-    // ============================================================
-    // Sidebar Toggle — with icon state (open/close)
-    // ============================================================
     const $sidebarToggle = $('#sidebarToggle');
+    const desktop = window.matchMedia('(min-width: 992px)');
 
-    function updateToggleIcon() {
-        // Icon remains constant as per template HTML markup
+    if ($content.length) {
+        $content.attr('tabindex', '-1');
+        $('<a class="nd-skip-link" href="#layoutSidenav_content">Skip to content</a>').prependTo($body);
     }
 
-    // Restore sidebar state from localStorage on page load
-    if (localStorage.getItem('nd|sidebar-toggle') === 'true') {
-        $body.addClass('nd-sidenav-toggled');
+    function updateSidebarState() {
+        const toggled = $body.hasClass('nd-sidenav-toggled');
+        $sidebarToggle.attr({
+            'aria-controls': 'layoutSidenav_nav',
+            'aria-expanded': String(desktop.matches ? !toggled : toggled)
+        });
+        const hidden = desktop.matches ? toggled && !$body.hasClass('nd-sidebar-mini') : !toggled;
+        $('#layoutSidenav_nav').prop('inert', hidden);
     }
-    
-    updateToggleIcon();
+
+    // Storage may be unavailable in private or sandboxed browsing.
+    try {
+        const savedState = localStorage.getItem('nd|sidebar-toggle');
+        if (desktop.matches && savedState !== null) {
+            $body.toggleClass('nd-sidenav-toggled', savedState === 'true');
+        }
+    } catch {
+        // Keep the layout's initial state when storage is blocked.
+    }
+    if (!desktop.matches) $body.removeClass('nd-sidenav-toggled');
+    updateSidebarState();
 
     if ($sidebarToggle.length) {
         $sidebarToggle.on('click', function (event) {
             event.preventDefault();
             $body.toggleClass('nd-sidenav-toggled');
-            localStorage.setItem('nd|sidebar-toggle', $body.hasClass('nd-sidenav-toggled'));
-            updateToggleIcon();
-            
+            if (desktop.matches) {
+                try {
+                    localStorage.setItem('nd|sidebar-toggle', $body.hasClass('nd-sidenav-toggled'));
+                } catch {
+                    // Sidebar still works without persistence.
+                }
+            }
+            updateSidebarState();
+
             // Dispatch resize event to recalculate charts size
             window.dispatchEvent(new Event('resize'));
             setTimeout(() => {
@@ -48,15 +81,26 @@ $(function () {
         });
     }
 
-    // Handle window resize to update toggle icon
-    $(window).on('resize', updateToggleIcon);
+    desktop.addEventListener('change', () => {
+        $body.removeClass('nd-sidenav-toggled');
+        updateSidebarState();
+    });
 
-    // ============================================================
-    // Add fadeIn on load if not already there
-    // ============================================================
-    if ($content.length && !$content.hasClass('animate__fadeIn')) {
-        $content.addClass('animate__animated animate__fadeIn');
-    }
+    $(document).on('keydown', function (event) {
+        if (event.key === 'Escape' && !desktop.matches && $body.hasClass('nd-sidenav-toggled')) {
+            $body.removeClass('nd-sidenav-toggled');
+            updateSidebarState();
+            $sidebarToggle.trigger('focus');
+        }
+    });
+
+    $content.on('click', function () {
+        if (!desktop.matches && $body.hasClass('nd-sidenav-toggled')) {
+            $body.removeClass('nd-sidenav-toggled');
+            updateSidebarState();
+            $sidebarToggle.trigger('focus');
+        }
+    });
 
     // ============================================================
     // Dynamic Active Sidebar Menu
@@ -65,7 +109,7 @@ $(function () {
     const page = path.split('/').pop() || 'index.html';
 
     // Remove any hardcoded active classes and reset collapses initially
-    $('#sidenavAccordion .nav-link').removeClass('active');
+    $('#sidenavAccordion .nav-link').removeClass('active').removeAttr('aria-current');
     $('#sidenavAccordion .collapse').removeClass('show');
     $('#sidenavAccordion [data-bs-toggle="collapse"]').addClass('collapsed').attr('aria-expanded', 'false');
 
@@ -73,6 +117,8 @@ $(function () {
     $('#sidenavAccordion .nav-link').each(function () {
         const $link = $(this);
         const href = $link.attr('href');
+        const label = $link.find('span').first().text().trim();
+        if (label) $link.attr('aria-label', label);
 
         if (!href || href === '#' || href.startsWith('javascript') || href.includes('..') || $link.attr('data-bs-toggle') === 'collapse') return;
 
@@ -80,7 +126,7 @@ $(function () {
 
         // Match exact page or default to index if path is empty
         if (linkPage === page || (page === '' && linkPage === 'index.html')) {
-            $link.addClass('active');
+            $link.addClass('active').attr('aria-current', 'page');
 
             // Expand all parent collapse elements
             $link.parents('.collapse').each(function () {
@@ -93,44 +139,7 @@ $(function () {
         }
     });
 
-    // ============================================================
-    // MPA Loading Effect on link click with animate__fadeOut
-    // ============================================================
-    $(document).on('click', 'a', function (e) {
-        const $link = $(this);
-        const href = $link.attr('href');
-        const target = $link.attr('target');
-
-        // Only transition for internal links that are not toggles or anchors
-        if (href &&
-            href !== '#' &&
-            !href.startsWith('http') &&
-            !href.startsWith('javascript') &&
-            !href.includes('#') &&
-            !$link.attr('data-bs-toggle') &&
-            !$link.attr('data-bs-dismiss') &&
-            target !== '_blank') {
-
-            e.preventDefault();
-
-            if (typeof NProgress !== 'undefined') {
-                NProgress.start();
-            }
-
-            if ($content.length) {
-                // Ensure the content fade out is fast enough
-                $content.css('animation-duration', '400ms');
-                $content.removeClass('animate__fadeIn').addClass('animate__fadeOut');
-
-                // Navigate after animation completes
-                setTimeout(() => {
-                    window.location.href = href;
-                }, 350);
-            } else {
-                window.location.href = href;
-            }
-        }
-    });
+    // Keep native link behavior: modified clicks, downloads, and back/forward.
 
     // ============================================================
     // Password Visibility Toggle
@@ -139,6 +148,8 @@ $(function () {
         const $btn = $(this);
         const $input = $btn.closest('.input-group').find('.password-toggle');
         const $icon = $btn.find('i');
+        const visible = $input.attr('type') === 'password';
+        $btn.attr({ 'aria-label': visible ? 'Hide password' : 'Show password', 'aria-pressed': String(visible) });
 
         if ($input.attr('type') === 'password') {
             $input.attr('type', 'text');

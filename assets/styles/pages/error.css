@@ -1,67 +1,66 @@
 body {
-    background-color: #f8fafc;
+    background-color: var(--nd-bg-light);
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--nd-text);
-    font-family: 'Inter', sans-serif;
+    font-family: var(--nd-font-sans);
 }
 
 .error-container {
+    width: 100%;
+    min-width: 0;
     max-width: 600px;
     padding: 2rem;
     text-align: center;
 }
 
+.error-container > .d-flex { flex-wrap: wrap; }
+
 .error-icon {
-    font-size: 5rem;
-    margin-bottom: 2rem;
-    padding: 2rem;
-    background: #fff;
-    border-radius: 2rem;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background: var(--nd-surface);
+    border: 1px solid var(--nd-border);
+    border-radius: var(--nd-radius-lg);
     display: inline-flex;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--nd-shadow);
 }
 
 .error-code {
-    font-size: 8rem;
-    font-weight: 800;
+    font-size: clamp(4rem, 15vw, 6rem);
+    font-weight: 600;
     line-height: 1;
     margin-bottom: 1rem;
-    letter-spacing: -4px;
+    letter-spacing: -0.04em;
 }
 
 .error-404 {
-    background: linear-gradient(135deg, var(--nd-primary), #3b82f6);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--nd-primary);
 }
 
 .error-500 {
-    background: linear-gradient(135deg, #ef4444, #f97316);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--nd-danger);
 }
 
 .error-title {
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: var(--nd-font-size-3xl);
+    font-weight: 600;
     margin-bottom: 1rem;
     color: var(--nd-text);
 }
 
 .error-text {
     color: var(--nd-text-muted);
-    margin: 0 auto 3rem;
-    font-size: 1.15rem;
+    margin: 0 auto 2rem;
+    font-size: var(--nd-font-size-lg);
     line-height: 1.6;
 }
 
 .btn-lg {
     padding: 0.8rem 2.5rem;
-    font-weight: 600;
+    font-weight: 500;
     border-radius: var(--nd-radius);
 }

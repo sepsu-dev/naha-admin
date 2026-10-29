@@ -25,7 +25,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" />
 
     <!-- Styles -->
     <link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css" />
@@ -36,14 +36,15 @@
     <link rel="stylesheet" href="../assets/plugins/phosphor/bold/style.css" />
     <link rel="stylesheet" href="../assets/plugins/phosphor/regular/style.css" />
     <link rel="stylesheet" href="../assets/plugins/phosphor/fill/style.css" />
+    <link rel="stylesheet" href="../assets/styles/docs.css" />
 </head>
 
 <body class="nd-nav-fixed">
     <header>
         <nav class="nd-topnav navbar navbar-expand navbar-light">
-            <a class="navbar-brand ps-3 d-flex align-items-center" href="index.html">
-                <img src="../assets/images/logo.png" alt="logo" class="logo-navbar" />
-                <span class="ms-2 fw-semibold">NahaAdmin</span>
+            <a class="navbar-brand ps-3 d-flex align-items-center" href="index.html" aria-label="Naha Admin">
+                <svg class="logo-navbar" viewBox="0 0 48 36" fill="currentColor" stroke="currentColor" stroke-width="3" stroke-dasharray="5 5" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><rect x="10" y="4" width="28" height="28" rx="3" fill-opacity="0.15"/></svg>
+                <span class="ms-2 fw-semibold">Naha Admin</span>
             </a>
             <button class="btn btn-light" id="sidebarToggle" aria-label="Toggle sidebar">
                 <i class="ph-bold ph-sidebar-simple"></i>
@@ -56,7 +57,7 @@
             </div>
 
             <div class="ms-auto d-flex align-items-center pe-3">
-                <a href="../demo/index.html" class="btn btn-light border ms-lg-2 px-3 py-2 text-dark fw-semibold">
+                <a href="../demo/index.html" class="btn btn-light border ms-lg-2 px-3 py-2 text-dark fw-medium">
                     <i class="ph-bold ph-monitor-play me-1 text-primary"></i> Live Preview
                 </a>
             </div>
@@ -87,13 +88,13 @@
                         </a>
 
                         <h2 class="nd-sidenav-menu-heading">Resources</h2>
-                        <a class="nav-link" href="support.html">
-                            <div class="nd-nav-link-icon"><i class="ph-bold ph-headset"></i></div>
-                            <span>Support</span>
-                        </a>
                         <a class="nav-link" href="faq.html">
                             <div class="nd-nav-link-icon"><i class="ph-bold ph-question"></i></div>
                             <span>FAQ</span>
+                        </a>
+                        <a class="nav-link" href="support.html">
+                            <div class="nd-nav-link-icon"><i class="ph-bold ph-headset"></i></div>
+                            <span>Support</span>
                         </a>
                         <a class="nav-link active" href="license.html">
                             <div class="nd-nav-link-icon"><i class="ph-bold ph-seal-check"></i></div>
@@ -114,31 +115,23 @@
                 <footer class="nd-sidenav-footer">
                     <div class="user-info-footer overflow-hidden w-100">
                         <small class="text-muted text-user-footer text-truncate d-block"
-                            style="font-size: 0.72rem; line-height: 1.4;">&copy; 2026 NahaAdmin &middot; MIT
-                            License</small>
+                            style="font-size: 0.75rem; line-height: 1.4;">&copy; 2026 Naha Admin</small>
                     </div>
                 </footer>
             </nav>
         </aside>
 
-        <main id="layoutSidenav_content" class="animate__animated animate__fadeIn">
+        <main id="layoutSidenav_content">
             <section class="container-fluid px-4 py-4 pb-5">
-                <div class="animate__animated animate__fadeIn">
+                <div>
                     <!-- License Card -->
-                    <div class="card shadow-sm border-0 mb-4">
-                        <div class="card-body p-4 p-lg-4.5">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="bg-primary-subtle text-primary rounded-3 p-3 me-3 d-inline-flex align-items-center justify-content-center"
-                                    style="width: 48px; height: 48px;">
-                                    <i class="ph-bold ph-seal-check fs-4"></i>
-                                </div>
-                                <div>
-                                    <h3 class="h5 fw-bold mb-0">License</h3>
-                                    <p class="text-muted extra-small mb-0">Open source licensing details, permissions,
-                                        and MIT legal terms.</p>
-                                </div>
-                            </div>
-                            <p class="text-muted small mb-4">
+                    <div class="docs-article mb-4">
+                        <div class="docs-body">
+                            <header class="docs-page-heading">
+                                <h1>License</h1>
+                                <p class="text-muted mb-0">Open source licensing details, permissions, and MIT legal terms.</p>
+                            </header>
+                            <p class="text-muted mb-4">
                                 NahaAdmin is an open source project licensed under the
                                 <a href="https://opensource.org/licenses/MIT" target="_blank"
                                     class="fw-semibold text-primary text-decoration-none">MIT license</a>.
@@ -151,10 +144,10 @@
                             <div class="row g-3 mb-4">
                                 <!-- Permissions -->
                                 <div class="col-md-4">
-                                    <div class="border rounded-3 p-3 bg-light-subtle h-100">
-                                        <h6 class="fw-bold small text-dark mb-2.5 d-flex align-items-center">
+                                    <div class="docs-note">
+                                        <h2 class="docs-section-title fw-semibold small text-dark mb-2.5 d-flex align-items-center">
                                             <i class="ph-bold ph-check-circle text-success fs-5 me-2"></i> Permissions
-                                        </h6>
+                                        </h2>
                                         <ul class="list-unstyled text-muted extra-small mb-0">
                                             <li class="mb-1.5"><i class="ph-bold ph-check text-success me-1"></i>
                                                 Commercial use</li>
@@ -171,10 +164,10 @@
 
                                 <!-- Conditions -->
                                 <div class="col-md-4">
-                                    <div class="border rounded-3 p-3 bg-light-subtle h-100">
-                                        <h6 class="fw-bold small text-dark mb-2.5 d-flex align-items-center">
+                                    <div class="docs-note">
+                                        <h2 class="docs-section-title fw-semibold small text-dark mb-2.5 d-flex align-items-center">
                                             <i class="ph-bold ph-info text-primary fs-5 me-2"></i> Conditions
-                                        </h6>
+                                        </h2>
                                         <ul class="list-unstyled text-muted extra-small mb-0">
                                             <li class="mb-1.5"><i class="ph-bold ph-dot-outline text-primary me-1"></i>
                                                 License & copyright notice must be included in all copies or substantial
@@ -185,11 +178,11 @@
 
                                 <!-- Limitations -->
                                 <div class="col-md-4">
-                                    <div class="border rounded-3 p-3 bg-light-subtle h-100">
-                                        <h6 class="fw-bold small text-dark mb-2.5 d-flex align-items-center">
+                                    <div class="docs-note">
+                                        <h2 class="docs-section-title fw-semibold small text-dark mb-2.5 d-flex align-items-center">
                                             <i class="ph-bold ph-shield-warning text-secondary fs-5 me-2"></i>
                                             Limitations
-                                        </h6>
+                                        </h2>
                                         <ul class="list-unstyled text-muted extra-small mb-0">
                                             <li class="mb-1.5"><i class="ph-bold ph-x text-secondary me-1"></i> No
                                                 liability</li>
@@ -200,12 +193,12 @@
                                 </div>
                             </div>
 
-                            <h6 class="fw-bold small text-dark mb-2 d-flex align-items-center">
+                            <h2 class="docs-section-title fw-semibold small text-dark mb-2 d-flex align-items-center">
                                 <i class="ph-bold ph-file-text text-muted me-2"></i> Verbatim MIT License:
-                            </h6>
+                            </h2>
                             <div class="bg-light p-3.5 rounded-3 border text-secondary p-3"
                                 style="font-family: monospace; font-size: 0.8125rem; line-height: 1.65;">
-                                <div class="fw-bold text-dark mb-2">MIT License</div>
+                                <div class="fw-semibold text-dark mb-2">MIT License</div>
                                 <div class="mb-2.5">Copyright (c) 2026 NahaAdmin / sepsu-dev</div>
                                 <p class="mb-2.5">Permission is hereby granted, free of charge, to any person obtaining
                                     a
@@ -229,8 +222,8 @@
 
                     <!-- Navigation Footer -->
                     <div class="d-flex justify-content-between align-items-center mt-4">
-                        <a href="faq.html" class="btn btn-outline-secondary px-3 py-2">
-                            <i class="ph-bold ph-arrow-left me-1"></i> FAQ
+                        <a href="support.html" class="btn btn-outline-secondary px-3 py-2">
+                            <i class="ph-bold ph-arrow-left me-1"></i> Support
                         </a>
                     </div>
                 </div>

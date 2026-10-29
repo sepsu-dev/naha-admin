@@ -1,6 +1,6 @@
 .catalog-title { font-size: var(--nd-font-size-3xl); }
 [hidden] { display: none !important; }
-.component-demo { max-width: 760px; }
+.component-demo { max-width: 760px; margin-bottom: 1rem; }
 .component-demo > .card + .card { margin-top: 1rem; }
 .component-demo h2 { font-size: 1rem; margin-bottom: 1rem; }
 .component-demo .select2-selection--single { min-height: 36px; box-shadow: var(--nd-shadow-sm); }
@@ -35,6 +35,9 @@
 .nd-bubble { padding: 0.75rem 1rem; background: var(--nd-primary-subtle); border-radius: var(--nd-radius-lg); width: fit-content; overflow-wrap: anywhere; white-space: pre-wrap; }
 .message-outgoing { flex-direction: row-reverse; }
 .message-outgoing .nd-bubble { color: #fff; background: var(--nd-primary); }
+.conversation-plain .nd-bubble { padding: 0; color: var(--nd-text); background: transparent; border-radius: 0; }
+.conversation-plain .message-outgoing { flex-direction: row; }
+#conversation, #attachments, main section[id] { scroll-margin-top: 5rem; }
 .nd-marker { display: flex; align-items: center; gap: 1rem; color: var(--nd-text-muted); font-size: 0.75rem; }
 .nd-marker::before, .nd-marker::after { content: ""; height: 1px; flex: 1; background: var(--nd-border); }
 #attachmentList img { max-width: 100%; max-height: 150px; object-fit: contain; }

@@ -90,7 +90,7 @@
 
         .message {
             margin-bottom: 1.5rem;
-            max-width: 75%;
+            max-width: 85%;
             display: flex;
             flex-direction: column;
         }
@@ -106,6 +106,8 @@
 
         .message-bubble {
             padding: 0.8rem 1.2rem;
+            overflow-wrap: anywhere;
+            white-space: pre-wrap;
             border-radius: 1rem;
             font-size: var(--nd-font-size-base);
             position: relative;
@@ -142,6 +144,7 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="../assets/styles/pages/components.css">
 </head>
 
 <body class='nd-nav-fixed'>
@@ -301,42 +304,31 @@
               <nav class="nd-sidenav-menu-nested nav">
                 <a class="nav-link" href="accordion.html">Accordion</a>
                 <a class="nav-link" href="alerts.html">Alert</a>
-                <a class="nav-link" href="alert-dialog.html">Alert Dialog</a>
                 <a class="nav-link" href="aspect-ratio.html">Aspect Ratio</a>
                 <a class="nav-link" href="avatar.html">Avatar</a>
                 <a class="nav-link" href="badges.html">Badge</a>
                 <a class="nav-link" href="breadcrumb.html">Breadcrumb</a>
                 <a class="nav-link" href="buttons.html">Button</a>
-                <a class="nav-link" href="button-group.html">Button Group</a>
+                <a class="nav-link" href="button-group.html">Button Groups &amp; Toggles</a>
                 <a class="nav-link" href="cards.html">Card</a>
                 <a class="nav-link" href="carousel.html">Carousel</a>
                 <a class="nav-link" href="collapse.html">Collapsible</a>
                 <a class="nav-link" href="context-menu.html">Context Menu</a>
                 <a class="nav-link" href="dropdowns.html">Dropdown Menu</a>
                 <a class="nav-link" href="empty.html">Empty</a>
-                <a class="nav-link" href="hover-card.html">Hover Card</a>
-                <a class="nav-link" href="item.html">Item</a>
                 <a class="nav-link" href="kbd.html">Kbd</a>
-                <a class="nav-link" href="label.html">Label</a>
-                <a class="nav-link" href="list-group.html">List Group</a>
-                <a class="nav-link" href="menubar.html">Menubar</a>
-                <a class="nav-link" href="modals.html">Dialog</a>
-                <a class="nav-link" href="navigation-menu.html">Navigation Menu</a>
-                <a class="nav-link" href="navs.html">Navs and Tabs</a>
+                <a class="nav-link" href="list-group.html">Lists &amp; Items</a>
+                <a class="nav-link" href="modals.html">Dialogs</a>
+                <a class="nav-link" href="navs.html">Navigation</a>
                 <a class="nav-link" href="pagination.html">Pagination</a>
-                <a class="nav-link" href="placeholders.html">Placeholder</a>
-                <a class="nav-link" href="popover.html">Popover</a>
+                <a class="nav-link" href="placeholders.html">Placeholders &amp; Skeletons</a>
                 <a class="nav-link" href="progress.html">Progress</a>
                 <a class="nav-link" href="scroll-area.html">Scroll Area</a>
                 <a class="nav-link" href="separator.html">Separator</a>
-                <a class="nav-link" href="skeleton.html">Skeleton</a>
                 <a class="nav-link" href="spinners.html">Spinner</a>
                 <a class="nav-link" href="tabs.html">Tabs</a>
-                <a class="nav-link" href="tabs-accordions.html">Tabs & Accordions</a>
                 <a class="nav-link" href="toasts.html">Toast</a>
-                <a class="nav-link" href="toggle.html">Toggle</a>
-                <a class="nav-link" href="toggle-group.html">Toggle Group</a>
-                <a class="nav-link" href="tooltips.html">Tooltip</a>
+                <a class="nav-link" href="tooltips.html">Tooltips &amp; Popovers</a>
                 <a class="nav-link" href="typography.html">Typography</a>
               </nav>
             </div>
@@ -348,24 +340,15 @@
             </a>
             <div class="collapse" id="formsCollapse" data-bs-parent="#sidenavAccordion">
               <nav class="nd-sidenav-menu-nested nav">
-                <a class="nav-link" href="calendar.html">Calendar</a>
-                <a class="nav-link" href="checkbox.html">Checkbox</a>
+                <a class="nav-link" href="calendar.html">Calendar &amp; Date Picker</a>
                 <a class="nav-link" href="combobox.html">Combobox</a>
                 <a class="nav-link" href="command.html">Command</a>
-                <a class="nav-link" href="date-picker.html">Date Picker</a>
-                <a class="nav-link" href="field.html">Field</a>
-                <a class="nav-link" href="input.html">Input</a>
-                <a class="nav-link" href="input-group.html">Input Group</a>
+                <a class="nav-link" href="input.html">Inputs &amp; Fields</a>
                 <a class="nav-link" href="input-otp.html">Input OTP</a>
-                <a class="nav-link" href="native-select.html">Native Select</a>
-                <a class="nav-link" href="radio-group.html">Radio Group</a>
-                <a class="nav-link" href="select.html">Select</a>
                 <a class="nav-link" href="slider.html">Slider</a>
-                <a class="nav-link" href="switch.html">Switch</a>
-                <a class="nav-link" href="textarea.html">Textarea</a>
                 <a class="nav-link" href="forms-basic.html">Basic Inputs</a>
-                <a class="nav-link" href="forms-select.html">Advanced Select</a>
-                <a class="nav-link" href="forms-checks.html">Checkboxes & Radios</a>
+                <a class="nav-link" href="forms-select.html">Select</a>
+                <a class="nav-link" href="forms-checks.html">Checks, Radios &amp; Switches</a>
                 <a class="nav-link" href="forms-layout.html">Form Layout</a>
                 <a class="nav-link" href="forms-validation.html">Validation</a>
                 <a class="nav-link" href="forms-editors.html">Editors</a>
@@ -394,10 +377,8 @@
             <div class="collapse" id="navigationCollapse" data-bs-parent="#sidenavAccordion">
               <nav class="nd-sidenav-menu-nested nav">
                 <a class="nav-link" href="direction.html">Direction</a>
-                <a class="nav-link" href="drawer.html">Drawer</a>
+                <a class="nav-link" href="drawer.html">Drawer &amp; Sheet</a>
                 <a class="nav-link" href="resizable.html">Resizable</a>
-                <a class="nav-link" href="sheet.html">Sheet</a>
-                <a class="nav-link" href="sidebar.html">Sidebar</a>
               </nav>
             </div>
             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#messagesCollapse"
@@ -408,12 +389,7 @@
             </a>
             <div class="collapse" id="messagesCollapse" data-bs-parent="#sidenavAccordion">
               <nav class="nd-sidenav-menu-nested nav">
-                <a class="nav-link" href="attachment.html">Attachment</a>
-                <a class="nav-link" href="bubble.html">Bubble</a>
                 <a class="nav-link" href="code-block.html">Code Block</a>
-                <a class="nav-link" href="marker.html">Marker</a>
-                <a class="nav-link" href="message.html">Message</a>
-                <a class="nav-link" href="message-scroller.html">Message Scroller</a>
                 <a class="nav-link" href="questionnaire.html">Questionnaire</a>
                 <a class="nav-link" href="trace.html">Trace</a>
               </nav>
@@ -534,25 +510,31 @@
                             </ol>
                         </nav>
                     </div>
-                    <button class="btn btn-primary btn-sm d-lg-none" id="toggleChatList">
+                    <button class="btn btn-primary btn-sm d-lg-none" id="toggleChatList" aria-controls="chatContacts" aria-expanded="true" aria-label="Toggle chat contacts">
                         <i class="ph-bold ph-list"></i>
                     </button>
                 </header>
 
+                <p class="text-muted">Full app layout and compact conversation variants. Messages and files stay local; reload resets this demo.</p>
+                <nav class="d-flex flex-wrap gap-2 mb-4" aria-label="Chat examples">
+                    <a class="btn btn-light btn-sm" href="#chatHistory">App layout</a>
+                    <a class="btn btn-light btn-sm" href="#conversation">Compact conversation</a>
+                    <a class="btn btn-light btn-sm" href="#attachments">Attachments</a>
+                </nav>
                 <div class="row g-4">
                     <!-- Chat Sidebar (User List) -->
-                    <div class="col-lg-4 col-xl-3">
+                    <div class="col-lg-4 col-xl-3" id="chatContacts">
                         <div class="card border-0 shadow-sm rounded-4 chat-sidebar overflow-hidden">
                             <div class="p-3 border-bottom">
                                 <div class="input-group input-group-sm bg-light rounded-3">
                                     <span class="input-group-text bg-transparent border-0"><i
                                             class="ph-bold ph-magnifying-glass text-muted"></i></span>
                                     <input type="text" class="form-control bg-transparent border-0"
-                                        placeholder="Search chats...">
+                                        id="chatSearch" aria-label="Search chats" placeholder="Search chats...">
                                 </div>
                             </div>
                             <div class="chat-list-wrapper" data-simplebar>
-                                <div class="chat-item active d-flex align-items-center">
+                                <div class="chat-item active d-flex align-items-center" role="button" tabindex="0" aria-pressed="true">
                                     <div class="avatar-wrapper me-3">
                                         <img src="../assets/images/user-avatar.png" class="rounded-circle" width="45"
                                             alt="">
@@ -567,7 +549,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="chat-item d-flex align-items-center">
+                                <div class="chat-item d-flex align-items-center" role="button" tabindex="0" aria-pressed="false">
                                     <div class="avatar-wrapper me-3">
                                         <img src="../assets/images/user-avatar.png" class="rounded-circle" width="45"
                                             alt="">
@@ -581,7 +563,7 @@
                                         <p class="mb-0 text-muted extra-small text-truncate">Hey bro, let's go!</p>
                                     </div>
                                 </div>
-                                <div class="chat-item d-flex align-items-center">
+                                <div class="chat-item d-flex align-items-center" role="button" tabindex="0" aria-pressed="false">
                                     <div class="avatar-wrapper me-3">
                                         <img src="../assets/images/user-avatar.png" class="rounded-circle" width="45"
                                             alt="">
@@ -614,17 +596,14 @@
                                     </div>
                                 </div>
                                 <div class="d-flex gap-1">
-                                    <button class="btn btn-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 36px; height: 36px; padding: 0;"><i
-                                            class="ph-bold ph-phone"></i></button>
-                                    <button class="btn btn-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 36px; height: 36px; padding: 0;"><i
-                                            class="ph-bold ph-video-camera"></i></button>
-                                    <button class="btn btn-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 36px; height: 36px; padding: 0;"><i
-                                            class="ph-bold ph-dots-three-vertical"></i></button>
+                                    <button class="btn btn-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 36px; height: 36px; padding: 0;" disabled aria-label="Voice call unavailable in local demo"><i class="ph-bold ph-phone" aria-hidden="true"></i></button>
+                                    <button class="btn btn-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 36px; height: 36px; padding: 0;" disabled aria-label="Video call unavailable in local demo"><i class="ph-bold ph-video-camera" aria-hidden="true"></i></button>
+                                    <button class="btn btn-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 36px; height: 36px; padding: 0;" disabled aria-label="More chat actions unavailable in local demo"><i class="ph-bold ph-dots-three-vertical" aria-hidden="true"></i></button>
                                 </div>
                             </div>
 
                             <!-- Messages History -->
-                            <div class="chat-history" data-simplebar id="chatHistory">
+                            <div class="chat-history" data-simplebar id="chatHistory" role="log" aria-live="polite" aria-label="App conversation" tabindex="0">
                                 <div class="message message-inbound">
                                     <div class="message-bubble">
                                         Hello handsome, how are you?
@@ -655,11 +634,11 @@
                             <div class="chat-input-area">
                                 <form id="chatForm">
                                     <div class="input-group">
-                                        <button class="btn btn-light" type="button"><i
-                                                class="ph-bold ph-paperclip"></i></button>
-                                        <input type="text" class="form-control border-0 bg-light" id="messageInput"
+                                        <a class="btn btn-light" href="#attachments" aria-label="Choose a local attachment"><i
+                                                class="ph-bold ph-paperclip"></i></a>
+                                        <input type="text" class="form-control border-0 bg-light" id="chatInput" required maxlength="500" aria-label="Chat message"
                                             placeholder="Type your message here..." autocomplete="off">
-                                        <button class="btn btn-primary px-4 fw-medium" type="submit">
+                                        <button class="btn btn-primary px-4 fw-medium" type="submit" aria-label="Send chat message">
                                             <i class="ph-bold ph-paper-plane-tilt"></i>
                                         </button>
                                     </div>
@@ -668,11 +647,77 @@
                         </div>
                     </div>
                 </div>
+
+                <section id="conversation" class="mb-4" aria-label="Message">
+                    <div class="component-demo">
+                        <article class="card conversation-card" id="message">
+                            <div class="card-body">
+                                <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-3">
+                                    <h2 class="h6 mb-0">Compact conversation</h2>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <label class="form-label mb-0 text-nowrap" for="conversationStyle">Message style</label>
+                                        <select id="conversationStyle" class="form-select form-select-sm">
+                                            <option value="bubbles">Bubbles</option>
+                                            <option value="plain">Plain transcript</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="message-scroller" role="region" aria-label="Demo conversation" tabindex="0" class="message-viewport border rounded p-3">
+                                    <div id="messageLog" role="log" aria-live="polite" aria-relevant="additions">
+                                        <div id="marker" class="nd-marker">Today · local demo</div>
+                                        <article class="message-row">
+                                            <span class="nd-avatar" aria-hidden="true">UK</span>
+                                            <div>
+                                                <strong>Ujang</strong>
+                                                <p class="small text-muted">10:30</p>
+                                                <div class="nd-bubble" id="bubble">Can we keep Bootstrap and refresh the components?</div>
+                                            </div>
+                                        </article>
+                                        <article class="message-row">
+                                            <span class="nd-avatar" aria-hidden="true">NA</span>
+                                            <div>
+                                                <strong>NahaAdmin</strong>
+                                                <p class="small text-muted">10:31</p>
+                                                <div class="nd-bubble">Yes. Shared tokens preserve the existing stack.</div>
+                                                <button class="btn btn-light btn-sm mt-2" id="reaction" aria-pressed="false">Helpful · 0</button>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-wrap gap-2 my-2">
+                                    <button class="btn btn-light btn-sm" id="loadHistory">Load earlier</button>
+                                    <button class="btn btn-light btn-sm" id="jumpLatest" hidden>Jump to latest</button>
+                                </div>
+                                <form id="messageForm" class="d-flex gap-2">
+                                    <label class="visually-hidden" for="messageInput">Message</label>
+                                    <input id="messageInput" class="form-control" required maxlength="500" placeholder="Write a local message…">
+                                    <button class="btn btn-primary" type="submit">Send</button>
+                                </form>
+                                <p id="messageStatus" role="status" class="small text-muted mt-2 mb-0">Sample replies only. Nothing leaves your browser.</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section id="attachments" class="mb-4" aria-label="Attachment">
+                    <div class="component-demo">
+                        <article class="card" id="attachment">
+                            <div class="card-body">
+                                <h2 class="h6">Attachment</h2>
+                                <label class="form-label" for="attachmentInput">Choose a file · maximum 5 MB</label>
+                                <input class="form-control" id="attachmentInput" type="file" accept="image/png,image/jpeg,application/pdf,.txt">
+                                <p class="small text-muted mt-2">PNG, JPEG, PDF, or text. Local preview only; no upload.</p>
+                                <div id="attachmentList"></div>
+                                <p id="attachmentStatus" role="status" class="small mb-0"></p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
             </section>
         </main>
     </div>
 
-    
+
 
   <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/plugins/jquery/jquery.min.js"></script>
@@ -681,43 +726,55 @@
     <script src="../assets/scripts/naha-admin.min.js"></script>
     <script>
         $(function () {
-            // Send Message
-            $('#chatForm').on('submit', function (e) {
-                e.preventDefault();
-                const input = $('#messageInput');
-                const message = input.val().trim();
+            const input = document.getElementById('chatInput');
+            const history = document.getElementById('chatHistory');
+            const scrollArea = () => SimpleBar.instances.get(history)?.getScrollElement() || history;
 
-                if (message) {
-                    const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-                    const html = `
-                        <div class="message message-outbound animate__animated animate__fadeInUp">
-                            <div class="message-bubble">${message}</div>
-                            <small class="text-muted extra-small mt-1">${time}</small>
-                        </div>
-                    `;
-                    $('#chatHistory .simplebar-content').append(html);
-                    input.val('');
+            $('#chatForm').on('submit', function (event) {
+                event.preventDefault();
+                const text = input.value.trim();
+                if (!text) {
+                    input.setCustomValidity('Enter a message.');
+                    input.reportValidity();
+                    return;
+                }
+                const message = document.createElement('div');
+                message.className = 'message message-outbound';
+                const bubble = document.createElement('div');
+                bubble.className = 'message-bubble';
+                bubble.textContent = text;
+                const time = document.createElement('small');
+                time.className = 'text-muted extra-small mt-1';
+                time.textContent = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                message.append(bubble, time);
+                (history.querySelector('.simplebar-content') || history).append(message);
+                input.value = '';
+                requestAnimationFrame(() => { scrollArea().scrollTop = scrollArea().scrollHeight; });
+            });
+            input.addEventListener('input', () => input.setCustomValidity(''));
 
-                    // Scroll to bottom
-                    const scrollElement = $('#chatHistory [data-simplebar-wrapper] .simplebar-content-wrapper');
-                    scrollElement.scrollTop(scrollElement[0].scrollHeight);
+            $('.chat-item').on('click', function () {
+                $('.chat-item').removeClass('active').attr('aria-pressed', 'false');
+                $(this).addClass('active').attr('aria-pressed', 'true');
+                $('.chat-content h6').text($(this).find('h6').text());
+            }).on('keydown', function (event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    this.click();
                 }
             });
-
-            // Switch Chat
-            $('.chat-item').on('click', function () {
-                $('.chat-item').removeClass('active');
-                $(this).addClass('active');
-
-                const name = $(this).find('h6').text();
-                $('.chat-content h6').text(name);
-
-                // Simulate loading chat
-                NProgress.start();
-                setTimeout(() => NProgress.done(), 500);
+            $('#chatSearch').on('input', function () {
+                const query = this.value.trim().toLowerCase();
+                $('.chat-item').each(function () { this.hidden = !this.textContent.toLowerCase().includes(query); });
+            });
+            $('#toggleChatList').on('click', function () {
+                const contacts = document.getElementById('chatContacts');
+                contacts.hidden = !contacts.hidden;
+                this.setAttribute('aria-expanded', String(!contacts.hidden));
             });
         });
     </script>
+    <script src="../assets/scripts/pages/components.js"></script>
 </body>
 
 </html>

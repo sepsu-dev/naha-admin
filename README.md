@@ -26,7 +26,7 @@ NahaAdmin gives internal tools, admin panels, and prototypes a consistent founda
 | --- | --- |
 | Soft, shared theme | Cool neutral surfaces, muted teal accents, Outfit typography, and restrained shadows |
 | 5 dashboards | Default, Analytics, CRM, E-Commerce, and Finance with sample data |
-| 66 component destinations | Dedicated examples, variants, and interactive states in the demo sidebar |
+| Grouped component examples | Related variants and interactive states grouped in the demo sidebar |
 | Application layouts | Inbox, chat, kanban, and file manager examples |
 | Essential pages | Login, registration, password reset, profiles, error pages, and starter layouts |
 | Shared navigation | Active links, desktop sidebar persistence, mobile sidebar, and keyboard controls |
@@ -116,12 +116,12 @@ The shipped theme is light-only; chart colors and vendor themes may need separat
 ## Component examples
 
 Open `/demo/index.html` and use the **Components** sidebar groups.
-Each of the 66 components has a dedicated page; variants and states stay together there.
-Existing combined form demos remain available for compatibility.
-Navs demonstrates page links; Tabs demonstrates keyboard-accessible panels.
-Tabs & Accordions combines both controls in a project workspace. Combined forms
-show project requests, notification preferences, and delivery choices; submissions
-are checked locally, never sent or saved.
+Related examples share one destination, with styles and states grouped into sections.
+Chat includes full app and compact conversation layouts, message bubbles, scrolling, and attachments.
+Inputs groups fields, textareas, labels, and input groups. Select, checks, panels, loading states,
+and navigation follow the same pattern. Tabs includes the combined project workspace.
+Complete forms show project requests, notification preferences, and delivery choices;
+submissions are checked locally, never sent or saved.
 AI Elements, Blocks, and community registries are outside this collection.
 This is Bootstrap HTML, not shadcn React API compatibility.
 

@@ -10,7 +10,8 @@ do not add a framework or dependency for behavior the browser already provides.
 - Page-only behavior and styles: the corresponding `pages/` directory.
 - Examples: `demo/`. Guides: `docs/`. Landing page: `index.html` and `assets/styles/landing.css`.
 - Do not edit third-party minified files to fix the theme. Add a scoped override instead.
-- Keep existing public page and asset URLs working.
+- Keep asset URLs working. When consolidating demo pages, update every menu, link, and guide.
+- Group related component variants in one destination rather than adding duplicate pages.
 
 The historical `.min.css` and `.min.js` URLs are compatibility copies.
 They intentionally remain uncompressed so no minifier dependency is required.
@@ -31,6 +32,16 @@ Check the landing page, default dashboard, starter, mini layout, auth forms, and
 - Auth forms reject invalid input, password confirmation matches, and submit never sends credentials.
 - Ctrl/Cmd-click, downloads, and browser back/forward keep native behavior.
 - No missing local requests or new console errors.
+
+For grouped chat examples, open `demo/apps-chat.html` and run this check in the browser console:
+
+```js
+console.assert(document.querySelectorAll('#messageInput').length === 1, 'Compact composer ID must be unique');
+console.assert(document.querySelector('#chatForm input') !== document.querySelector('#messageForm input'), 'Composers must stay independent');
+document.getElementById('conversationStyle').value = 'plain';
+document.getElementById('conversationStyle').dispatchEvent(new Event('change'));
+console.assert(document.getElementById('message').classList.contains('conversation-plain'), 'Plain style must apply');
+```
 
 ## Design and content
 

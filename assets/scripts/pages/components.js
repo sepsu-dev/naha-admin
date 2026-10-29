@@ -378,6 +378,10 @@
         }, 800);
     });
 
+    $('conversationStyle')?.addEventListener('change', () => {
+        $('message').classList.toggle('conversation-plain', $('conversationStyle').value === 'plain');
+    });
+
     if ($('message-scroller')) {
         const viewport = $('message-scroller');
         const atBottom = () => viewport.scrollHeight - viewport.clientHeight - viewport.scrollTop < 24;

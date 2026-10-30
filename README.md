@@ -10,9 +10,11 @@ Built with Bootstrap 5 — no build step required.
 [![Bootstrap 5.3.8](https://img.shields.io/badge/Bootstrap-5.3.8-386b65?style=flat-square)](https://getbootstrap.com/)
 [![MIT License](https://img.shields.io/badge/License-MIT-386b65?style=flat-square)](LICENSE)
 
-[Live demo](https://naha-admin.vercel.app/demo/) · [Documentation](https://naha-admin.vercel.app/docs/) · [Download](https://github.com/sepsu-dev/naha-admin/releases)
+[Website](https://naha-admin.vercel.app/) · [Live demo](https://naha-admin.vercel.app/demo/index.html) · [Documentation](https://naha-admin.vercel.app/docs/index.html) · [Download](https://github.com/sepsu-dev/naha-admin/releases)
 
-[<img src="assets/images/banner.png" alt="Naha Admin dashboard with workspace overview, project metrics, active projects, and recent activity" width="100%" />](https://naha-admin.vercel.app/demo/)
+[<img src="assets/images/dashboard-tour.gif" alt="Recorded NahaAdmin tour through Workspace, Analytics, and Finance dashboards using sample data" width="100%" />](https://naha-admin.vercel.app/demo/index.html)
+
+[Static preview](assets/images/banner.png) · [Open dashboard demo](https://naha-admin.vercel.app/demo/index.html)
 
 </div>
 
@@ -53,6 +55,11 @@ Open `index.html` directly in your browser, or double-click it in your file mana
 Open `demo/index.html` for examples or `docs/index.html` for documentation.
 No local server, package installation, or build step is required. Keep the project folders together so relative asset paths work.
 Some examples load third-party assets from CDNs and need an internet connection.
+
+The landing tour is a silent recording, not an interactive dashboard. It loads only
+after the page finishes loading and the banner is visible. Use its Play/Pause button;
+reduced-motion and data-saver preferences keep the static poster until Play is chosen.
+GitHub displays the GIF without playback controls; use the static preview to avoid motion.
 
 ---
 
@@ -188,6 +195,23 @@ review compatibility before distributing an application that uses it.
 - When reusing this template for another product, replace production URLs, product names,
   descriptions, and social images before publishing. Do not point a different site at
   NahaAdmin's canonical URLs. Run the checks in [CONTRIBUTING.md](CONTRIBUTING.md).
+
+### Production review
+
+- Confirm sitemap URLs return HTTP `200` without redirect chains, match their canonical
+  URLs, and do not have `noindex` in HTML or `X-Robots-Tag` headers.
+  A nonexistent URL must return HTTP `404`; the intentionally published error demos
+  may return `200` because they are examples marked `noindex`.
+- Test mobile performance with [PageSpeed Insights](https://pagespeed.web.dev/).
+  Separate Lighthouse lab results from real-user Core Web Vitals; a single local
+  Chrome measurement does not establish a field-data pass. Optimize measured bottlenecks.
+- Add the website to GitHub's About section and link relevant releases or tutorials
+  to the demo. Avoid purchased links and mass directory submissions.
+- Confirm ownership and redistribution rights for local images before republishing;
+  review [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md), including CKEditor terms.
+- Review Search Console indexing, impressions, and actual search queries after crawling.
+  Ownership verification, sitemap submission, and GitHub repository settings require
+  access to the corresponding accounts; repository changes do not configure them.
 
 ## License
 

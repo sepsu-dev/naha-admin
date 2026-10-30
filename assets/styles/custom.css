@@ -1,5 +1,36 @@
 /* Page customizations. Core and vendor styles stay in their own files. */
 
+/* Native same-origin page transitions; unsupported browsers keep normal navigation. */
+@media (prefers-reduced-motion: no-preference) {
+    @view-transition {
+        navigation: auto;
+    }
+
+    ::view-transition-group(*) {
+        animation-duration: 200ms;
+    }
+
+    ::view-transition-old(root),
+    ::view-transition-new(root) {
+        animation-timing-function: ease-out;
+    }
+
+    .nd-topnav {
+        view-transition-name: site-navbar;
+    }
+
+    #layoutSidenav_nav {
+        view-transition-name: site-sidebar;
+    }
+
+    ::view-transition-old(site-navbar),
+    ::view-transition-new(site-navbar),
+    ::view-transition-old(site-sidebar),
+    ::view-transition-new(site-sidebar) {
+        animation: none;
+    }
+}
+
 /* Error */
 :where(html[data-page~="error"]) body {
     background-color: var(--nd-bg-light);
@@ -723,7 +754,7 @@ html:where([data-page~="docs"]) {
 
 /* Landing */
 :where(html[data-page~="landing"]) .container {
-    max-width: 1200px !important;
+    max-width: 1008px;
 }
 
 :where(html[data-page~="landing"]),
@@ -742,79 +773,9 @@ html:where([data-page~="docs"]) {
 /* ================================================
    NAVBAR
 ================================================ */
-:where(html[data-page~="landing"]) .nd-topnav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    min-height: 64px;
-    background: var(--nd-surface);
-    border-bottom: 1px solid var(--nd-border);
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    padding: 0.5rem 0.75rem;
-    height: auto;
-}
-
-:where(html[data-page~="landing"]) .nd-topnav .navbar-brand {
-    text-decoration: none;
-    display: flex !important;
-    align-items: center;
-    width: auto;
-}
-
-:where(html[data-page~="landing"]) .nd-topnav .navbar-brand span {
-    font-family: var(--nd-font-sans);
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: inherit;
-}
-
-:where(html[data-page~="landing"]) .nd-topnav .navbar-brand .logo-navbar {
-    width: 40px;
-    height: 32px;
-}
-
-:where(html[data-page~="landing"]) .nd-topnav .btn {
-    padding: 0.5rem 1rem;
-    font-size: var(--nd-font-size-base);
-    font-weight: 500;
-    font-family: var(--nd-font-sans);
-    line-height: 1.2;
-    border-radius: var(--nd-radius);
-    transition: var(--nd-transition);
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-:where(html[data-page~="landing"]) .nd-topnav .btn-light {
-    background-color: var(--nd-bg-light);
-    border: 1px solid var(--nd-border);
-    color: var(--nd-text-muted);
-}
-
-:where(html[data-page~="landing"]) .nd-topnav .btn-light:hover {
-    background-color: var(--bs-tertiary-bg);
-    border-color: var(--bs-secondary-border-subtle);
-    color: var(--nd-text);
-}
-
-:where(html[data-page~="landing"]) .navbar-toggler {
-    padding: 0.5rem;
-    font-size: 1.25rem;
-    color: var(--nd-text);
-}
-
-@media (max-width: 991.98px) {
-    :where(html[data-page~="landing"]) .navbar-collapse {
-        background: var(--nd-surface);
-        margin: 0 -0.75rem;
-        padding: 1rem;
-        border-bottom: 1px solid var(--nd-border);
-        box-shadow: var(--nd-shadow);
-    }
+:where(html[data-page~="landing"]) .landing-header {
+    padding: 1rem 0;
+    border: 0;
 }
 
 /* ================================================
@@ -824,7 +785,7 @@ html:where([data-page~="docs"]) {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 7rem 1.5rem 2.5rem;
+    padding: 2.5rem 1.5rem 1.5rem;
     text-align: center;
     background-color: var(--nd-bg-light);
 }
@@ -857,10 +818,24 @@ html:where([data-page~="docs"]) {
 ================================================ */
 :where(html[data-page~="landing"]) .hero-banner-wrap {
     width: 100%;
-    max-width: 960px;
+    max-width: 860px;
     margin: 0 auto;
     position: relative;
     border-radius: var(--nd-radius-lg);
+}
+
+:where(html[data-page~="landing"]) .landing-tour-preview {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    border-radius: var(--nd-radius-lg);
+    background: transparent;
+    cursor: pointer;
+}
+
+:where(html[data-page~="landing"]) .landing-tour-preview:disabled {
+    cursor: default;
 }
 
 :where(html[data-page~="landing"]) .landing-banner {
@@ -868,8 +843,17 @@ html:where([data-page~="docs"]) {
     height: auto;
     border-radius: var(--nd-radius-lg);
     border: 1px solid var(--nd-border);
-    box-shadow: var(--nd-shadow);
     display: block;
+}
+
+:where(html[data-page~="landing"]) .landing-tour {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--nd-border);
+    border-radius: var(--nd-radius-lg);
+    object-fit: cover;
 }
 
 /* ================================================
@@ -877,11 +861,10 @@ html:where([data-page~="docs"]) {
 ================================================ */
 :where(html[data-page~="landing"]) .landing-footer {
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
     color: var(--nd-text-muted);
     font-size: var(--nd-font-size-sm);
     border-top: 1px solid var(--nd-border);
-    margin-top: 1rem;
 }
 
 :where(html[data-page~="landing"]) .landing-nav-link,
@@ -901,17 +884,11 @@ html:where([data-page~="docs"]) {
 =============================================== */
 @media (max-width: 768px) {
     :where(html[data-page~="landing"]) .hero-section {
-        padding: 5.5rem 1rem 1.5rem;
+        padding: 1.5rem 1rem;
     }
 
     :where(html[data-page~="landing"]) .hero-subtitle {
         font-size: 0.9375rem;
-        margin-bottom: 1.75rem;
-    }
-
-    :where(html[data-page~="landing"]) .hero-banner-wrap {
-        width: 100%;
-        border-radius: var(--nd-radius-lg);
     }
 }
 

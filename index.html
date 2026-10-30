@@ -31,14 +31,12 @@
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" />
 
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/styles/naha-admin.min.css" />
-    <link rel="stylesheet" href="assets/plugins/phosphor/bold/style.css" />
-    <link rel="stylesheet" href="assets/plugins/phosphor/fill/style.css" />
 
     <link rel="stylesheet" href="assets/styles/custom.css" />
 </head>
@@ -47,22 +45,15 @@
     <a class="nd-skip-link" href="#main">Skip to content</a>
 
     <header>
-        <nav class="nd-topnav navbar navbar-expand-lg navbar-light">
+        <nav class="landing-header navbar navbar-light" aria-label="Main navigation">
             <div class="container">
-                <a class="navbar-brand d-flex align-items-center" href="./" aria-label="Naha Admin">
+                <a class="navbar-brand d-flex align-items-center me-0" href="./" aria-label="Naha Admin">
                     <svg class="logo-navbar" viewBox="0 0 48 36" fill="currentColor" stroke="currentColor" stroke-width="3" stroke-dasharray="5 5" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><rect x="10" y="4" width="28" height="28" rx="3" fill-opacity="0.15"/></svg>
                     <span class="ms-2 fw-semibold" itemprop="alternateName">Naha Admin</span>
                 </a>
-                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#landingNavbar" aria-controls="landingNavbar" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <i class="ph-bold ph-list"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="landingNavbar">
-                    <div class="ms-auto d-flex flex-column flex-lg-row align-items-start align-items-lg-center gap-3 py-3 py-lg-0">
-                        <a href="https://github.com/sepsu-dev/naha-admin" class="landing-nav-link" target="_blank" rel="noopener noreferrer">GitHub</a>
-                        <a href="https://github.com/sepsu-dev/naha-admin/releases" class="btn btn-light border">Download <i class="ph-bold ph-download-simple" aria-hidden="true"></i></a>
-                    </div>
+                <div class="d-flex align-items-center gap-2 gap-sm-3">
+                    <a href="https://github.com/sepsu-dev/naha-admin" class="landing-nav-link py-2" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://github.com/sepsu-dev/naha-admin/releases" class="btn btn-outline-secondary btn-sm">Download</a>
                 </div>
             </div>
         </nav>
@@ -71,48 +62,28 @@
     <main id="main" tabindex="-1">
         <section class="hero-section container">
             <h1 class="hero-title">Free Bootstrap 5 admin dashboard template.</h1>
-            <p class="hero-subtitle"><span itemprop="name">NahaAdmin</span> is an open-source starting point with
-                responsive layouts and ready-to-use UI components. No build step required.</p>
-            <div class="d-flex flex-wrap justify-content-center gap-2 mb-5">
-                <a href="demo/index.html" class="btn btn-primary">Live demo <i class="ph-bold ph-arrow-right ms-2" aria-hidden="true"></i></a>
-                <a href="docs/index.html" class="btn btn-outline-secondary">Documentation</a>
+            <p class="hero-subtitle"><span itemprop="name">NahaAdmin</span> is open source, with five responsive dashboards, reusable components, and no build step.</p>
+            <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+                <a href="demo/index.html" class="btn btn-primary">Live demo <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="align-middle ms-2" aria-hidden="true" focusable="false"><path d="M4 12h16m-7-7 7 7-7 7" /></svg></a>
+                <a href="docs/index.html" class="btn btn-outline-secondary">Documentation <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="align-middle ms-2" aria-hidden="true" focusable="false"><path d="M12 5v16m0-16C9 3 5 3 2 4v16c3-1 7-1 10 1m0-16c3-2 7-2 10-1v16c-3-1-7-1-10 1" /></svg></a>
             </div>
-            <a href="demo/index.html" class="hero-banner-wrap" aria-label="Explore the Naha Admin dashboard demo">
-                <img src="assets/images/banner.png" alt="Naha Admin dashboard with project metrics, active projects, and recent activity" width="1440" height="900" class="landing-banner" fetchpriority="high">
-            </a>
-        </section>
-        <section class="container py-5" aria-labelledby="dashboards-heading">
-            <h2 id="dashboards-heading" class="h3">Five dashboard demos, one consistent theme</h2>
-            <p>Choose a starting layout for your project. Every dashboard uses sample data;
-                connect your own application to make it live.</p>
-            <ul class="d-flex flex-wrap gap-3 list-unstyled mb-4">
-                <li><a href="demo/index.html">Workspace dashboard</a></li>
-                <li><a href="demo/dashboard-analytics.html">Analytics dashboard</a></li>
-                <li><a href="demo/dashboard-crm.html">CRM dashboard</a></li>
-                <li><a href="demo/dashboard-ecommerce.html">Ecommerce dashboard</a></li>
-                <li><a href="demo/dashboard-finance.html">Finance dashboard</a></li>
-            </ul>
-            <h2 class="h3">HTML, CSS, and jQuery. No build tools.</h2>
-            <p>Reuse <a href="demo/buttons.html">buttons</a>, <a href="demo/forms-basic.html">forms</a>,
-                <a href="demo/tables-basic.html">tables</a>, and <a href="demo/chart.html">charts</a>
-                in your admin interface. Follow the <a href="docs/getting-started.html">setup guide</a>,
-                then adapt colors and navigation with the <a href="docs/theme-layout.html">theme and layout guide</a>.</p>
-            <p class="mb-0">NahaAdmin is free for personal and commercial projects under the
-                <a href="docs/license.html">MIT license</a>. Third-party libraries retain their own licenses.</p>
+            <div class="hero-banner-wrap">
+                <button id="dashboard-tour-preview" class="landing-tour-preview position-relative" type="button" aria-label="Play dashboard tour" aria-describedby="dashboard-tour-help" disabled>
+                    <img src="assets/images/banner.png" alt="Naha Admin dashboard with project metrics, active projects, and recent activity" width="1440" height="900" class="landing-banner" fetchpriority="high">
+                    <video id="dashboard-tour" class="landing-tour" width="1440" height="900" aria-hidden="true" muted playsinline loop preload="none" poster="assets/images/banner.png" data-src="assets/images/dashboard-tour.mp4" hidden></video>
+                </button>
+                <p id="dashboard-tour-help" class="visually-hidden">Silent dashboard tour through Workspace, Analytics, and Finance using sample data. Click or tap the preview, or press Enter or Space, to pause or resume.</p>
+            </div>
         </section>
     </main>
     <footer class="landing-footer">
         <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
             <p class="mb-0">&copy; 2026 Naha Admin</p>
-            <div class="d-flex flex-wrap gap-4">
-                <a href="docs/license.html">MIT License</a>
-                <a href="docs/index.html">Documentation</a>
-                <a href="mailto:hello@sepsu.dev">Contact</a>
-            </div>
+            <a href="docs/license.html">MIT License</a>
         </div>
     </footer>
 
-    <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/scripts/custom.js" defer></script>
 </body>
 
 </html>

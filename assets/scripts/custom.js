@@ -1,6 +1,80 @@
 /* Page behavior only. Load after vendors and naha-admin.min.js where used. */
 (() => {
 
+    // Landing: preview itself is the native keyboard/touch Play/Pause button.
+    if (document.documentElement.matches('[data-page~="landing"]')) {
+        const video = document.getElementById('dashboard-tour');
+        const preview = document.getElementById('dashboard-tour-preview');
+        const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+        let visible = false;
+        let ready = false;
+        let userPaused = false;
+        let autoPaused = false;
+        let failed = false;
+
+        const label = () => preview.setAttribute('aria-label', video.paused ? 'Play dashboard tour' : 'Pause dashboard tour');
+        const pause = () => {
+            if (!video.paused) {
+                autoPaused = true;
+                video.pause();
+            }
+        };
+        const play = () => {
+            if (!video.src) video.src = video.dataset.src;
+            video.muted = true;
+            video.play().catch(error => {
+                if (error.name === 'AbortError' || failed) return;
+                userPaused = true;
+                video.hidden = true;
+                label(); // Poster stays clickable if autoplay is denied.
+            });
+        };
+        const update = () => {
+            if (failed) return;
+            if (visible && ready && !document.hidden && !motion.matches &&
+                !navigator.connection?.saveData && !userPaused) play();
+            else pause();
+        };
+        preview.disabled = false;
+        preview.addEventListener('click', () => {
+            if (failed) return;
+            userPaused = !video.paused;
+            if (userPaused) video.pause();
+            else play();
+        });
+        video.addEventListener('playing', () => {
+            video.hidden = false;
+            label();
+        });
+        video.addEventListener('pause', () => {
+            if (!autoPaused) userPaused = true;
+            autoPaused = false;
+            label();
+        });
+        video.addEventListener('error', () => {
+            video.hidden = true;
+            failed = true;
+            preview.disabled = true;
+            preview.setAttribute('aria-label', 'Dashboard tour unavailable');
+        });
+        motion.addEventListener('change', update);
+        navigator.connection?.addEventListener?.('change', update);
+        document.addEventListener('visibilitychange', update);
+        if ('IntersectionObserver' in window) {
+            new IntersectionObserver(entries => {
+                visible = entries[0].isIntersecting;
+                update();
+            }).observe(video.parentElement);
+        }
+        const loaded = () => {
+            const start = () => { ready = true; update(); };
+            if ('requestIdleCallback' in window) window.requestIdleCallback(start, { timeout: 2000 });
+            else window.setTimeout(start, 0);
+        };
+        if (document.readyState === 'complete') loaded();
+        else window.addEventListener('load', loaded, { once: true });
+    }
+
     // Components
     if (document.documentElement.matches('[data-page~="components"]')) {
         /* Page-only, local demos. Bootstrap owns modal/offcanvas focus, Escape, and restoration. */

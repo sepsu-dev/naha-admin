@@ -1,20 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-page="demo-maps" lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <meta name="description" content="NahaAdmin - Free Bootstrap 5 Admin Dashboard" />
-    <meta name="keywords" content="NahaAdmin, admin dashboard, bootstrap 5, ui kit, webapp" />
+    <!-- SEO and social previews -->
+    <meta name="description" content="Explore a Leaflet map example inside the NahaAdmin Bootstrap 5 admin layout. Map tiles require a network connection." />
     <meta name="author" content="NahaAdmin" />
-    <meta name="robots" content="index, follow" />
-
-    <meta property="og:title" content="NahaAdmin - Free Bootstrap 5 Admin Dashboard" />
-    <meta property="og:description" content="NahaAdmin - Free Bootstrap 5 Admin Dashboard" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta property="og:title" content="Maps - Bootstrap 5 Demo | NahaAdmin" />
+    <meta property="og:description" content="Explore a Leaflet map example inside the NahaAdmin Bootstrap 5 admin layout. Map tiles require a network connection." />
     <meta property="og:type" content="website" />
-    <title>NahaAdmin - Maps</title>
+    <meta property="og:site_name" content="NahaAdmin" />
+    <meta property="og:url" content="https://naha-admin.vercel.app/demo/maps.html" />
+    <meta property="og:image" content="https://naha-admin.vercel.app/assets/images/banner.png" />
+    <meta property="og:image:width" content="1440" />
+    <meta property="og:image:height" content="900" />
+    <meta property="og:image:alt" content="NahaAdmin Bootstrap 5 admin dashboard preview" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Maps - Bootstrap 5 Demo | NahaAdmin" />
+    <meta name="twitter:description" content="Explore a Leaflet map example inside the NahaAdmin Bootstrap 5 admin layout. Map tiles require a network connection." />
+    <meta name="twitter:image" content="https://naha-admin.vercel.app/assets/images/banner.png" />
+    <meta name="twitter:image:alt" content="NahaAdmin Bootstrap 5 admin dashboard preview" />
+    <link rel="canonical" href="https://naha-admin.vercel.app/demo/maps.html" />
+    <title>Maps - Bootstrap 5 Demo | NahaAdmin</title>
 
     <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap"/>
@@ -28,21 +39,7 @@
     <!-- Leaflet Styles -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 
-    <style>
-        #leaflet-map {
-            height: 500px;
-            width: 100%;
-            border-radius: 8px;
-            z-index: 1;
-        }
-
-        .gmap-container {
-            height: 500px;
-            width: 100%;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-    </style>
+    <link rel="stylesheet" href="../assets/styles/custom.css" />
 </head>
 
 <body class='nd-nav-fixed'>
@@ -445,7 +442,6 @@
 
     <!-- Scripts -->
 
-
   <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/plugins/jquery/jquery.min.js"></script>
     <script src="../assets/plugins/simplebar/simplebar.min.js"></script>
@@ -455,52 +451,8 @@
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-    <script>
-        $(function () {
-            // Indonesia Center
-            var indonesiaCenter = [-0.7893, 113.9213];
-
-            // Initialize Leaflet Map
-            var map = L.map('leaflet-map').setView(indonesiaCenter, 5);
-
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
-
-            // Indonesia City Markers
-            var cities = [
-                { name: "Jakarta", coords: [-6.2088, 106.8456] },
-                { name: "Surabaya", coords: [-7.2575, 112.7521] },
-                { name: "Bandung", coords: [-6.9175, 107.6191] },
-                { name: "Medan", coords: [3.5952, 98.6722] },
-                { name: "Makassar", coords: [-5.1476, 119.4327] },
-                { name: "Yogyakarta", coords: [-7.7956, 110.3695] },
-                { name: "Denpasar", coords: [-8.6705, 115.2126] }
-            ];
-
-            cities.forEach(function (city) {
-                L.marker(city.coords).addTo(map)
-                    .bindPopup('<b>' + city.name + '</b><br>Indonesia.')
-                    .openPopup();
-            });
-        });
-    </script>
+    <script src="../assets/scripts/custom.js"></script>
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

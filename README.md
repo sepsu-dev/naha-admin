@@ -73,12 +73,12 @@ naha-admin/
 ├── assets/
 │   ├── images/       # Logos, banners, user avatars, and UI graphics
 │   ├── plugins/      # Third-party libraries (Bootstrap, Phosphor, NProgress, etc.)
-│   ├── scripts/      # Shared layout script and page-specific initializers
-│   └── styles/       # Shared theme, landing styles, and page styles
+│   ├── scripts/      # Shared layout script and custom.js page behavior
+│   └── styles/       # Shared theme and custom.css page styles
 ├── demo/             # Static HTML pages and component examples
 ├── docs/             # Static documentation site
 ├── CONTRIBUTING.md   # Editing and validation workflow
-├── CHANGELOG.md      # Changes since the last release
+├── CHANGELOG.md      # Unreleased changes
 ├── index.html        # Landing page
 ├── robots.txt        # Web crawler configuration
 └── sitemap.xml       # Search engine sitemap
@@ -91,8 +91,13 @@ naha-admin/
 Start from `demo/starter.html` for the shared navbar/sidebar, or `demo/blank.html` for a minimal page.
 Keep relative asset paths valid if moving a page to another directory.
 
-Edit `assets/styles/naha-admin.css` and `assets/scripts/naha-admin.js` as the source files.
-After editing, copy each source file's contents to its matching `.min.css` or `.min.js` file used by the examples.
+Edit page styles in `assets/styles/custom.css` and page behavior in `assets/scripts/custom.js`.
+Keep each page's `<html data-page="...">` tokens: they scope styles and initializers.
+Load custom CSS after core/vendor CSS, and custom JS after its vendor dependencies and shared layout script.
+These two custom files have no `.min` copies.
+
+Shared theme/layout changes belong in `assets/styles/naha-admin.css` and `assets/scripts/naha-admin.js`.
+After editing a shared source, copy its contents to the matching `.min.css` or `.min.js` file used by the examples.
 
 These `.min` files are compatibility copies, not compressed builds. This avoids a required npm toolchain.
 Do not edit both copies separately. See [contributing](CONTRIBUTING.md) for browser checks.
@@ -125,7 +130,8 @@ submissions are checked locally, never sent or saved.
 AI Elements, Blocks, and community registries are outside this collection.
 This is Bootstrap HTML, not shadcn React API compatibility.
 
-New demos use `assets/styles/pages/components.css` and `assets/scripts/pages/components.js`.
+Component demos use `assets/styles/custom.css` and `assets/scripts/custom.js`,
+with `components` included in the `<html data-page="...">` tokens.
 Reuse their markup and handlers together. Native controls cover validation, OTP paste,
 file selection, direction, and popovers; Bootstrap owns modal/offcanvas focus and dismissal.
 Modern browsers with the Popover API are required for the new popover/context-menu examples.
@@ -142,6 +148,9 @@ full streaming/virtualized transcript infrastructure is not included.
 Found a layout issue or missing state? Include the page URL, browser, viewport width,
 and reproduction steps in your issue. Focused pull requests are welcome.
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the editing workflow and browser checks.
+Report vulnerabilities privately using [SECURITY.md](SECURITY.md), not public issues.
+Changes are recorded in [CHANGELOG.md](CHANGELOG.md). GitHub Actions runs the documented
+Python stdlib checks and Node regression check; browser review remains manual.
 
 ## Dependencies and network access
 
@@ -153,9 +162,35 @@ Some examples use CDNs: DataTables, Grid.js, Quill, CKEditor, Summernote, Leafle
 Notyf, SortableJS, and flag icons. Google Fonts also requires a connection; system fonts are the fallback.
 For offline use, self-host the assets used by your chosen pages, pin versions, and retain vendor license notices.
 Map tiles and external images can require network access too.
+See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for versions, licenses, bundled notices,
+and service terms. The CKEditor 5 v41.0.0 example is GPL-2.0-or-later or commercially licensed;
+review compatibility before distributing an application that uses it.
+
+## Search indexing after deployment
+
+- Production URL: `https://naha-admin.vercel.app`. Each HTML page has an absolute
+  canonical URL; the landing page uses `/`, while demo and documentation URLs keep `.html`.
+  Keep internal links, canonical URLs, and sitemap URLs consistent if hosting changes.
+  If your host serves directory aliases, redirect them to these canonical URLs when possible.
+- Submit `https://naha-admin.vercel.app/sitemap.xml` through Google Search Console and
+  Bing Webmaster Tools after verifying site ownership. Use only the verification method
+  and token supplied by those services; none is preconfigured in this template.
+- Inspect the homepage and representative demo/documentation URLs after deployment.
+  Check HTTP status, crawl access, canonical selection, and image access; request indexing
+  where appropriate. Search indexing and updates are not immediate or guaranteed.
+- The sitemap includes canonical, indexable pages only. Error examples, blank pages,
+  and starter blueprints use `noindex, follow` and stay crawlable in `robots.txt`.
+  Do not add invented `lastmod` dates or block pages whose `noindex` must be read.
+- Keep titles and descriptions specific to visible page content. The homepage uses
+  `WebSite` microdata for NahaAdmin and its alternate name, Naha Admin. Social preview
+  tags and a crawlable banner support sharing; Google chooses search titles, snippets,
+  thumbnails, site names, and sitelinks. No metadata guarantees rankings or rich results.
+- When reusing this template for another product, replace production URLs, product names,
+  descriptions, and social images before publishing. Do not point a different site at
+  NahaAdmin's canonical URLs. Run the checks in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
 Released under the [MIT License](LICENSE). Personal, client, and commercial use is allowed.
-No visible UI attribution is required. Retain the copyright and license notice in copies or substantial portions.
+No visible UI attribution is required for NahaAdmin itself. Retain the copyright and license notice in copies or substantial portions.
 Third-party libraries retain their own licenses; review those for your application.

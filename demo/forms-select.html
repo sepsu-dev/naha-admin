@@ -1,22 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-page="components demo-forms-select" lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!-- Meta SEO -->
-    <meta name="description" content="NahaAdmin - Free Bootstrap 5 Admin Dashboard" />
-    <meta name="keywords" content="NahaAdmin, admin dashboard, bootstrap 5, ui kit, webapp" />
+    <!-- SEO and social previews -->
+    <meta name="description" content="Try native select fields and enhanced Select2 controls in the NahaAdmin Bootstrap 5 form examples." />
     <meta name="author" content="NahaAdmin" />
-    <meta name="robots" content="index, follow" />
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="NahaAdmin - Free Bootstrap 5 Admin Dashboard" />
-    <meta property="og:description" content="NahaAdmin - Free Bootstrap 5 Admin Dashboard" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta property="og:title" content="Select - Bootstrap 5 Demo | NahaAdmin" />
+    <meta property="og:description" content="Try native select fields and enhanced Select2 controls in the NahaAdmin Bootstrap 5 form examples." />
     <meta property="og:type" content="website" />
-    <title>NahaAdmin - Select</title>
+    <meta property="og:site_name" content="NahaAdmin" />
+    <meta property="og:url" content="https://naha-admin.vercel.app/demo/forms-select.html" />
+    <meta property="og:image" content="https://naha-admin.vercel.app/assets/images/banner.png" />
+    <meta property="og:image:width" content="1440" />
+    <meta property="og:image:height" content="900" />
+    <meta property="og:image:alt" content="NahaAdmin Bootstrap 5 admin dashboard preview" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Select - Bootstrap 5 Demo | NahaAdmin" />
+    <meta name="twitter:description" content="Try native select fields and enhanced Select2 controls in the NahaAdmin Bootstrap 5 form examples." />
+    <meta name="twitter:image" content="https://naha-admin.vercel.app/assets/images/banner.png" />
+    <meta name="twitter:image:alt" content="NahaAdmin Bootstrap 5 admin dashboard preview" />
+    <link rel="canonical" href="https://naha-admin.vercel.app/demo/forms-select.html" />
+    <title>Select - Bootstrap 5 Demo | NahaAdmin</title>
     <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap"/>
     <link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css"/>
@@ -29,7 +38,8 @@
     <link rel="stylesheet" href="../assets/plugins/select2/css/select2-bootstrap-5-theme.min.css"/>
     <link rel="stylesheet" href="../assets/plugins/simplebar/simplebar.min.css"/>
     <link rel="stylesheet" href="../assets/plugins/phosphor/bold/style.css"/>
-    <link rel="stylesheet" href="../assets/styles/pages/components.css">
+
+    <link rel="stylesheet" href="../assets/styles/custom.css" />
 </head>
 
 <body class='nd-nav-fixed'>
@@ -397,7 +407,7 @@
             </header>
             <p class="text-muted mb-4">A delivery form pairs a native shipping choice with searchable country controls and flag templates.
             Compare individual <a href="forms-select.html">Native Select</a> and <a href="forms-select.html#framework-select">Select</a> states.</p>
-            <form id="deliveryForm" onsubmit="event.preventDefault(); document.getElementById('deliveryStatus').textContent = 'Delivery choices checked locally. Nothing sent or saved.';">
+            <form id="deliveryForm">
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="card animate__animated animate__fadeIn mb-4">
@@ -503,33 +513,8 @@
     <script src="../assets/plugins/simplebar/simplebar.min.js"></script>
     <script src="../assets/plugins/nprogress/nprogress.min.js"></script>
     <script src="../assets/scripts/naha-admin.min.js"></script>
-    <script>
-        $(function () {
-            $('#select2-single').select2({
-                theme: 'bootstrap-5',
-                width: '100%',
-                placeholder: $('#select2-single').data('placeholder'),
-            });
 
-            function formatCountry(country) {
-                if (!country.id) return country.text;
-                var $country = $(
-                    '<span><span class="fi fi-' + country.id.toLowerCase() + ' me-2"></span>' + country.text + '</span>'
-                );
-                return $country;
-            };
-
-            $('#select-country').select2({
-                theme: 'bootstrap-5',
-                width: '100%',
-                placeholder: $('#select-country').data('placeholder'),
-                templateResult: formatCountry,
-                templateSelection: formatCountry
-            });
-        });
-    </script>
-    <script src="../assets/scripts/pages/components.js"></script>
-    <script>jQuery('#selectFramework').select2({ width: '100%', minimumResultsForSearch: Infinity });</script>
+    <script src="../assets/scripts/custom.js"></script>
 </body>
 
 </html>

@@ -17,19 +17,32 @@ if (typeof echarts !== 'undefined') {
     const token = name => styles.getPropertyValue(`--${name}`).trim();
     echarts.registerTheme('naha', {
         color: [1, 2, 3, 4, 5, 6].map(index => token(`nd-chart-${index}`)),
-        textStyle: { color: token('nd-text'), fontFamily: token('nd-font-sans'), fontSize: 12 },
+        textStyle: {
+            color: token('nd-text'),
+            fontFamily: token('nd-font-sans'),
+            fontSize: 12
+        },
         legend: { textStyle: { color: token('nd-text-muted') } },
-        categoryAxis: { axisLabel: { color: token('nd-text-muted') }, axisLine: { lineStyle: { color: token('nd-border') } } },
-        valueAxis: { axisLabel: { color: token('nd-text-muted') }, splitLine: { lineStyle: { color: token('nd-border') } } },
+        categoryAxis: {
+            axisLabel: { color: token('nd-text-muted') },
+            axisLine: { lineStyle: { color: token('nd-border') } }
+        },
+        valueAxis: {
+            axisLabel: { color: token('nd-text-muted') },
+            splitLine: { lineStyle: { color: token('nd-border') } }
+        },
         pie: { label: { color: token('nd-text') } },
-        tooltip: { backgroundColor: token('nd-surface'), borderColor: token('nd-border'), textStyle: { color: token('nd-text') } }
+        tooltip: {
+            backgroundColor: token('nd-surface'),
+            borderColor: token('nd-border'),
+            textStyle: { color: token('nd-text') }
+        }
     });
 }
 
 $(function () {
     const $body = $('body');
     const $content = $('#layoutSidenav_content');
-
     const $sidebarToggle = $('#sidebarToggle');
     const desktop = window.matchMedia('(min-width: 992px)');
 
@@ -120,7 +133,13 @@ $(function () {
         const label = $link.find('span').first().text().trim();
         if (label) $link.attr('aria-label', label);
 
-        if (!href || href === '#' || href.startsWith('javascript') || href.includes('..') || $link.attr('data-bs-toggle') === 'collapse') return;
+        if (
+            !href ||
+            href === '#' ||
+            href.startsWith('javascript') ||
+            href.includes('..') ||
+            $link.attr('data-bs-toggle') === 'collapse'
+        ) return;
 
         const linkPage = href.split('/').pop().split('?')[0].split('#')[0];
 
@@ -149,7 +168,10 @@ $(function () {
         const $input = $btn.closest('.input-group').find('.password-toggle');
         const $icon = $btn.find('i');
         const visible = $input.attr('type') === 'password';
-        $btn.attr({ 'aria-label': visible ? 'Hide password' : 'Show password', 'aria-pressed': String(visible) });
+        $btn.attr({
+            'aria-label': visible ? 'Hide password' : 'Show password',
+            'aria-pressed': String(visible)
+        });
 
         if ($input.attr('type') === 'password') {
             $input.attr('type', 'text');
@@ -159,5 +181,4 @@ $(function () {
             $icon.removeClass('ph-eye-slash').addClass('ph-eye');
         }
     });
-
 });

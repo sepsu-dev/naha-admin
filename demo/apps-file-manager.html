@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-page="demo-apps-file-manager" lang="en">
 
 <head>
     <!-- Basic SEO -->
@@ -7,17 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!-- Meta SEO -->
-    <meta name="description" content="NahaAdmin - Free Bootstrap 5 Admin Dashboard" />
-    <meta name="keywords" content="NahaAdmin, admin dashboard, bootstrap 5, ui kit, webapp" />
+    <!-- SEO and social previews -->
+    <meta name="description" content="Preview a Bootstrap 5 file manager layout with folders, file listings, and storage indicators in NahaAdmin. Uses sample data." />
     <meta name="author" content="NahaAdmin" />
-    <meta name="robots" content="index, follow" />
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="NahaAdmin - File Manager" />
-    <meta property="og:description" content="NahaAdmin - Free Bootstrap 5 Admin Dashboard" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta property="og:title" content="File Manager - Bootstrap 5 Demo | NahaAdmin" />
+    <meta property="og:description" content="Preview a Bootstrap 5 file manager layout with folders, file listings, and storage indicators in NahaAdmin. Uses sample data." />
     <meta property="og:type" content="website" />
-    <title>NahaAdmin - File Manager</title>
+    <meta property="og:site_name" content="NahaAdmin" />
+    <meta property="og:url" content="https://naha-admin.vercel.app/demo/apps-file-manager.html" />
+    <meta property="og:image" content="https://naha-admin.vercel.app/assets/images/banner.png" />
+    <meta property="og:image:width" content="1440" />
+    <meta property="og:image:height" content="900" />
+    <meta property="og:image:alt" content="NahaAdmin Bootstrap 5 admin dashboard preview" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="File Manager - Bootstrap 5 Demo | NahaAdmin" />
+    <meta name="twitter:description" content="Preview a Bootstrap 5 file manager layout with folders, file listings, and storage indicators in NahaAdmin. Uses sample data." />
+    <meta name="twitter:image" content="https://naha-admin.vercel.app/assets/images/banner.png" />
+    <meta name="twitter:image:alt" content="NahaAdmin Bootstrap 5 admin dashboard preview" />
+    <link rel="canonical" href="https://naha-admin.vercel.app/demo/apps-file-manager.html" />
+    <title>File Manager - Bootstrap 5 Demo | NahaAdmin</title>
 
     <!-- Favicon -->
     <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon"/>
@@ -35,59 +44,7 @@
     <link rel="stylesheet" href="../assets/plugins/simplebar/simplebar.min.css"/>
     <link rel="stylesheet" href="../assets/plugins/phosphor/bold/style.css"/>
 
-    <style>
-        .file-manager-sidebar {
-            height: calc(100vh - 180px);
-            min-height: 500px;
-        }
-
-        .file-manager-content {
-            height: calc(100vh - 180px);
-            min-height: 500px;
-        }
-
-        .folder-card {
-            transition: all 0.2s ease-in-out;
-            cursor: pointer;
-        }
-
-        .folder-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.08) !important;
-        }
-
-        .file-item-card {
-            transition: all 0.2s ease-in-out;
-            cursor: pointer;
-        }
-
-        .file-item-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.08) !important;
-        }
-
-        .storage-progress {
-            height: 6px;
-        }
-
-        .file-icon-wrapper {
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .file-action-btn {
-            opacity: 0;
-            transition: opacity 0.2s ease;
-        }
-
-        .file-item-card:hover .file-action-btn {
-            opacity: 1;
-        }
-    </style>
+    <link rel="stylesheet" href="../assets/styles/custom.css" />
 </head>
 
 <body class='nd-nav-fixed'>

@@ -1,20 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-page="demo-apps-inbox" lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <meta name="description" content="NahaAdmin - Free Bootstrap 5 Admin Dashboard" />
-    <meta name="keywords" content="NahaAdmin, admin dashboard, bootstrap 5, ui kit, webapp" />
+    <!-- SEO and social previews -->
+    <meta name="description" content="Explore a Bootstrap 5 email inbox layout with message lists and mailbox navigation in NahaAdmin. Static UI, not an email service." />
     <meta name="author" content="NahaAdmin" />
-    <meta name="robots" content="index, follow" />
-
-    <meta property="og:title" content="NahaAdmin - Free Bootstrap 5 Admin Dashboard" />
-    <meta property="og:description" content="NahaAdmin - Free Bootstrap 5 Admin Dashboard" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta property="og:title" content="Inbox - Bootstrap 5 Demo | NahaAdmin" />
+    <meta property="og:description" content="Explore a Bootstrap 5 email inbox layout with message lists and mailbox navigation in NahaAdmin. Static UI, not an email service." />
     <meta property="og:type" content="website" />
-    <title>NahaAdmin - Inbox</title>
+    <meta property="og:site_name" content="NahaAdmin" />
+    <meta property="og:url" content="https://naha-admin.vercel.app/demo/apps-inbox.html" />
+    <meta property="og:image" content="https://naha-admin.vercel.app/assets/images/banner.png" />
+    <meta property="og:image:width" content="1440" />
+    <meta property="og:image:height" content="900" />
+    <meta property="og:image:alt" content="NahaAdmin Bootstrap 5 admin dashboard preview" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Inbox - Bootstrap 5 Demo | NahaAdmin" />
+    <meta name="twitter:description" content="Explore a Bootstrap 5 email inbox layout with message lists and mailbox navigation in NahaAdmin. Static UI, not an email service." />
+    <meta name="twitter:image" content="https://naha-admin.vercel.app/assets/images/banner.png" />
+    <meta name="twitter:image:alt" content="NahaAdmin Bootstrap 5 admin dashboard preview" />
+    <link rel="canonical" href="https://naha-admin.vercel.app/demo/apps-inbox.html" />
+    <title>Inbox - Bootstrap 5 Demo | NahaAdmin</title>
 
     <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap"/>
@@ -26,89 +37,7 @@
     <link rel="stylesheet" href="../assets/plugins/simplebar/simplebar.min.css"/>
     <link rel="stylesheet" href="../assets/plugins/phosphor/bold/style.css"/>
 
-    <style>
-        .inbox-sidebar {
-            min-width: 220px;
-        }
-
-        .inbox-nav .nav-link {
-            color: var(--nd-text-muted);
-            padding: 0.6rem 1rem;
-            border-radius: var(--nd-radius);
-            margin-bottom: 2px;
-            display: flex;
-            align-items: center;
-            transition: var(--nd-transition);
-        }
-
-        .inbox-nav .nav-link:hover {
-            background-color: var(--nd-bg-light);
-            color: var(--nd-primary);
-        }
-
-        .inbox-nav .nav-link.active {
-            background-color: var(--nd-primary-subtle);
-            color: var(--nd-primary);
-            font-weight: 600;
-        }
-
-        .inbox-nav .nav-link i {
-            font-size: 1.1rem;
-            margin-right: 12px;
-        }
-
-        .email-item {
-            cursor: pointer;
-            transition: var(--nd-transition);
-            border-bottom: 1px solid var(--nd-border);
-        }
-
-        .email-item:hover {
-            background-color: var(--nd-bg-light);
-            box-shadow: inset 3px 0 0 var(--nd-primary);
-        }
-
-        .email-item.unread {
-            background-color: var(--nd-bg-light);
-            font-weight: 600;
-        }
-
-        .email-item .star {
-            color: var(--nd-text-muted);
-            cursor: pointer;
-        }
-
-        .email-item .star.active {
-            color: var(--bs-warning-text-emphasis);
-        }
-
-        .email-item .date {
-            min-width: 80px;
-            text-align: right;
-        }
-
-        .inbox-toolbar {
-            flex-wrap: wrap;
-            gap: 0.75rem;
-            padding: 1rem;
-            background: var(--nd-surface);
-            border-bottom: 1px solid var(--nd-border);
-            border-top-left-radius: var(--nd-radius-lg);
-            border-top-right-radius: var(--nd-radius-lg);
-        }
-
-        .email-list-wrapper {
-            border-bottom-left-radius: var(--nd-radius-lg);
-            border-bottom-right-radius: var(--nd-radius-lg);
-            overflow: hidden;
-        }
-
-        @media (max-width: 991.98px) {
-            .inbox-sidebar {
-                margin-bottom: 2rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../assets/styles/custom.css" />
 </head>
 
 <body class='nd-nav-fixed'>
@@ -727,38 +656,14 @@
         </main>
     </div>
 
-
   <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/plugins/jquery/jquery.min.js"></script>
     <script src="../assets/plugins/simplebar/simplebar.min.js"></script>
     <script src="../assets/plugins/nprogress/nprogress.min.js"></script>
     <script src="../assets/scripts/naha-admin.min.js"></script>
-    <script>
-        $(function () {
-            $('.email-item .star').on('click', function (e) {
-                e.stopPropagation();
-                $(this).toggleClass('active ph-star ph-fill');
-            });
 
-            $('.email-item').on('click', function () {
-                $(this).removeClass('unread');
-            });
-        });
-    </script>
+    <script src="../assets/scripts/custom.js"></script>
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
 

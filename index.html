@@ -1,26 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-page="landing" lang="en" itemscope itemtype="https://schema.org/WebSite">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!-- Meta SEO -->
-    <meta name="description"
-        content="NahaAdmin is a free Bootstrap 5 admin template with a soft, consistent theme, 5 dashboards, and grouped component examples. HTML, CSS, and jQuery. No build step required." />
-    <meta name="keywords"
-        content="NahaAdmin, admin dashboard, bootstrap 5, control panel, open source, ui kit, webapp template" />
+    <!-- SEO and social previews -->
+    <meta name="description" content="NahaAdmin is a free, open-source Bootstrap 5 admin template with 5 dashboard demos, responsive layouts, and UI components. No build step required." />
     <meta name="author" content="NahaAdmin" />
-    <meta name="robots" content="index, follow" />
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="NahaAdmin - Free Bootstrap 5 Admin Template" />
-    <meta property="og:description"
-        content="A calmer starting point for your admin UI. 5 dashboards, grouped component examples, and no build step. Free under the MIT license." />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta property="og:title" content="Free Bootstrap 5 Admin Dashboard Template | NahaAdmin" />
+    <meta property="og:description" content="NahaAdmin is a free, open-source Bootstrap 5 admin template with 5 dashboard demos, responsive layouts, and UI components. No build step required." />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="NahaAdmin" />
+    <meta property="og:url" content="https://naha-admin.vercel.app/" />
     <meta property="og:image" content="https://naha-admin.vercel.app/assets/images/banner.png" />
-    <title>NahaAdmin - Free Bootstrap 5 Admin Template</title>
+    <meta property="og:image:width" content="1440" />
+    <meta property="og:image:height" content="900" />
+    <meta property="og:image:alt" content="NahaAdmin Bootstrap 5 admin dashboard preview" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Free Bootstrap 5 Admin Dashboard Template | NahaAdmin" />
+    <meta name="twitter:description" content="NahaAdmin is a free, open-source Bootstrap 5 admin template with 5 dashboard demos, responsive layouts, and UI components. No build step required." />
+    <meta name="twitter:image" content="https://naha-admin.vercel.app/assets/images/banner.png" />
+    <meta name="twitter:image:alt" content="NahaAdmin Bootstrap 5 admin dashboard preview" />
+    <link rel="canonical" href="https://naha-admin.vercel.app/" itemprop="url" />
+    <title>Free Bootstrap 5 Admin Dashboard Template | NahaAdmin</title>
 
     <!-- Favicon -->
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
@@ -34,7 +39,8 @@
     <link rel="stylesheet" href="assets/styles/naha-admin.min.css" />
     <link rel="stylesheet" href="assets/plugins/phosphor/bold/style.css" />
     <link rel="stylesheet" href="assets/plugins/phosphor/fill/style.css" />
-    <link rel="stylesheet" href="assets/styles/landing.css" />
+
+    <link rel="stylesheet" href="assets/styles/custom.css" />
 </head>
 
 <body>
@@ -43,9 +49,9 @@
     <header>
         <nav class="nd-topnav navbar navbar-expand-lg navbar-light">
             <div class="container">
-                <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="Naha Admin">
+                <a class="navbar-brand d-flex align-items-center" href="./" aria-label="Naha Admin">
                     <svg class="logo-navbar" viewBox="0 0 48 36" fill="currentColor" stroke="currentColor" stroke-width="3" stroke-dasharray="5 5" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><rect x="10" y="4" width="28" height="28" rx="3" fill-opacity="0.15"/></svg>
-                    <span class="ms-2 fw-semibold">Naha Admin</span>
+                    <span class="ms-2 fw-semibold" itemprop="alternateName">Naha Admin</span>
                 </a>
                 <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
                     data-bs-target="#landingNavbar" aria-controls="landingNavbar" aria-expanded="false"
@@ -64,9 +70,9 @@
 
     <main id="main" tabindex="-1">
         <section class="hero-section container">
-            <h1 class="hero-title">A simple start for your dashboard.</h1>
-            <p class="hero-subtitle">Free Bootstrap 5 template with ready-to-use layouts and components.
-                No build step required.</p>
+            <h1 class="hero-title">Free Bootstrap 5 admin dashboard template.</h1>
+            <p class="hero-subtitle"><span itemprop="name">NahaAdmin</span> is an open-source starting point with
+                responsive layouts and ready-to-use UI components. No build step required.</p>
             <div class="d-flex flex-wrap justify-content-center gap-2 mb-5">
                 <a href="demo/index.html" class="btn btn-primary">Live demo <i class="ph-bold ph-arrow-right ms-2" aria-hidden="true"></i></a>
                 <a href="docs/index.html" class="btn btn-outline-secondary">Documentation</a>
@@ -74,6 +80,25 @@
             <a href="demo/index.html" class="hero-banner-wrap" aria-label="Explore the Naha Admin dashboard demo">
                 <img src="assets/images/banner.png" alt="Naha Admin dashboard with project metrics, active projects, and recent activity" width="1440" height="900" class="landing-banner" fetchpriority="high">
             </a>
+        </section>
+        <section class="container py-5" aria-labelledby="dashboards-heading">
+            <h2 id="dashboards-heading" class="h3">Five dashboard demos, one consistent theme</h2>
+            <p>Choose a starting layout for your project. Every dashboard uses sample data;
+                connect your own application to make it live.</p>
+            <ul class="d-flex flex-wrap gap-3 list-unstyled mb-4">
+                <li><a href="demo/index.html">Workspace dashboard</a></li>
+                <li><a href="demo/dashboard-analytics.html">Analytics dashboard</a></li>
+                <li><a href="demo/dashboard-crm.html">CRM dashboard</a></li>
+                <li><a href="demo/dashboard-ecommerce.html">Ecommerce dashboard</a></li>
+                <li><a href="demo/dashboard-finance.html">Finance dashboard</a></li>
+            </ul>
+            <h2 class="h3">HTML, CSS, and jQuery. No build tools.</h2>
+            <p>Reuse <a href="demo/buttons.html">buttons</a>, <a href="demo/forms-basic.html">forms</a>,
+                <a href="demo/tables-basic.html">tables</a>, and <a href="demo/chart.html">charts</a>
+                in your admin interface. Follow the <a href="docs/getting-started.html">setup guide</a>,
+                then adapt colors and navigation with the <a href="docs/theme-layout.html">theme and layout guide</a>.</p>
+            <p class="mb-0">NahaAdmin is free for personal and commercial projects under the
+                <a href="docs/license.html">MIT license</a>. Third-party libraries retain their own licenses.</p>
         </section>
     </main>
     <footer class="landing-footer">

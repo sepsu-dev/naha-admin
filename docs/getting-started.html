@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-page="docs" lang="en">
 
 <head>
     <!-- Basic SEO -->
@@ -7,17 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!-- Meta SEO -->
-    <meta name="description" content="NahaAdmin - Getting Started Guide" />
-    <meta name="keywords" content="NahaAdmin, admin dashboard, bootstrap 5, getting started" />
+    <!-- SEO and social previews -->
+    <meta name="description" content="Set up the NahaAdmin Bootstrap 5 admin template without a build step. Learn folder structure, asset order, page blueprints, and demo boundaries." />
     <meta name="author" content="NahaAdmin" />
-    <meta name="robots" content="index, follow" />
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="NahaAdmin - Getting Started" />
-    <meta property="og:description" content="Quick setup guide and instructions for NahaAdmin" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta property="og:title" content="Getting Started Guide | NahaAdmin" />
+    <meta property="og:description" content="Set up the NahaAdmin Bootstrap 5 admin template without a build step. Learn folder structure, asset order, page blueprints, and demo boundaries." />
     <meta property="og:type" content="website" />
-    <title>NahaAdmin - Getting Started</title>
+    <meta property="og:site_name" content="NahaAdmin" />
+    <meta property="og:url" content="https://naha-admin.vercel.app/docs/getting-started.html" />
+    <meta property="og:image" content="https://naha-admin.vercel.app/assets/images/banner.png" />
+    <meta property="og:image:width" content="1440" />
+    <meta property="og:image:height" content="900" />
+    <meta property="og:image:alt" content="NahaAdmin Bootstrap 5 admin dashboard preview" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Getting Started Guide | NahaAdmin" />
+    <meta name="twitter:description" content="Set up the NahaAdmin Bootstrap 5 admin template without a build step. Learn folder structure, asset order, page blueprints, and demo boundaries." />
+    <meta name="twitter:image" content="https://naha-admin.vercel.app/assets/images/banner.png" />
+    <meta name="twitter:image:alt" content="NahaAdmin Bootstrap 5 admin dashboard preview" />
+    <link rel="canonical" href="https://naha-admin.vercel.app/docs/getting-started.html" />
+    <title>Getting Started Guide | NahaAdmin</title>
 
     <!-- Favicon -->
     <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
@@ -36,8 +45,8 @@
     <link rel="stylesheet" href="../assets/plugins/phosphor/bold/style.css" />
     <link rel="stylesheet" href="../assets/plugins/phosphor/regular/style.css" />
     <link rel="stylesheet" href="../assets/plugins/phosphor/fill/style.css" />
-    <link rel="stylesheet" href="../assets/styles/docs.css" />
 
+    <link rel="stylesheet" href="../assets/styles/custom.css" />
 </head>
 
 <body class="nd-nav-fixed">
@@ -233,10 +242,13 @@ cd naha-admin</code></pre>
                                 </table>
                             </div>
                             <h2 class="docs-section-title fw-semibold small text-dark mt-4 mb-2">6. Asset order and editing</h2>
-                            <p class="text-muted">Load Bootstrap CSS, vendor CSS, NahaAdmin CSS, then page CSS.
+                            <p class="text-muted">Load Bootstrap, NahaAdmin, and page vendor CSS before <code>custom.css</code>.
                                 Load jQuery before <code>naha-admin.min.js</code> and jQuery plugins. Load each vendor
-                                before its page initializer. Keep page-only dependencies out of the shared layout.</p>
-                            <p class="text-muted">Edit <code>assets/styles/naha-admin.css</code> and
+                                before <code>custom.js</code>. Keep page-only dependencies out of the shared layout.</p>
+                            <p class="text-muted">Edit page styles in <code>assets/styles/custom.css</code> and page behavior in
+                                <code>assets/scripts/custom.js</code>. Keep the HTML root's <code>data-page</code> tokens
+                                aligned with scoped styles and initializers. These files have no <code>.min</code> copies.</p>
+                            <p class="text-muted">For shared theme/layout changes, edit <code>assets/styles/naha-admin.css</code> and
                                 <code>assets/scripts/naha-admin.js</code>, then copy their contents to
                                 <code>assets/styles/naha-admin.min.css</code> and <code>assets/scripts/naha-admin.min.js</code>.
                                 The historical <code>.min</code> URLs are compatibility copies, not compressed builds.
@@ -250,12 +262,13 @@ cd naha-admin</code></pre>
                             <p class="text-muted">Open <a href="../demo/index.html">Live Preview</a>, then choose
                                 a page under <strong>Components</strong>. Copy the component markup and its matching
                                 CSS/JS references. For example, <a href="../demo/modals.html#archive-project">Alert Dialog</a>
-                                uses Bootstrap modal behavior plus these page assets:</p>
-                            <pre class="bg-dark text-light p-3 rounded small mb-3"><code>&lt;!-- In the head, after Bootstrap and NahaAdmin CSS --&gt;
-&lt;link rel="stylesheet" href="../assets/styles/pages/components.css"&gt;
+                                uses Bootstrap modal behavior plus these custom assets and page token:</p>
+                            <pre class="bg-dark text-light p-3 rounded small mb-3"><code>&lt;html lang="en" data-page="components"&gt;
+&lt;!-- In the head, after core and vendor CSS --&gt;
+&lt;link rel="stylesheet" href="../assets/styles/custom.css"&gt;
 
 &lt;!-- At the end of body, after Bootstrap and shared layout scripts --&gt;
-&lt;script src="../assets/scripts/pages/components.js"&gt;&lt;/script&gt;</code></pre>
+&lt;script src="../assets/scripts/custom.js"&gt;&lt;/script&gt;</code></pre>
                             <p class="text-muted">Paths above assume an HTML file in <code>demo/</code>.
                                 Keep labels, IDs, <code>aria-*</code>, and <code>data-bs-*</code> attributes together;
                                 use unique IDs when repeating examples. Page handlers may depend on specific IDs.

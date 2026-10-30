@@ -1,0 +1,1231 @@
+/* Page customizations. Core and vendor styles stay in their own files. */
+
+/* Error */
+:where(html[data-page~="error"]) body {
+    background-color: var(--nd-bg-light);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--nd-text);
+    font-family: var(--nd-font-sans);
+}
+
+:where(html[data-page~="error"]) .error-container {
+    width: 100%;
+    min-width: 0;
+    max-width: 600px;
+    padding: 2rem;
+    text-align: center;
+}
+
+:where(html[data-page~="error"]) .error-container > .d-flex {
+    flex-wrap: wrap;
+}
+
+:where(html[data-page~="error"]) .error-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background: var(--nd-surface);
+    border: 1px solid var(--nd-border);
+    border-radius: var(--nd-radius-lg);
+    display: inline-flex;
+    box-shadow: var(--nd-shadow);
+}
+
+:where(html[data-page~="error"]) .error-code {
+    font-size: clamp(4rem, 15vw, 6rem);
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 1rem;
+    letter-spacing: -0.04em;
+}
+
+:where(html[data-page~="error"]) .error-404 {
+    color: var(--nd-primary);
+}
+
+:where(html[data-page~="error"]) .error-500 {
+    color: var(--nd-danger);
+}
+
+:where(html[data-page~="error"]) .error-title {
+    font-size: var(--nd-font-size-3xl);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--nd-text);
+}
+
+:where(html[data-page~="error"]) .error-text {
+    color: var(--nd-text-muted);
+    margin: 0 auto 2rem;
+    font-size: var(--nd-font-size-lg);
+    line-height: 1.6;
+}
+
+:where(html[data-page~="error"]) .btn-lg {
+    padding: 0.8rem 2.5rem;
+    font-weight: 500;
+    border-radius: var(--nd-radius);
+}
+
+/* Components */
+:where(html[data-page~="components"]) .catalog-title {
+    font-size: var(--nd-font-size-3xl);
+}
+
+:where(html[data-page~="components"]) [hidden] {
+    display: none !important;
+}
+
+:where(html[data-page~="components"]) .component-demo {
+    max-width: 760px;
+    margin-bottom: 1rem;
+}
+
+:where(html[data-page~="components"]) .component-demo > .card + .card {
+    margin-top: 1rem;
+}
+
+:where(html[data-page~="components"]) .component-demo h2 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+:where(html[data-page~="components"]) .component-demo .select2-selection--single {
+    min-height: 36px;
+    box-shadow: var(--nd-shadow-sm);
+}
+
+:where(html[data-page~="components"]) .component-demo .select2-selection--single .select2-selection__rendered {
+    line-height: 34px;
+    padding-inline-start: 0.75rem;
+    color: var(--foreground);
+}
+
+:where(html[data-page~="components"]) .component-demo .select2-selection--single:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--bs-focus-ring-color);
+}
+
+:where(html[data-page~="components"]) .nd-avatar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    object-fit: cover;
+    background: var(--nd-primary-subtle);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+:where(html[data-page~="components"]) .ratio-image {
+    object-fit: cover;
+    object-position: center 30%;
+    border-radius: var(--nd-radius);
+}
+
+:where(html[data-page~="components"]) .nd-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    border: 1px solid var(--nd-border);
+    border-radius: var(--nd-radius);
+    overflow-wrap: anywhere;
+}
+
+:where(html[data-page~="components"]) .nd-item > div {
+    min-width: 0;
+}
+
+:where(html[data-page~="components"]) .combo-options {
+    padding: 0.25rem;
+    margin: 0.25rem 0;
+    list-style: none;
+    border: 1px solid var(--nd-border);
+    border-radius: var(--nd-radius);
+    box-shadow: var(--nd-shadow);
+    background: var(--popover);
+    color: var(--popover-foreground);
+}
+
+:where(html[data-page~="components"]) .combo-options li {
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+:where(html[data-page~="components"]) .combo-options [aria-selected="true"] {
+    background: var(--nd-primary-subtle);
+}
+
+:where(html[data-page~="components"]) .otp-input {
+    font-family: monospace;
+    font-size: 1.5rem;
+    letter-spacing: 0.3em;
+}
+
+:where(html[data-page~="components"]) .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 2px;
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+:where(html[data-page~="components"]) .calendar-grid button {
+    padding: 0.4rem 0;
+    font-size: 0.8rem;
+}
+
+:where(html[data-page~="components"]) .nd-popover {
+    padding: 1rem;
+    border: 1px solid var(--nd-border);
+    border-radius: var(--nd-radius);
+    color: var(--popover-foreground);
+    background: var(--popover);
+    box-shadow: var(--nd-shadow-lg);
+    width: min(280px, calc(100vw - 2rem));
+}
+
+:where(html[data-page~="components"]) .hover-card {
+    position: relative;
+    width: fit-content;
+}
+
+:where(html[data-page~="components"]) .hover-card-content {
+    position: absolute;
+    z-index: 10;
+    inset-inline-start: 0;
+    top: 100%;
+    width: 230px;
+    max-width: calc(100vw - 5rem);
+    padding: 1rem;
+    border: 1px solid var(--nd-border);
+    border-radius: var(--nd-radius);
+    background: var(--nd-surface);
+    box-shadow: var(--nd-shadow);
+    visibility: hidden;
+}
+
+:where(html[data-page~="components"]) .hover-card:not(.dismissed):is(:hover, :focus-within) .hover-card-content {
+    visibility: visible;
+}
+
+:where(html[data-page~="components"]) .context-target {
+    width: 100%;
+    padding: 1.5rem 0.75rem;
+    background: var(--nd-bg-light);
+    color: var(--nd-text-muted);
+    border: 1px dashed var(--nd-border);
+    border-radius: var(--nd-radius);
+}
+
+:where(html[data-page~="components"]) .resize-panels {
+    --panel-width: 40%;
+    display: grid;
+    grid-template-columns: minmax(0, var(--panel-width)) 12px minmax(0, 1fr);
+    height: 160px;
+    border: 1px solid var(--nd-border);
+    border-radius: var(--nd-radius);
+    overflow: hidden;
+}
+
+:where(html[data-page~="components"]) .resize-pane {
+    display: grid;
+    place-content: center;
+    padding: 0.5rem;
+    overflow-wrap: anywhere;
+    min-width: 0;
+}
+
+:where(html[data-page~="components"]) #resizeHandle {
+    background: var(--nd-primary-subtle);
+    cursor: col-resize;
+    touch-action: none;
+}
+
+:where(html[data-page~="components"]) #resizeHandle:focus-visible {
+    outline-offset: -3px;
+}
+
+:where(html[data-page~="components"]) .demo-scroll {
+    height: 180px;
+    overflow: auto;
+    overscroll-behavior: contain;
+}
+
+:where(html[data-page~="components"]) .nd-skeleton {
+    height: 1rem;
+    border-radius: var(--nd-radius);
+    background: var(--nd-primary-subtle);
+}
+
+:where(html[data-page~="components"]) .skeleton-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+:where(html[data-page~="components"]) .code-block {
+    background: var(--muted);
+    border: 1px solid var(--nd-border);
+    border-radius: var(--nd-radius);
+    padding: 1rem;
+    font-size: 0.75rem;
+    max-width: 100%;
+    overflow: auto;
+    color: var(--nd-text);
+}
+
+:where(html[data-page~="components"]) .message-viewport {
+    height: 290px;
+    overflow: auto;
+    overscroll-behavior: contain;
+    overflow-anchor: none;
+}
+
+:where(html[data-page~="components"]) .message-row {
+    display: flex;
+    gap: 0.75rem;
+    margin: 1rem 0;
+}
+
+:where(html[data-page~="components"]) .message-row > div {
+    min-width: 0;
+}
+
+:where(html[data-page~="components"]) .nd-bubble {
+    padding: 0.75rem 1rem;
+    background: var(--nd-primary-subtle);
+    border-radius: var(--nd-radius-lg);
+    width: fit-content;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+}
+
+:where(html[data-page~="components"]) .message-outgoing {
+    flex-direction: row-reverse;
+}
+
+:where(html[data-page~="components"]) .message-outgoing .nd-bubble {
+    color: #fff;
+    background: var(--nd-primary);
+}
+
+:where(html[data-page~="components"]) .conversation-plain .nd-bubble {
+    padding: 0;
+    color: var(--nd-text);
+    background: transparent;
+    border-radius: 0;
+}
+
+:where(html[data-page~="components"]) .conversation-plain .message-outgoing {
+    flex-direction: row;
+}
+
+:where(html[data-page~="components"]) #conversation,
+:where(html[data-page~="components"]) #attachments,
+:where(html[data-page~="components"]) main section[id] {
+    scroll-margin-top: 5rem;
+}
+
+:where(html[data-page~="components"]) .nd-marker {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--nd-text-muted);
+    font-size: 0.75rem;
+}
+
+:where(html[data-page~="components"]) .nd-marker::before,
+:where(html[data-page~="components"]) .nd-marker::after {
+    content: "";
+    height: 1px;
+    flex: 1;
+    background: var(--nd-border);
+}
+
+:where(html[data-page~="components"]) #attachmentList img {
+    max-width: 100%;
+    max-height: 150px;
+    object-fit: contain;
+}
+
+:where(html[data-page~="components"]) #attachmentList strong {
+    overflow-wrap: anywhere;
+}
+
+:where(html[data-page~="components"]) #traceLines details {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--nd-border);
+}
+
+:where(html[data-page~="components"]) #questionnaire {
+    max-width: 760px;
+}
+
+:where(html[data-page~="components"]) #questionnaire legend {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+:where(html[data-page~="components"]) #questionnaire progress {
+    accent-color: var(--nd-primary);
+    height: 6px;
+}
+
+/* Colors */
+:where(html[data-page~="colors"]) .color-box {
+    height: 100px;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: flex-end;
+    padding: 0.75rem;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+/* Auth */
+:where(html[data-page~="auth"]) body {
+    background-color: var(--nd-bg-light);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+:where(html[data-page~="auth"]) :is(.login-card, .register-card, .forgot-card) {
+    max-width: 420px;
+    margin: 2rem auto;
+    border-radius: var(--nd-radius-lg);
+    box-shadow: var(--nd-shadow-sm);
+    border: 1px solid var(--nd-border);
+    overflow: hidden;
+    background: var(--nd-surface);
+}
+
+:where(html[data-page~="auth"]) :is(.login-header, .register-header, .forgot-header) {
+    padding: 3rem 2rem 1.5rem;
+    text-align: center;
+}
+
+:where(html[data-page~="auth"]) :is(.login-header, .register-header, .forgot-header) .icon-box {
+    width: 64px;
+    height: 64px;
+    background: var(--bs-primary-bg-subtle);
+    color: var(--nd-primary);
+    border-radius: var(--nd-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 1.75rem;
+}
+
+:where(html[data-page~="auth"]) :is(.login-header, .register-header, .forgot-header) h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--nd-text);
+    margin-bottom: 0.5rem;
+}
+
+:where(html[data-page~="auth"]) :is(.login-body, .register-body, .forgot-body) {
+    padding: 0 2.5rem 3rem;
+}
+
+@media (max-width: 575.98px) {
+    :where(html[data-page~="auth"]) :is(.login-body, .register-body, .forgot-body) {
+        padding: 0 1.5rem 2rem;
+    }
+}
+
+:where(html[data-page~="auth"]) .register-card {
+    max-width: 480px;
+}
+
+/* Icons */
+:where(html[data-page~="icons"]) .icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem 0.5rem;
+    border: 1px solid var(--nd-border);
+    border-radius: var(--nd-radius);
+    background: var(--nd-surface);
+    transition: var(--nd-transition);
+    height: 100%;
+}
+
+:where(html[data-page~="icons"]) #weightSwitcher {
+    flex-wrap: wrap;
+}
+
+:where(html[data-page~="icons"]) #weightSwitcher .btn {
+    flex: 1 0 auto;
+}
+
+:where(html[data-page~="icons"]) .icon-box i {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+    color: var(--nd-text);
+    transition: color 0.2s;
+}
+
+:where(html[data-page~="icons"]) .icon-box span {
+    font-size: 0.75rem;
+    color: var(--nd-text-muted);
+    text-align: center;
+    word-break: break-all;
+    font-family: monospace;
+    transition: color 0.2s;
+}
+
+/* Dashboard */
+:where(html[data-page~="dashboard"]) .dashboard-date {
+    flex-shrink: 0;
+}
+
+:where(html[data-page~="dashboard"]) .dashboard-summary .border-dashed {
+    border-style: solid !important;
+}
+
+:where(html[data-page~="dashboard"]) .dashboard-metrics {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+:where(html[data-page~="dashboard"]) .dashboard-metrics h3 {
+    font-size: clamp(1.5rem, 2.5vw, 1.75rem);
+    letter-spacing: -0.025em;
+    line-height: 1.25;
+}
+
+:where(html[data-page~="dashboard"]) .dashboard-metrics .p-3 {
+    padding: 0.625rem !important;
+}
+
+:where(html[data-page~="dashboard"]) .dashboard-metrics .p-3 i {
+    font-size: 1.25rem !important;
+}
+
+:where(html[data-page~="dashboard"]) .dashboard-projects {
+    overflow: hidden;
+}
+
+:where(html[data-page~="dashboard"]) .dashboard-projects table {
+    min-width: 540px;
+}
+
+:where(html[data-page~="dashboard"]) .dashboard-projects th:last-child {
+    width: 25%;
+}
+
+:where(html[data-page~="dashboard"]) .dashboard-projects td {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+:where(html[data-page~="dashboard"]) .dashboard-projects .table-responsive:focus-visible {
+    outline-offset: -3px;
+}
+
+@media (max-width: 1199.98px) {
+    :where(html[data-page~="dashboard"]) .dashboard-metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 575.98px) {
+    :where(html[data-page~="dashboard"]) .nd-dashboard {
+        padding-inline: 1rem !important;
+    }
+
+    :where(html[data-page~="dashboard"]) .nd-dashboard .card-body.p-4 {
+        padding: 1rem !important;
+    }
+
+    :where(html[data-page~="dashboard"]) .dashboard-overview > .card-body > .mb-4 {
+        margin-bottom: 1rem !important;
+    }
+
+    :where(html[data-page~="dashboard"]) .dashboard-date {
+        gap: 0.5rem 1rem !important;
+    }
+
+    :where(html[data-page~="dashboard"]) .dashboard-summary .p-3 {
+        padding: 0.625rem 0.75rem !important;
+    }
+
+    :where(html[data-page~="dashboard"]) .dashboard-summary .me-3 {
+        margin-right: 0.5rem !important;
+    }
+
+    :where(html[data-page~="dashboard"]) .dashboard-metrics {
+        gap: 0.75rem;
+    }
+
+    :where(html[data-page~="dashboard"]) .dashboard-metrics .card-body > .d-flex {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 0.75rem !important;
+    }
+
+    :where(html[data-page~="dashboard"]) .dashboard-metrics h6 {
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 359.98px) {
+    :where(html[data-page~="dashboard"]) .dashboard-metrics {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+/* Docs */
+:where(html[data-page~="docs"]) .container {
+    max-width: 1200px !important;
+}
+
+html:where([data-page~="docs"]) {
+    scroll-behavior: smooth;
+}
+
+:where(html[data-page~="docs"]),
+:where(html[data-page~="docs"]) * {
+    box-sizing: border-box;
+}
+
+:where(html[data-page~="docs"]) body {
+    font-family: var(--nd-font-sans);
+    color: var(--nd-text);
+    background-color: var(--nd-bg-light);
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Documentation Sidebar Navigation Styles */
+:where(html[data-page~="docs"]) .nav-pills .nav-link {
+    border-radius: var(--nd-radius);
+    padding: 0.6rem 1rem;
+    font-size: 0.875rem;
+    transition: var(--nd-transition);
+    display: flex;
+    align-items: center;
+}
+
+:where(html[data-page~="docs"]) .nav-pills .nav-link:hover {
+    background-color: rgba(var(--nd-primary-rgb), 0.05);
+    color: var(--nd-primary) !important;
+}
+
+:where(html[data-page~="docs"]) .nav-pills .nav-link.active {
+    background-color: var(--bs-primary-bg-subtle) !important;
+    color: var(--nd-primary-dark) !important;
+}
+
+/* ================================================
+   DOCS CONTENT CUSTOMIZATIONS
+================================================ */
+:where(html[data-page~="docs"]) main .docs-body p:not(.small, .extra-small) {
+    max-width: 65ch;
+    font-size: 0.9375rem;
+    line-height: 1.7;
+}
+
+:where(html[data-page~="docs"]) #layoutSidenav_content > section {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+:where(html[data-page~="docs"]) .docs-body {
+    padding: 1rem 0;
+}
+
+:where(html[data-page~="docs"]) .docs-page-heading {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--nd-border);
+}
+
+:where(html[data-page~="docs"]) .docs-page-heading h1 {
+    margin-bottom: 0.5rem;
+}
+
+:where(html[data-page~="docs"]) .docs-body .docs-section-title {
+    font-size: 1.125rem;
+    margin-top: 2rem !important;
+    margin-bottom: 1rem !important;
+}
+
+:where(html[data-page~="docs"]) .docs-quickstart {
+    margin-bottom: 2rem;
+}
+
+:where(html[data-page~="docs"]) .docs-note {
+    padding: 0.25rem 0 0.25rem 1rem;
+    border-left: 2px solid var(--nd-border);
+    margin-bottom: 1.5rem;
+}
+
+:where(html[data-page~="docs"]) .docs-guide-links a {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.25rem 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--nd-border);
+    text-decoration: none;
+}
+
+:where(html[data-page~="docs"]) .docs-guide-links span {
+    grid-row: 2;
+    color: var(--nd-text-muted);
+}
+
+:where(html[data-page~="docs"]) .docs-guide-links i {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    align-self: center;
+}
+
+:where(html[data-page~="docs"]) .docs-guide-links a:hover strong {
+    text-decoration: underline;
+}
+
+:where(html[data-page~="docs"]) pre,
+:where(html[data-page~="docs"]) pre.bg-dark,
+:where(html[data-page~="docs"]) pre.bg-light {
+    border: 1px solid var(--nd-border);
+    background-color: var(--nd-bg-light) !important;
+    overflow-x: auto;
+}
+
+:where(html[data-page~="docs"]) pre code {
+    color: var(--nd-text) !important;
+}
+
+:where(html[data-page~="docs"]) .card {
+    border-radius: var(--nd-radius-lg);
+    scroll-margin-top: 90px;
+}
+
+:where(html[data-page~="docs"]) .table-responsive {
+    border-radius: var(--nd-radius);
+    overflow-x: auto;
+}
+
+/* Landing */
+:where(html[data-page~="landing"]) .container {
+    max-width: 1200px !important;
+}
+
+:where(html[data-page~="landing"]),
+:where(html[data-page~="landing"]) * {
+    box-sizing: border-box;
+}
+
+:where(html[data-page~="landing"]) body {
+    font-family: var(--nd-font-sans);
+    color: var(--nd-text);
+    background-color: var(--nd-bg-light);
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ================================================
+   NAVBAR
+================================================ */
+:where(html[data-page~="landing"]) .nd-topnav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 64px;
+    background: var(--nd-surface);
+    border-bottom: 1px solid var(--nd-border);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    height: auto;
+}
+
+:where(html[data-page~="landing"]) .nd-topnav .navbar-brand {
+    text-decoration: none;
+    display: flex !important;
+    align-items: center;
+    width: auto;
+}
+
+:where(html[data-page~="landing"]) .nd-topnav .navbar-brand span {
+    font-family: var(--nd-font-sans);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: inherit;
+}
+
+:where(html[data-page~="landing"]) .nd-topnav .navbar-brand .logo-navbar {
+    width: 40px;
+    height: 32px;
+}
+
+:where(html[data-page~="landing"]) .nd-topnav .btn {
+    padding: 0.5rem 1rem;
+    font-size: var(--nd-font-size-base);
+    font-weight: 500;
+    font-family: var(--nd-font-sans);
+    line-height: 1.2;
+    border-radius: var(--nd-radius);
+    transition: var(--nd-transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+:where(html[data-page~="landing"]) .nd-topnav .btn-light {
+    background-color: var(--nd-bg-light);
+    border: 1px solid var(--nd-border);
+    color: var(--nd-text-muted);
+}
+
+:where(html[data-page~="landing"]) .nd-topnav .btn-light:hover {
+    background-color: var(--bs-tertiary-bg);
+    border-color: var(--bs-secondary-border-subtle);
+    color: var(--nd-text);
+}
+
+:where(html[data-page~="landing"]) .navbar-toggler {
+    padding: 0.5rem;
+    font-size: 1.25rem;
+    color: var(--nd-text);
+}
+
+@media (max-width: 991.98px) {
+    :where(html[data-page~="landing"]) .navbar-collapse {
+        background: var(--nd-surface);
+        margin: 0 -0.75rem;
+        padding: 1rem;
+        border-bottom: 1px solid var(--nd-border);
+        box-shadow: var(--nd-shadow);
+    }
+}
+
+/* ================================================
+   HERO
+================================================ */
+:where(html[data-page~="landing"]) .hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 7rem 1.5rem 2.5rem;
+    text-align: center;
+    background-color: var(--nd-bg-light);
+}
+
+:where(html[data-page~="landing"]) .hero-title {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+    color: var(--nd-text);
+    margin: 0 auto 1rem;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    text-wrap: balance;
+}
+
+:where(html[data-page~="landing"]) .hero-subtitle {
+    font-size: var(--nd-font-size-lg);
+    color: var(--nd-text-muted);
+    max-width: 480px;
+    width: 100%;
+    line-height: 1.65;
+    margin: 0 auto 1.5rem;
+    text-align: center;
+}
+
+/* ================================================
+   BANNER
+================================================ */
+:where(html[data-page~="landing"]) .hero-banner-wrap {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative;
+    border-radius: var(--nd-radius-lg);
+}
+
+:where(html[data-page~="landing"]) .landing-banner {
+    width: 100%;
+    height: auto;
+    border-radius: var(--nd-radius-lg);
+    border: 1px solid var(--nd-border);
+    box-shadow: var(--nd-shadow);
+    display: block;
+}
+
+/* ================================================
+   FOOTER
+================================================ */
+:where(html[data-page~="landing"]) .landing-footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: var(--nd-text-muted);
+    font-size: var(--nd-font-size-sm);
+    border-top: 1px solid var(--nd-border);
+    margin-top: 1rem;
+}
+
+:where(html[data-page~="landing"]) .landing-nav-link,
+:where(html[data-page~="landing"]) .landing-footer a {
+    color: var(--nd-text-muted);
+    text-decoration: none;
+}
+
+:where(html[data-page~="landing"]) .landing-nav-link:hover,
+:where(html[data-page~="landing"]) .landing-footer a:hover {
+    color: var(--nd-primary);
+    text-decoration: underline;
+}
+
+/* ================================================
+   RESPONSIVE
+=============================================== */
+@media (max-width: 768px) {
+    :where(html[data-page~="landing"]) .hero-section {
+        padding: 5.5rem 1rem 1.5rem;
+    }
+
+    :where(html[data-page~="landing"]) .hero-subtitle {
+        font-size: 0.9375rem;
+        margin-bottom: 1.75rem;
+    }
+
+    :where(html[data-page~="landing"]) .hero-banner-wrap {
+        width: 100%;
+        border-radius: var(--nd-radius-lg);
+    }
+}
+
+/* Demo Apps Chat */
+:where(html[data-page~="demo-apps-chat"]) .chat-sidebar {
+    height: calc(100vh - 180px);
+    min-height: 500px;
+}
+
+:where(html[data-page~="demo-apps-chat"]) .chat-list-wrapper {
+    height: calc(100% - 70px);
+}
+
+:where(html[data-page~="demo-apps-chat"]) .chat-item {
+    cursor: pointer;
+    transition: var(--nd-transition);
+    border-bottom: 1px solid var(--nd-border);
+    padding: 1rem;
+}
+
+:where(html[data-page~="demo-apps-chat"]) .chat-item:hover {
+    background-color: var(--nd-bg-light);
+}
+
+:where(html[data-page~="demo-apps-chat"]) .chat-item.active {
+    background-color: var(--nd-primary-subtle);
+    border-left: 3px solid var(--nd-primary);
+}
+
+:where(html[data-page~="demo-apps-chat"]) .status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 2px solid #fff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+:where(html[data-page~="demo-apps-chat"]) .status-online {
+    background-color: var(--nd-success);
+}
+
+:where(html[data-page~="demo-apps-chat"]) .status-offline {
+    background-color: var(--nd-text-muted);
+}
+
+:where(html[data-page~="demo-apps-chat"]) .status-away {
+    background-color: var(--nd-warning);
+}
+
+:where(html[data-page~="demo-apps-chat"]) .chat-content {
+    height: calc(100vh - 180px);
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+:where(html[data-page~="demo-apps-chat"]) .chat-history {
+    flex: 1;
+    padding: 1.5rem;
+    background-color: var(--nd-bg-light);
+}
+
+:where(html[data-page~="demo-apps-chat"]) .message {
+    margin-bottom: 1.5rem;
+    max-width: 85%;
+    display: flex;
+    flex-direction: column;
+}
+
+:where(html[data-page~="demo-apps-chat"]) .message-inbound {
+    align-self: flex-start;
+}
+
+:where(html[data-page~="demo-apps-chat"]) .message-outbound {
+    align-self: flex-end;
+    align-items: flex-end;
+}
+
+:where(html[data-page~="demo-apps-chat"]) .message-bubble {
+    padding: 0.8rem 1.2rem;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+    border-radius: 1rem;
+    font-size: var(--nd-font-size-base);
+    position: relative;
+    box-shadow: var(--nd-shadow-sm);
+}
+
+:where(html[data-page~="demo-apps-chat"]) .message-inbound .message-bubble {
+    background-color: var(--nd-surface);
+    border-bottom-left-radius: 0.2rem;
+    color: var(--nd-text);
+}
+
+:where(html[data-page~="demo-apps-chat"]) .message-outbound .message-bubble {
+    background-color: var(--nd-primary);
+    color: #fff;
+    border-bottom-right-radius: 0.2rem;
+}
+
+:where(html[data-page~="demo-apps-chat"]) .chat-input-area {
+    padding: 1rem;
+    background: var(--nd-surface);
+    border-top: 1px solid var(--nd-border);
+}
+
+:where(html[data-page~="demo-apps-chat"]) .avatar-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+@media (max-width: 991.98px) {
+    :where(html[data-page~="demo-apps-chat"]) .chat-sidebar {
+        height: auto;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Demo Apps File Manager */
+:where(html[data-page~="demo-apps-file-manager"]) .file-manager-sidebar {
+    height: calc(100vh - 180px);
+    min-height: 500px;
+}
+
+:where(html[data-page~="demo-apps-file-manager"]) .file-manager-content {
+    height: calc(100vh - 180px);
+    min-height: 500px;
+}
+
+:where(html[data-page~="demo-apps-file-manager"]) .folder-card {
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+:where(html[data-page~="demo-apps-file-manager"]) .folder-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.08) !important;
+}
+
+:where(html[data-page~="demo-apps-file-manager"]) .file-item-card {
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+:where(html[data-page~="demo-apps-file-manager"]) .file-item-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.08) !important;
+}
+
+:where(html[data-page~="demo-apps-file-manager"]) .storage-progress {
+    height: 6px;
+}
+
+:where(html[data-page~="demo-apps-file-manager"]) .file-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+:where(html[data-page~="demo-apps-file-manager"]) .file-action-btn {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+:where(html[data-page~="demo-apps-file-manager"]) .file-item-card:hover .file-action-btn {
+    opacity: 1;
+}
+
+/* Demo Apps Inbox */
+:where(html[data-page~="demo-apps-inbox"]) .inbox-sidebar {
+    min-width: 220px;
+}
+
+:where(html[data-page~="demo-apps-inbox"]) .inbox-nav .nav-link {
+    color: var(--nd-text-muted);
+    padding: 0.6rem 1rem;
+    border-radius: var(--nd-radius);
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    transition: var(--nd-transition);
+}
+
+:where(html[data-page~="demo-apps-inbox"]) .inbox-nav .nav-link:hover {
+    background-color: var(--nd-bg-light);
+    color: var(--nd-primary);
+}
+
+:where(html[data-page~="demo-apps-inbox"]) .inbox-nav .nav-link.active {
+    background-color: var(--nd-primary-subtle);
+    color: var(--nd-primary);
+    font-weight: 600;
+}
+
+:where(html[data-page~="demo-apps-inbox"]) .inbox-nav .nav-link i {
+    font-size: 1.1rem;
+    margin-right: 12px;
+}
+
+:where(html[data-page~="demo-apps-inbox"]) .email-item {
+    cursor: pointer;
+    transition: var(--nd-transition);
+    border-bottom: 1px solid var(--nd-border);
+}
+
+:where(html[data-page~="demo-apps-inbox"]) .email-item:hover {
+    background-color: var(--nd-bg-light);
+    box-shadow: inset 3px 0 0 var(--nd-primary);
+}
+
+:where(html[data-page~="demo-apps-inbox"]) .email-item.unread {
+    background-color: var(--nd-bg-light);
+    font-weight: 600;
+}
+
+:where(html[data-page~="demo-apps-inbox"]) .email-item .star {
+    color: var(--nd-text-muted);
+    cursor: pointer;
+}
+
+:where(html[data-page~="demo-apps-inbox"]) .email-item .star.active {
+    color: var(--bs-warning-text-emphasis);
+}
+
+:where(html[data-page~="demo-apps-inbox"]) .email-item .date {
+    min-width: 80px;
+    text-align: right;
+}
+
+:where(html[data-page~="demo-apps-inbox"]) .inbox-toolbar {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: var(--nd-surface);
+    border-bottom: 1px solid var(--nd-border);
+    border-top-left-radius: var(--nd-radius-lg);
+    border-top-right-radius: var(--nd-radius-lg);
+}
+
+:where(html[data-page~="demo-apps-inbox"]) .email-list-wrapper {
+    border-bottom-left-radius: var(--nd-radius-lg);
+    border-bottom-right-radius: var(--nd-radius-lg);
+    overflow: hidden;
+}
+
+@media (max-width: 991.98px) {
+    :where(html[data-page~="demo-apps-inbox"]) .inbox-sidebar {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Demo Dashboard Finance */
+:where(html[data-page~="demo-dashboard-finance"]) .finance-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+:where(html[data-page~="demo-dashboard-finance"]) .finance-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+:where(html[data-page~="demo-dashboard-finance"]) .chart-container {
+    position: relative;
+    height: 350px;
+}
+
+:where(html[data-page~="demo-dashboard-finance"]) .budget-progress {
+    height: 6px;
+}
+
+/* Demo Forms Editors */
+:where(html[data-page~="demo-forms-editors"]) .ql-container {
+    height: 400px;
+}
+
+/* Demo Maps */
+:where(html[data-page~="demo-maps"]) #leaflet-map {
+    height: 500px;
+    width: 100%;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+:where(html[data-page~="demo-maps"]) .gmap-container {
+    height: 500px;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Demo Tables Gridjs */
+:where(html[data-page~="demo-tables-gridjs"]) .gridjs-container {
+    padding: 0;
+    display: block;
+}
+
+:where(html[data-page~="demo-tables-gridjs"]) .gridjs-wrapper {
+    border-radius: var(--nd-radius);
+    border: 1px solid var(--nd-border);
+}
+
+:where(html[data-page~="demo-tables-gridjs"]) .gridjs-thead th {
+    background-color: var(--nd-bg-light) !important;
+    color: var(--nd-text) !important;
+    font-weight: 600 !important;
+    border-bottom: 2px solid var(--nd-border) !important;
+}
+
+:where(html[data-page~="demo-tables-gridjs"]) .gridjs-td {
+    border: 1px solid var(--nd-border) !important;
+}

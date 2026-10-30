@@ -1,4 +1,5 @@
-﻿User-agent: *
+User-agent: *
 Allow: /
 
+# Keep noindex demo pages crawlable so their robots meta tags can be read.
 Sitemap: https://naha-admin.vercel.app/sitemap.xml
